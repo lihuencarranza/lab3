@@ -60,7 +60,7 @@ int main() {
     bind(server_fd, (struct sockaddr *)&address, sizeof(address));
     listen(server_fd, 3);
 
-    printf("ervice A waiting for connections...\n");
+    printf("Service A waiting for connections...\n");
 
     while (1) {
         new_socket = accept(server_fd, (struct sockaddr *)&address, &addrlen);

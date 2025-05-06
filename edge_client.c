@@ -6,10 +6,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-#define SENSOR_IP "127.0.0.1"   // IP de RPi-1 con el sensor
+#define SENSOR_IP "127.0.0.1"   // IP of RPi-1 with the sensor
 #define SENSOR_PORT 5000
 
-#define ACTUATOR_IP "127.0.0.1" // IP de RPi-2 con el LED
+#define ACTUATOR_IP "127.0.0.1" // IP of RPi-2 with the LED
 #define ACTUATOR_PORT 5001
 
 int read_humidity() {
@@ -23,7 +23,7 @@ int read_humidity() {
     inet_pton(AF_INET, SENSOR_IP, &address.sin_addr);
 
     if (connect(sock, (struct sockaddr*)&address, sizeof(address)) < 0) {
-        perror("Error conectando a sensor");
+        perror("Error connecting to sensor");
         return -1;
     }
 
@@ -42,7 +42,7 @@ void send_led_command(const char *cmd) {
     inet_pton(AF_INET, ACTUATOR_IP, &address.sin_addr);
 
     if (connect(sock, (struct sockaddr*)&address, sizeof(address)) < 0) {
-        perror("Error conectando a actuador");
+        perror("Error connecting to actuator");
         return;
     }
 
@@ -59,13 +59,13 @@ int main() {
         }
 
         float voltage = humidity * 3.3 / 1023.0;
-        printf("Humedad (ADC): %d - Voltaje: %.2f V\n", humidity, voltage);
+        printf("Humidity (ADC): %d - Voltage: %.2f V\n", humidity, voltage);
 
         if (humidity < 30) {
-            printf("Humedad < 30 => Enviando comando ON al LED\n");
+            printf("Humidity < 30 => Sending ON command to LED\n");
             send_led_command("ON");
         } else {
-            printf("Condici�n no cumplida. No se enciende el LED.\n");
+            printf("Condition not met. LED will not turn on.\n");
         }
 
         sleep(5);
