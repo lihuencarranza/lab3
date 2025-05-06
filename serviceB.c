@@ -16,6 +16,8 @@
 
 int led_on = 0;
 struct gpiod_line *led;
+#define EDGE_IP "127.0.0.1"
+#define EDGE_PORT 6000
 
 void *button_thread(void *arg) {
     struct gpiod_chip *chip = gpiod_chip_open(GPIO_CHIP);
@@ -37,12 +39,34 @@ void *button_thread(void *arg) {
     return NULL;
 }
 
+void register_service() {
+    int sock;
+    struct sockaddr_in edge_addr;
+    char *message = "RPi-2,Set_LED,1,state";
+
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    edge_addr.sin_family = AF_INET;
+    edge_addr.sin_port = htons(EDGE_PORT);
+    inet_pton(AF_INET, EDGE_IP, &edge_addr.sin_addr);
+
+    if (connect(sock, (struct sockaddr *)&edge_addr, sizeof(edge_addr)) < 0) {
+        perror("Error registering service to edge");
+        return;
+    }
+
+    send(sock, message, strlen(message), 0);
+    close(sock);
+}
+
+
 int main() {
     struct gpiod_chip *chip = gpiod_chip_open(GPIO_CHIP);
     if (!chip) {
         perror("Error opening GPIO chip");
         return 1;
     }
+
+    register_service();
 
     led = gpiod_chip_get_line(chip, GPIO_LED);
     if (!led || gpiod_line_request_output(led, "led", 0) < 0) {

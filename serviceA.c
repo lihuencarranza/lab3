@@ -36,12 +36,37 @@ int read_channel(int fd, uint8_t channel) {
     return value;
 }
 
+#define EDGE_IP "127.0.0.1"
+#define EDGE_PORT 6000
+
+void register_service() {
+    int sock;
+    struct sockaddr_in edge_addr;
+    char *message = "RPi-1,Read_Humidity,0,";
+
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    edge_addr.sin_family = AF_INET;
+    edge_addr.sin_port = htons(EDGE_PORT);
+    inet_pton(AF_INET, EDGE_IP, &edge_addr.sin_addr);
+
+    if (connect(sock, (struct sockaddr *)&edge_addr, sizeof(edge_addr)) < 0) {
+        perror("Error registering service to edge");
+        return;
+    }
+
+    send(sock, message, strlen(message), 0);
+    close(sock);
+}
+
+
+
 int main() {
     int spi_fd = open(SPI_DEVICE, O_RDWR);
     if (spi_fd < 0) {
         perror("Cannot open SPI device");
         return 1;
     }
+    register_service();
 
     uint8_t mode = 0;
     ioctl(spi_fd, SPI_IOC_WR_MODE, &mode);
@@ -61,6 +86,7 @@ int main() {
     listen(server_fd, 3);
 
     printf("Service A waiting for connections...\n");
+    register_service();
 
     while (1) {
         new_socket = accept(server_fd, (struct sockaddr *)&address, &addrlen);
