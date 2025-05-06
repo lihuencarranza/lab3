@@ -2,7 +2,7 @@
 
 CC = gcc
 CFLAGS = -o
-SRC = serviceA.c serviceB.c edge_client
+SRC = serviceA.c serviceB.c edge_client.c
 EXEC = serviceA serviceB edge_client
 all: $(EXEC)
 
