@@ -6,10 +6,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-#define SENSOR_IP "127.0.0.1"   // IP of RPi-1 with the sensor
+#define SENSOR_IP "127.0.0.1"
 #define SENSOR_PORT 5000
 
-#define ACTUATOR_IP "127.0.0.1" // IP of RPi-2 with the LED
+#define ACTUATOR_IP "127.0.0.1"
 #define ACTUATOR_PORT 5001
 
 int read_humidity() {
@@ -65,7 +65,8 @@ int main() {
             printf("Humidity < 30 => Sending ON command to LED\n");
             send_led_command("ON");
         } else {
-            printf("Condition not met. LED will not turn on.\n");
+            printf("Humidity >= 30 => Sending OFF command to LED\n");
+            send_led_command("OFF");
         }
 
         sleep(5);
