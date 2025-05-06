@@ -1,5 +1,5 @@
-# Makefile for compiling and executing GPIO test programs
-
+# Makefile for compiling serviceA, serviceB, and edge_client
+# using gcc with the -lgpiod flag for GPIO access
 CC = gcc
 CFLAGS = -o
 SRC = serviceA.c serviceB.c edge_client.c
