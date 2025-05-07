@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/ServiceComponent//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/ServiceComponent//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule
 .PHONY : compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ usServiceComponent: compendium/ServiceComponent/CMakeFiles/usServiceComponent.di
 
 # fast build rule for target.
 usServiceComponent/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build
 .PHONY : usServiceComponent/fast
 
 src/ComponentConstants.o: src/ComponentConstants.cpp.o
@@ -180,7 +180,7 @@ src/ComponentConstants.o: src/ComponentConstants.cpp.o
 
 # target to build an object file
 src/ComponentConstants.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.o
 .PHONY : src/ComponentConstants.cpp.o
 
 src/ComponentConstants.i: src/ComponentConstants.cpp.i
@@ -188,7 +188,7 @@ src/ComponentConstants.i: src/ComponentConstants.cpp.i
 
 # target to preprocess a source file
 src/ComponentConstants.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.i
 .PHONY : src/ComponentConstants.cpp.i
 
 src/ComponentConstants.s: src/ComponentConstants.cpp.s
@@ -196,7 +196,7 @@ src/ComponentConstants.s: src/ComponentConstants.cpp.s
 
 # target to generate assembly for a file
 src/ComponentConstants.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentConstants.cpp.s
 .PHONY : src/ComponentConstants.cpp.s
 
 src/ComponentContext.o: src/ComponentContext.cpp.o
@@ -204,7 +204,7 @@ src/ComponentContext.o: src/ComponentContext.cpp.o
 
 # target to build an object file
 src/ComponentContext.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.o
 .PHONY : src/ComponentContext.cpp.o
 
 src/ComponentContext.i: src/ComponentContext.cpp.i
@@ -212,7 +212,7 @@ src/ComponentContext.i: src/ComponentContext.cpp.i
 
 # target to preprocess a source file
 src/ComponentContext.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.i
 .PHONY : src/ComponentContext.cpp.i
 
 src/ComponentContext.s: src/ComponentContext.cpp.s
@@ -220,7 +220,7 @@ src/ComponentContext.s: src/ComponentContext.cpp.s
 
 # target to generate assembly for a file
 src/ComponentContext.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentContext.cpp.s
 .PHONY : src/ComponentContext.cpp.s
 
 src/ComponentException.o: src/ComponentException.cpp.o
@@ -228,7 +228,7 @@ src/ComponentException.o: src/ComponentException.cpp.o
 
 # target to build an object file
 src/ComponentException.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.o
 .PHONY : src/ComponentException.cpp.o
 
 src/ComponentException.i: src/ComponentException.cpp.i
@@ -236,7 +236,7 @@ src/ComponentException.i: src/ComponentException.cpp.i
 
 # target to preprocess a source file
 src/ComponentException.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.i
 .PHONY : src/ComponentException.cpp.i
 
 src/ComponentException.s: src/ComponentException.cpp.s
@@ -244,7 +244,7 @@ src/ComponentException.s: src/ComponentException.cpp.s
 
 # target to generate assembly for a file
 src/ComponentException.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentException.cpp.s
 .PHONY : src/ComponentException.cpp.s
 
 src/ComponentInstance.o: src/ComponentInstance.cpp.o
@@ -252,7 +252,7 @@ src/ComponentInstance.o: src/ComponentInstance.cpp.o
 
 # target to build an object file
 src/ComponentInstance.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.o
 .PHONY : src/ComponentInstance.cpp.o
 
 src/ComponentInstance.i: src/ComponentInstance.cpp.i
@@ -260,7 +260,7 @@ src/ComponentInstance.i: src/ComponentInstance.cpp.i
 
 # target to preprocess a source file
 src/ComponentInstance.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.i
 .PHONY : src/ComponentInstance.cpp.i
 
 src/ComponentInstance.s: src/ComponentInstance.cpp.s
@@ -268,7 +268,7 @@ src/ComponentInstance.s: src/ComponentInstance.cpp.s
 
 # target to generate assembly for a file
 src/ComponentInstance.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ComponentInstance.cpp.s
 .PHONY : src/ComponentInstance.cpp.s
 
 src/ServiceComponentRuntime.o: src/ServiceComponentRuntime.cpp.o
@@ -276,7 +276,7 @@ src/ServiceComponentRuntime.o: src/ServiceComponentRuntime.cpp.o
 
 # target to build an object file
 src/ServiceComponentRuntime.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.o
 .PHONY : src/ServiceComponentRuntime.cpp.o
 
 src/ServiceComponentRuntime.i: src/ServiceComponentRuntime.cpp.i
@@ -284,7 +284,7 @@ src/ServiceComponentRuntime.i: src/ServiceComponentRuntime.cpp.i
 
 # target to preprocess a source file
 src/ServiceComponentRuntime.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.i
 .PHONY : src/ServiceComponentRuntime.cpp.i
 
 src/ServiceComponentRuntime.s: src/ServiceComponentRuntime.cpp.s
@@ -292,7 +292,7 @@ src/ServiceComponentRuntime.s: src/ServiceComponentRuntime.cpp.s
 
 # target to generate assembly for a file
 src/ServiceComponentRuntime.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/src/ServiceComponentRuntime.cpp.s
 .PHONY : src/ServiceComponentRuntime.cpp.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

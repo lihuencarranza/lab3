@@ -51,7 +51,7 @@ add_library(usHttpService SHARED IMPORTED)
 
 set_target_properties(usHttpService PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_variadic_templates;cxx_nullptr"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/httpservice/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/httpservice/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/httpservice/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/httpservice/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include"
   INTERFACE_LINK_LIBRARIES "CppMicroServices"
 )
 
@@ -60,21 +60,21 @@ add_library(CppMicroServices SHARED IMPORTED)
 
 set_target_properties(CppMicroServices PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_variadic_templates;cxx_nullptr"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include"
   INTERFACE_LINK_LIBRARIES "dl"
 )
 
 # Import target "usHttpService" for configuration "Debug"
 set_property(TARGET usHttpService APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(usHttpService PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libusHttpServiced.so.0.1.0"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libusHttpServiced.so.0.1.0"
   IMPORTED_SONAME_DEBUG "libusHttpServiced.so.0.1.0"
   )
 
 # Import target "CppMicroServices" for configuration "Debug"
 set_property(TARGET CppMicroServices APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(CppMicroServices PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libCppMicroServicesd.so.4.0.0"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libCppMicroServicesd.so.4.0.0"
   IMPORTED_SONAME_DEBUG "libCppMicroServicesd.so.4.0.0"
   )
 

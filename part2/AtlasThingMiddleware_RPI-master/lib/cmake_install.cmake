@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,7 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/CppMicroServicesTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/CppMicroServicesTargets.cmake"
-         "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets.cmake")
+         "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/CppMicroServicesTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -59,49 +59,49 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/CppMicroServicesTargets-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/BundleInit.cpp"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/CMakeResourceDependencies.cpp"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGenerateBundleInit.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionAddResources.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionEmbedResources.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGetResourceSource.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckResourceLinking.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckCompilerFlags.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/BundleInit.cpp"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/CMakeResourceDependencies.cpp"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGenerateBundleInit.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionAddResources.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionEmbedResources.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGetResourceSource.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckResourceLinking.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckCompilerFlags.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4/cppmicroservices" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include/cppmicroservices/GlobalConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4/cppmicroservices" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include/cppmicroservices/GlobalConfig.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CppMicroServicesConfig.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServicesConfigVersion.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CppMicroServicesConfig.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServicesConfigVersion.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/third_party/absl/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/rc/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/httpservice/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/webconsole/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell/cmake_install.cmake")
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/doc/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/third_party/absl/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/rc/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/httpservice/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/webconsole/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/doc/cmake_install.cmake")
 
 endif()
 
@@ -113,5 +113,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

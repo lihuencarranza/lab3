@@ -23,6 +23,6 @@
 // Macros used by the unit tests
 //-------------------------------------------------------------------
 
-#define US_FRAMEWORK_SOURCE_DIR "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework"
+#define US_FRAMEWORK_SOURCE_DIR "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework"
 
 #endif // CPPMICROSERVICES_FRAMEWORKCONFIG_H

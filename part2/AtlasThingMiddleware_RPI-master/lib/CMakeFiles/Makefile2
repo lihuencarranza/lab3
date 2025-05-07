@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -377,14 +377,14 @@ webconsole/clean: webconsole/CMakeFiles/usWebConsole.dir/clean
 third_party/absl/CMakeFiles/absl.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=54,55,56,57,58,59,60,61 "Built target absl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=54,55,56,57,58,59,60,61 "Built target absl"
 .PHONY : third_party/absl/CMakeFiles/absl.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/absl/CMakeFiles/absl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/CMakeFiles/absl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : third_party/absl/CMakeFiles/absl.dir/rule
 
 # Convenience name for target.
@@ -403,14 +403,14 @@ third_party/absl/CMakeFiles/absl.dir/clean:
 tools/rc/CMakeFiles/usResourceCompiler.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/rc/CMakeFiles/usResourceCompiler.dir/build.make tools/rc/CMakeFiles/usResourceCompiler.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/rc/CMakeFiles/usResourceCompiler.dir/build.make tools/rc/CMakeFiles/usResourceCompiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=74,75 "Built target usResourceCompiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=74,75 "Built target usResourceCompiler"
 .PHONY : tools/rc/CMakeFiles/usResourceCompiler.dir/all
 
 # Build rule for subdir invocation for target.
 tools/rc/CMakeFiles/usResourceCompiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/rc/CMakeFiles/usResourceCompiler.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : tools/rc/CMakeFiles/usResourceCompiler.dir/rule
 
 # Convenience name for target.
@@ -429,14 +429,14 @@ tools/rc/CMakeFiles/usResourceCompiler.dir/clean:
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build.make tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build.make tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=62,63 "Built target jsonschemavalidator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=62,63 "Built target jsonschemavalidator"
 .PHONY : tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/all
 
 # Build rule for subdir invocation for target.
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/rule
 
 # Convenience name for target.
@@ -455,14 +455,14 @@ tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/clean:
 util/CMakeFiles/util.dir/all:
 	$(MAKE) $(MAKESILENT) -f util/CMakeFiles/util.dir/build.make util/CMakeFiles/util.dir/depend
 	$(MAKE) $(MAKESILENT) -f util/CMakeFiles/util.dir/build.make util/CMakeFiles/util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=97,98,99,100 "Built target util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=97,98,99,100 "Built target util"
 .PHONY : util/CMakeFiles/util.dir/all
 
 # Build rule for subdir invocation for target.
 util/CMakeFiles/util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 util/CMakeFiles/util.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : util/CMakeFiles/util.dir/rule
 
 # Convenience name for target.
@@ -483,14 +483,14 @@ framework/CMakeFiles/CppMicroServices.dir/all: tools/rc/CMakeFiles/usResourceCom
 framework/CMakeFiles/CppMicroServices.dir/all: util/CMakeFiles/util.dir/all
 	$(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/depend
 	$(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 "Built target CppMicroServices"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 "Built target CppMicroServices"
 .PHONY : framework/CMakeFiles/CppMicroServices.dir/all
 
 # Build rule for subdir invocation for target.
 framework/CMakeFiles/CppMicroServices.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 47
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 47
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/CMakeFiles/CppMicroServices.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : framework/CMakeFiles/CppMicroServices.dir/rule
 
 # Convenience name for target.
@@ -511,14 +511,14 @@ httpservice/CMakeFiles/usHttpService.dir/all: util/CMakeFiles/util.dir/all
 httpservice/CMakeFiles/usHttpService.dir/all: framework/CMakeFiles/CppMicroServices.dir/all
 	$(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/depend
 	$(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=64,65,66,67,68,69,70,71,72 "Built target usHttpService"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=64,65,66,67,68,69,70,71,72 "Built target usHttpService"
 .PHONY : httpservice/CMakeFiles/usHttpService.dir/all
 
 # Build rule for subdir invocation for target.
 httpservice/CMakeFiles/usHttpService.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 56
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/CMakeFiles/usHttpService.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : httpservice/CMakeFiles/usHttpService.dir/rule
 
 # Convenience name for target.
@@ -540,14 +540,14 @@ webconsole/CMakeFiles/usWebConsole.dir/all: framework/CMakeFiles/CppMicroService
 webconsole/CMakeFiles/usWebConsole.dir/all: httpservice/CMakeFiles/usHttpService.dir/all
 	$(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/depend
 	$(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=88,89,90,91,92,93,94,95,96 "Built target usWebConsole"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=88,89,90,91,92,93,94,95,96 "Built target usWebConsole"
 .PHONY : webconsole/CMakeFiles/usWebConsole.dir/all
 
 # Build rule for subdir invocation for target.
 webconsole/CMakeFiles/usWebConsole.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 65
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 65
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/CMakeFiles/usWebConsole.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : webconsole/CMakeFiles/usWebConsole.dir/rule
 
 # Convenience name for target.
@@ -568,14 +568,14 @@ shellservice/CMakeFiles/usShellService.dir/all: util/CMakeFiles/util.dir/all
 shellservice/CMakeFiles/usShellService.dir/all: framework/CMakeFiles/CppMicroServices.dir/all
 	$(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/depend
 	$(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=82,83,84,85,86,87 "Built target usShellService"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=82,83,84,85,86,87 "Built target usShellService"
 .PHONY : shellservice/CMakeFiles/usShellService.dir/all
 
 # Build rule for subdir invocation for target.
 shellservice/CMakeFiles/usShellService.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 53
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/CMakeFiles/usShellService.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : shellservice/CMakeFiles/usShellService.dir/rule
 
 # Convenience name for target.
@@ -594,14 +594,14 @@ shellservice/CMakeFiles/usShellService.dir/clean:
 compendium/LogService/CMakeFiles/usLogService.dir/all:
 	$(MAKE) $(MAKESILENT) -f compendium/LogService/CMakeFiles/usLogService.dir/build.make compendium/LogService/CMakeFiles/usLogService.dir/depend
 	$(MAKE) $(MAKESILENT) -f compendium/LogService/CMakeFiles/usLogService.dir/build.make compendium/LogService/CMakeFiles/usLogService.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=73 "Built target usLogService"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=73 "Built target usLogService"
 .PHONY : compendium/LogService/CMakeFiles/usLogService.dir/all
 
 # Build rule for subdir invocation for target.
 compendium/LogService/CMakeFiles/usLogService.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/LogService/CMakeFiles/usLogService.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : compendium/LogService/CMakeFiles/usLogService.dir/rule
 
 # Convenience name for target.
@@ -620,14 +620,14 @@ compendium/LogService/CMakeFiles/usLogService.dir/clean:
 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/all: framework/CMakeFiles/CppMicroServices.dir/all
 	$(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/depend
 	$(MAKE) $(MAKESILENT) -f compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build.make compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=76,77,78,79 "Built target usServiceComponent"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=76,77,78,79 "Built target usServiceComponent"
 .PHONY : compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/all
 
 # Build rule for subdir invocation for target.
 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 51
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : compendium/ServiceComponent/CMakeFiles/usServiceComponent.dir/rule
 
 # Convenience name for target.
@@ -651,14 +651,14 @@ compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/all: compendiu
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/all: compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/all
 	$(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/depend
 	$(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=34,35,36 "Built target DeclarativeServices"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=34,35,36 "Built target DeclarativeServices"
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/all
 
 # Build rule for subdir invocation for target.
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 69
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 69
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule
 
 # Convenience name for target.
@@ -677,14 +677,14 @@ compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/clean:
 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/all:
 	$(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/depend
 	$(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target DeclarativeServicesObjs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target DeclarativeServicesObjs"
 .PHONY : compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/all
 
 # Build rule for subdir invocation for target.
 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule
 
 # Convenience name for target.
@@ -703,14 +703,14 @@ compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/clean:
 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/all:
 	$(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/depend
 	$(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=51,52,53 "Built target SCRCodeGen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=51,52,53 "Built target SCRCodeGen"
 .PHONY : compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/all
 
 # Build rule for subdir invocation for target.
 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule
 
 # Convenience name for target.
@@ -730,14 +730,14 @@ tools/shell/CMakeFiles/usShell.dir/all: framework/CMakeFiles/CppMicroServices.di
 tools/shell/CMakeFiles/usShell.dir/all: shellservice/CMakeFiles/usShellService.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=80,81 "Built target usShell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=80,81 "Built target usShell"
 .PHONY : tools/shell/CMakeFiles/usShell.dir/all
 
 # Build rule for subdir invocation for target.
 tools/shell/CMakeFiles/usShell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/CMakeFiles/usShell.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : tools/shell/CMakeFiles/usShell.dir/rule
 
 # Convenience name for target.

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 # Include any dependencies generated for this target.
 include tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/depend.make
@@ -70,18 +70,18 @@ include tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/progress.ma
 include tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/flags.make
 
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o: tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/flags.make
-tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp
+tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o: tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o -MF CMakeFiles/jsonschemavalidator.dir/main.cpp.o.d -o CMakeFiles/jsonschemavalidator.dir/main.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o -MF CMakeFiles/jsonschemavalidator.dir/main.cpp.o.d -o CMakeFiles/jsonschemavalidator.dir/main.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp
 
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jsonschemavalidator.dir/main.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp > CMakeFiles/jsonschemavalidator.dir/main.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp > CMakeFiles/jsonschemavalidator.dir/main.cpp.i
 
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jsonschemavalidator.dir/main.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp -o CMakeFiles/jsonschemavalidator.dir/main.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator/main.cpp -o CMakeFiles/jsonschemavalidator.dir/main.cpp.s
 
 # Object files for target jsonschemavalidator
 jsonschemavalidator_OBJECTS = \
@@ -93,18 +93,18 @@ jsonschemavalidator_EXTERNAL_OBJECTS =
 bin/jsonschemavalidator: tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/main.cpp.o
 bin/jsonschemavalidator: tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build.make
 bin/jsonschemavalidator: tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/jsonschemavalidator"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jsonschemavalidator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/jsonschemavalidator"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jsonschemavalidator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build: bin/jsonschemavalidator
 .PHONY : tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/build
 
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && $(CMAKE_COMMAND) -P CMakeFiles/jsonschemavalidator.dir/cmake_clean.cmake
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator && $(CMAKE_COMMAND) -P CMakeFiles/jsonschemavalidator.dir/cmake_clean.cmake
 .PHONY : tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/clean
 
 tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/jsonschemavalidator /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/jsonschemavalidator/CMakeFiles/jsonschemavalidator.dir/depend
 

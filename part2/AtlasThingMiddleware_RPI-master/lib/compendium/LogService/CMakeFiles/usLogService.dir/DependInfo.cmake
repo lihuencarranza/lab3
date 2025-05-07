@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp" "compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o" "gcc" "compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp" "compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o" "gcc" "compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o.d"
   )
 
 # Targets to which this target links.

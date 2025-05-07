@@ -92,7 +92,7 @@
 			
 			<Services>
 			  <Service>
-				<Service_Name>ReadHumidity</Service_Name>
+				<Service_Name>getHumidity</Service_Name>
 				<Libraries>
 				  <Library>#include "mcp3008.h"</Library>
 				</Libraries>
@@ -114,16 +114,9 @@
 			</Services>
 		  </Entity>
 		</Entities>
-		<Thing_Services>
-			<Service>
-				<Service_Name>ReadHumidity</Service_Name>
-				<Service_Type>Sensor</Service_Type>
-				<Service_EntityID>HumiditySensor01</Service_EntityID>
-				<Service_Output>
-					<Output_Name>value</Output_Name>
-					<Output_Type>int</Output_Type>
-				</Service_Output>
-			</Service>
-		</Thing_Services>
+		
+		
+    
+
 	</Atlas_Thing>
 </Atlas_IoTDDL>

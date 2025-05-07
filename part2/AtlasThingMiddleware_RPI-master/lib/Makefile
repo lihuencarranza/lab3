@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

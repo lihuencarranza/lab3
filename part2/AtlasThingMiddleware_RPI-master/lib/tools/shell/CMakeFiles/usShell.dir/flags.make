@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/../../third_party -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/include
+C_INCLUDES = -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/../../third_party -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/include
 
 C_FLAGS =   -fPIC -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/../../third_party -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/include
+CXX_INCLUDES = -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/../../third_party -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/include
 
 CXX_FLAGS =   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations -g -std=c++14
 

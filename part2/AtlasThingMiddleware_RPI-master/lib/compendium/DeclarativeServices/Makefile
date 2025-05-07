@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ DeclarativeServices: compendium/DeclarativeServices/CMakeFiles/DeclarativeServic
 
 # fast build rule for target.
 DeclarativeServices/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build
 .PHONY : DeclarativeServices/fast
 
 DeclarativeServices/cppmicroservices_init.o: DeclarativeServices/cppmicroservices_init.cpp.o
@@ -180,7 +180,7 @@ DeclarativeServices/cppmicroservices_init.o: DeclarativeServices/cppmicroservice
 
 # target to build an object file
 DeclarativeServices/cppmicroservices_init.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o
 .PHONY : DeclarativeServices/cppmicroservices_init.cpp.o
 
 DeclarativeServices/cppmicroservices_init.i: DeclarativeServices/cppmicroservices_init.cpp.i
@@ -188,7 +188,7 @@ DeclarativeServices/cppmicroservices_init.i: DeclarativeServices/cppmicroservice
 
 # target to preprocess a source file
 DeclarativeServices/cppmicroservices_init.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i
 .PHONY : DeclarativeServices/cppmicroservices_init.cpp.i
 
 DeclarativeServices/cppmicroservices_init.s: DeclarativeServices/cppmicroservices_init.cpp.s
@@ -196,7 +196,7 @@ DeclarativeServices/cppmicroservices_init.s: DeclarativeServices/cppmicroservice
 
 # target to generate assembly for a file
 DeclarativeServices/cppmicroservices_init.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s
 .PHONY : DeclarativeServices/cppmicroservices_init.cpp.s
 
 src/SCRActivator.o: src/SCRActivator.cpp.o
@@ -204,7 +204,7 @@ src/SCRActivator.o: src/SCRActivator.cpp.o
 
 # target to build an object file
 src/SCRActivator.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o
 .PHONY : src/SCRActivator.cpp.o
 
 src/SCRActivator.i: src/SCRActivator.cpp.i
@@ -212,7 +212,7 @@ src/SCRActivator.i: src/SCRActivator.cpp.i
 
 # target to preprocess a source file
 src/SCRActivator.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i
 .PHONY : src/SCRActivator.cpp.i
 
 src/SCRActivator.s: src/SCRActivator.cpp.s
@@ -220,7 +220,7 @@ src/SCRActivator.s: src/SCRActivator.cpp.s
 
 # target to generate assembly for a file
 src/SCRActivator.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build.make compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s
 .PHONY : src/SCRActivator.cpp.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

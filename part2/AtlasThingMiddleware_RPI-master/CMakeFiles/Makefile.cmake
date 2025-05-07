@@ -11,7 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/Main/CMakeLists.txt"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/Main/CMakeLists.txt"
   "lib/CoAPLib/COAPLIB.cmake"
   "lib/OMALib/core/wakaama.cmake"
   "lib/OMALib/shared/shared.cmake"

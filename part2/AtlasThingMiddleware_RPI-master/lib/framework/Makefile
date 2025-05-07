@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 framework/CMakeFiles/CppMicroServices.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/CMakeFiles/CppMicroServices.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework/CMakeFiles/CppMicroServices.dir/rule
 .PHONY : framework/CMakeFiles/CppMicroServices.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ CppMicroServices: framework/CMakeFiles/CppMicroServices.dir/rule
 
 # fast build rule for target.
 CppMicroServices/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/build
 .PHONY : CppMicroServices/fast
 
 __/third_party/jsoncpp.o: __/third_party/jsoncpp.cpp.o
@@ -180,7 +180,7 @@ __/third_party/jsoncpp.o: __/third_party/jsoncpp.cpp.o
 
 # target to build an object file
 __/third_party/jsoncpp.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.o
 .PHONY : __/third_party/jsoncpp.cpp.o
 
 __/third_party/jsoncpp.i: __/third_party/jsoncpp.cpp.i
@@ -188,7 +188,7 @@ __/third_party/jsoncpp.i: __/third_party/jsoncpp.cpp.i
 
 # target to preprocess a source file
 __/third_party/jsoncpp.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.i
 .PHONY : __/third_party/jsoncpp.cpp.i
 
 __/third_party/jsoncpp.s: __/third_party/jsoncpp.cpp.s
@@ -196,7 +196,7 @@ __/third_party/jsoncpp.s: __/third_party/jsoncpp.cpp.s
 
 # target to generate assembly for a file
 __/third_party/jsoncpp.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/jsoncpp.cpp.s
 .PHONY : __/third_party/jsoncpp.cpp.s
 
 __/third_party/miniz.o: __/third_party/miniz.c.o
@@ -204,7 +204,7 @@ __/third_party/miniz.o: __/third_party/miniz.c.o
 
 # target to build an object file
 __/third_party/miniz.c.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.o
 .PHONY : __/third_party/miniz.c.o
 
 __/third_party/miniz.i: __/third_party/miniz.c.i
@@ -212,7 +212,7 @@ __/third_party/miniz.i: __/third_party/miniz.c.i
 
 # target to preprocess a source file
 __/third_party/miniz.c.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.i
 .PHONY : __/third_party/miniz.c.i
 
 __/third_party/miniz.s: __/third_party/miniz.c.s
@@ -220,7 +220,7 @@ __/third_party/miniz.s: __/third_party/miniz.c.s
 
 # target to generate assembly for a file
 __/third_party/miniz.c.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/__/third_party/miniz.c.s
 .PHONY : __/third_party/miniz.c.s
 
 src/bundle/Bundle.o: src/bundle/Bundle.cpp.o
@@ -228,7 +228,7 @@ src/bundle/Bundle.o: src/bundle/Bundle.cpp.o
 
 # target to build an object file
 src/bundle/Bundle.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.o
 .PHONY : src/bundle/Bundle.cpp.o
 
 src/bundle/Bundle.i: src/bundle/Bundle.cpp.i
@@ -236,7 +236,7 @@ src/bundle/Bundle.i: src/bundle/Bundle.cpp.i
 
 # target to preprocess a source file
 src/bundle/Bundle.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.i
 .PHONY : src/bundle/Bundle.cpp.i
 
 src/bundle/Bundle.s: src/bundle/Bundle.cpp.s
@@ -244,7 +244,7 @@ src/bundle/Bundle.s: src/bundle/Bundle.cpp.s
 
 # target to generate assembly for a file
 src/bundle/Bundle.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Bundle.cpp.s
 .PHONY : src/bundle/Bundle.cpp.s
 
 src/bundle/BundleArchive.o: src/bundle/BundleArchive.cpp.o
@@ -252,7 +252,7 @@ src/bundle/BundleArchive.o: src/bundle/BundleArchive.cpp.o
 
 # target to build an object file
 src/bundle/BundleArchive.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.o
 .PHONY : src/bundle/BundleArchive.cpp.o
 
 src/bundle/BundleArchive.i: src/bundle/BundleArchive.cpp.i
@@ -260,7 +260,7 @@ src/bundle/BundleArchive.i: src/bundle/BundleArchive.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleArchive.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.i
 .PHONY : src/bundle/BundleArchive.cpp.i
 
 src/bundle/BundleArchive.s: src/bundle/BundleArchive.cpp.s
@@ -268,7 +268,7 @@ src/bundle/BundleArchive.s: src/bundle/BundleArchive.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleArchive.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleArchive.cpp.s
 .PHONY : src/bundle/BundleArchive.cpp.s
 
 src/bundle/BundleContext.o: src/bundle/BundleContext.cpp.o
@@ -276,7 +276,7 @@ src/bundle/BundleContext.o: src/bundle/BundleContext.cpp.o
 
 # target to build an object file
 src/bundle/BundleContext.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.o
 .PHONY : src/bundle/BundleContext.cpp.o
 
 src/bundle/BundleContext.i: src/bundle/BundleContext.cpp.i
@@ -284,7 +284,7 @@ src/bundle/BundleContext.i: src/bundle/BundleContext.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleContext.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.i
 .PHONY : src/bundle/BundleContext.cpp.i
 
 src/bundle/BundleContext.s: src/bundle/BundleContext.cpp.s
@@ -292,7 +292,7 @@ src/bundle/BundleContext.s: src/bundle/BundleContext.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleContext.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContext.cpp.s
 .PHONY : src/bundle/BundleContext.cpp.s
 
 src/bundle/BundleContextPrivate.o: src/bundle/BundleContextPrivate.cpp.o
@@ -300,7 +300,7 @@ src/bundle/BundleContextPrivate.o: src/bundle/BundleContextPrivate.cpp.o
 
 # target to build an object file
 src/bundle/BundleContextPrivate.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.o
 .PHONY : src/bundle/BundleContextPrivate.cpp.o
 
 src/bundle/BundleContextPrivate.i: src/bundle/BundleContextPrivate.cpp.i
@@ -308,7 +308,7 @@ src/bundle/BundleContextPrivate.i: src/bundle/BundleContextPrivate.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleContextPrivate.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.i
 .PHONY : src/bundle/BundleContextPrivate.cpp.i
 
 src/bundle/BundleContextPrivate.s: src/bundle/BundleContextPrivate.cpp.s
@@ -316,7 +316,7 @@ src/bundle/BundleContextPrivate.s: src/bundle/BundleContextPrivate.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleContextPrivate.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleContextPrivate.cpp.s
 .PHONY : src/bundle/BundleContextPrivate.cpp.s
 
 src/bundle/BundleEvent.o: src/bundle/BundleEvent.cpp.o
@@ -324,7 +324,7 @@ src/bundle/BundleEvent.o: src/bundle/BundleEvent.cpp.o
 
 # target to build an object file
 src/bundle/BundleEvent.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.o
 .PHONY : src/bundle/BundleEvent.cpp.o
 
 src/bundle/BundleEvent.i: src/bundle/BundleEvent.cpp.i
@@ -332,7 +332,7 @@ src/bundle/BundleEvent.i: src/bundle/BundleEvent.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleEvent.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.i
 .PHONY : src/bundle/BundleEvent.cpp.i
 
 src/bundle/BundleEvent.s: src/bundle/BundleEvent.cpp.s
@@ -340,7 +340,7 @@ src/bundle/BundleEvent.s: src/bundle/BundleEvent.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleEvent.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEvent.cpp.s
 .PHONY : src/bundle/BundleEvent.cpp.s
 
 src/bundle/BundleEventHook.o: src/bundle/BundleEventHook.cpp.o
@@ -348,7 +348,7 @@ src/bundle/BundleEventHook.o: src/bundle/BundleEventHook.cpp.o
 
 # target to build an object file
 src/bundle/BundleEventHook.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.o
 .PHONY : src/bundle/BundleEventHook.cpp.o
 
 src/bundle/BundleEventHook.i: src/bundle/BundleEventHook.cpp.i
@@ -356,7 +356,7 @@ src/bundle/BundleEventHook.i: src/bundle/BundleEventHook.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleEventHook.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.i
 .PHONY : src/bundle/BundleEventHook.cpp.i
 
 src/bundle/BundleEventHook.s: src/bundle/BundleEventHook.cpp.s
@@ -364,7 +364,7 @@ src/bundle/BundleEventHook.s: src/bundle/BundleEventHook.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleEventHook.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleEventHook.cpp.s
 .PHONY : src/bundle/BundleEventHook.cpp.s
 
 src/bundle/BundleFindHook.o: src/bundle/BundleFindHook.cpp.o
@@ -372,7 +372,7 @@ src/bundle/BundleFindHook.o: src/bundle/BundleFindHook.cpp.o
 
 # target to build an object file
 src/bundle/BundleFindHook.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.o
 .PHONY : src/bundle/BundleFindHook.cpp.o
 
 src/bundle/BundleFindHook.i: src/bundle/BundleFindHook.cpp.i
@@ -380,7 +380,7 @@ src/bundle/BundleFindHook.i: src/bundle/BundleFindHook.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleFindHook.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.i
 .PHONY : src/bundle/BundleFindHook.cpp.i
 
 src/bundle/BundleFindHook.s: src/bundle/BundleFindHook.cpp.s
@@ -388,7 +388,7 @@ src/bundle/BundleFindHook.s: src/bundle/BundleFindHook.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleFindHook.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleFindHook.cpp.s
 .PHONY : src/bundle/BundleFindHook.cpp.s
 
 src/bundle/BundleHooks.o: src/bundle/BundleHooks.cpp.o
@@ -396,7 +396,7 @@ src/bundle/BundleHooks.o: src/bundle/BundleHooks.cpp.o
 
 # target to build an object file
 src/bundle/BundleHooks.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.o
 .PHONY : src/bundle/BundleHooks.cpp.o
 
 src/bundle/BundleHooks.i: src/bundle/BundleHooks.cpp.i
@@ -404,7 +404,7 @@ src/bundle/BundleHooks.i: src/bundle/BundleHooks.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleHooks.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.i
 .PHONY : src/bundle/BundleHooks.cpp.i
 
 src/bundle/BundleHooks.s: src/bundle/BundleHooks.cpp.s
@@ -412,7 +412,7 @@ src/bundle/BundleHooks.s: src/bundle/BundleHooks.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleHooks.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleHooks.cpp.s
 .PHONY : src/bundle/BundleHooks.cpp.s
 
 src/bundle/BundleManifest.o: src/bundle/BundleManifest.cpp.o
@@ -420,7 +420,7 @@ src/bundle/BundleManifest.o: src/bundle/BundleManifest.cpp.o
 
 # target to build an object file
 src/bundle/BundleManifest.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.o
 .PHONY : src/bundle/BundleManifest.cpp.o
 
 src/bundle/BundleManifest.i: src/bundle/BundleManifest.cpp.i
@@ -428,7 +428,7 @@ src/bundle/BundleManifest.i: src/bundle/BundleManifest.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleManifest.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.i
 .PHONY : src/bundle/BundleManifest.cpp.i
 
 src/bundle/BundleManifest.s: src/bundle/BundleManifest.cpp.s
@@ -436,7 +436,7 @@ src/bundle/BundleManifest.s: src/bundle/BundleManifest.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleManifest.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleManifest.cpp.s
 .PHONY : src/bundle/BundleManifest.cpp.s
 
 src/bundle/BundlePrivate.o: src/bundle/BundlePrivate.cpp.o
@@ -444,7 +444,7 @@ src/bundle/BundlePrivate.o: src/bundle/BundlePrivate.cpp.o
 
 # target to build an object file
 src/bundle/BundlePrivate.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.o
 .PHONY : src/bundle/BundlePrivate.cpp.o
 
 src/bundle/BundlePrivate.i: src/bundle/BundlePrivate.cpp.i
@@ -452,7 +452,7 @@ src/bundle/BundlePrivate.i: src/bundle/BundlePrivate.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundlePrivate.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.i
 .PHONY : src/bundle/BundlePrivate.cpp.i
 
 src/bundle/BundlePrivate.s: src/bundle/BundlePrivate.cpp.s
@@ -460,7 +460,7 @@ src/bundle/BundlePrivate.s: src/bundle/BundlePrivate.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundlePrivate.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundlePrivate.cpp.s
 .PHONY : src/bundle/BundlePrivate.cpp.s
 
 src/bundle/BundleRegistry.o: src/bundle/BundleRegistry.cpp.o
@@ -468,7 +468,7 @@ src/bundle/BundleRegistry.o: src/bundle/BundleRegistry.cpp.o
 
 # target to build an object file
 src/bundle/BundleRegistry.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.o
 .PHONY : src/bundle/BundleRegistry.cpp.o
 
 src/bundle/BundleRegistry.i: src/bundle/BundleRegistry.cpp.i
@@ -476,7 +476,7 @@ src/bundle/BundleRegistry.i: src/bundle/BundleRegistry.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleRegistry.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.i
 .PHONY : src/bundle/BundleRegistry.cpp.i
 
 src/bundle/BundleRegistry.s: src/bundle/BundleRegistry.cpp.s
@@ -484,7 +484,7 @@ src/bundle/BundleRegistry.s: src/bundle/BundleRegistry.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleRegistry.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleRegistry.cpp.s
 .PHONY : src/bundle/BundleRegistry.cpp.s
 
 src/bundle/BundleResource.o: src/bundle/BundleResource.cpp.o
@@ -492,7 +492,7 @@ src/bundle/BundleResource.o: src/bundle/BundleResource.cpp.o
 
 # target to build an object file
 src/bundle/BundleResource.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.o
 .PHONY : src/bundle/BundleResource.cpp.o
 
 src/bundle/BundleResource.i: src/bundle/BundleResource.cpp.i
@@ -500,7 +500,7 @@ src/bundle/BundleResource.i: src/bundle/BundleResource.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleResource.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.i
 .PHONY : src/bundle/BundleResource.cpp.i
 
 src/bundle/BundleResource.s: src/bundle/BundleResource.cpp.s
@@ -508,7 +508,7 @@ src/bundle/BundleResource.s: src/bundle/BundleResource.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleResource.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResource.cpp.s
 .PHONY : src/bundle/BundleResource.cpp.s
 
 src/bundle/BundleResourceBuffer.o: src/bundle/BundleResourceBuffer.cpp.o
@@ -516,7 +516,7 @@ src/bundle/BundleResourceBuffer.o: src/bundle/BundleResourceBuffer.cpp.o
 
 # target to build an object file
 src/bundle/BundleResourceBuffer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.o
 .PHONY : src/bundle/BundleResourceBuffer.cpp.o
 
 src/bundle/BundleResourceBuffer.i: src/bundle/BundleResourceBuffer.cpp.i
@@ -524,7 +524,7 @@ src/bundle/BundleResourceBuffer.i: src/bundle/BundleResourceBuffer.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleResourceBuffer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.i
 .PHONY : src/bundle/BundleResourceBuffer.cpp.i
 
 src/bundle/BundleResourceBuffer.s: src/bundle/BundleResourceBuffer.cpp.s
@@ -532,7 +532,7 @@ src/bundle/BundleResourceBuffer.s: src/bundle/BundleResourceBuffer.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleResourceBuffer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceBuffer.cpp.s
 .PHONY : src/bundle/BundleResourceBuffer.cpp.s
 
 src/bundle/BundleResourceContainer.o: src/bundle/BundleResourceContainer.cpp.o
@@ -540,7 +540,7 @@ src/bundle/BundleResourceContainer.o: src/bundle/BundleResourceContainer.cpp.o
 
 # target to build an object file
 src/bundle/BundleResourceContainer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.o
 .PHONY : src/bundle/BundleResourceContainer.cpp.o
 
 src/bundle/BundleResourceContainer.i: src/bundle/BundleResourceContainer.cpp.i
@@ -548,7 +548,7 @@ src/bundle/BundleResourceContainer.i: src/bundle/BundleResourceContainer.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleResourceContainer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.i
 .PHONY : src/bundle/BundleResourceContainer.cpp.i
 
 src/bundle/BundleResourceContainer.s: src/bundle/BundleResourceContainer.cpp.s
@@ -556,7 +556,7 @@ src/bundle/BundleResourceContainer.s: src/bundle/BundleResourceContainer.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleResourceContainer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceContainer.cpp.s
 .PHONY : src/bundle/BundleResourceContainer.cpp.s
 
 src/bundle/BundleResourceStream.o: src/bundle/BundleResourceStream.cpp.o
@@ -564,7 +564,7 @@ src/bundle/BundleResourceStream.o: src/bundle/BundleResourceStream.cpp.o
 
 # target to build an object file
 src/bundle/BundleResourceStream.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.o
 .PHONY : src/bundle/BundleResourceStream.cpp.o
 
 src/bundle/BundleResourceStream.i: src/bundle/BundleResourceStream.cpp.i
@@ -572,7 +572,7 @@ src/bundle/BundleResourceStream.i: src/bundle/BundleResourceStream.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleResourceStream.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.i
 .PHONY : src/bundle/BundleResourceStream.cpp.i
 
 src/bundle/BundleResourceStream.s: src/bundle/BundleResourceStream.cpp.s
@@ -580,7 +580,7 @@ src/bundle/BundleResourceStream.s: src/bundle/BundleResourceStream.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleResourceStream.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleResourceStream.cpp.s
 .PHONY : src/bundle/BundleResourceStream.cpp.s
 
 src/bundle/BundleStorageFile.o: src/bundle/BundleStorageFile.cpp.o
@@ -588,7 +588,7 @@ src/bundle/BundleStorageFile.o: src/bundle/BundleStorageFile.cpp.o
 
 # target to build an object file
 src/bundle/BundleStorageFile.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.o
 .PHONY : src/bundle/BundleStorageFile.cpp.o
 
 src/bundle/BundleStorageFile.i: src/bundle/BundleStorageFile.cpp.i
@@ -596,7 +596,7 @@ src/bundle/BundleStorageFile.i: src/bundle/BundleStorageFile.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleStorageFile.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.i
 .PHONY : src/bundle/BundleStorageFile.cpp.i
 
 src/bundle/BundleStorageFile.s: src/bundle/BundleStorageFile.cpp.s
@@ -604,7 +604,7 @@ src/bundle/BundleStorageFile.s: src/bundle/BundleStorageFile.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleStorageFile.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageFile.cpp.s
 .PHONY : src/bundle/BundleStorageFile.cpp.s
 
 src/bundle/BundleStorageMemory.o: src/bundle/BundleStorageMemory.cpp.o
@@ -612,7 +612,7 @@ src/bundle/BundleStorageMemory.o: src/bundle/BundleStorageMemory.cpp.o
 
 # target to build an object file
 src/bundle/BundleStorageMemory.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.o
 .PHONY : src/bundle/BundleStorageMemory.cpp.o
 
 src/bundle/BundleStorageMemory.i: src/bundle/BundleStorageMemory.cpp.i
@@ -620,7 +620,7 @@ src/bundle/BundleStorageMemory.i: src/bundle/BundleStorageMemory.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleStorageMemory.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.i
 .PHONY : src/bundle/BundleStorageMemory.cpp.i
 
 src/bundle/BundleStorageMemory.s: src/bundle/BundleStorageMemory.cpp.s
@@ -628,7 +628,7 @@ src/bundle/BundleStorageMemory.s: src/bundle/BundleStorageMemory.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleStorageMemory.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleStorageMemory.cpp.s
 .PHONY : src/bundle/BundleStorageMemory.cpp.s
 
 src/bundle/BundleThread.o: src/bundle/BundleThread.cpp.o
@@ -636,7 +636,7 @@ src/bundle/BundleThread.o: src/bundle/BundleThread.cpp.o
 
 # target to build an object file
 src/bundle/BundleThread.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.o
 .PHONY : src/bundle/BundleThread.cpp.o
 
 src/bundle/BundleThread.i: src/bundle/BundleThread.cpp.i
@@ -644,7 +644,7 @@ src/bundle/BundleThread.i: src/bundle/BundleThread.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleThread.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.i
 .PHONY : src/bundle/BundleThread.cpp.i
 
 src/bundle/BundleThread.s: src/bundle/BundleThread.cpp.s
@@ -652,7 +652,7 @@ src/bundle/BundleThread.s: src/bundle/BundleThread.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleThread.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleThread.cpp.s
 .PHONY : src/bundle/BundleThread.cpp.s
 
 src/bundle/BundleUtils.o: src/bundle/BundleUtils.cpp.o
@@ -660,7 +660,7 @@ src/bundle/BundleUtils.o: src/bundle/BundleUtils.cpp.o
 
 # target to build an object file
 src/bundle/BundleUtils.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.o
 .PHONY : src/bundle/BundleUtils.cpp.o
 
 src/bundle/BundleUtils.i: src/bundle/BundleUtils.cpp.i
@@ -668,7 +668,7 @@ src/bundle/BundleUtils.i: src/bundle/BundleUtils.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleUtils.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.i
 .PHONY : src/bundle/BundleUtils.cpp.i
 
 src/bundle/BundleUtils.s: src/bundle/BundleUtils.cpp.s
@@ -676,7 +676,7 @@ src/bundle/BundleUtils.s: src/bundle/BundleUtils.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleUtils.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleUtils.cpp.s
 .PHONY : src/bundle/BundleUtils.cpp.s
 
 src/bundle/BundleVersion.o: src/bundle/BundleVersion.cpp.o
@@ -684,7 +684,7 @@ src/bundle/BundleVersion.o: src/bundle/BundleVersion.cpp.o
 
 # target to build an object file
 src/bundle/BundleVersion.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.o
 .PHONY : src/bundle/BundleVersion.cpp.o
 
 src/bundle/BundleVersion.i: src/bundle/BundleVersion.cpp.i
@@ -692,7 +692,7 @@ src/bundle/BundleVersion.i: src/bundle/BundleVersion.cpp.i
 
 # target to preprocess a source file
 src/bundle/BundleVersion.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.i
 .PHONY : src/bundle/BundleVersion.cpp.i
 
 src/bundle/BundleVersion.s: src/bundle/BundleVersion.cpp.s
@@ -700,7 +700,7 @@ src/bundle/BundleVersion.s: src/bundle/BundleVersion.cpp.s
 
 # target to generate assembly for a file
 src/bundle/BundleVersion.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/BundleVersion.cpp.s
 .PHONY : src/bundle/BundleVersion.cpp.s
 
 src/bundle/Constants.o: src/bundle/Constants.cpp.o
@@ -708,7 +708,7 @@ src/bundle/Constants.o: src/bundle/Constants.cpp.o
 
 # target to build an object file
 src/bundle/Constants.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.o
 .PHONY : src/bundle/Constants.cpp.o
 
 src/bundle/Constants.i: src/bundle/Constants.cpp.i
@@ -716,7 +716,7 @@ src/bundle/Constants.i: src/bundle/Constants.cpp.i
 
 # target to preprocess a source file
 src/bundle/Constants.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.i
 .PHONY : src/bundle/Constants.cpp.i
 
 src/bundle/Constants.s: src/bundle/Constants.cpp.s
@@ -724,7 +724,7 @@ src/bundle/Constants.s: src/bundle/Constants.cpp.s
 
 # target to generate assembly for a file
 src/bundle/Constants.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/Constants.cpp.s
 .PHONY : src/bundle/Constants.cpp.s
 
 src/bundle/CoreBundleContext.o: src/bundle/CoreBundleContext.cpp.o
@@ -732,7 +732,7 @@ src/bundle/CoreBundleContext.o: src/bundle/CoreBundleContext.cpp.o
 
 # target to build an object file
 src/bundle/CoreBundleContext.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.o
 .PHONY : src/bundle/CoreBundleContext.cpp.o
 
 src/bundle/CoreBundleContext.i: src/bundle/CoreBundleContext.cpp.i
@@ -740,7 +740,7 @@ src/bundle/CoreBundleContext.i: src/bundle/CoreBundleContext.cpp.i
 
 # target to preprocess a source file
 src/bundle/CoreBundleContext.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.i
 .PHONY : src/bundle/CoreBundleContext.cpp.i
 
 src/bundle/CoreBundleContext.s: src/bundle/CoreBundleContext.cpp.s
@@ -748,7 +748,7 @@ src/bundle/CoreBundleContext.s: src/bundle/CoreBundleContext.cpp.s
 
 # target to generate assembly for a file
 src/bundle/CoreBundleContext.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/bundle/CoreBundleContext.cpp.s
 .PHONY : src/bundle/CoreBundleContext.cpp.s
 
 src/service/ListenerToken.o: src/service/ListenerToken.cpp.o
@@ -756,7 +756,7 @@ src/service/ListenerToken.o: src/service/ListenerToken.cpp.o
 
 # target to build an object file
 src/service/ListenerToken.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.o
 .PHONY : src/service/ListenerToken.cpp.o
 
 src/service/ListenerToken.i: src/service/ListenerToken.cpp.i
@@ -764,7 +764,7 @@ src/service/ListenerToken.i: src/service/ListenerToken.cpp.i
 
 # target to preprocess a source file
 src/service/ListenerToken.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.i
 .PHONY : src/service/ListenerToken.cpp.i
 
 src/service/ListenerToken.s: src/service/ListenerToken.cpp.s
@@ -772,7 +772,7 @@ src/service/ListenerToken.s: src/service/ListenerToken.cpp.s
 
 # target to generate assembly for a file
 src/service/ListenerToken.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ListenerToken.cpp.s
 .PHONY : src/service/ListenerToken.cpp.s
 
 src/service/ServiceEvent.o: src/service/ServiceEvent.cpp.o
@@ -780,7 +780,7 @@ src/service/ServiceEvent.o: src/service/ServiceEvent.cpp.o
 
 # target to build an object file
 src/service/ServiceEvent.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.o
 .PHONY : src/service/ServiceEvent.cpp.o
 
 src/service/ServiceEvent.i: src/service/ServiceEvent.cpp.i
@@ -788,7 +788,7 @@ src/service/ServiceEvent.i: src/service/ServiceEvent.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceEvent.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.i
 .PHONY : src/service/ServiceEvent.cpp.i
 
 src/service/ServiceEvent.s: src/service/ServiceEvent.cpp.s
@@ -796,7 +796,7 @@ src/service/ServiceEvent.s: src/service/ServiceEvent.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceEvent.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEvent.cpp.s
 .PHONY : src/service/ServiceEvent.cpp.s
 
 src/service/ServiceEventListenerHook.o: src/service/ServiceEventListenerHook.cpp.o
@@ -804,7 +804,7 @@ src/service/ServiceEventListenerHook.o: src/service/ServiceEventListenerHook.cpp
 
 # target to build an object file
 src/service/ServiceEventListenerHook.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.o
 .PHONY : src/service/ServiceEventListenerHook.cpp.o
 
 src/service/ServiceEventListenerHook.i: src/service/ServiceEventListenerHook.cpp.i
@@ -812,7 +812,7 @@ src/service/ServiceEventListenerHook.i: src/service/ServiceEventListenerHook.cpp
 
 # target to preprocess a source file
 src/service/ServiceEventListenerHook.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.i
 .PHONY : src/service/ServiceEventListenerHook.cpp.i
 
 src/service/ServiceEventListenerHook.s: src/service/ServiceEventListenerHook.cpp.s
@@ -820,7 +820,7 @@ src/service/ServiceEventListenerHook.s: src/service/ServiceEventListenerHook.cpp
 
 # target to generate assembly for a file
 src/service/ServiceEventListenerHook.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceEventListenerHook.cpp.s
 .PHONY : src/service/ServiceEventListenerHook.cpp.s
 
 src/service/ServiceException.o: src/service/ServiceException.cpp.o
@@ -828,7 +828,7 @@ src/service/ServiceException.o: src/service/ServiceException.cpp.o
 
 # target to build an object file
 src/service/ServiceException.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.o
 .PHONY : src/service/ServiceException.cpp.o
 
 src/service/ServiceException.i: src/service/ServiceException.cpp.i
@@ -836,7 +836,7 @@ src/service/ServiceException.i: src/service/ServiceException.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceException.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.i
 .PHONY : src/service/ServiceException.cpp.i
 
 src/service/ServiceException.s: src/service/ServiceException.cpp.s
@@ -844,7 +844,7 @@ src/service/ServiceException.s: src/service/ServiceException.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceException.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceException.cpp.s
 .PHONY : src/service/ServiceException.cpp.s
 
 src/service/ServiceFindHook.o: src/service/ServiceFindHook.cpp.o
@@ -852,7 +852,7 @@ src/service/ServiceFindHook.o: src/service/ServiceFindHook.cpp.o
 
 # target to build an object file
 src/service/ServiceFindHook.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.o
 .PHONY : src/service/ServiceFindHook.cpp.o
 
 src/service/ServiceFindHook.i: src/service/ServiceFindHook.cpp.i
@@ -860,7 +860,7 @@ src/service/ServiceFindHook.i: src/service/ServiceFindHook.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceFindHook.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.i
 .PHONY : src/service/ServiceFindHook.cpp.i
 
 src/service/ServiceFindHook.s: src/service/ServiceFindHook.cpp.s
@@ -868,7 +868,7 @@ src/service/ServiceFindHook.s: src/service/ServiceFindHook.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceFindHook.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceFindHook.cpp.s
 .PHONY : src/service/ServiceFindHook.cpp.s
 
 src/service/ServiceHooks.o: src/service/ServiceHooks.cpp.o
@@ -876,7 +876,7 @@ src/service/ServiceHooks.o: src/service/ServiceHooks.cpp.o
 
 # target to build an object file
 src/service/ServiceHooks.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.o
 .PHONY : src/service/ServiceHooks.cpp.o
 
 src/service/ServiceHooks.i: src/service/ServiceHooks.cpp.i
@@ -884,7 +884,7 @@ src/service/ServiceHooks.i: src/service/ServiceHooks.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceHooks.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.i
 .PHONY : src/service/ServiceHooks.cpp.i
 
 src/service/ServiceHooks.s: src/service/ServiceHooks.cpp.s
@@ -892,7 +892,7 @@ src/service/ServiceHooks.s: src/service/ServiceHooks.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceHooks.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceHooks.cpp.s
 .PHONY : src/service/ServiceHooks.cpp.s
 
 src/service/ServiceListenerEntry.o: src/service/ServiceListenerEntry.cpp.o
@@ -900,7 +900,7 @@ src/service/ServiceListenerEntry.o: src/service/ServiceListenerEntry.cpp.o
 
 # target to build an object file
 src/service/ServiceListenerEntry.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.o
 .PHONY : src/service/ServiceListenerEntry.cpp.o
 
 src/service/ServiceListenerEntry.i: src/service/ServiceListenerEntry.cpp.i
@@ -908,7 +908,7 @@ src/service/ServiceListenerEntry.i: src/service/ServiceListenerEntry.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceListenerEntry.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.i
 .PHONY : src/service/ServiceListenerEntry.cpp.i
 
 src/service/ServiceListenerEntry.s: src/service/ServiceListenerEntry.cpp.s
@@ -916,7 +916,7 @@ src/service/ServiceListenerEntry.s: src/service/ServiceListenerEntry.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceListenerEntry.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerEntry.cpp.s
 .PHONY : src/service/ServiceListenerEntry.cpp.s
 
 src/service/ServiceListenerHook.o: src/service/ServiceListenerHook.cpp.o
@@ -924,7 +924,7 @@ src/service/ServiceListenerHook.o: src/service/ServiceListenerHook.cpp.o
 
 # target to build an object file
 src/service/ServiceListenerHook.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.o
 .PHONY : src/service/ServiceListenerHook.cpp.o
 
 src/service/ServiceListenerHook.i: src/service/ServiceListenerHook.cpp.i
@@ -932,7 +932,7 @@ src/service/ServiceListenerHook.i: src/service/ServiceListenerHook.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceListenerHook.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.i
 .PHONY : src/service/ServiceListenerHook.cpp.i
 
 src/service/ServiceListenerHook.s: src/service/ServiceListenerHook.cpp.s
@@ -940,7 +940,7 @@ src/service/ServiceListenerHook.s: src/service/ServiceListenerHook.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceListenerHook.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListenerHook.cpp.s
 .PHONY : src/service/ServiceListenerHook.cpp.s
 
 src/service/ServiceListeners.o: src/service/ServiceListeners.cpp.o
@@ -948,7 +948,7 @@ src/service/ServiceListeners.o: src/service/ServiceListeners.cpp.o
 
 # target to build an object file
 src/service/ServiceListeners.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.o
 .PHONY : src/service/ServiceListeners.cpp.o
 
 src/service/ServiceListeners.i: src/service/ServiceListeners.cpp.i
@@ -956,7 +956,7 @@ src/service/ServiceListeners.i: src/service/ServiceListeners.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceListeners.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.i
 .PHONY : src/service/ServiceListeners.cpp.i
 
 src/service/ServiceListeners.s: src/service/ServiceListeners.cpp.s
@@ -964,7 +964,7 @@ src/service/ServiceListeners.s: src/service/ServiceListeners.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceListeners.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceListeners.cpp.s
 .PHONY : src/service/ServiceListeners.cpp.s
 
 src/service/ServiceObjects.o: src/service/ServiceObjects.cpp.o
@@ -972,7 +972,7 @@ src/service/ServiceObjects.o: src/service/ServiceObjects.cpp.o
 
 # target to build an object file
 src/service/ServiceObjects.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.o
 .PHONY : src/service/ServiceObjects.cpp.o
 
 src/service/ServiceObjects.i: src/service/ServiceObjects.cpp.i
@@ -980,7 +980,7 @@ src/service/ServiceObjects.i: src/service/ServiceObjects.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceObjects.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.i
 .PHONY : src/service/ServiceObjects.cpp.i
 
 src/service/ServiceObjects.s: src/service/ServiceObjects.cpp.s
@@ -988,7 +988,7 @@ src/service/ServiceObjects.s: src/service/ServiceObjects.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceObjects.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceObjects.cpp.s
 .PHONY : src/service/ServiceObjects.cpp.s
 
 src/service/ServiceReferenceBase.o: src/service/ServiceReferenceBase.cpp.o
@@ -996,7 +996,7 @@ src/service/ServiceReferenceBase.o: src/service/ServiceReferenceBase.cpp.o
 
 # target to build an object file
 src/service/ServiceReferenceBase.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.o
 .PHONY : src/service/ServiceReferenceBase.cpp.o
 
 src/service/ServiceReferenceBase.i: src/service/ServiceReferenceBase.cpp.i
@@ -1004,7 +1004,7 @@ src/service/ServiceReferenceBase.i: src/service/ServiceReferenceBase.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceReferenceBase.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.i
 .PHONY : src/service/ServiceReferenceBase.cpp.i
 
 src/service/ServiceReferenceBase.s: src/service/ServiceReferenceBase.cpp.s
@@ -1012,7 +1012,7 @@ src/service/ServiceReferenceBase.s: src/service/ServiceReferenceBase.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceReferenceBase.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBase.cpp.s
 .PHONY : src/service/ServiceReferenceBase.cpp.s
 
 src/service/ServiceReferenceBasePrivate.o: src/service/ServiceReferenceBasePrivate.cpp.o
@@ -1020,7 +1020,7 @@ src/service/ServiceReferenceBasePrivate.o: src/service/ServiceReferenceBasePriva
 
 # target to build an object file
 src/service/ServiceReferenceBasePrivate.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.o
 .PHONY : src/service/ServiceReferenceBasePrivate.cpp.o
 
 src/service/ServiceReferenceBasePrivate.i: src/service/ServiceReferenceBasePrivate.cpp.i
@@ -1028,7 +1028,7 @@ src/service/ServiceReferenceBasePrivate.i: src/service/ServiceReferenceBasePriva
 
 # target to preprocess a source file
 src/service/ServiceReferenceBasePrivate.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.i
 .PHONY : src/service/ServiceReferenceBasePrivate.cpp.i
 
 src/service/ServiceReferenceBasePrivate.s: src/service/ServiceReferenceBasePrivate.cpp.s
@@ -1036,7 +1036,7 @@ src/service/ServiceReferenceBasePrivate.s: src/service/ServiceReferenceBasePriva
 
 # target to generate assembly for a file
 src/service/ServiceReferenceBasePrivate.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceReferenceBasePrivate.cpp.s
 .PHONY : src/service/ServiceReferenceBasePrivate.cpp.s
 
 src/service/ServiceRegistrationBase.o: src/service/ServiceRegistrationBase.cpp.o
@@ -1044,7 +1044,7 @@ src/service/ServiceRegistrationBase.o: src/service/ServiceRegistrationBase.cpp.o
 
 # target to build an object file
 src/service/ServiceRegistrationBase.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.o
 .PHONY : src/service/ServiceRegistrationBase.cpp.o
 
 src/service/ServiceRegistrationBase.i: src/service/ServiceRegistrationBase.cpp.i
@@ -1052,7 +1052,7 @@ src/service/ServiceRegistrationBase.i: src/service/ServiceRegistrationBase.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceRegistrationBase.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.i
 .PHONY : src/service/ServiceRegistrationBase.cpp.i
 
 src/service/ServiceRegistrationBase.s: src/service/ServiceRegistrationBase.cpp.s
@@ -1060,7 +1060,7 @@ src/service/ServiceRegistrationBase.s: src/service/ServiceRegistrationBase.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceRegistrationBase.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBase.cpp.s
 .PHONY : src/service/ServiceRegistrationBase.cpp.s
 
 src/service/ServiceRegistrationBasePrivate.o: src/service/ServiceRegistrationBasePrivate.cpp.o
@@ -1068,7 +1068,7 @@ src/service/ServiceRegistrationBasePrivate.o: src/service/ServiceRegistrationBas
 
 # target to build an object file
 src/service/ServiceRegistrationBasePrivate.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.o
 .PHONY : src/service/ServiceRegistrationBasePrivate.cpp.o
 
 src/service/ServiceRegistrationBasePrivate.i: src/service/ServiceRegistrationBasePrivate.cpp.i
@@ -1076,7 +1076,7 @@ src/service/ServiceRegistrationBasePrivate.i: src/service/ServiceRegistrationBas
 
 # target to preprocess a source file
 src/service/ServiceRegistrationBasePrivate.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.i
 .PHONY : src/service/ServiceRegistrationBasePrivate.cpp.i
 
 src/service/ServiceRegistrationBasePrivate.s: src/service/ServiceRegistrationBasePrivate.cpp.s
@@ -1084,7 +1084,7 @@ src/service/ServiceRegistrationBasePrivate.s: src/service/ServiceRegistrationBas
 
 # target to generate assembly for a file
 src/service/ServiceRegistrationBasePrivate.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistrationBasePrivate.cpp.s
 .PHONY : src/service/ServiceRegistrationBasePrivate.cpp.s
 
 src/service/ServiceRegistry.o: src/service/ServiceRegistry.cpp.o
@@ -1092,7 +1092,7 @@ src/service/ServiceRegistry.o: src/service/ServiceRegistry.cpp.o
 
 # target to build an object file
 src/service/ServiceRegistry.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.o
 .PHONY : src/service/ServiceRegistry.cpp.o
 
 src/service/ServiceRegistry.i: src/service/ServiceRegistry.cpp.i
@@ -1100,7 +1100,7 @@ src/service/ServiceRegistry.i: src/service/ServiceRegistry.cpp.i
 
 # target to preprocess a source file
 src/service/ServiceRegistry.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.i
 .PHONY : src/service/ServiceRegistry.cpp.i
 
 src/service/ServiceRegistry.s: src/service/ServiceRegistry.cpp.s
@@ -1108,7 +1108,7 @@ src/service/ServiceRegistry.s: src/service/ServiceRegistry.cpp.s
 
 # target to generate assembly for a file
 src/service/ServiceRegistry.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/service/ServiceRegistry.cpp.s
 .PHONY : src/service/ServiceRegistry.cpp.s
 
 src/util/Any.o: src/util/Any.cpp.o
@@ -1116,7 +1116,7 @@ src/util/Any.o: src/util/Any.cpp.o
 
 # target to build an object file
 src/util/Any.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.o
 .PHONY : src/util/Any.cpp.o
 
 src/util/Any.i: src/util/Any.cpp.i
@@ -1124,7 +1124,7 @@ src/util/Any.i: src/util/Any.cpp.i
 
 # target to preprocess a source file
 src/util/Any.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.i
 .PHONY : src/util/Any.cpp.i
 
 src/util/Any.s: src/util/Any.cpp.s
@@ -1132,7 +1132,7 @@ src/util/Any.s: src/util/Any.cpp.s
 
 # target to generate assembly for a file
 src/util/Any.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Any.cpp.s
 .PHONY : src/util/Any.cpp.s
 
 src/util/AnyMap.o: src/util/AnyMap.cpp.o
@@ -1140,7 +1140,7 @@ src/util/AnyMap.o: src/util/AnyMap.cpp.o
 
 # target to build an object file
 src/util/AnyMap.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.o
 .PHONY : src/util/AnyMap.cpp.o
 
 src/util/AnyMap.i: src/util/AnyMap.cpp.i
@@ -1148,7 +1148,7 @@ src/util/AnyMap.i: src/util/AnyMap.cpp.i
 
 # target to preprocess a source file
 src/util/AnyMap.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.i
 .PHONY : src/util/AnyMap.cpp.i
 
 src/util/AnyMap.s: src/util/AnyMap.cpp.s
@@ -1156,7 +1156,7 @@ src/util/AnyMap.s: src/util/AnyMap.cpp.s
 
 # target to generate assembly for a file
 src/util/AnyMap.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/AnyMap.cpp.s
 .PHONY : src/util/AnyMap.cpp.s
 
 src/util/Framework.o: src/util/Framework.cpp.o
@@ -1164,7 +1164,7 @@ src/util/Framework.o: src/util/Framework.cpp.o
 
 # target to build an object file
 src/util/Framework.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.o
 .PHONY : src/util/Framework.cpp.o
 
 src/util/Framework.i: src/util/Framework.cpp.i
@@ -1172,7 +1172,7 @@ src/util/Framework.i: src/util/Framework.cpp.i
 
 # target to preprocess a source file
 src/util/Framework.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.i
 .PHONY : src/util/Framework.cpp.i
 
 src/util/Framework.s: src/util/Framework.cpp.s
@@ -1180,7 +1180,7 @@ src/util/Framework.s: src/util/Framework.cpp.s
 
 # target to generate assembly for a file
 src/util/Framework.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Framework.cpp.s
 .PHONY : src/util/Framework.cpp.s
 
 src/util/FrameworkEvent.o: src/util/FrameworkEvent.cpp.o
@@ -1188,7 +1188,7 @@ src/util/FrameworkEvent.o: src/util/FrameworkEvent.cpp.o
 
 # target to build an object file
 src/util/FrameworkEvent.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.o
 .PHONY : src/util/FrameworkEvent.cpp.o
 
 src/util/FrameworkEvent.i: src/util/FrameworkEvent.cpp.i
@@ -1196,7 +1196,7 @@ src/util/FrameworkEvent.i: src/util/FrameworkEvent.cpp.i
 
 # target to preprocess a source file
 src/util/FrameworkEvent.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.i
 .PHONY : src/util/FrameworkEvent.cpp.i
 
 src/util/FrameworkEvent.s: src/util/FrameworkEvent.cpp.s
@@ -1204,7 +1204,7 @@ src/util/FrameworkEvent.s: src/util/FrameworkEvent.cpp.s
 
 # target to generate assembly for a file
 src/util/FrameworkEvent.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkEvent.cpp.s
 .PHONY : src/util/FrameworkEvent.cpp.s
 
 src/util/FrameworkFactory.o: src/util/FrameworkFactory.cpp.o
@@ -1212,7 +1212,7 @@ src/util/FrameworkFactory.o: src/util/FrameworkFactory.cpp.o
 
 # target to build an object file
 src/util/FrameworkFactory.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.o
 .PHONY : src/util/FrameworkFactory.cpp.o
 
 src/util/FrameworkFactory.i: src/util/FrameworkFactory.cpp.i
@@ -1220,7 +1220,7 @@ src/util/FrameworkFactory.i: src/util/FrameworkFactory.cpp.i
 
 # target to preprocess a source file
 src/util/FrameworkFactory.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.i
 .PHONY : src/util/FrameworkFactory.cpp.i
 
 src/util/FrameworkFactory.s: src/util/FrameworkFactory.cpp.s
@@ -1228,7 +1228,7 @@ src/util/FrameworkFactory.s: src/util/FrameworkFactory.cpp.s
 
 # target to generate assembly for a file
 src/util/FrameworkFactory.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkFactory.cpp.s
 .PHONY : src/util/FrameworkFactory.cpp.s
 
 src/util/FrameworkPrivate.o: src/util/FrameworkPrivate.cpp.o
@@ -1236,7 +1236,7 @@ src/util/FrameworkPrivate.o: src/util/FrameworkPrivate.cpp.o
 
 # target to build an object file
 src/util/FrameworkPrivate.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.o
 .PHONY : src/util/FrameworkPrivate.cpp.o
 
 src/util/FrameworkPrivate.i: src/util/FrameworkPrivate.cpp.i
@@ -1244,7 +1244,7 @@ src/util/FrameworkPrivate.i: src/util/FrameworkPrivate.cpp.i
 
 # target to preprocess a source file
 src/util/FrameworkPrivate.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.i
 .PHONY : src/util/FrameworkPrivate.cpp.i
 
 src/util/FrameworkPrivate.s: src/util/FrameworkPrivate.cpp.s
@@ -1252,7 +1252,7 @@ src/util/FrameworkPrivate.s: src/util/FrameworkPrivate.cpp.s
 
 # target to generate assembly for a file
 src/util/FrameworkPrivate.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/FrameworkPrivate.cpp.s
 .PHONY : src/util/FrameworkPrivate.cpp.s
 
 src/util/LDAPExpr.o: src/util/LDAPExpr.cpp.o
@@ -1260,7 +1260,7 @@ src/util/LDAPExpr.o: src/util/LDAPExpr.cpp.o
 
 # target to build an object file
 src/util/LDAPExpr.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.o
 .PHONY : src/util/LDAPExpr.cpp.o
 
 src/util/LDAPExpr.i: src/util/LDAPExpr.cpp.i
@@ -1268,7 +1268,7 @@ src/util/LDAPExpr.i: src/util/LDAPExpr.cpp.i
 
 # target to preprocess a source file
 src/util/LDAPExpr.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.i
 .PHONY : src/util/LDAPExpr.cpp.i
 
 src/util/LDAPExpr.s: src/util/LDAPExpr.cpp.s
@@ -1276,7 +1276,7 @@ src/util/LDAPExpr.s: src/util/LDAPExpr.cpp.s
 
 # target to generate assembly for a file
 src/util/LDAPExpr.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPExpr.cpp.s
 .PHONY : src/util/LDAPExpr.cpp.s
 
 src/util/LDAPFilter.o: src/util/LDAPFilter.cpp.o
@@ -1284,7 +1284,7 @@ src/util/LDAPFilter.o: src/util/LDAPFilter.cpp.o
 
 # target to build an object file
 src/util/LDAPFilter.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.o
 .PHONY : src/util/LDAPFilter.cpp.o
 
 src/util/LDAPFilter.i: src/util/LDAPFilter.cpp.i
@@ -1292,7 +1292,7 @@ src/util/LDAPFilter.i: src/util/LDAPFilter.cpp.i
 
 # target to preprocess a source file
 src/util/LDAPFilter.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.i
 .PHONY : src/util/LDAPFilter.cpp.i
 
 src/util/LDAPFilter.s: src/util/LDAPFilter.cpp.s
@@ -1300,7 +1300,7 @@ src/util/LDAPFilter.s: src/util/LDAPFilter.cpp.s
 
 # target to generate assembly for a file
 src/util/LDAPFilter.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPFilter.cpp.s
 .PHONY : src/util/LDAPFilter.cpp.s
 
 src/util/LDAPProp.o: src/util/LDAPProp.cpp.o
@@ -1308,7 +1308,7 @@ src/util/LDAPProp.o: src/util/LDAPProp.cpp.o
 
 # target to build an object file
 src/util/LDAPProp.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.o
 .PHONY : src/util/LDAPProp.cpp.o
 
 src/util/LDAPProp.i: src/util/LDAPProp.cpp.i
@@ -1316,7 +1316,7 @@ src/util/LDAPProp.i: src/util/LDAPProp.cpp.i
 
 # target to preprocess a source file
 src/util/LDAPProp.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.i
 .PHONY : src/util/LDAPProp.cpp.i
 
 src/util/LDAPProp.s: src/util/LDAPProp.cpp.s
@@ -1324,7 +1324,7 @@ src/util/LDAPProp.s: src/util/LDAPProp.cpp.s
 
 # target to generate assembly for a file
 src/util/LDAPProp.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/LDAPProp.cpp.s
 .PHONY : src/util/LDAPProp.cpp.s
 
 src/util/Properties.o: src/util/Properties.cpp.o
@@ -1332,7 +1332,7 @@ src/util/Properties.o: src/util/Properties.cpp.o
 
 # target to build an object file
 src/util/Properties.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.o
 .PHONY : src/util/Properties.cpp.o
 
 src/util/Properties.i: src/util/Properties.cpp.i
@@ -1340,7 +1340,7 @@ src/util/Properties.i: src/util/Properties.cpp.i
 
 # target to preprocess a source file
 src/util/Properties.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.i
 .PHONY : src/util/Properties.cpp.i
 
 src/util/Properties.s: src/util/Properties.cpp.s
@@ -1348,7 +1348,7 @@ src/util/Properties.s: src/util/Properties.cpp.s
 
 # target to generate assembly for a file
 src/util/Properties.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Properties.cpp.s
 .PHONY : src/util/Properties.cpp.s
 
 src/util/SharedLibrary.o: src/util/SharedLibrary.cpp.o
@@ -1356,7 +1356,7 @@ src/util/SharedLibrary.o: src/util/SharedLibrary.cpp.o
 
 # target to build an object file
 src/util/SharedLibrary.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.o
 .PHONY : src/util/SharedLibrary.cpp.o
 
 src/util/SharedLibrary.i: src/util/SharedLibrary.cpp.i
@@ -1364,7 +1364,7 @@ src/util/SharedLibrary.i: src/util/SharedLibrary.cpp.i
 
 # target to preprocess a source file
 src/util/SharedLibrary.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.i
 .PHONY : src/util/SharedLibrary.cpp.i
 
 src/util/SharedLibrary.s: src/util/SharedLibrary.cpp.s
@@ -1372,7 +1372,7 @@ src/util/SharedLibrary.s: src/util/SharedLibrary.cpp.s
 
 # target to generate assembly for a file
 src/util/SharedLibrary.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibrary.cpp.s
 .PHONY : src/util/SharedLibrary.cpp.s
 
 src/util/SharedLibraryException.o: src/util/SharedLibraryException.cpp.o
@@ -1380,7 +1380,7 @@ src/util/SharedLibraryException.o: src/util/SharedLibraryException.cpp.o
 
 # target to build an object file
 src/util/SharedLibraryException.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.o
 .PHONY : src/util/SharedLibraryException.cpp.o
 
 src/util/SharedLibraryException.i: src/util/SharedLibraryException.cpp.i
@@ -1388,7 +1388,7 @@ src/util/SharedLibraryException.i: src/util/SharedLibraryException.cpp.i
 
 # target to preprocess a source file
 src/util/SharedLibraryException.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.i
 .PHONY : src/util/SharedLibraryException.cpp.i
 
 src/util/SharedLibraryException.s: src/util/SharedLibraryException.cpp.s
@@ -1396,7 +1396,7 @@ src/util/SharedLibraryException.s: src/util/SharedLibraryException.cpp.s
 
 # target to generate assembly for a file
 src/util/SharedLibraryException.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/SharedLibraryException.cpp.s
 .PHONY : src/util/SharedLibraryException.cpp.s
 
 src/util/Utils.o: src/util/Utils.cpp.o
@@ -1404,7 +1404,7 @@ src/util/Utils.o: src/util/Utils.cpp.o
 
 # target to build an object file
 src/util/Utils.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.o
 .PHONY : src/util/Utils.cpp.o
 
 src/util/Utils.i: src/util/Utils.cpp.i
@@ -1412,7 +1412,7 @@ src/util/Utils.i: src/util/Utils.cpp.i
 
 # target to preprocess a source file
 src/util/Utils.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.i
 .PHONY : src/util/Utils.cpp.i
 
 src/util/Utils.s: src/util/Utils.cpp.s
@@ -1420,7 +1420,7 @@ src/util/Utils.s: src/util/Utils.cpp.s
 
 # target to generate assembly for a file
 src/util/Utils.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f framework/CMakeFiles/CppMicroServices.dir/build.make framework/CMakeFiles/CppMicroServices.dir/src/util/Utils.cpp.s
 .PHONY : src/util/Utils.cpp.s
 
 # Help Target
@@ -1603,6 +1603,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

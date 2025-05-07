@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/tools/SCRCodeGen/../../../third_party -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/googletest/googletest/include -I/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/googletest/googlemock/include
+CXX_INCLUDES = -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/tools/SCRCodeGen/../../../third_party -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/googletest/googletest/include -I/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/googletest/googlemock/include
 
 CXX_FLAGS =   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations -g -std=c++14
 

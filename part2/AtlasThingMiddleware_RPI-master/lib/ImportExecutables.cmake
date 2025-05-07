@@ -55,13 +55,13 @@ add_executable(native-SCRCodeGen IMPORTED)
 # Import target "native-usResourceCompiler" for configuration "Debug"
 set_property(TARGET native-usResourceCompiler APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(native-usResourceCompiler PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4"
   )
 
 # Import target "native-SCRCodeGen" for configuration "Debug"
 set_property(TARGET native-SCRCodeGen APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(native-SCRCodeGen PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/bin/SCRCodeGen4"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/bin/SCRCodeGen4"
   )
 
 # This file does not depend on other imported targets which have

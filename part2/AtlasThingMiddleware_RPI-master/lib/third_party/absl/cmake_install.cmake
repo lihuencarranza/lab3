@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/absl
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/absl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

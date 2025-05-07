@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/miniz.c" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/miniz.c.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/miniz.c.o.d"
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/rc/ResourceCompiler.cpp" "tools/rc/CMakeFiles/usResourceCompiler.dir/ResourceCompiler.cpp.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/ResourceCompiler.cpp.o.d"
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/jsoncpp.cpp" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/jsoncpp.cpp.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/jsoncpp.cpp.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/miniz.c" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/miniz.c.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/miniz.c.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/rc/ResourceCompiler.cpp" "tools/rc/CMakeFiles/usResourceCompiler.dir/ResourceCompiler.cpp.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/ResourceCompiler.cpp.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/jsoncpp.cpp" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/jsoncpp.cpp.o" "gcc" "tools/rc/CMakeFiles/usResourceCompiler.dir/__/__/third_party/jsoncpp.cpp.o.d"
   )
 
 # Targets to which this target links.

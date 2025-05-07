@@ -52,7 +52,7 @@ add_executable(usResourceCompiler IMPORTED)
 # Import target "usResourceCompiler" for configuration "Debug"
 set_property(TARGET usResourceCompiler APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(usResourceCompiler PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4"
   )
 
 # This file does not depend on other imported targets which have

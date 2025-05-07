@@ -50,13 +50,13 @@ unset(_cmake_expected_targets)
 add_library(usLogService SHARED IMPORTED)
 
 set_target_properties(usLogService PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/include"
 )
 
 # Import target "usLogService" for configuration "Debug"
 set_property(TARGET usLogService APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(usLogService PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libusLogServiced.so"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libusLogServiced.so"
   IMPORTED_SONAME_DEBUG "libusLogServiced.so"
   )
 

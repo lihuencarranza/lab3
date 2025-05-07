@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusLogServiced.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libusLogServiced.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libusLogServiced.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusLogServiced.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusLogServiced.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -62,18 +62,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/include/cppmicroservices")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/include/cppmicroservices")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/include/cppmicroservices")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/include/cppmicroservices")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usLogServiceTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usLogServiceTargets.cmake"
-         "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets.cmake")
+         "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usLogServiceTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -86,16 +86,16 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usLogServiceTargets-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/usLogServiceConfig.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/usLogServiceConfigVersion.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/usLogServiceConfig.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/usLogServiceConfigVersion.cmake"
     )
 endif()
 

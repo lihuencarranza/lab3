@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/doc
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/doc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

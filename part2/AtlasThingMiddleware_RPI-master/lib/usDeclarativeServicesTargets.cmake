@@ -51,7 +51,7 @@ add_library(DeclarativeServices SHARED IMPORTED)
 
 set_target_properties(DeclarativeServices PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_variadic_templates;cxx_nullptr"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include"
   INTERFACE_LINK_LIBRARIES "CppMicroServices;dl;usLogService;usServiceComponent"
 )
 
@@ -60,21 +60,21 @@ add_library(CppMicroServices SHARED IMPORTED)
 
 set_target_properties(CppMicroServices PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_variadic_templates;cxx_nullptr"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/include;/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/framework/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/include;/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/include"
   INTERFACE_LINK_LIBRARIES "dl"
 )
 
 # Import target "DeclarativeServices" for configuration "Debug"
 set_property(TARGET DeclarativeServices APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(DeclarativeServices PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libDeclarativeServicesd.so.1.0.0"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libDeclarativeServicesd.so.1.0.0"
   IMPORTED_SONAME_DEBUG "libDeclarativeServicesd.so.1.0.0"
   )
 
 # Import target "CppMicroServices" for configuration "Debug"
 set_property(TARGET CppMicroServices APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(CppMicroServices PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libCppMicroServicesd.so.4.0.0"
+  IMPORTED_LOCATION_DEBUG "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libCppMicroServicesd.so.4.0.0"
   IMPORTED_SONAME_DEBUG "libCppMicroServicesd.so.4.0.0"
   )
 

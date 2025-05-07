@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/tools
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/tools/SCRCodeGen/cmake_install.cmake")
+  include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/tools/SCRCodeGen/cmake_install.cmake")
 
 endif()
 

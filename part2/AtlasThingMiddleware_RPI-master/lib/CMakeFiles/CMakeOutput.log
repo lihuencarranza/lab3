@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/3.25.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/3.25.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,15 +23,15 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CxMwo6
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5BilGq
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5cb47/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5cb47.dir/build.make CMakeFiles/cmTC_5cb47.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CxMwo6'
-Building C object CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f6424/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6424.dir/build.make CMakeFiles/cmTC_f6424.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5BilGq'
+Building C object CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: aarch64-linux-gnu
@@ -39,8 +39,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5cb47.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccvWAOqo.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/'
+ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f6424.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccLNBlge.s
 GNU C17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)
 	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
 
@@ -62,15 +62,15 @@ GNU C17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)
 warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: f1bacec099212325d0da3c77e1f38897
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o /tmp/ccvWAOqo.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o /tmp/ccLNBlge.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_5cb47
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cb47.dir/link.txt --verbose=1
-/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -o cmTC_5cb47 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_f6424
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6424.dir/link.txt --verbose=1
+/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -o cmTC_f6424 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -81,10 +81,10 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5cb47' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_5cb47.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvTFghE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_5cb47 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5cb47' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_5cb47.'
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CxMwo6'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f6424' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f6424.'
+ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMdQ2KO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_f6424 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f6424' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f6424.'
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5BilGq'
 
 
 
@@ -105,12 +105,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CxMwo6]
+  ignore line: [Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5BilGq]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5cb47/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5cb47.dir/build.make CMakeFiles/cmTC_5cb47.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CxMwo6']
-  ignore line: [Building C object CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f6424/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6424.dir/build.make CMakeFiles/cmTC_f6424.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5BilGq']
+  ignore line: [Building C object CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [Target: aarch64-linux-gnu]
@@ -118,8 +118,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5cb47.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccvWAOqo.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f6424.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccLNBlge.s]
   ignore line: [GNU C17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)]
   ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
   ignore line: []
@@ -141,15 +141,15 @@ Parsed C implicit link information from above output:
   ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: f1bacec099212325d0da3c77e1f38897]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o /tmp/ccvWAOqo.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o /tmp/ccLNBlge.s]
   ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_5cb47]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cb47.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -o cmTC_5cb47 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_f6424]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6424.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -o cmTC_f6424 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
@@ -160,13 +160,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5cb47' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_5cb47.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvTFghE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_5cb47 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f6424' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f6424.']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMdQ2KO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_f6424 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvTFghE.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccMdQ2KO.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -185,7 +185,7 @@ Parsed C implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5cb47] ==> ignore
+    arg [cmTC_f6424] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
@@ -197,7 +197,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_5cb47.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_f6424.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -229,12 +229,12 @@ Parsed C implicit link information from above output:
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hHD3s3
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RrfL1B
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2fc9d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fc9d.dir/build.make CMakeFiles/cmTC_2fc9d.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hHD3s3'
-Building CXX object CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++   -v -o CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1a521/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1a521.dir/build.make CMakeFiles/cmTC_1a521.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RrfL1B'
+Building CXX object CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++   -v -o CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: aarch64-linux-gnu
@@ -242,8 +242,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2fc9d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccLeaPMa.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/'
+ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1a521.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccOf5rXG.s
 GNU C++17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)
 	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
 
@@ -269,15 +269,15 @@ GNU C++17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)
 warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 76d6f14273b9515783c50374b109b352
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLeaPMa.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccOf5rXG.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_2fc9d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fc9d.dir/link.txt --verbose=1
-/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2fc9d 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_1a521
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a521.dir/link.txt --verbose=1
+/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1a521 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -288,10 +288,10 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2fc9d' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_2fc9d.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUuPWJA.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_2fc9d /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2fc9d' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_2fc9d.'
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hHD3s3'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1a521' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1a521.'
+ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cckJyl70.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_1a521 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1a521' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1a521.'
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RrfL1B'
 
 
 
@@ -318,12 +318,12 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hHD3s3]
+  ignore line: [Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RrfL1B]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2fc9d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fc9d.dir/build.make CMakeFiles/cmTC_2fc9d.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hHD3s3']
-  ignore line: [Building CXX object CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1a521/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1a521.dir/build.make CMakeFiles/cmTC_1a521.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RrfL1B']
+  ignore line: [Building CXX object CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: aarch64-linux-gnu]
@@ -331,8 +331,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2fc9d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccLeaPMa.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1a521.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccOf5rXG.s]
   ignore line: [GNU C++17 (Debian 12.2.0-14) version 12.2.0 (aarch64-linux-gnu)]
   ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
   ignore line: []
@@ -358,15 +358,15 @@ Parsed CXX implicit link information from above output:
   ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 76d6f14273b9515783c50374b109b352]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccLeaPMa.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccOf5rXG.s]
   ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_2fc9d]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fc9d.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2fc9d ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_1a521]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a521.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1a521 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
@@ -377,13 +377,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2fc9d' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_2fc9d.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUuPWJA.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_2fc9d /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1a521' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1a521.']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cckJyl70.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_1a521 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccUuPWJA.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cckJyl70.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -402,7 +402,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2fc9d] ==> ignore
+    arg [cmTC_1a521] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
@@ -414,7 +414,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_2fc9d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_1a521.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -442,304 +442,304 @@ Parsed CXX implicit link information from above output:
 
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__fstack_protector_all succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-jDtunq
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SZFF55
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_77e76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77e76.dir/build.make CMakeFiles/cmTC_77e76.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-jDtunq'
-Building CXX object CMakeFiles/cmTC_77e76.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__fstack_protector_all  -fstack-protector-all -o CMakeFiles/cmTC_77e76.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-jDtunq/src.cxx
-Linking CXX executable cmTC_77e76
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77e76.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_77e76.dir/src.cxx.o -o cmTC_77e76 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-jDtunq'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_722e1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_722e1.dir/build.make CMakeFiles/cmTC_722e1.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SZFF55'
+Building CXX object CMakeFiles/cmTC_722e1.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__fstack_protector_all  -fstack-protector-all -o CMakeFiles/cmTC_722e1.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SZFF55/src.cxx
+Linking CXX executable cmTC_722e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_722e1.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_722e1.dir/src.cxx.o -o cmTC_722e1 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SZFF55'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Werror succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-U1543x
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-pN9FqG
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_25d1e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_25d1e.dir/build.make CMakeFiles/cmTC_25d1e.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-U1543x'
-Building CXX object CMakeFiles/cmTC_25d1e.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Werror  -Werror -o CMakeFiles/cmTC_25d1e.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-U1543x/src.cxx
-Linking CXX executable cmTC_25d1e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25d1e.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_25d1e.dir/src.cxx.o -o cmTC_25d1e 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-U1543x'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_343f6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_343f6.dir/build.make CMakeFiles/cmTC_343f6.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-pN9FqG'
+Building CXX object CMakeFiles/cmTC_343f6.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Werror  -Werror -o CMakeFiles/cmTC_343f6.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-pN9FqG/src.cxx
+Linking CXX executable cmTC_343f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_343f6.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_343f6.dir/src.cxx.o -o cmTC_343f6 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-pN9FqG'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wall succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XP2QMA
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-bck2tL
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2a76c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2a76c.dir/build.make CMakeFiles/cmTC_2a76c.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XP2QMA'
-Building CXX object CMakeFiles/cmTC_2a76c.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wall  -Wall -o CMakeFiles/cmTC_2a76c.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XP2QMA/src.cxx
-Linking CXX executable cmTC_2a76c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a76c.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_2a76c.dir/src.cxx.o -o cmTC_2a76c 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XP2QMA'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a9ba2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a9ba2.dir/build.make CMakeFiles/cmTC_a9ba2.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-bck2tL'
+Building CXX object CMakeFiles/cmTC_a9ba2.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wall  -Wall -o CMakeFiles/cmTC_a9ba2.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-bck2tL/src.cxx
+Linking CXX executable cmTC_a9ba2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9ba2.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_a9ba2.dir/src.cxx.o -o cmTC_a9ba2 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-bck2tL'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wextra succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9N4MFa
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5hVOYU
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f41fd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f41fd.dir/build.make CMakeFiles/cmTC_f41fd.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9N4MFa'
-Building CXX object CMakeFiles/cmTC_f41fd.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wextra  -Wextra -o CMakeFiles/cmTC_f41fd.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9N4MFa/src.cxx
-Linking CXX executable cmTC_f41fd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f41fd.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_f41fd.dir/src.cxx.o -o cmTC_f41fd 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9N4MFa'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b96d2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b96d2.dir/build.make CMakeFiles/cmTC_b96d2.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5hVOYU'
+Building CXX object CMakeFiles/cmTC_b96d2.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wextra  -Wextra -o CMakeFiles/cmTC_b96d2.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5hVOYU/src.cxx
+Linking CXX executable cmTC_b96d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b96d2.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_b96d2.dir/src.cxx.o -o cmTC_b96d2 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-5hVOYU'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wpointer_arith succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-B1Msp6
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yjSWw0
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ca836/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ca836.dir/build.make CMakeFiles/cmTC_ca836.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-B1Msp6'
-Building CXX object CMakeFiles/cmTC_ca836.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wpointer_arith  -Wpointer-arith -o CMakeFiles/cmTC_ca836.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-B1Msp6/src.cxx
-Linking CXX executable cmTC_ca836
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca836.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ca836.dir/src.cxx.o -o cmTC_ca836 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-B1Msp6'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_20a2a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_20a2a.dir/build.make CMakeFiles/cmTC_20a2a.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yjSWw0'
+Building CXX object CMakeFiles/cmTC_20a2a.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wpointer_arith  -Wpointer-arith -o CMakeFiles/cmTC_20a2a.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yjSWw0/src.cxx
+Linking CXX executable cmTC_20a2a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20a2a.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_20a2a.dir/src.cxx.o -o cmTC_20a2a 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yjSWw0'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Winvalid_pch succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-2ThJ0H
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-h7UofI
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_febd7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_febd7.dir/build.make CMakeFiles/cmTC_febd7.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-2ThJ0H'
-Building CXX object CMakeFiles/cmTC_febd7.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Winvalid_pch  -Winvalid-pch -o CMakeFiles/cmTC_febd7.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-2ThJ0H/src.cxx
-Linking CXX executable cmTC_febd7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_febd7.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_febd7.dir/src.cxx.o -o cmTC_febd7 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-2ThJ0H'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_81270/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_81270.dir/build.make CMakeFiles/cmTC_81270.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-h7UofI'
+Building CXX object CMakeFiles/cmTC_81270.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Winvalid_pch  -Winvalid-pch -o CMakeFiles/cmTC_81270.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-h7UofI/src.cxx
+Linking CXX executable cmTC_81270
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81270.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_81270.dir/src.cxx.o -o cmTC_81270 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-h7UofI'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wcast_align succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-ZsXQhg
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-93tzre
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_182e0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_182e0.dir/build.make CMakeFiles/cmTC_182e0.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-ZsXQhg'
-Building CXX object CMakeFiles/cmTC_182e0.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wcast_align  -Wcast-align -o CMakeFiles/cmTC_182e0.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-ZsXQhg/src.cxx
-Linking CXX executable cmTC_182e0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_182e0.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_182e0.dir/src.cxx.o -o cmTC_182e0 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-ZsXQhg'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3cc9c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3cc9c.dir/build.make CMakeFiles/cmTC_3cc9c.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-93tzre'
+Building CXX object CMakeFiles/cmTC_3cc9c.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wcast_align  -Wcast-align -o CMakeFiles/cmTC_3cc9c.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-93tzre/src.cxx
+Linking CXX executable cmTC_3cc9c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cc9c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3cc9c.dir/src.cxx.o -o cmTC_3cc9c 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-93tzre'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wwrite_strings succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RE28eQ
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-IZvXLG
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_af0e8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_af0e8.dir/build.make CMakeFiles/cmTC_af0e8.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RE28eQ'
-Building CXX object CMakeFiles/cmTC_af0e8.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wwrite_strings  -Wwrite-strings -o CMakeFiles/cmTC_af0e8.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RE28eQ/src.cxx
-Linking CXX executable cmTC_af0e8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af0e8.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_af0e8.dir/src.cxx.o -o cmTC_af0e8 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-RE28eQ'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f640/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0f640.dir/build.make CMakeFiles/cmTC_0f640.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-IZvXLG'
+Building CXX object CMakeFiles/cmTC_0f640.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wwrite_strings  -Wwrite-strings -o CMakeFiles/cmTC_0f640.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-IZvXLG/src.cxx
+Linking CXX executable cmTC_0f640
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f640.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_0f640.dir/src.cxx.o -o cmTC_0f640 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-IZvXLG'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Woverloaded_virtual succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-I3yyBD
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yvKGo3
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_727ad/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_727ad.dir/build.make CMakeFiles/cmTC_727ad.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-I3yyBD'
-Building CXX object CMakeFiles/cmTC_727ad.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Woverloaded_virtual  -Woverloaded-virtual -o CMakeFiles/cmTC_727ad.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-I3yyBD/src.cxx
-Linking CXX executable cmTC_727ad
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_727ad.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_727ad.dir/src.cxx.o -o cmTC_727ad 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-I3yyBD'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33c8a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33c8a.dir/build.make CMakeFiles/cmTC_33c8a.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yvKGo3'
+Building CXX object CMakeFiles/cmTC_33c8a.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Woverloaded_virtual  -Woverloaded-virtual -o CMakeFiles/cmTC_33c8a.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yvKGo3/src.cxx
+Linking CXX executable cmTC_33c8a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33c8a.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_33c8a.dir/src.cxx.o -o cmTC_33c8a 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-yvKGo3'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wnon_virtual_dtor succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9foXA4
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CXX5pf
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_28b69/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_28b69.dir/build.make CMakeFiles/cmTC_28b69.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9foXA4'
-Building CXX object CMakeFiles/cmTC_28b69.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wnon_virtual_dtor  -Wnon-virtual-dtor -o CMakeFiles/cmTC_28b69.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9foXA4/src.cxx
-Linking CXX executable cmTC_28b69
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28b69.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_28b69.dir/src.cxx.o -o cmTC_28b69 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-9foXA4'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_abf4c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_abf4c.dir/build.make CMakeFiles/cmTC_abf4c.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CXX5pf'
+Building CXX object CMakeFiles/cmTC_abf4c.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wnon_virtual_dtor  -Wnon-virtual-dtor -o CMakeFiles/cmTC_abf4c.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CXX5pf/src.cxx
+Linking CXX executable cmTC_abf4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abf4c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_abf4c.dir/src.cxx.o -o cmTC_abf4c 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-CXX5pf'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wold_style_cast succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XMsuIE
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-q1YNhp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fff14/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fff14.dir/build.make CMakeFiles/cmTC_fff14.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XMsuIE'
-Building CXX object CMakeFiles/cmTC_fff14.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wold_style_cast  -Wold-style-cast -o CMakeFiles/cmTC_fff14.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XMsuIE/src.cxx
-Linking CXX executable cmTC_fff14
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fff14.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_fff14.dir/src.cxx.o -o cmTC_fff14 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-XMsuIE'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9f5ce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9f5ce.dir/build.make CMakeFiles/cmTC_9f5ce.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-q1YNhp'
+Building CXX object CMakeFiles/cmTC_9f5ce.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wold_style_cast  -Wold-style-cast -o CMakeFiles/cmTC_9f5ce.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-q1YNhp/src.cxx
+Linking CXX executable cmTC_9f5ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f5ce.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_9f5ce.dir/src.cxx.o -o cmTC_9f5ce 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-q1YNhp'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wstrict_null_sentinel succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-Jvroak
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o4hyuk
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_858f3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_858f3.dir/build.make CMakeFiles/cmTC_858f3.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-Jvroak'
-Building CXX object CMakeFiles/cmTC_858f3.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wstrict_null_sentinel  -Wstrict-null-sentinel -o CMakeFiles/cmTC_858f3.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-Jvroak/src.cxx
-Linking CXX executable cmTC_858f3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_858f3.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_858f3.dir/src.cxx.o -o cmTC_858f3 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-Jvroak'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e405f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e405f.dir/build.make CMakeFiles/cmTC_e405f.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o4hyuk'
+Building CXX object CMakeFiles/cmTC_e405f.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wstrict_null_sentinel  -Wstrict-null-sentinel -o CMakeFiles/cmTC_e405f.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o4hyuk/src.cxx
+Linking CXX executable cmTC_e405f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e405f.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_e405f.dir/src.cxx.o -o cmTC_e405f 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o4hyuk'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wsign_promo succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-MG8QF6
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-UNpyhT
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_09c20/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_09c20.dir/build.make CMakeFiles/cmTC_09c20.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-MG8QF6'
-Building CXX object CMakeFiles/cmTC_09c20.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wsign_promo  -Wsign-promo -o CMakeFiles/cmTC_09c20.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-MG8QF6/src.cxx
-Linking CXX executable cmTC_09c20
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09c20.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_09c20.dir/src.cxx.o -o cmTC_09c20 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-MG8QF6'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6a1d4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6a1d4.dir/build.make CMakeFiles/cmTC_6a1d4.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-UNpyhT'
+Building CXX object CMakeFiles/cmTC_6a1d4.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wsign_promo  -Wsign-promo -o CMakeFiles/cmTC_6a1d4.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-UNpyhT/src.cxx
+Linking CXX executable cmTC_6a1d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a1d4.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_6a1d4.dir/src.cxx.o -o cmTC_6a1d4 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-UNpyhT'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__fdiagnostics_show_option succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-0l6WeW
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7ESWHA
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f899c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f899c.dir/build.make CMakeFiles/cmTC_f899c.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-0l6WeW'
-Building CXX object CMakeFiles/cmTC_f899c.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__fdiagnostics_show_option  -fdiagnostics-show-option -o CMakeFiles/cmTC_f899c.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-0l6WeW/src.cxx
-Linking CXX executable cmTC_f899c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f899c.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_f899c.dir/src.cxx.o -o cmTC_f899c 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-0l6WeW'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_39f21/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_39f21.dir/build.make CMakeFiles/cmTC_39f21.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7ESWHA'
+Building CXX object CMakeFiles/cmTC_39f21.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__fdiagnostics_show_option  -fdiagnostics-show-option -o CMakeFiles/cmTC_39f21.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7ESWHA/src.cxx
+Linking CXX executable cmTC_39f21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39f21.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_39f21.dir/src.cxx.o -o cmTC_39f21 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7ESWHA'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__fvisibility_hidden_fvisibility_inlines_hidden succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SsQs9w
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hReTsp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ee6aa/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ee6aa.dir/build.make CMakeFiles/cmTC_ee6aa.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SsQs9w'
-Building CXX object CMakeFiles/cmTC_ee6aa.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__fvisibility_hidden_fvisibility_inlines_hidden  -fvisibility=hidden -fvisibility-inlines-hidden -o CMakeFiles/cmTC_ee6aa.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SsQs9w/src.cxx
-Linking CXX executable cmTC_ee6aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee6aa.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ee6aa.dir/src.cxx.o -o cmTC_ee6aa 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-SsQs9w'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_18c34/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_18c34.dir/build.make CMakeFiles/cmTC_18c34.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hReTsp'
+Building CXX object CMakeFiles/cmTC_18c34.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__fvisibility_hidden_fvisibility_inlines_hidden  -fvisibility=hidden -fvisibility-inlines-hidden -o CMakeFiles/cmTC_18c34.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hReTsp/src.cxx
+Linking CXX executable cmTC_18c34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18c34.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_18c34.dir/src.cxx.o -o cmTC_18c34 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-hReTsp'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__O1_D_FORTIFY_SOURCE_2 succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-dp9dDa
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o5Hpfq
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3f872/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3f872.dir/build.make CMakeFiles/cmTC_3f872.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-dp9dDa'
-Building CXX object CMakeFiles/cmTC_3f872.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__O1_D_FORTIFY_SOURCE_2  -O1 -D_FORTIFY_SOURCE=2 -o CMakeFiles/cmTC_3f872.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-dp9dDa/src.cxx
-Linking CXX executable cmTC_3f872
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f872.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3f872.dir/src.cxx.o -o cmTC_3f872 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-dp9dDa'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4a97c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4a97c.dir/build.make CMakeFiles/cmTC_4a97c.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o5Hpfq'
+Building CXX object CMakeFiles/cmTC_4a97c.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__O1_D_FORTIFY_SOURCE_2  -O1 -D_FORTIFY_SOURCE=2 -o CMakeFiles/cmTC_4a97c.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o5Hpfq/src.cxx
+Linking CXX executable cmTC_4a97c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a97c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_4a97c.dir/src.cxx.o -o cmTC_4a97c 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o5Hpfq'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__O1_fsanitize_thread succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FyeSsI
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-tbzS5n
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f8d03/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f8d03.dir/build.make CMakeFiles/cmTC_f8d03.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FyeSsI'
-Building CXX object CMakeFiles/cmTC_f8d03.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__O1_fsanitize_thread  -O1 -fsanitize=thread -o CMakeFiles/cmTC_f8d03.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FyeSsI/src.cxx
-Linking CXX executable cmTC_f8d03
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8d03.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_f8d03.dir/src.cxx.o -o cmTC_f8d03  -fsanitize=thread 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FyeSsI'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fd8c2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fd8c2.dir/build.make CMakeFiles/cmTC_fd8c2.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-tbzS5n'
+Building CXX object CMakeFiles/cmTC_fd8c2.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__O1_fsanitize_thread  -O1 -fsanitize=thread -o CMakeFiles/cmTC_fd8c2.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-tbzS5n/src.cxx
+Linking CXX executable cmTC_fd8c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd8c2.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_fd8c2.dir/src.cxx.o -o cmTC_fd8c2  -fsanitize=thread 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-tbzS5n'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__fprofile_arcs_ftest_coverage succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-N5YEZ8
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o3XsNC
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f544f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f544f.dir/build.make CMakeFiles/cmTC_f544f.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-N5YEZ8'
-Building CXX object CMakeFiles/cmTC_f544f.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__fprofile_arcs_ftest_coverage  -fprofile-arcs -ftest-coverage -o CMakeFiles/cmTC_f544f.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-N5YEZ8/src.cxx
-Linking CXX executable cmTC_f544f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f544f.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_f544f.dir/src.cxx.o -o cmTC_f544f  -fprofile-arcs -ftest-coverage 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-N5YEZ8'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2cc87/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2cc87.dir/build.make CMakeFiles/cmTC_2cc87.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o3XsNC'
+Building CXX object CMakeFiles/cmTC_2cc87.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__fprofile_arcs_ftest_coverage  -fprofile-arcs -ftest-coverage -o CMakeFiles/cmTC_2cc87.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o3XsNC/src.cxx
+Linking CXX executable cmTC_2cc87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cc87.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_2cc87.dir/src.cxx.o -o cmTC_2cc87  -fprofile-arcs -ftest-coverage 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-o3XsNC'
 
 
 Source file was:
 int main() { return 0; }
 
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-fATTqj
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-gVbksq
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_70f44/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_70f44.dir/build.make CMakeFiles/cmTC_70f44.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-fATTqj'
-Building C object CMakeFiles/cmTC_70f44.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_70f44.dir/src.c.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-fATTqj/src.c
-Linking C executable cmTC_70f44
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70f44.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_70f44.dir/src.c.o -o cmTC_70f44 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-fATTqj'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_47b0c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_47b0c.dir/build.make CMakeFiles/cmTC_47b0c.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-gVbksq'
+Building C object CMakeFiles/cmTC_47b0c.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_47b0c.dir/src.c.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-gVbksq/src.c
+Linking C executable cmTC_47b0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47b0c.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_47b0c.dir/src.c.o -o cmTC_47b0c 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-gVbksq'
 
 
 Source file was:
@@ -765,46 +765,46 @@ int main(void)
 
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wl__no_undefined succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-OClEj9
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7Kqsfc
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5142a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5142a.dir/build.make CMakeFiles/cmTC_5142a.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-OClEj9'
-Building CXX object CMakeFiles/cmTC_5142a.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wl__no_undefined  -Wl,--no-undefined -o CMakeFiles/cmTC_5142a.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-OClEj9/src.cxx
-Linking CXX executable cmTC_5142a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5142a.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_5142a.dir/src.cxx.o -o cmTC_5142a 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-OClEj9'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_50866/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_50866.dir/build.make CMakeFiles/cmTC_50866.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7Kqsfc'
+Building CXX object CMakeFiles/cmTC_50866.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wl__no_undefined  -Wl,--no-undefined -o CMakeFiles/cmTC_50866.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7Kqsfc/src.cxx
+Linking CXX executable cmTC_50866
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50866.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_50866.dir/src.cxx.o -o cmTC_50866 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-7Kqsfc'
 
 
 Source file was:
 int main() { return 0; }
 
 Determining if the include file cxxabi.h exists passed with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-6mp7dH
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-xCxutD
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ee5a4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ee5a4.dir/build.make CMakeFiles/cmTC_ee5a4.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-6mp7dH'
-Building CXX object CMakeFiles/cmTC_ee5a4.dir/CheckIncludeFile.cxx.o
-/usr/bin/c++   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations  -o CMakeFiles/cmTC_ee5a4.dir/CheckIncludeFile.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-6mp7dH/CheckIncludeFile.cxx
-Linking CXX executable cmTC_ee5a4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee5a4.dir/link.txt --verbose=1
-/usr/bin/c++   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations  -rdynamic CMakeFiles/cmTC_ee5a4.dir/CheckIncludeFile.cxx.o -o cmTC_ee5a4 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-6mp7dH'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_327e8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_327e8.dir/build.make CMakeFiles/cmTC_327e8.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-xCxutD'
+Building CXX object CMakeFiles/cmTC_327e8.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations  -o CMakeFiles/cmTC_327e8.dir/CheckIncludeFile.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-xCxutD/CheckIncludeFile.cxx
+Linking CXX executable cmTC_327e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_327e8.dir/link.txt --verbose=1
+/usr/bin/c++   -fstack-protector-all -Werror -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo -fdiagnostics-show-option  -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -Wno-error=deprecated-declarations  -rdynamic CMakeFiles/cmTC_327e8.dir/CheckIncludeFile.cxx.o -o cmTC_327e8 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-xCxutD'
 
 
 
 Performing C++ SOURCE FILE Test HAS_CXX_FLAG__Wno_switch succeeded with the following output:
-Change Dir: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FGYQ5a
+Change Dir: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-GT9XZT
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ebe6e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ebe6e.dir/build.make CMakeFiles/cmTC_ebe6e.dir/build
-gmake[1]: Entering directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FGYQ5a'
-Building CXX object CMakeFiles/cmTC_ebe6e.dir/src.cxx.o
-/usr/bin/c++ -DHAS_CXX_FLAG__Wno_switch  -Wno-switch -o CMakeFiles/cmTC_ebe6e.dir/src.cxx.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FGYQ5a/src.cxx
-Linking CXX executable cmTC_ebe6e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebe6e.dir/link.txt --verbose=1
-/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ebe6e.dir/src.cxx.o -o cmTC_ebe6e 
-gmake[1]: Leaving directory '/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-FGYQ5a'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_311cf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_311cf.dir/build.make CMakeFiles/cmTC_311cf.dir/build
+gmake[1]: Entering directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-GT9XZT'
+Building CXX object CMakeFiles/cmTC_311cf.dir/src.cxx.o
+/usr/bin/c++ -DHAS_CXX_FLAG__Wno_switch  -Wno-switch -o CMakeFiles/cmTC_311cf.dir/src.cxx.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-GT9XZT/src.cxx
+Linking CXX executable cmTC_311cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_311cf.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_311cf.dir/src.cxx.o -o cmTC_311cf 
+gmake[1]: Leaving directory '/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/CMakeScratch/TryCompile-GT9XZT'
 
 
 Source file was:

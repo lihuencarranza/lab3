@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 # Include any dependencies generated for this target.
 include util/CMakeFiles/util.dir/depend.make
@@ -70,74 +70,74 @@ include util/CMakeFiles/util.dir/progress.make
 include util/CMakeFiles/util.dir/flags.make
 
 util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o: util/CMakeFiles/util.dir/flags.make
-util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp
+util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp
 util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o: util/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o -MF CMakeFiles/util.dir/src/BundleObjFactory.cpp.o.d -o CMakeFiles/util.dir/src/BundleObjFactory.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o -MF CMakeFiles/util.dir/src/BundleObjFactory.cpp.o.d -o CMakeFiles/util.dir/src/BundleObjFactory.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp
 
 util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/src/BundleObjFactory.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp > CMakeFiles/util.dir/src/BundleObjFactory.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp > CMakeFiles/util.dir/src/BundleObjFactory.cpp.i
 
 util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/src/BundleObjFactory.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp -o CMakeFiles/util.dir/src/BundleObjFactory.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFactory.cpp -o CMakeFiles/util.dir/src/BundleObjFactory.cpp.s
 
 util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o: util/CMakeFiles/util.dir/flags.make
-util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp
+util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp
 util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o: util/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o -MF CMakeFiles/util.dir/src/BundleObjFile.cpp.o.d -o CMakeFiles/util.dir/src/BundleObjFile.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o -MF CMakeFiles/util.dir/src/BundleObjFile.cpp.o.d -o CMakeFiles/util.dir/src/BundleObjFile.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp
 
 util/CMakeFiles/util.dir/src/BundleObjFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/src/BundleObjFile.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp > CMakeFiles/util.dir/src/BundleObjFile.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp > CMakeFiles/util.dir/src/BundleObjFile.cpp.i
 
 util/CMakeFiles/util.dir/src/BundleObjFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/src/BundleObjFile.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp -o CMakeFiles/util.dir/src/BundleObjFile.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/BundleObjFile.cpp -o CMakeFiles/util.dir/src/BundleObjFile.cpp.s
 
 util/CMakeFiles/util.dir/src/Error.cpp.o: util/CMakeFiles/util.dir/flags.make
-util/CMakeFiles/util.dir/src/Error.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp
+util/CMakeFiles/util.dir/src/Error.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp
 util/CMakeFiles/util.dir/src/Error.cpp.o: util/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object util/CMakeFiles/util.dir/src/Error.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/Error.cpp.o -MF CMakeFiles/util.dir/src/Error.cpp.o.d -o CMakeFiles/util.dir/src/Error.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object util/CMakeFiles/util.dir/src/Error.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/Error.cpp.o -MF CMakeFiles/util.dir/src/Error.cpp.o.d -o CMakeFiles/util.dir/src/Error.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp
 
 util/CMakeFiles/util.dir/src/Error.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/src/Error.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp > CMakeFiles/util.dir/src/Error.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp > CMakeFiles/util.dir/src/Error.cpp.i
 
 util/CMakeFiles/util.dir/src/Error.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/src/Error.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp -o CMakeFiles/util.dir/src/Error.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/Error.cpp -o CMakeFiles/util.dir/src/Error.cpp.s
 
 util/CMakeFiles/util.dir/src/FileSystem.cpp.o: util/CMakeFiles/util.dir/flags.make
-util/CMakeFiles/util.dir/src/FileSystem.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp
+util/CMakeFiles/util.dir/src/FileSystem.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp
 util/CMakeFiles/util.dir/src/FileSystem.cpp.o: util/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object util/CMakeFiles/util.dir/src/FileSystem.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/FileSystem.cpp.o -MF CMakeFiles/util.dir/src/FileSystem.cpp.o.d -o CMakeFiles/util.dir/src/FileSystem.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object util/CMakeFiles/util.dir/src/FileSystem.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/FileSystem.cpp.o -MF CMakeFiles/util.dir/src/FileSystem.cpp.o.d -o CMakeFiles/util.dir/src/FileSystem.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp
 
 util/CMakeFiles/util.dir/src/FileSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/src/FileSystem.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp > CMakeFiles/util.dir/src/FileSystem.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp > CMakeFiles/util.dir/src/FileSystem.cpp.i
 
 util/CMakeFiles/util.dir/src/FileSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/src/FileSystem.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp -o CMakeFiles/util.dir/src/FileSystem.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/FileSystem.cpp -o CMakeFiles/util.dir/src/FileSystem.cpp.s
 
 util/CMakeFiles/util.dir/src/String.cpp.o: util/CMakeFiles/util.dir/flags.make
-util/CMakeFiles/util.dir/src/String.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp
+util/CMakeFiles/util.dir/src/String.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp
 util/CMakeFiles/util.dir/src/String.cpp.o: util/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object util/CMakeFiles/util.dir/src/String.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/String.cpp.o -MF CMakeFiles/util.dir/src/String.cpp.o.d -o CMakeFiles/util.dir/src/String.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object util/CMakeFiles/util.dir/src/String.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT util/CMakeFiles/util.dir/src/String.cpp.o -MF CMakeFiles/util.dir/src/String.cpp.o.d -o CMakeFiles/util.dir/src/String.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp
 
 util/CMakeFiles/util.dir/src/String.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/src/String.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp > CMakeFiles/util.dir/src/String.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp > CMakeFiles/util.dir/src/String.cpp.i
 
 util/CMakeFiles/util.dir/src/String.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/src/String.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp -o CMakeFiles/util.dir/src/String.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util/src/String.cpp -o CMakeFiles/util.dir/src/String.cpp.s
 
 util: util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o
 util: util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o
@@ -152,10 +152,10 @@ util/CMakeFiles/util.dir/build: util
 .PHONY : util/CMakeFiles/util.dir/build
 
 util/CMakeFiles/util.dir/clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean.cmake
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean.cmake
 .PHONY : util/CMakeFiles/util.dir/clean
 
 util/CMakeFiles/util.dir/depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/util /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : util/CMakeFiles/util.dir/depend
 

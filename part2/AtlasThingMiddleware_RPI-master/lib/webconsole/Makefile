@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/webconsole//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/webconsole//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 webconsole/CMakeFiles/usWebConsole.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/CMakeFiles/usWebConsole.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webconsole/CMakeFiles/usWebConsole.dir/rule
 .PHONY : webconsole/CMakeFiles/usWebConsole.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ usWebConsole: webconsole/CMakeFiles/usWebConsole.dir/rule
 
 # fast build rule for target.
 usWebConsole/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/build
 .PHONY : usWebConsole/fast
 
 src/AbstractWebConsolePlugin.o: src/AbstractWebConsolePlugin.cpp.o
@@ -180,7 +180,7 @@ src/AbstractWebConsolePlugin.o: src/AbstractWebConsolePlugin.cpp.o
 
 # target to build an object file
 src/AbstractWebConsolePlugin.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.o
 .PHONY : src/AbstractWebConsolePlugin.cpp.o
 
 src/AbstractWebConsolePlugin.i: src/AbstractWebConsolePlugin.cpp.i
@@ -188,7 +188,7 @@ src/AbstractWebConsolePlugin.i: src/AbstractWebConsolePlugin.cpp.i
 
 # target to preprocess a source file
 src/AbstractWebConsolePlugin.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.i
 .PHONY : src/AbstractWebConsolePlugin.cpp.i
 
 src/AbstractWebConsolePlugin.s: src/AbstractWebConsolePlugin.cpp.s
@@ -196,7 +196,7 @@ src/AbstractWebConsolePlugin.s: src/AbstractWebConsolePlugin.cpp.s
 
 # target to generate assembly for a file
 src/AbstractWebConsolePlugin.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/AbstractWebConsolePlugin.cpp.s
 .PHONY : src/AbstractWebConsolePlugin.cpp.s
 
 src/BundlesPlugin.o: src/BundlesPlugin.cpp.o
@@ -204,7 +204,7 @@ src/BundlesPlugin.o: src/BundlesPlugin.cpp.o
 
 # target to build an object file
 src/BundlesPlugin.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.o
 .PHONY : src/BundlesPlugin.cpp.o
 
 src/BundlesPlugin.i: src/BundlesPlugin.cpp.i
@@ -212,7 +212,7 @@ src/BundlesPlugin.i: src/BundlesPlugin.cpp.i
 
 # target to preprocess a source file
 src/BundlesPlugin.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.i
 .PHONY : src/BundlesPlugin.cpp.i
 
 src/BundlesPlugin.s: src/BundlesPlugin.cpp.s
@@ -220,7 +220,7 @@ src/BundlesPlugin.s: src/BundlesPlugin.cpp.s
 
 # target to generate assembly for a file
 src/BundlesPlugin.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/BundlesPlugin.cpp.s
 .PHONY : src/BundlesPlugin.cpp.s
 
 src/ServicesPlugin.o: src/ServicesPlugin.cpp.o
@@ -228,7 +228,7 @@ src/ServicesPlugin.o: src/ServicesPlugin.cpp.o
 
 # target to build an object file
 src/ServicesPlugin.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.o
 .PHONY : src/ServicesPlugin.cpp.o
 
 src/ServicesPlugin.i: src/ServicesPlugin.cpp.i
@@ -236,7 +236,7 @@ src/ServicesPlugin.i: src/ServicesPlugin.cpp.i
 
 # target to preprocess a source file
 src/ServicesPlugin.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.i
 .PHONY : src/ServicesPlugin.cpp.i
 
 src/ServicesPlugin.s: src/ServicesPlugin.cpp.s
@@ -244,7 +244,7 @@ src/ServicesPlugin.s: src/ServicesPlugin.cpp.s
 
 # target to generate assembly for a file
 src/ServicesPlugin.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/ServicesPlugin.cpp.s
 .PHONY : src/ServicesPlugin.cpp.s
 
 src/SettingsPlugin.o: src/SettingsPlugin.cpp.o
@@ -252,7 +252,7 @@ src/SettingsPlugin.o: src/SettingsPlugin.cpp.o
 
 # target to build an object file
 src/SettingsPlugin.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.o
 .PHONY : src/SettingsPlugin.cpp.o
 
 src/SettingsPlugin.i: src/SettingsPlugin.cpp.i
@@ -260,7 +260,7 @@ src/SettingsPlugin.i: src/SettingsPlugin.cpp.i
 
 # target to preprocess a source file
 src/SettingsPlugin.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.i
 .PHONY : src/SettingsPlugin.cpp.i
 
 src/SettingsPlugin.s: src/SettingsPlugin.cpp.s
@@ -268,7 +268,7 @@ src/SettingsPlugin.s: src/SettingsPlugin.cpp.s
 
 # target to generate assembly for a file
 src/SettingsPlugin.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SettingsPlugin.cpp.s
 .PHONY : src/SettingsPlugin.cpp.s
 
 src/SimpleWebConsolePlugin.o: src/SimpleWebConsolePlugin.cpp.o
@@ -276,7 +276,7 @@ src/SimpleWebConsolePlugin.o: src/SimpleWebConsolePlugin.cpp.o
 
 # target to build an object file
 src/SimpleWebConsolePlugin.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.o
 .PHONY : src/SimpleWebConsolePlugin.cpp.o
 
 src/SimpleWebConsolePlugin.i: src/SimpleWebConsolePlugin.cpp.i
@@ -284,7 +284,7 @@ src/SimpleWebConsolePlugin.i: src/SimpleWebConsolePlugin.cpp.i
 
 # target to preprocess a source file
 src/SimpleWebConsolePlugin.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.i
 .PHONY : src/SimpleWebConsolePlugin.cpp.i
 
 src/SimpleWebConsolePlugin.s: src/SimpleWebConsolePlugin.cpp.s
@@ -292,7 +292,7 @@ src/SimpleWebConsolePlugin.s: src/SimpleWebConsolePlugin.cpp.s
 
 # target to generate assembly for a file
 src/SimpleWebConsolePlugin.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/SimpleWebConsolePlugin.cpp.s
 .PHONY : src/SimpleWebConsolePlugin.cpp.s
 
 src/VariableResolverStreamBuffer.o: src/VariableResolverStreamBuffer.cpp.o
@@ -300,7 +300,7 @@ src/VariableResolverStreamBuffer.o: src/VariableResolverStreamBuffer.cpp.o
 
 # target to build an object file
 src/VariableResolverStreamBuffer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.o
 .PHONY : src/VariableResolverStreamBuffer.cpp.o
 
 src/VariableResolverStreamBuffer.i: src/VariableResolverStreamBuffer.cpp.i
@@ -308,7 +308,7 @@ src/VariableResolverStreamBuffer.i: src/VariableResolverStreamBuffer.cpp.i
 
 # target to preprocess a source file
 src/VariableResolverStreamBuffer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.i
 .PHONY : src/VariableResolverStreamBuffer.cpp.i
 
 src/VariableResolverStreamBuffer.s: src/VariableResolverStreamBuffer.cpp.s
@@ -316,7 +316,7 @@ src/VariableResolverStreamBuffer.s: src/VariableResolverStreamBuffer.cpp.s
 
 # target to generate assembly for a file
 src/VariableResolverStreamBuffer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/VariableResolverStreamBuffer.cpp.s
 .PHONY : src/VariableResolverStreamBuffer.cpp.s
 
 src/WebConsoleActivator.o: src/WebConsoleActivator.cpp.o
@@ -324,7 +324,7 @@ src/WebConsoleActivator.o: src/WebConsoleActivator.cpp.o
 
 # target to build an object file
 src/WebConsoleActivator.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.o
 .PHONY : src/WebConsoleActivator.cpp.o
 
 src/WebConsoleActivator.i: src/WebConsoleActivator.cpp.i
@@ -332,7 +332,7 @@ src/WebConsoleActivator.i: src/WebConsoleActivator.cpp.i
 
 # target to preprocess a source file
 src/WebConsoleActivator.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.i
 .PHONY : src/WebConsoleActivator.cpp.i
 
 src/WebConsoleActivator.s: src/WebConsoleActivator.cpp.s
@@ -340,7 +340,7 @@ src/WebConsoleActivator.s: src/WebConsoleActivator.cpp.s
 
 # target to generate assembly for a file
 src/WebConsoleActivator.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleActivator.cpp.s
 .PHONY : src/WebConsoleActivator.cpp.s
 
 src/WebConsoleConstants.o: src/WebConsoleConstants.cpp.o
@@ -348,7 +348,7 @@ src/WebConsoleConstants.o: src/WebConsoleConstants.cpp.o
 
 # target to build an object file
 src/WebConsoleConstants.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.o
 .PHONY : src/WebConsoleConstants.cpp.o
 
 src/WebConsoleConstants.i: src/WebConsoleConstants.cpp.i
@@ -356,7 +356,7 @@ src/WebConsoleConstants.i: src/WebConsoleConstants.cpp.i
 
 # target to preprocess a source file
 src/WebConsoleConstants.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.i
 .PHONY : src/WebConsoleConstants.cpp.i
 
 src/WebConsoleConstants.s: src/WebConsoleConstants.cpp.s
@@ -364,7 +364,7 @@ src/WebConsoleConstants.s: src/WebConsoleConstants.cpp.s
 
 # target to generate assembly for a file
 src/WebConsoleConstants.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleConstants.cpp.s
 .PHONY : src/WebConsoleConstants.cpp.s
 
 src/WebConsoleDefaultVariableResolver.o: src/WebConsoleDefaultVariableResolver.cpp.o
@@ -372,7 +372,7 @@ src/WebConsoleDefaultVariableResolver.o: src/WebConsoleDefaultVariableResolver.c
 
 # target to build an object file
 src/WebConsoleDefaultVariableResolver.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.o
 .PHONY : src/WebConsoleDefaultVariableResolver.cpp.o
 
 src/WebConsoleDefaultVariableResolver.i: src/WebConsoleDefaultVariableResolver.cpp.i
@@ -380,7 +380,7 @@ src/WebConsoleDefaultVariableResolver.i: src/WebConsoleDefaultVariableResolver.c
 
 # target to preprocess a source file
 src/WebConsoleDefaultVariableResolver.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.i
 .PHONY : src/WebConsoleDefaultVariableResolver.cpp.i
 
 src/WebConsoleDefaultVariableResolver.s: src/WebConsoleDefaultVariableResolver.cpp.s
@@ -388,7 +388,7 @@ src/WebConsoleDefaultVariableResolver.s: src/WebConsoleDefaultVariableResolver.c
 
 # target to generate assembly for a file
 src/WebConsoleDefaultVariableResolver.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleDefaultVariableResolver.cpp.s
 .PHONY : src/WebConsoleDefaultVariableResolver.cpp.s
 
 src/WebConsoleServlet.o: src/WebConsoleServlet.cpp.o
@@ -396,7 +396,7 @@ src/WebConsoleServlet.o: src/WebConsoleServlet.cpp.o
 
 # target to build an object file
 src/WebConsoleServlet.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.o
 .PHONY : src/WebConsoleServlet.cpp.o
 
 src/WebConsoleServlet.i: src/WebConsoleServlet.cpp.i
@@ -404,7 +404,7 @@ src/WebConsoleServlet.i: src/WebConsoleServlet.cpp.i
 
 # target to preprocess a source file
 src/WebConsoleServlet.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.i
 .PHONY : src/WebConsoleServlet.cpp.i
 
 src/WebConsoleServlet.s: src/WebConsoleServlet.cpp.s
@@ -412,7 +412,7 @@ src/WebConsoleServlet.s: src/WebConsoleServlet.cpp.s
 
 # target to generate assembly for a file
 src/WebConsoleServlet.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleServlet.cpp.s
 .PHONY : src/WebConsoleServlet.cpp.s
 
 src/WebConsoleVariableResolver.o: src/WebConsoleVariableResolver.cpp.o
@@ -420,7 +420,7 @@ src/WebConsoleVariableResolver.o: src/WebConsoleVariableResolver.cpp.o
 
 # target to build an object file
 src/WebConsoleVariableResolver.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.o
 .PHONY : src/WebConsoleVariableResolver.cpp.o
 
 src/WebConsoleVariableResolver.i: src/WebConsoleVariableResolver.cpp.i
@@ -428,7 +428,7 @@ src/WebConsoleVariableResolver.i: src/WebConsoleVariableResolver.cpp.i
 
 # target to preprocess a source file
 src/WebConsoleVariableResolver.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.i
 .PHONY : src/WebConsoleVariableResolver.cpp.i
 
 src/WebConsoleVariableResolver.s: src/WebConsoleVariableResolver.cpp.s
@@ -436,7 +436,7 @@ src/WebConsoleVariableResolver.s: src/WebConsoleVariableResolver.cpp.s
 
 # target to generate assembly for a file
 src/WebConsoleVariableResolver.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/src/WebConsoleVariableResolver.cpp.s
 .PHONY : src/WebConsoleVariableResolver.cpp.s
 
 usWebConsole/cppmicroservices_init.o: usWebConsole/cppmicroservices_init.cpp.o
@@ -444,7 +444,7 @@ usWebConsole/cppmicroservices_init.o: usWebConsole/cppmicroservices_init.cpp.o
 
 # target to build an object file
 usWebConsole/cppmicroservices_init.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.o
 .PHONY : usWebConsole/cppmicroservices_init.cpp.o
 
 usWebConsole/cppmicroservices_init.i: usWebConsole/cppmicroservices_init.cpp.i
@@ -452,7 +452,7 @@ usWebConsole/cppmicroservices_init.i: usWebConsole/cppmicroservices_init.cpp.i
 
 # target to preprocess a source file
 usWebConsole/cppmicroservices_init.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.i
 .PHONY : usWebConsole/cppmicroservices_init.cpp.i
 
 usWebConsole/cppmicroservices_init.s: usWebConsole/cppmicroservices_init.cpp.s
@@ -460,7 +460,7 @@ usWebConsole/cppmicroservices_init.s: usWebConsole/cppmicroservices_init.cpp.s
 
 # target to generate assembly for a file
 usWebConsole/cppmicroservices_init.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_init.cpp.s
 .PHONY : usWebConsole/cppmicroservices_init.cpp.s
 
 usWebConsole/cppmicroservices_resources.o: usWebConsole/cppmicroservices_resources.cpp.o
@@ -468,7 +468,7 @@ usWebConsole/cppmicroservices_resources.o: usWebConsole/cppmicroservices_resourc
 
 # target to build an object file
 usWebConsole/cppmicroservices_resources.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.o
 .PHONY : usWebConsole/cppmicroservices_resources.cpp.o
 
 usWebConsole/cppmicroservices_resources.i: usWebConsole/cppmicroservices_resources.cpp.i
@@ -476,7 +476,7 @@ usWebConsole/cppmicroservices_resources.i: usWebConsole/cppmicroservices_resourc
 
 # target to preprocess a source file
 usWebConsole/cppmicroservices_resources.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.i
 .PHONY : usWebConsole/cppmicroservices_resources.cpp.i
 
 usWebConsole/cppmicroservices_resources.s: usWebConsole/cppmicroservices_resources.cpp.s
@@ -484,7 +484,7 @@ usWebConsole/cppmicroservices_resources.s: usWebConsole/cppmicroservices_resourc
 
 # target to generate assembly for a file
 usWebConsole/cppmicroservices_resources.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f webconsole/CMakeFiles/usWebConsole.dir/build.make webconsole/CMakeFiles/usWebConsole.dir/usWebConsole/cppmicroservices_resources.cpp.s
 .PHONY : usWebConsole/cppmicroservices_resources.cpp.s
 
 # Help Target
@@ -550,6 +550,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

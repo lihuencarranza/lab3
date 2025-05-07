@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule
 .PHONY : compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ DeclarativeServicesObjs: compendium/DeclarativeServices/src/CMakeFiles/Declarati
 
 # fast build rule for target.
 DeclarativeServicesObjs/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build
 .PHONY : DeclarativeServicesObjs/fast
 
 ComponentContextImpl.o: ComponentContextImpl.cpp.o
@@ -180,7 +180,7 @@ ComponentContextImpl.o: ComponentContextImpl.cpp.o
 
 # target to build an object file
 ComponentContextImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.o
 .PHONY : ComponentContextImpl.cpp.o
 
 ComponentContextImpl.i: ComponentContextImpl.cpp.i
@@ -188,7 +188,7 @@ ComponentContextImpl.i: ComponentContextImpl.cpp.i
 
 # target to preprocess a source file
 ComponentContextImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.i
 .PHONY : ComponentContextImpl.cpp.i
 
 ComponentContextImpl.s: ComponentContextImpl.cpp.s
@@ -196,7 +196,7 @@ ComponentContextImpl.s: ComponentContextImpl.cpp.s
 
 # target to generate assembly for a file
 ComponentContextImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.s
 .PHONY : ComponentContextImpl.cpp.s
 
 ComponentRegistry.o: ComponentRegistry.cpp.o
@@ -204,7 +204,7 @@ ComponentRegistry.o: ComponentRegistry.cpp.o
 
 # target to build an object file
 ComponentRegistry.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.o
 .PHONY : ComponentRegistry.cpp.o
 
 ComponentRegistry.i: ComponentRegistry.cpp.i
@@ -212,7 +212,7 @@ ComponentRegistry.i: ComponentRegistry.cpp.i
 
 # target to preprocess a source file
 ComponentRegistry.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.i
 .PHONY : ComponentRegistry.cpp.i
 
 ComponentRegistry.s: ComponentRegistry.cpp.s
@@ -220,7 +220,7 @@ ComponentRegistry.s: ComponentRegistry.cpp.s
 
 # target to generate assembly for a file
 ComponentRegistry.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.s
 .PHONY : ComponentRegistry.cpp.s
 
 SCRBundleExtension.o: SCRBundleExtension.cpp.o
@@ -228,7 +228,7 @@ SCRBundleExtension.o: SCRBundleExtension.cpp.o
 
 # target to build an object file
 SCRBundleExtension.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.o
 .PHONY : SCRBundleExtension.cpp.o
 
 SCRBundleExtension.i: SCRBundleExtension.cpp.i
@@ -236,7 +236,7 @@ SCRBundleExtension.i: SCRBundleExtension.cpp.i
 
 # target to preprocess a source file
 SCRBundleExtension.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.i
 .PHONY : SCRBundleExtension.cpp.i
 
 SCRBundleExtension.s: SCRBundleExtension.cpp.s
@@ -244,7 +244,7 @@ SCRBundleExtension.s: SCRBundleExtension.cpp.s
 
 # target to generate assembly for a file
 SCRBundleExtension.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.s
 .PHONY : SCRBundleExtension.cpp.s
 
 SCRLogger.o: SCRLogger.cpp.o
@@ -252,7 +252,7 @@ SCRLogger.o: SCRLogger.cpp.o
 
 # target to build an object file
 SCRLogger.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.o
 .PHONY : SCRLogger.cpp.o
 
 SCRLogger.i: SCRLogger.cpp.i
@@ -260,7 +260,7 @@ SCRLogger.i: SCRLogger.cpp.i
 
 # target to preprocess a source file
 SCRLogger.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.i
 .PHONY : SCRLogger.cpp.i
 
 SCRLogger.s: SCRLogger.cpp.s
@@ -268,7 +268,7 @@ SCRLogger.s: SCRLogger.cpp.s
 
 # target to generate assembly for a file
 SCRLogger.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.s
 .PHONY : SCRLogger.cpp.s
 
 ServiceComponentRuntimeImpl.o: ServiceComponentRuntimeImpl.cpp.o
@@ -276,7 +276,7 @@ ServiceComponentRuntimeImpl.o: ServiceComponentRuntimeImpl.cpp.o
 
 # target to build an object file
 ServiceComponentRuntimeImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.o
 .PHONY : ServiceComponentRuntimeImpl.cpp.o
 
 ServiceComponentRuntimeImpl.i: ServiceComponentRuntimeImpl.cpp.i
@@ -284,7 +284,7 @@ ServiceComponentRuntimeImpl.i: ServiceComponentRuntimeImpl.cpp.i
 
 # target to preprocess a source file
 ServiceComponentRuntimeImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.i
 .PHONY : ServiceComponentRuntimeImpl.cpp.i
 
 ServiceComponentRuntimeImpl.s: ServiceComponentRuntimeImpl.cpp.s
@@ -292,7 +292,7 @@ ServiceComponentRuntimeImpl.s: ServiceComponentRuntimeImpl.cpp.s
 
 # target to generate assembly for a file
 ServiceComponentRuntimeImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.s
 .PHONY : ServiceComponentRuntimeImpl.cpp.s
 
 manager/BundleLoader.o: manager/BundleLoader.cpp.o
@@ -300,7 +300,7 @@ manager/BundleLoader.o: manager/BundleLoader.cpp.o
 
 # target to build an object file
 manager/BundleLoader.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.o
 .PHONY : manager/BundleLoader.cpp.o
 
 manager/BundleLoader.i: manager/BundleLoader.cpp.i
@@ -308,7 +308,7 @@ manager/BundleLoader.i: manager/BundleLoader.cpp.i
 
 # target to preprocess a source file
 manager/BundleLoader.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.i
 .PHONY : manager/BundleLoader.cpp.i
 
 manager/BundleLoader.s: manager/BundleLoader.cpp.s
@@ -316,7 +316,7 @@ manager/BundleLoader.s: manager/BundleLoader.cpp.s
 
 # target to generate assembly for a file
 manager/BundleLoader.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.s
 .PHONY : manager/BundleLoader.cpp.s
 
 manager/BundleOrPrototypeComponentConfiguration.o: manager/BundleOrPrototypeComponentConfiguration.cpp.o
@@ -324,7 +324,7 @@ manager/BundleOrPrototypeComponentConfiguration.o: manager/BundleOrPrototypeComp
 
 # target to build an object file
 manager/BundleOrPrototypeComponentConfiguration.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.o
 .PHONY : manager/BundleOrPrototypeComponentConfiguration.cpp.o
 
 manager/BundleOrPrototypeComponentConfiguration.i: manager/BundleOrPrototypeComponentConfiguration.cpp.i
@@ -332,7 +332,7 @@ manager/BundleOrPrototypeComponentConfiguration.i: manager/BundleOrPrototypeComp
 
 # target to preprocess a source file
 manager/BundleOrPrototypeComponentConfiguration.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.i
 .PHONY : manager/BundleOrPrototypeComponentConfiguration.cpp.i
 
 manager/BundleOrPrototypeComponentConfiguration.s: manager/BundleOrPrototypeComponentConfiguration.cpp.s
@@ -340,7 +340,7 @@ manager/BundleOrPrototypeComponentConfiguration.s: manager/BundleOrPrototypeComp
 
 # target to generate assembly for a file
 manager/BundleOrPrototypeComponentConfiguration.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.s
 .PHONY : manager/BundleOrPrototypeComponentConfiguration.cpp.s
 
 manager/ComponentConfigurationFactory.o: manager/ComponentConfigurationFactory.cpp.o
@@ -348,7 +348,7 @@ manager/ComponentConfigurationFactory.o: manager/ComponentConfigurationFactory.c
 
 # target to build an object file
 manager/ComponentConfigurationFactory.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.o
 .PHONY : manager/ComponentConfigurationFactory.cpp.o
 
 manager/ComponentConfigurationFactory.i: manager/ComponentConfigurationFactory.cpp.i
@@ -356,7 +356,7 @@ manager/ComponentConfigurationFactory.i: manager/ComponentConfigurationFactory.c
 
 # target to preprocess a source file
 manager/ComponentConfigurationFactory.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.i
 .PHONY : manager/ComponentConfigurationFactory.cpp.i
 
 manager/ComponentConfigurationFactory.s: manager/ComponentConfigurationFactory.cpp.s
@@ -364,7 +364,7 @@ manager/ComponentConfigurationFactory.s: manager/ComponentConfigurationFactory.c
 
 # target to generate assembly for a file
 manager/ComponentConfigurationFactory.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.s
 .PHONY : manager/ComponentConfigurationFactory.cpp.s
 
 manager/ComponentConfigurationImpl.o: manager/ComponentConfigurationImpl.cpp.o
@@ -372,7 +372,7 @@ manager/ComponentConfigurationImpl.o: manager/ComponentConfigurationImpl.cpp.o
 
 # target to build an object file
 manager/ComponentConfigurationImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.o
 .PHONY : manager/ComponentConfigurationImpl.cpp.o
 
 manager/ComponentConfigurationImpl.i: manager/ComponentConfigurationImpl.cpp.i
@@ -380,7 +380,7 @@ manager/ComponentConfigurationImpl.i: manager/ComponentConfigurationImpl.cpp.i
 
 # target to preprocess a source file
 manager/ComponentConfigurationImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.i
 .PHONY : manager/ComponentConfigurationImpl.cpp.i
 
 manager/ComponentConfigurationImpl.s: manager/ComponentConfigurationImpl.cpp.s
@@ -388,7 +388,7 @@ manager/ComponentConfigurationImpl.s: manager/ComponentConfigurationImpl.cpp.s
 
 # target to generate assembly for a file
 manager/ComponentConfigurationImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.s
 .PHONY : manager/ComponentConfigurationImpl.cpp.s
 
 manager/ComponentManagerImpl.o: manager/ComponentManagerImpl.cpp.o
@@ -396,7 +396,7 @@ manager/ComponentManagerImpl.o: manager/ComponentManagerImpl.cpp.o
 
 # target to build an object file
 manager/ComponentManagerImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.o
 .PHONY : manager/ComponentManagerImpl.cpp.o
 
 manager/ComponentManagerImpl.i: manager/ComponentManagerImpl.cpp.i
@@ -404,7 +404,7 @@ manager/ComponentManagerImpl.i: manager/ComponentManagerImpl.cpp.i
 
 # target to preprocess a source file
 manager/ComponentManagerImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.i
 .PHONY : manager/ComponentManagerImpl.cpp.i
 
 manager/ComponentManagerImpl.s: manager/ComponentManagerImpl.cpp.s
@@ -412,7 +412,7 @@ manager/ComponentManagerImpl.s: manager/ComponentManagerImpl.cpp.s
 
 # target to generate assembly for a file
 manager/ComponentManagerImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.s
 .PHONY : manager/ComponentManagerImpl.cpp.s
 
 manager/ReferenceManagerImpl.o: manager/ReferenceManagerImpl.cpp.o
@@ -420,7 +420,7 @@ manager/ReferenceManagerImpl.o: manager/ReferenceManagerImpl.cpp.o
 
 # target to build an object file
 manager/ReferenceManagerImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.o
 .PHONY : manager/ReferenceManagerImpl.cpp.o
 
 manager/ReferenceManagerImpl.i: manager/ReferenceManagerImpl.cpp.i
@@ -428,7 +428,7 @@ manager/ReferenceManagerImpl.i: manager/ReferenceManagerImpl.cpp.i
 
 # target to preprocess a source file
 manager/ReferenceManagerImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.i
 .PHONY : manager/ReferenceManagerImpl.cpp.i
 
 manager/ReferenceManagerImpl.s: manager/ReferenceManagerImpl.cpp.s
@@ -436,7 +436,7 @@ manager/ReferenceManagerImpl.s: manager/ReferenceManagerImpl.cpp.s
 
 # target to generate assembly for a file
 manager/ReferenceManagerImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.s
 .PHONY : manager/ReferenceManagerImpl.cpp.s
 
 manager/RegistrationManager.o: manager/RegistrationManager.cpp.o
@@ -444,7 +444,7 @@ manager/RegistrationManager.o: manager/RegistrationManager.cpp.o
 
 # target to build an object file
 manager/RegistrationManager.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.o
 .PHONY : manager/RegistrationManager.cpp.o
 
 manager/RegistrationManager.i: manager/RegistrationManager.cpp.i
@@ -452,7 +452,7 @@ manager/RegistrationManager.i: manager/RegistrationManager.cpp.i
 
 # target to preprocess a source file
 manager/RegistrationManager.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.i
 .PHONY : manager/RegistrationManager.cpp.i
 
 manager/RegistrationManager.s: manager/RegistrationManager.cpp.s
@@ -460,7 +460,7 @@ manager/RegistrationManager.s: manager/RegistrationManager.cpp.s
 
 # target to generate assembly for a file
 manager/RegistrationManager.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.s
 .PHONY : manager/RegistrationManager.cpp.s
 
 manager/SingletonComponentConfiguration.o: manager/SingletonComponentConfiguration.cpp.o
@@ -468,7 +468,7 @@ manager/SingletonComponentConfiguration.o: manager/SingletonComponentConfigurati
 
 # target to build an object file
 manager/SingletonComponentConfiguration.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.o
 .PHONY : manager/SingletonComponentConfiguration.cpp.o
 
 manager/SingletonComponentConfiguration.i: manager/SingletonComponentConfiguration.cpp.i
@@ -476,7 +476,7 @@ manager/SingletonComponentConfiguration.i: manager/SingletonComponentConfigurati
 
 # target to preprocess a source file
 manager/SingletonComponentConfiguration.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.i
 .PHONY : manager/SingletonComponentConfiguration.cpp.i
 
 manager/SingletonComponentConfiguration.s: manager/SingletonComponentConfiguration.cpp.s
@@ -484,7 +484,7 @@ manager/SingletonComponentConfiguration.s: manager/SingletonComponentConfigurati
 
 # target to generate assembly for a file
 manager/SingletonComponentConfiguration.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.s
 .PHONY : manager/SingletonComponentConfiguration.cpp.s
 
 manager/states/CCActiveState.o: manager/states/CCActiveState.cpp.o
@@ -492,7 +492,7 @@ manager/states/CCActiveState.o: manager/states/CCActiveState.cpp.o
 
 # target to build an object file
 manager/states/CCActiveState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.o
 .PHONY : manager/states/CCActiveState.cpp.o
 
 manager/states/CCActiveState.i: manager/states/CCActiveState.cpp.i
@@ -500,7 +500,7 @@ manager/states/CCActiveState.i: manager/states/CCActiveState.cpp.i
 
 # target to preprocess a source file
 manager/states/CCActiveState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.i
 .PHONY : manager/states/CCActiveState.cpp.i
 
 manager/states/CCActiveState.s: manager/states/CCActiveState.cpp.s
@@ -508,7 +508,7 @@ manager/states/CCActiveState.s: manager/states/CCActiveState.cpp.s
 
 # target to generate assembly for a file
 manager/states/CCActiveState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.s
 .PHONY : manager/states/CCActiveState.cpp.s
 
 manager/states/CCRegisteredState.o: manager/states/CCRegisteredState.cpp.o
@@ -516,7 +516,7 @@ manager/states/CCRegisteredState.o: manager/states/CCRegisteredState.cpp.o
 
 # target to build an object file
 manager/states/CCRegisteredState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.o
 .PHONY : manager/states/CCRegisteredState.cpp.o
 
 manager/states/CCRegisteredState.i: manager/states/CCRegisteredState.cpp.i
@@ -524,7 +524,7 @@ manager/states/CCRegisteredState.i: manager/states/CCRegisteredState.cpp.i
 
 # target to preprocess a source file
 manager/states/CCRegisteredState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.i
 .PHONY : manager/states/CCRegisteredState.cpp.i
 
 manager/states/CCRegisteredState.s: manager/states/CCRegisteredState.cpp.s
@@ -532,7 +532,7 @@ manager/states/CCRegisteredState.s: manager/states/CCRegisteredState.cpp.s
 
 # target to generate assembly for a file
 manager/states/CCRegisteredState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.s
 .PHONY : manager/states/CCRegisteredState.cpp.s
 
 manager/states/CCSatisfiedState.o: manager/states/CCSatisfiedState.cpp.o
@@ -540,7 +540,7 @@ manager/states/CCSatisfiedState.o: manager/states/CCSatisfiedState.cpp.o
 
 # target to build an object file
 manager/states/CCSatisfiedState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.o
 .PHONY : manager/states/CCSatisfiedState.cpp.o
 
 manager/states/CCSatisfiedState.i: manager/states/CCSatisfiedState.cpp.i
@@ -548,7 +548,7 @@ manager/states/CCSatisfiedState.i: manager/states/CCSatisfiedState.cpp.i
 
 # target to preprocess a source file
 manager/states/CCSatisfiedState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.i
 .PHONY : manager/states/CCSatisfiedState.cpp.i
 
 manager/states/CCSatisfiedState.s: manager/states/CCSatisfiedState.cpp.s
@@ -556,7 +556,7 @@ manager/states/CCSatisfiedState.s: manager/states/CCSatisfiedState.cpp.s
 
 # target to generate assembly for a file
 manager/states/CCSatisfiedState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.s
 .PHONY : manager/states/CCSatisfiedState.cpp.s
 
 manager/states/CCUnsatisfiedReferenceState.o: manager/states/CCUnsatisfiedReferenceState.cpp.o
@@ -564,7 +564,7 @@ manager/states/CCUnsatisfiedReferenceState.o: manager/states/CCUnsatisfiedRefere
 
 # target to build an object file
 manager/states/CCUnsatisfiedReferenceState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.o
 .PHONY : manager/states/CCUnsatisfiedReferenceState.cpp.o
 
 manager/states/CCUnsatisfiedReferenceState.i: manager/states/CCUnsatisfiedReferenceState.cpp.i
@@ -572,7 +572,7 @@ manager/states/CCUnsatisfiedReferenceState.i: manager/states/CCUnsatisfiedRefere
 
 # target to preprocess a source file
 manager/states/CCUnsatisfiedReferenceState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.i
 .PHONY : manager/states/CCUnsatisfiedReferenceState.cpp.i
 
 manager/states/CCUnsatisfiedReferenceState.s: manager/states/CCUnsatisfiedReferenceState.cpp.s
@@ -580,7 +580,7 @@ manager/states/CCUnsatisfiedReferenceState.s: manager/states/CCUnsatisfiedRefere
 
 # target to generate assembly for a file
 manager/states/CCUnsatisfiedReferenceState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.s
 .PHONY : manager/states/CCUnsatisfiedReferenceState.cpp.s
 
 manager/states/CMDisabledState.o: manager/states/CMDisabledState.cpp.o
@@ -588,7 +588,7 @@ manager/states/CMDisabledState.o: manager/states/CMDisabledState.cpp.o
 
 # target to build an object file
 manager/states/CMDisabledState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.o
 .PHONY : manager/states/CMDisabledState.cpp.o
 
 manager/states/CMDisabledState.i: manager/states/CMDisabledState.cpp.i
@@ -596,7 +596,7 @@ manager/states/CMDisabledState.i: manager/states/CMDisabledState.cpp.i
 
 # target to preprocess a source file
 manager/states/CMDisabledState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.i
 .PHONY : manager/states/CMDisabledState.cpp.i
 
 manager/states/CMDisabledState.s: manager/states/CMDisabledState.cpp.s
@@ -604,7 +604,7 @@ manager/states/CMDisabledState.s: manager/states/CMDisabledState.cpp.s
 
 # target to generate assembly for a file
 manager/states/CMDisabledState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.s
 .PHONY : manager/states/CMDisabledState.cpp.s
 
 manager/states/CMEnabledState.o: manager/states/CMEnabledState.cpp.o
@@ -612,7 +612,7 @@ manager/states/CMEnabledState.o: manager/states/CMEnabledState.cpp.o
 
 # target to build an object file
 manager/states/CMEnabledState.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.o
 .PHONY : manager/states/CMEnabledState.cpp.o
 
 manager/states/CMEnabledState.i: manager/states/CMEnabledState.cpp.i
@@ -620,7 +620,7 @@ manager/states/CMEnabledState.i: manager/states/CMEnabledState.cpp.i
 
 # target to preprocess a source file
 manager/states/CMEnabledState.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.i
 .PHONY : manager/states/CMEnabledState.cpp.i
 
 manager/states/CMEnabledState.s: manager/states/CMEnabledState.cpp.s
@@ -628,7 +628,7 @@ manager/states/CMEnabledState.s: manager/states/CMEnabledState.cpp.s
 
 # target to generate assembly for a file
 manager/states/CMEnabledState.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.s
 .PHONY : manager/states/CMEnabledState.cpp.s
 
 metadata/MetadataParserImpl.o: metadata/MetadataParserImpl.cpp.o
@@ -636,7 +636,7 @@ metadata/MetadataParserImpl.o: metadata/MetadataParserImpl.cpp.o
 
 # target to build an object file
 metadata/MetadataParserImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.o
 .PHONY : metadata/MetadataParserImpl.cpp.o
 
 metadata/MetadataParserImpl.i: metadata/MetadataParserImpl.cpp.i
@@ -644,7 +644,7 @@ metadata/MetadataParserImpl.i: metadata/MetadataParserImpl.cpp.i
 
 # target to preprocess a source file
 metadata/MetadataParserImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.i
 .PHONY : metadata/MetadataParserImpl.cpp.i
 
 metadata/MetadataParserImpl.s: metadata/MetadataParserImpl.cpp.s
@@ -652,7 +652,7 @@ metadata/MetadataParserImpl.s: metadata/MetadataParserImpl.cpp.s
 
 # target to generate assembly for a file
 metadata/MetadataParserImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.s
 .PHONY : metadata/MetadataParserImpl.cpp.s
 
 metadata/ReferenceMetadata.o: metadata/ReferenceMetadata.cpp.o
@@ -660,7 +660,7 @@ metadata/ReferenceMetadata.o: metadata/ReferenceMetadata.cpp.o
 
 # target to build an object file
 metadata/ReferenceMetadata.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.o
 .PHONY : metadata/ReferenceMetadata.cpp.o
 
 metadata/ReferenceMetadata.i: metadata/ReferenceMetadata.cpp.i
@@ -668,7 +668,7 @@ metadata/ReferenceMetadata.i: metadata/ReferenceMetadata.cpp.i
 
 # target to preprocess a source file
 metadata/ReferenceMetadata.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.i
 .PHONY : metadata/ReferenceMetadata.cpp.i
 
 metadata/ReferenceMetadata.s: metadata/ReferenceMetadata.cpp.s
@@ -676,7 +676,7 @@ metadata/ReferenceMetadata.s: metadata/ReferenceMetadata.cpp.s
 
 # target to generate assembly for a file
 metadata/ReferenceMetadata.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.s
 .PHONY : metadata/ReferenceMetadata.cpp.s
 
 metadata/ServiceMetadata.o: metadata/ServiceMetadata.cpp.o
@@ -684,7 +684,7 @@ metadata/ServiceMetadata.o: metadata/ServiceMetadata.cpp.o
 
 # target to build an object file
 metadata/ServiceMetadata.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.o
 .PHONY : metadata/ServiceMetadata.cpp.o
 
 metadata/ServiceMetadata.i: metadata/ServiceMetadata.cpp.i
@@ -692,7 +692,7 @@ metadata/ServiceMetadata.i: metadata/ServiceMetadata.cpp.i
 
 # target to preprocess a source file
 metadata/ServiceMetadata.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.i
 .PHONY : metadata/ServiceMetadata.cpp.i
 
 metadata/ServiceMetadata.s: metadata/ServiceMetadata.cpp.s
@@ -700,7 +700,7 @@ metadata/ServiceMetadata.s: metadata/ServiceMetadata.cpp.s
 
 # target to generate assembly for a file
 metadata/ServiceMetadata.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.s
 .PHONY : metadata/ServiceMetadata.cpp.s
 
 metadata/Util.o: metadata/Util.cpp.o
@@ -708,7 +708,7 @@ metadata/Util.o: metadata/Util.cpp.o
 
 # target to build an object file
 metadata/Util.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.o
 .PHONY : metadata/Util.cpp.o
 
 metadata/Util.i: metadata/Util.cpp.i
@@ -716,7 +716,7 @@ metadata/Util.i: metadata/Util.cpp.i
 
 # target to preprocess a source file
 metadata/Util.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.i
 .PHONY : metadata/Util.cpp.i
 
 metadata/Util.s: metadata/Util.cpp.s
@@ -724,7 +724,7 @@ metadata/Util.s: metadata/Util.cpp.s
 
 # target to generate assembly for a file
 metadata/Util.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/build.make compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.s
 .PHONY : metadata/Util.cpp.s
 
 # Help Target
@@ -820,6 +820,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

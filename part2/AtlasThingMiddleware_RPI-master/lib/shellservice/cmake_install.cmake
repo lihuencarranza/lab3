@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice
+# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so.0.1.0"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libusShellServiced.so.0.1.0")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libusShellServiced.so.0.1.0")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so.0.1.0" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so.0.1.0")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so.0.1.0"
-         OLD_RPATH "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib:"
+         OLD_RPATH "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so.0.1.0")
@@ -69,12 +69,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib/libusShellServiced.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib/libusShellServiced.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so"
-         OLD_RPATH "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/lib:"
+         OLD_RPATH "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libusShellServiced.so")
@@ -83,18 +83,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include/cppmicroservices")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/shellservice/include/cppmicroservices")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/include/cppmicroservices")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cppmicroservices4" TYPE DIRECTORY OPTIONAL FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/include/cppmicroservices")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usShellServiceTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usShellServiceTargets.cmake"
-         "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets.cmake")
+         "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake/usShellServiceTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -107,16 +107,16 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/Export/07c78fe876f0ca29ad434080522b336f/usShellServiceTargets-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "sdk" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cppmicroservices4/cmake" TYPE FILE FILES
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/usShellServiceConfig.cmake"
-    "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/usShellServiceConfigVersion.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles/usShellServiceConfig.cmake"
+    "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/usShellServiceConfigVersion.cmake"
     )
 endif()
 

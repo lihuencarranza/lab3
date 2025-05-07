@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/httpservice//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/httpservice//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 httpservice/CMakeFiles/usHttpService.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/CMakeFiles/usHttpService.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpservice/CMakeFiles/usHttpService.dir/rule
 .PHONY : httpservice/CMakeFiles/usHttpService.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ usHttpService: httpservice/CMakeFiles/usHttpService.dir/rule
 
 # fast build rule for target.
 usHttpService/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/build
 .PHONY : usHttpService/fast
 
 __/third_party/civetweb/CivetServer.o: __/third_party/civetweb/CivetServer.cpp.o
@@ -180,7 +180,7 @@ __/third_party/civetweb/CivetServer.o: __/third_party/civetweb/CivetServer.cpp.o
 
 # target to build an object file
 __/third_party/civetweb/CivetServer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.o
 .PHONY : __/third_party/civetweb/CivetServer.cpp.o
 
 __/third_party/civetweb/CivetServer.i: __/third_party/civetweb/CivetServer.cpp.i
@@ -188,7 +188,7 @@ __/third_party/civetweb/CivetServer.i: __/third_party/civetweb/CivetServer.cpp.i
 
 # target to preprocess a source file
 __/third_party/civetweb/CivetServer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.i
 .PHONY : __/third_party/civetweb/CivetServer.cpp.i
 
 __/third_party/civetweb/CivetServer.s: __/third_party/civetweb/CivetServer.cpp.s
@@ -196,7 +196,7 @@ __/third_party/civetweb/CivetServer.s: __/third_party/civetweb/CivetServer.cpp.s
 
 # target to generate assembly for a file
 __/third_party/civetweb/CivetServer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/CivetServer.cpp.s
 .PHONY : __/third_party/civetweb/CivetServer.cpp.s
 
 __/third_party/civetweb/civetweb.o: __/third_party/civetweb/civetweb.c.o
@@ -204,7 +204,7 @@ __/third_party/civetweb/civetweb.o: __/third_party/civetweb/civetweb.c.o
 
 # target to build an object file
 __/third_party/civetweb/civetweb.c.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.o
 .PHONY : __/third_party/civetweb/civetweb.c.o
 
 __/third_party/civetweb/civetweb.i: __/third_party/civetweb/civetweb.c.i
@@ -212,7 +212,7 @@ __/third_party/civetweb/civetweb.i: __/third_party/civetweb/civetweb.c.i
 
 # target to preprocess a source file
 __/third_party/civetweb/civetweb.c.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.i
 .PHONY : __/third_party/civetweb/civetweb.c.i
 
 __/third_party/civetweb/civetweb.s: __/third_party/civetweb/civetweb.c.s
@@ -220,7 +220,7 @@ __/third_party/civetweb/civetweb.s: __/third_party/civetweb/civetweb.c.s
 
 # target to generate assembly for a file
 __/third_party/civetweb/civetweb.c.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/__/third_party/civetweb/civetweb.c.s
 .PHONY : __/third_party/civetweb/civetweb.c.s
 
 src/HttpConstants.o: src/HttpConstants.cpp.o
@@ -228,7 +228,7 @@ src/HttpConstants.o: src/HttpConstants.cpp.o
 
 # target to build an object file
 src/HttpConstants.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.o
 .PHONY : src/HttpConstants.cpp.o
 
 src/HttpConstants.i: src/HttpConstants.cpp.i
@@ -236,7 +236,7 @@ src/HttpConstants.i: src/HttpConstants.cpp.i
 
 # target to preprocess a source file
 src/HttpConstants.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.i
 .PHONY : src/HttpConstants.cpp.i
 
 src/HttpConstants.s: src/HttpConstants.cpp.s
@@ -244,7 +244,7 @@ src/HttpConstants.s: src/HttpConstants.cpp.s
 
 # target to generate assembly for a file
 src/HttpConstants.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpConstants.cpp.s
 .PHONY : src/HttpConstants.cpp.s
 
 src/HttpOutputStreamBuffer.o: src/HttpOutputStreamBuffer.cpp.o
@@ -252,7 +252,7 @@ src/HttpOutputStreamBuffer.o: src/HttpOutputStreamBuffer.cpp.o
 
 # target to build an object file
 src/HttpOutputStreamBuffer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.o
 .PHONY : src/HttpOutputStreamBuffer.cpp.o
 
 src/HttpOutputStreamBuffer.i: src/HttpOutputStreamBuffer.cpp.i
@@ -260,7 +260,7 @@ src/HttpOutputStreamBuffer.i: src/HttpOutputStreamBuffer.cpp.i
 
 # target to preprocess a source file
 src/HttpOutputStreamBuffer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.i
 .PHONY : src/HttpOutputStreamBuffer.cpp.i
 
 src/HttpOutputStreamBuffer.s: src/HttpOutputStreamBuffer.cpp.s
@@ -268,7 +268,7 @@ src/HttpOutputStreamBuffer.s: src/HttpOutputStreamBuffer.cpp.s
 
 # target to generate assembly for a file
 src/HttpOutputStreamBuffer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpOutputStreamBuffer.cpp.s
 .PHONY : src/HttpOutputStreamBuffer.cpp.s
 
 src/HttpServlet.o: src/HttpServlet.cpp.o
@@ -276,7 +276,7 @@ src/HttpServlet.o: src/HttpServlet.cpp.o
 
 # target to build an object file
 src/HttpServlet.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.o
 .PHONY : src/HttpServlet.cpp.o
 
 src/HttpServlet.i: src/HttpServlet.cpp.i
@@ -284,7 +284,7 @@ src/HttpServlet.i: src/HttpServlet.cpp.i
 
 # target to preprocess a source file
 src/HttpServlet.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.i
 .PHONY : src/HttpServlet.cpp.i
 
 src/HttpServlet.s: src/HttpServlet.cpp.s
@@ -292,7 +292,7 @@ src/HttpServlet.s: src/HttpServlet.cpp.s
 
 # target to generate assembly for a file
 src/HttpServlet.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServlet.cpp.s
 .PHONY : src/HttpServlet.cpp.s
 
 src/HttpServletRequest.o: src/HttpServletRequest.cpp.o
@@ -300,7 +300,7 @@ src/HttpServletRequest.o: src/HttpServletRequest.cpp.o
 
 # target to build an object file
 src/HttpServletRequest.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.o
 .PHONY : src/HttpServletRequest.cpp.o
 
 src/HttpServletRequest.i: src/HttpServletRequest.cpp.i
@@ -308,7 +308,7 @@ src/HttpServletRequest.i: src/HttpServletRequest.cpp.i
 
 # target to preprocess a source file
 src/HttpServletRequest.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.i
 .PHONY : src/HttpServletRequest.cpp.i
 
 src/HttpServletRequest.s: src/HttpServletRequest.cpp.s
@@ -316,7 +316,7 @@ src/HttpServletRequest.s: src/HttpServletRequest.cpp.s
 
 # target to generate assembly for a file
 src/HttpServletRequest.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletRequest.cpp.s
 .PHONY : src/HttpServletRequest.cpp.s
 
 src/HttpServletResponse.o: src/HttpServletResponse.cpp.o
@@ -324,7 +324,7 @@ src/HttpServletResponse.o: src/HttpServletResponse.cpp.o
 
 # target to build an object file
 src/HttpServletResponse.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.o
 .PHONY : src/HttpServletResponse.cpp.o
 
 src/HttpServletResponse.i: src/HttpServletResponse.cpp.i
@@ -332,7 +332,7 @@ src/HttpServletResponse.i: src/HttpServletResponse.cpp.i
 
 # target to preprocess a source file
 src/HttpServletResponse.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.i
 .PHONY : src/HttpServletResponse.cpp.i
 
 src/HttpServletResponse.s: src/HttpServletResponse.cpp.s
@@ -340,7 +340,7 @@ src/HttpServletResponse.s: src/HttpServletResponse.cpp.s
 
 # target to generate assembly for a file
 src/HttpServletResponse.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/HttpServletResponse.cpp.s
 .PHONY : src/HttpServletResponse.cpp.s
 
 src/ServletConfig.o: src/ServletConfig.cpp.o
@@ -348,7 +348,7 @@ src/ServletConfig.o: src/ServletConfig.cpp.o
 
 # target to build an object file
 src/ServletConfig.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.o
 .PHONY : src/ServletConfig.cpp.o
 
 src/ServletConfig.i: src/ServletConfig.cpp.i
@@ -356,7 +356,7 @@ src/ServletConfig.i: src/ServletConfig.cpp.i
 
 # target to preprocess a source file
 src/ServletConfig.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.i
 .PHONY : src/ServletConfig.cpp.i
 
 src/ServletConfig.s: src/ServletConfig.cpp.s
@@ -364,7 +364,7 @@ src/ServletConfig.s: src/ServletConfig.cpp.s
 
 # target to generate assembly for a file
 src/ServletConfig.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletConfig.cpp.s
 .PHONY : src/ServletConfig.cpp.s
 
 src/ServletContainer.o: src/ServletContainer.cpp.o
@@ -372,7 +372,7 @@ src/ServletContainer.o: src/ServletContainer.cpp.o
 
 # target to build an object file
 src/ServletContainer.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.o
 .PHONY : src/ServletContainer.cpp.o
 
 src/ServletContainer.i: src/ServletContainer.cpp.i
@@ -380,7 +380,7 @@ src/ServletContainer.i: src/ServletContainer.cpp.i
 
 # target to preprocess a source file
 src/ServletContainer.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.i
 .PHONY : src/ServletContainer.cpp.i
 
 src/ServletContainer.s: src/ServletContainer.cpp.s
@@ -388,7 +388,7 @@ src/ServletContainer.s: src/ServletContainer.cpp.s
 
 # target to generate assembly for a file
 src/ServletContainer.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContainer.cpp.s
 .PHONY : src/ServletContainer.cpp.s
 
 src/ServletContext.o: src/ServletContext.cpp.o
@@ -396,7 +396,7 @@ src/ServletContext.o: src/ServletContext.cpp.o
 
 # target to build an object file
 src/ServletContext.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.o
 .PHONY : src/ServletContext.cpp.o
 
 src/ServletContext.i: src/ServletContext.cpp.i
@@ -404,7 +404,7 @@ src/ServletContext.i: src/ServletContext.cpp.i
 
 # target to preprocess a source file
 src/ServletContext.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.i
 .PHONY : src/ServletContext.cpp.i
 
 src/ServletContext.s: src/ServletContext.cpp.s
@@ -412,7 +412,7 @@ src/ServletContext.s: src/ServletContext.cpp.s
 
 # target to generate assembly for a file
 src/ServletContext.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/src/ServletContext.cpp.s
 .PHONY : src/ServletContext.cpp.s
 
 usHttpService/cppmicroservices_init.o: usHttpService/cppmicroservices_init.cpp.o
@@ -420,7 +420,7 @@ usHttpService/cppmicroservices_init.o: usHttpService/cppmicroservices_init.cpp.o
 
 # target to build an object file
 usHttpService/cppmicroservices_init.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.o
 .PHONY : usHttpService/cppmicroservices_init.cpp.o
 
 usHttpService/cppmicroservices_init.i: usHttpService/cppmicroservices_init.cpp.i
@@ -428,7 +428,7 @@ usHttpService/cppmicroservices_init.i: usHttpService/cppmicroservices_init.cpp.i
 
 # target to preprocess a source file
 usHttpService/cppmicroservices_init.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.i
 .PHONY : usHttpService/cppmicroservices_init.cpp.i
 
 usHttpService/cppmicroservices_init.s: usHttpService/cppmicroservices_init.cpp.s
@@ -436,7 +436,7 @@ usHttpService/cppmicroservices_init.s: usHttpService/cppmicroservices_init.cpp.s
 
 # target to generate assembly for a file
 usHttpService/cppmicroservices_init.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_init.cpp.s
 .PHONY : usHttpService/cppmicroservices_init.cpp.s
 
 usHttpService/cppmicroservices_resources.o: usHttpService/cppmicroservices_resources.cpp.o
@@ -444,7 +444,7 @@ usHttpService/cppmicroservices_resources.o: usHttpService/cppmicroservices_resou
 
 # target to build an object file
 usHttpService/cppmicroservices_resources.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.o
 .PHONY : usHttpService/cppmicroservices_resources.cpp.o
 
 usHttpService/cppmicroservices_resources.i: usHttpService/cppmicroservices_resources.cpp.i
@@ -452,7 +452,7 @@ usHttpService/cppmicroservices_resources.i: usHttpService/cppmicroservices_resou
 
 # target to preprocess a source file
 usHttpService/cppmicroservices_resources.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.i
 .PHONY : usHttpService/cppmicroservices_resources.cpp.i
 
 usHttpService/cppmicroservices_resources.s: usHttpService/cppmicroservices_resources.cpp.s
@@ -460,7 +460,7 @@ usHttpService/cppmicroservices_resources.s: usHttpService/cppmicroservices_resou
 
 # target to generate assembly for a file
 usHttpService/cppmicroservices_resources.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f httpservice/CMakeFiles/usHttpService.dir/build.make httpservice/CMakeFiles/usHttpService.dir/usHttpService/cppmicroservices_resources.cpp.s
 .PHONY : usHttpService/cppmicroservices_resources.cpp.s
 
 # Help Target
@@ -523,6 +523,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

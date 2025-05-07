@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/shell/CMakeFiles/usShell.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/CMakeFiles/usShell.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/shell/CMakeFiles/usShell.dir/rule
 .PHONY : tools/shell/CMakeFiles/usShell.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ usShell: tools/shell/CMakeFiles/usShell.dir/rule
 
 # fast build rule for target.
 usShell/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/build
 .PHONY : usShell/fast
 
 Shell.o: Shell.cpp.o
@@ -180,7 +180,7 @@ Shell.o: Shell.cpp.o
 
 # target to build an object file
 Shell.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o
 .PHONY : Shell.cpp.o
 
 Shell.i: Shell.cpp.i
@@ -188,7 +188,7 @@ Shell.i: Shell.cpp.i
 
 # target to preprocess a source file
 Shell.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.i
 .PHONY : Shell.cpp.i
 
 Shell.s: Shell.cpp.s
@@ -196,7 +196,7 @@ Shell.s: Shell.cpp.s
 
 # target to generate assembly for a file
 Shell.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/Shell.cpp.s
 .PHONY : Shell.cpp.s
 
 __/__/third_party/linenoise.o: __/__/third_party/linenoise.c.o
@@ -204,7 +204,7 @@ __/__/third_party/linenoise.o: __/__/third_party/linenoise.c.o
 
 # target to build an object file
 __/__/third_party/linenoise.c.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o
 .PHONY : __/__/third_party/linenoise.c.o
 
 __/__/third_party/linenoise.i: __/__/third_party/linenoise.c.i
@@ -212,7 +212,7 @@ __/__/third_party/linenoise.i: __/__/third_party/linenoise.c.i
 
 # target to preprocess a source file
 __/__/third_party/linenoise.c.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i
 .PHONY : __/__/third_party/linenoise.c.i
 
 __/__/third_party/linenoise.s: __/__/third_party/linenoise.c.s
@@ -220,7 +220,7 @@ __/__/third_party/linenoise.s: __/__/third_party/linenoise.c.s
 
 # target to generate assembly for a file
 __/__/third_party/linenoise.c.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f tools/shell/CMakeFiles/usShell.dir/build.make tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s
 .PHONY : __/__/third_party/linenoise.c.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

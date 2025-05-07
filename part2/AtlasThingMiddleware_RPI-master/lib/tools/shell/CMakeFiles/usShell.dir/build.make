@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 # Include any dependencies generated for this target.
 include tools/shell/CMakeFiles/usShell.dir/depend.make
@@ -70,32 +70,32 @@ include tools/shell/CMakeFiles/usShell.dir/progress.make
 include tools/shell/CMakeFiles/usShell.dir/flags.make
 
 tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o: tools/shell/CMakeFiles/usShell.dir/flags.make
-tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp
+tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp
 tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o: tools/shell/CMakeFiles/usShell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o -MF CMakeFiles/usShell.dir/Shell.cpp.o.d -o CMakeFiles/usShell.dir/Shell.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o -MF CMakeFiles/usShell.dir/Shell.cpp.o.d -o CMakeFiles/usShell.dir/Shell.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp
 
 tools/shell/CMakeFiles/usShell.dir/Shell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usShell.dir/Shell.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp > CMakeFiles/usShell.dir/Shell.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp > CMakeFiles/usShell.dir/Shell.cpp.i
 
 tools/shell/CMakeFiles/usShell.dir/Shell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usShell.dir/Shell.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp -o CMakeFiles/usShell.dir/Shell.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp -o CMakeFiles/usShell.dir/Shell.cpp.s
 
 tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o: tools/shell/CMakeFiles/usShell.dir/flags.make
-tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c
+tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c
 tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o: tools/shell/CMakeFiles/usShell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o -MF CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o.d -o CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o -MF CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o.d -o CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c
 
 tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c > CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c > CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.i
 
 tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c -o CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c -o CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.s
 
 # Object files for target usShell
 usShell_OBJECTS = \
@@ -111,18 +111,18 @@ bin/usShell4: tools/shell/CMakeFiles/usShell.dir/build.make
 bin/usShell4: lib/libusShellServiced.so.0.1.0
 bin/usShell4: lib/libCppMicroServicesd.so.4.0.0
 bin/usShell4: tools/shell/CMakeFiles/usShell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/usShell4"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usShell.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/usShell4"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usShell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/shell/CMakeFiles/usShell.dir/build: bin/usShell4
 .PHONY : tools/shell/CMakeFiles/usShell.dir/build
 
 tools/shell/CMakeFiles/usShell.dir/clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell && $(CMAKE_COMMAND) -P CMakeFiles/usShell.dir/cmake_clean.cmake
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell && $(CMAKE_COMMAND) -P CMakeFiles/usShell.dir/cmake_clean.cmake
 .PHONY : tools/shell/CMakeFiles/usShell.dir/clean
 
 tools/shell/CMakeFiles/usShell.dir/depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/tools/shell/CMakeFiles/usShell.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/tools/shell/CMakeFiles/usShell.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/shell/CMakeFiles/usShell.dir/depend
 

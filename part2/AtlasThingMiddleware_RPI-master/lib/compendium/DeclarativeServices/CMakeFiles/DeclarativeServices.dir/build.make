@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 # Include any dependencies generated for this target.
 include compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/depend.make
@@ -70,43 +70,43 @@ include compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/progre
 include compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/flags.make
 
 compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o: compendium/DeclarativeServices/DeclarativeServices/res_0.zip
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking resources zip file for DeclarativeServices"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices && /usr/bin/ld -r -b binary -o /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o res_0.zip
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices && /usr/bin/objcopy --rename-section .data=.us_resources,alloc,load,readonly,data,contents /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking resources zip file for DeclarativeServices"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices && /usr/bin/ld -r -b binary -o /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o res_0.zip
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices && /usr/bin/objcopy --rename-section .data=.us_resources,alloc,load,readonly,data,contents /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o
 
 compendium/DeclarativeServices/DeclarativeServices/res_0.zip: compendium/DeclarativeServices/resources/manifest.json
 compendium/DeclarativeServices/DeclarativeServices/res_0.zip: bin/usResourceCompiler4
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Checking resource dependencies for DeclarativeServices"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/resources && /usr/bin/cmake -E make_directory /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/resources && /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4 -o /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/res_0.zip -n declarative_services -r manifest.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Checking resource dependencies for DeclarativeServices"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/resources && /usr/bin/cmake -E make_directory /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/resources && /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/bin/usResourceCompiler4 -o /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/res_0.zip -n declarative_services -r manifest.json
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/flags.make
-compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp
+compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o -MF CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o.d -o CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o -MF CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o.d -o CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp > CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp > CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.i
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp -o CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices/src/SCRActivator.cpp -o CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.s
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/flags.make
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o: compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o -MF CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o.d -o CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o -MF CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o.d -o CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp > CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp > CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.i
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp -o CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_init.cpp -o CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.s
 
 # Object files for target DeclarativeServices
 DeclarativeServices_OBJECTS = \
@@ -115,35 +115,35 @@ DeclarativeServices_OBJECTS = \
 
 # External object files for target DeclarativeServices
 DeclarativeServices_EXTERNAL_OBJECTS = \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/Error.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/FileSystem.cpp.o" \
-"/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/String.cpp.o"
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentContextImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ComponentRegistry.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRBundleExtension.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/SCRLogger.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/ServiceComponentRuntimeImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleLoader.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/BundleOrPrototypeComponentConfiguration.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationFactory.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentConfigurationImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ComponentManagerImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/ReferenceManagerImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/RegistrationManager.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/SingletonComponentConfiguration.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCActiveState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCRegisteredState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCSatisfiedState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CCUnsatisfiedReferenceState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMDisabledState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/manager/states/CMEnabledState.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/MetadataParserImpl.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ReferenceMetadata.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/ServiceMetadata.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/src/CMakeFiles/DeclarativeServicesObjs.dir/metadata/Util.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/BundleObjFactory.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/BundleObjFile.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/Error.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/FileSystem.cpp.o" \
+"/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/util/CMakeFiles/util.dir/src/String.cpp.o"
 
 lib/libDeclarativeServicesd.so.1.0.0: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/src/SCRActivator.cpp.o
 lib/libDeclarativeServicesd.so.1.0.0: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DeclarativeServices/cppmicroservices_init.cpp.o
@@ -181,9 +181,9 @@ lib/libDeclarativeServicesd.so.1.0.0: lib/libusLogServiced.so
 lib/libDeclarativeServicesd.so.1.0.0: lib/libusServiceComponentd.so
 lib/libDeclarativeServicesd.so.1.0.0: lib/libCppMicroServicesd.so.4.0.0
 lib/libDeclarativeServicesd.so.1.0.0: compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../../lib/libDeclarativeServicesd.so"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DeclarativeServices.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -E cmake_symlink_library ../../lib/libDeclarativeServicesd.so.1.0.0 ../../lib/libDeclarativeServicesd.so.1.0.0 ../../lib/libDeclarativeServicesd.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../../lib/libDeclarativeServicesd.so"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DeclarativeServices.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -E cmake_symlink_library ../../lib/libDeclarativeServicesd.so.1.0.0 ../../lib/libDeclarativeServicesd.so.1.0.0 ../../lib/libDeclarativeServicesd.so
 
 lib/libDeclarativeServicesd.so: lib/libDeclarativeServicesd.so.1.0.0
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/libDeclarativeServicesd.so
@@ -193,11 +193,11 @@ compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build: lib/lib
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/build
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -P CMakeFiles/DeclarativeServices.dir/cmake_clean.cmake
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices && $(CMAKE_COMMAND) -P CMakeFiles/DeclarativeServices.dir/cmake_clean.cmake
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/clean
 
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/depend: compendium/DeclarativeServices/DeclarativeServices/cppmicroservices_resources.o
 compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/depend: compendium/DeclarativeServices/DeclarativeServices/res_0.zip
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/DeclarativeServices /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : compendium/DeclarativeServices/CMakeFiles/DeclarativeServices.dir/depend
 

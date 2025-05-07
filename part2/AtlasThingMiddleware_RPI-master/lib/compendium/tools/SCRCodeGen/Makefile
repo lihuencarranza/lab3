@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/tools/SCRCodeGen//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/tools/SCRCodeGen//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule
 .PHONY : compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ SCRCodeGen: compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/rule
 
 # fast build rule for target.
 SCRCodeGen/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build
 .PHONY : SCRCodeGen/fast
 
 ComponentInfo.o: ComponentInfo.cpp.o
@@ -180,7 +180,7 @@ ComponentInfo.o: ComponentInfo.cpp.o
 
 # target to build an object file
 ComponentInfo.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.o
 .PHONY : ComponentInfo.cpp.o
 
 ComponentInfo.i: ComponentInfo.cpp.i
@@ -188,7 +188,7 @@ ComponentInfo.i: ComponentInfo.cpp.i
 
 # target to preprocess a source file
 ComponentInfo.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.i
 .PHONY : ComponentInfo.cpp.i
 
 ComponentInfo.s: ComponentInfo.cpp.s
@@ -196,7 +196,7 @@ ComponentInfo.s: ComponentInfo.cpp.s
 
 # target to generate assembly for a file
 ComponentInfo.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ComponentInfo.cpp.s
 .PHONY : ComponentInfo.cpp.s
 
 Main.o: Main.cpp.o
@@ -204,7 +204,7 @@ Main.o: Main.cpp.o
 
 # target to build an object file
 Main.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.o
 .PHONY : Main.cpp.o
 
 Main.i: Main.cpp.i
@@ -212,7 +212,7 @@ Main.i: Main.cpp.i
 
 # target to preprocess a source file
 Main.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.i
 .PHONY : Main.cpp.i
 
 Main.s: Main.cpp.s
@@ -220,7 +220,7 @@ Main.s: Main.cpp.s
 
 # target to generate assembly for a file
 Main.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
 ManifestParserImpl.o: ManifestParserImpl.cpp.o
@@ -228,7 +228,7 @@ ManifestParserImpl.o: ManifestParserImpl.cpp.o
 
 # target to build an object file
 ManifestParserImpl.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.o
 .PHONY : ManifestParserImpl.cpp.o
 
 ManifestParserImpl.i: ManifestParserImpl.cpp.i
@@ -236,7 +236,7 @@ ManifestParserImpl.i: ManifestParserImpl.cpp.i
 
 # target to preprocess a source file
 ManifestParserImpl.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.i
 .PHONY : ManifestParserImpl.cpp.i
 
 ManifestParserImpl.s: ManifestParserImpl.cpp.s
@@ -244,7 +244,7 @@ ManifestParserImpl.s: ManifestParserImpl.cpp.s
 
 # target to generate assembly for a file
 ManifestParserImpl.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/ManifestParserImpl.cpp.s
 .PHONY : ManifestParserImpl.cpp.s
 
 Util.o: Util.cpp.o
@@ -252,7 +252,7 @@ Util.o: Util.cpp.o
 
 # target to build an object file
 Util.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.o
 .PHONY : Util.cpp.o
 
 Util.i: Util.cpp.i
@@ -260,7 +260,7 @@ Util.i: Util.cpp.i
 
 # target to preprocess a source file
 Util.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.i
 .PHONY : Util.cpp.i
 
 Util.s: Util.cpp.s
@@ -268,7 +268,7 @@ Util.s: Util.cpp.s
 
 # target to generate assembly for a file
 Util.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/Util.cpp.s
 .PHONY : Util.cpp.s
 
 __/__/__/third_party/jsoncpp.o: __/__/__/third_party/jsoncpp.cpp.o
@@ -276,7 +276,7 @@ __/__/__/third_party/jsoncpp.o: __/__/__/third_party/jsoncpp.cpp.o
 
 # target to build an object file
 __/__/__/third_party/jsoncpp.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.o
 .PHONY : __/__/__/third_party/jsoncpp.cpp.o
 
 __/__/__/third_party/jsoncpp.i: __/__/__/third_party/jsoncpp.cpp.i
@@ -284,7 +284,7 @@ __/__/__/third_party/jsoncpp.i: __/__/__/third_party/jsoncpp.cpp.i
 
 # target to preprocess a source file
 __/__/__/third_party/jsoncpp.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.i
 .PHONY : __/__/__/third_party/jsoncpp.cpp.i
 
 __/__/__/third_party/jsoncpp.s: __/__/__/third_party/jsoncpp.cpp.s
@@ -292,7 +292,7 @@ __/__/__/third_party/jsoncpp.s: __/__/__/third_party/jsoncpp.cpp.s
 
 # target to generate assembly for a file
 __/__/__/third_party/jsoncpp.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/build.make compendium/tools/SCRCodeGen/CMakeFiles/SCRCodeGen.dir/__/__/__/third_party/jsoncpp.cpp.s
 .PHONY : __/__/__/third_party/jsoncpp.cpp.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

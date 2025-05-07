@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/third_party/absl//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/third_party/absl//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 third_party/absl/CMakeFiles/absl.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/CMakeFiles/absl.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/absl/CMakeFiles/absl.dir/rule
 .PHONY : third_party/absl/CMakeFiles/absl.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ absl: third_party/absl/CMakeFiles/absl.dir/rule
 
 # fast build rule for target.
 absl/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/build
 .PHONY : absl/fast
 
 absl/base/internal/raw_logging.o: absl/base/internal/raw_logging.cc.o
@@ -180,7 +180,7 @@ absl/base/internal/raw_logging.o: absl/base/internal/raw_logging.cc.o
 
 # target to build an object file
 absl/base/internal/raw_logging.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.o
 .PHONY : absl/base/internal/raw_logging.cc.o
 
 absl/base/internal/raw_logging.i: absl/base/internal/raw_logging.cc.i
@@ -188,7 +188,7 @@ absl/base/internal/raw_logging.i: absl/base/internal/raw_logging.cc.i
 
 # target to preprocess a source file
 absl/base/internal/raw_logging.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.i
 .PHONY : absl/base/internal/raw_logging.cc.i
 
 absl/base/internal/raw_logging.s: absl/base/internal/raw_logging.cc.s
@@ -196,7 +196,7 @@ absl/base/internal/raw_logging.s: absl/base/internal/raw_logging.cc.s
 
 # target to generate assembly for a file
 absl/base/internal/raw_logging.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/raw_logging.cc.s
 .PHONY : absl/base/internal/raw_logging.cc.s
 
 absl/base/internal/throw_delegate.o: absl/base/internal/throw_delegate.cc.o
@@ -204,7 +204,7 @@ absl/base/internal/throw_delegate.o: absl/base/internal/throw_delegate.cc.o
 
 # target to build an object file
 absl/base/internal/throw_delegate.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.o
 .PHONY : absl/base/internal/throw_delegate.cc.o
 
 absl/base/internal/throw_delegate.i: absl/base/internal/throw_delegate.cc.i
@@ -212,7 +212,7 @@ absl/base/internal/throw_delegate.i: absl/base/internal/throw_delegate.cc.i
 
 # target to preprocess a source file
 absl/base/internal/throw_delegate.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.i
 .PHONY : absl/base/internal/throw_delegate.cc.i
 
 absl/base/internal/throw_delegate.s: absl/base/internal/throw_delegate.cc.s
@@ -220,7 +220,7 @@ absl/base/internal/throw_delegate.s: absl/base/internal/throw_delegate.cc.s
 
 # target to generate assembly for a file
 absl/base/internal/throw_delegate.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/internal/throw_delegate.cc.s
 .PHONY : absl/base/internal/throw_delegate.cc.s
 
 absl/base/log_severity.o: absl/base/log_severity.cc.o
@@ -228,7 +228,7 @@ absl/base/log_severity.o: absl/base/log_severity.cc.o
 
 # target to build an object file
 absl/base/log_severity.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.o
 .PHONY : absl/base/log_severity.cc.o
 
 absl/base/log_severity.i: absl/base/log_severity.cc.i
@@ -236,7 +236,7 @@ absl/base/log_severity.i: absl/base/log_severity.cc.i
 
 # target to preprocess a source file
 absl/base/log_severity.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.i
 .PHONY : absl/base/log_severity.cc.i
 
 absl/base/log_severity.s: absl/base/log_severity.cc.s
@@ -244,7 +244,7 @@ absl/base/log_severity.s: absl/base/log_severity.cc.s
 
 # target to generate assembly for a file
 absl/base/log_severity.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/base/log_severity.cc.s
 .PHONY : absl/base/log_severity.cc.s
 
 absl/numeric/int128.o: absl/numeric/int128.cc.o
@@ -252,7 +252,7 @@ absl/numeric/int128.o: absl/numeric/int128.cc.o
 
 # target to build an object file
 absl/numeric/int128.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.o
 .PHONY : absl/numeric/int128.cc.o
 
 absl/numeric/int128.i: absl/numeric/int128.cc.i
@@ -260,7 +260,7 @@ absl/numeric/int128.i: absl/numeric/int128.cc.i
 
 # target to preprocess a source file
 absl/numeric/int128.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.i
 .PHONY : absl/numeric/int128.cc.i
 
 absl/numeric/int128.s: absl/numeric/int128.cc.s
@@ -268,7 +268,7 @@ absl/numeric/int128.s: absl/numeric/int128.cc.s
 
 # target to generate assembly for a file
 absl/numeric/int128.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/numeric/int128.cc.s
 .PHONY : absl/numeric/int128.cc.s
 
 absl/strings/ascii.o: absl/strings/ascii.cc.o
@@ -276,7 +276,7 @@ absl/strings/ascii.o: absl/strings/ascii.cc.o
 
 # target to build an object file
 absl/strings/ascii.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.o
 .PHONY : absl/strings/ascii.cc.o
 
 absl/strings/ascii.i: absl/strings/ascii.cc.i
@@ -284,7 +284,7 @@ absl/strings/ascii.i: absl/strings/ascii.cc.i
 
 # target to preprocess a source file
 absl/strings/ascii.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.i
 .PHONY : absl/strings/ascii.cc.i
 
 absl/strings/ascii.s: absl/strings/ascii.cc.s
@@ -292,7 +292,7 @@ absl/strings/ascii.s: absl/strings/ascii.cc.s
 
 # target to generate assembly for a file
 absl/strings/ascii.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/ascii.cc.s
 .PHONY : absl/strings/ascii.cc.s
 
 absl/strings/charconv.o: absl/strings/charconv.cc.o
@@ -300,7 +300,7 @@ absl/strings/charconv.o: absl/strings/charconv.cc.o
 
 # target to build an object file
 absl/strings/charconv.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.o
 .PHONY : absl/strings/charconv.cc.o
 
 absl/strings/charconv.i: absl/strings/charconv.cc.i
@@ -308,7 +308,7 @@ absl/strings/charconv.i: absl/strings/charconv.cc.i
 
 # target to preprocess a source file
 absl/strings/charconv.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.i
 .PHONY : absl/strings/charconv.cc.i
 
 absl/strings/charconv.s: absl/strings/charconv.cc.s
@@ -316,7 +316,7 @@ absl/strings/charconv.s: absl/strings/charconv.cc.s
 
 # target to generate assembly for a file
 absl/strings/charconv.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/charconv.cc.s
 .PHONY : absl/strings/charconv.cc.s
 
 absl/strings/internal/charconv_bigint.o: absl/strings/internal/charconv_bigint.cc.o
@@ -324,7 +324,7 @@ absl/strings/internal/charconv_bigint.o: absl/strings/internal/charconv_bigint.c
 
 # target to build an object file
 absl/strings/internal/charconv_bigint.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.o
 .PHONY : absl/strings/internal/charconv_bigint.cc.o
 
 absl/strings/internal/charconv_bigint.i: absl/strings/internal/charconv_bigint.cc.i
@@ -332,7 +332,7 @@ absl/strings/internal/charconv_bigint.i: absl/strings/internal/charconv_bigint.c
 
 # target to preprocess a source file
 absl/strings/internal/charconv_bigint.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.i
 .PHONY : absl/strings/internal/charconv_bigint.cc.i
 
 absl/strings/internal/charconv_bigint.s: absl/strings/internal/charconv_bigint.cc.s
@@ -340,7 +340,7 @@ absl/strings/internal/charconv_bigint.s: absl/strings/internal/charconv_bigint.c
 
 # target to generate assembly for a file
 absl/strings/internal/charconv_bigint.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_bigint.cc.s
 .PHONY : absl/strings/internal/charconv_bigint.cc.s
 
 absl/strings/internal/charconv_parse.o: absl/strings/internal/charconv_parse.cc.o
@@ -348,7 +348,7 @@ absl/strings/internal/charconv_parse.o: absl/strings/internal/charconv_parse.cc.
 
 # target to build an object file
 absl/strings/internal/charconv_parse.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.o
 .PHONY : absl/strings/internal/charconv_parse.cc.o
 
 absl/strings/internal/charconv_parse.i: absl/strings/internal/charconv_parse.cc.i
@@ -356,7 +356,7 @@ absl/strings/internal/charconv_parse.i: absl/strings/internal/charconv_parse.cc.
 
 # target to preprocess a source file
 absl/strings/internal/charconv_parse.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.i
 .PHONY : absl/strings/internal/charconv_parse.cc.i
 
 absl/strings/internal/charconv_parse.s: absl/strings/internal/charconv_parse.cc.s
@@ -364,7 +364,7 @@ absl/strings/internal/charconv_parse.s: absl/strings/internal/charconv_parse.cc.
 
 # target to generate assembly for a file
 absl/strings/internal/charconv_parse.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/charconv_parse.cc.s
 .PHONY : absl/strings/internal/charconv_parse.cc.s
 
 absl/strings/internal/memutil.o: absl/strings/internal/memutil.cc.o
@@ -372,7 +372,7 @@ absl/strings/internal/memutil.o: absl/strings/internal/memutil.cc.o
 
 # target to build an object file
 absl/strings/internal/memutil.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.o
 .PHONY : absl/strings/internal/memutil.cc.o
 
 absl/strings/internal/memutil.i: absl/strings/internal/memutil.cc.i
@@ -380,7 +380,7 @@ absl/strings/internal/memutil.i: absl/strings/internal/memutil.cc.i
 
 # target to preprocess a source file
 absl/strings/internal/memutil.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.i
 .PHONY : absl/strings/internal/memutil.cc.i
 
 absl/strings/internal/memutil.s: absl/strings/internal/memutil.cc.s
@@ -388,7 +388,7 @@ absl/strings/internal/memutil.s: absl/strings/internal/memutil.cc.s
 
 # target to generate assembly for a file
 absl/strings/internal/memutil.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/internal/memutil.cc.s
 .PHONY : absl/strings/internal/memutil.cc.s
 
 absl/strings/match.o: absl/strings/match.cc.o
@@ -396,7 +396,7 @@ absl/strings/match.o: absl/strings/match.cc.o
 
 # target to build an object file
 absl/strings/match.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.o
 .PHONY : absl/strings/match.cc.o
 
 absl/strings/match.i: absl/strings/match.cc.i
@@ -404,7 +404,7 @@ absl/strings/match.i: absl/strings/match.cc.i
 
 # target to preprocess a source file
 absl/strings/match.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.i
 .PHONY : absl/strings/match.cc.i
 
 absl/strings/match.s: absl/strings/match.cc.s
@@ -412,7 +412,7 @@ absl/strings/match.s: absl/strings/match.cc.s
 
 # target to generate assembly for a file
 absl/strings/match.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/match.cc.s
 .PHONY : absl/strings/match.cc.s
 
 absl/strings/numbers.o: absl/strings/numbers.cc.o
@@ -420,7 +420,7 @@ absl/strings/numbers.o: absl/strings/numbers.cc.o
 
 # target to build an object file
 absl/strings/numbers.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.o
 .PHONY : absl/strings/numbers.cc.o
 
 absl/strings/numbers.i: absl/strings/numbers.cc.i
@@ -428,7 +428,7 @@ absl/strings/numbers.i: absl/strings/numbers.cc.i
 
 # target to preprocess a source file
 absl/strings/numbers.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.i
 .PHONY : absl/strings/numbers.cc.i
 
 absl/strings/numbers.s: absl/strings/numbers.cc.s
@@ -436,7 +436,7 @@ absl/strings/numbers.s: absl/strings/numbers.cc.s
 
 # target to generate assembly for a file
 absl/strings/numbers.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/numbers.cc.s
 .PHONY : absl/strings/numbers.cc.s
 
 absl/strings/str_cat.o: absl/strings/str_cat.cc.o
@@ -444,7 +444,7 @@ absl/strings/str_cat.o: absl/strings/str_cat.cc.o
 
 # target to build an object file
 absl/strings/str_cat.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.o
 .PHONY : absl/strings/str_cat.cc.o
 
 absl/strings/str_cat.i: absl/strings/str_cat.cc.i
@@ -452,7 +452,7 @@ absl/strings/str_cat.i: absl/strings/str_cat.cc.i
 
 # target to preprocess a source file
 absl/strings/str_cat.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.i
 .PHONY : absl/strings/str_cat.cc.i
 
 absl/strings/str_cat.s: absl/strings/str_cat.cc.s
@@ -460,7 +460,7 @@ absl/strings/str_cat.s: absl/strings/str_cat.cc.s
 
 # target to generate assembly for a file
 absl/strings/str_cat.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/str_cat.cc.s
 .PHONY : absl/strings/str_cat.cc.s
 
 absl/strings/string_view.o: absl/strings/string_view.cc.o
@@ -468,7 +468,7 @@ absl/strings/string_view.o: absl/strings/string_view.cc.o
 
 # target to build an object file
 absl/strings/string_view.cc.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.o
 .PHONY : absl/strings/string_view.cc.o
 
 absl/strings/string_view.i: absl/strings/string_view.cc.i
@@ -476,7 +476,7 @@ absl/strings/string_view.i: absl/strings/string_view.cc.i
 
 # target to preprocess a source file
 absl/strings/string_view.cc.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.i
 .PHONY : absl/strings/string_view.cc.i
 
 absl/strings/string_view.s: absl/strings/string_view.cc.s
@@ -484,7 +484,7 @@ absl/strings/string_view.s: absl/strings/string_view.cc.s
 
 # target to generate assembly for a file
 absl/strings/string_view.cc.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f third_party/absl/CMakeFiles/absl.dir/build.make third_party/absl/CMakeFiles/absl.dir/absl/strings/string_view.cc.s
 .PHONY : absl/strings/string_view.cc.s
 
 # Help Target
@@ -550,6 +550,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -50,11 +50,11 @@ set(US_ENABLE_THREADING_SUPPORT ON)
 
 cmake_minimum_required(VERSION ${US_CMAKE_MINIMUM_REQUIRED_VERSION})
 
-list(APPEND CMAKE_MODULE_PATH "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake")
+list(APPEND CMAKE_MODULE_PATH "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake")
 
-set(US_BUNDLE_INIT_TEMPLATE "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/BundleInit.cpp")
-set(US_RESOURCE_RC_TEMPLATE "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/cppmicroservices_resources.rc.in")
-set(US_CMAKE_RESOURCE_DEPENDENCIES_CPP "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/CMakeResourceDependencies.cpp")
+set(US_BUNDLE_INIT_TEMPLATE "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/BundleInit.cpp")
+set(US_RESOURCE_RC_TEMPLATE "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/cppmicroservices_resources.rc.in")
+set(US_CMAKE_RESOURCE_DEPENDENCIES_CPP "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/CMakeResourceDependencies.cpp")
 
 set(US_RCC_EXECUTABLE_TARGET usResourceCompiler)
 if(NOT TARGET ${US_RCC_EXECUTABLE_TARGET})
@@ -65,12 +65,12 @@ endif()
 include(CMakeParseArguments)
 include(FindPackageHandleStandardArgs)
 
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGenerateBundleInit.cmake")
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionAddResources.cmake")
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckCompilerFlags.cmake")
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionEmbedResources.cmake")
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckResourceLinking.cmake")
-include("/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGetResourceSource.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGenerateBundleInit.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionAddResources.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckCompilerFlags.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionEmbedResources.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionCheckResourceLinking.cmake")
+include("/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/cmake/usFunctionGetResourceSource.cmake")
 
 usFunctionCheckResourceLinking()
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 # Include any dependencies generated for this target.
 include compendium/LogService/CMakeFiles/usLogService.dir/depend.make
@@ -70,18 +70,18 @@ include compendium/LogService/CMakeFiles/usLogService.dir/progress.make
 include compendium/LogService/CMakeFiles/usLogService.dir/flags.make
 
 compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o: compendium/LogService/CMakeFiles/usLogService.dir/flags.make
-compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o: /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp
+compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp
 compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o: compendium/LogService/CMakeFiles/usLogService.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o -MF CMakeFiles/usLogService.dir/src/LogService.cpp.o.d -o CMakeFiles/usLogService.dir/src/LogService.cpp.o -c /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o -MF CMakeFiles/usLogService.dir/src/LogService.cpp.o.d -o CMakeFiles/usLogService.dir/src/LogService.cpp.o -c /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp
 
 compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usLogService.dir/src/LogService.cpp.i"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp > CMakeFiles/usLogService.dir/src/LogService.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp > CMakeFiles/usLogService.dir/src/LogService.cpp.i
 
 compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usLogService.dir/src/LogService.cpp.s"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp -o CMakeFiles/usLogService.dir/src/LogService.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService/src/LogService.cpp -o CMakeFiles/usLogService.dir/src/LogService.cpp.s
 
 # Object files for target usLogService
 usLogService_OBJECTS = \
@@ -93,18 +93,18 @@ usLogService_EXTERNAL_OBJECTS =
 lib/libusLogServiced.so: compendium/LogService/CMakeFiles/usLogService.dir/src/LogService.cpp.o
 lib/libusLogServiced.so: compendium/LogService/CMakeFiles/usLogService.dir/build.make
 lib/libusLogServiced.so: compendium/LogService/CMakeFiles/usLogService.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libusLogServiced.so"
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usLogService.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libusLogServiced.so"
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usLogService.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 compendium/LogService/CMakeFiles/usLogService.dir/build: lib/libusLogServiced.so
 .PHONY : compendium/LogService/CMakeFiles/usLogService.dir/build
 
 compendium/LogService/CMakeFiles/usLogService.dir/clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && $(CMAKE_COMMAND) -P CMakeFiles/usLogService.dir/cmake_clean.cmake
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService && $(CMAKE_COMMAND) -P CMakeFiles/usLogService.dir/cmake_clean.cmake
 .PHONY : compendium/LogService/CMakeFiles/usLogService.dir/clean
 
 compendium/LogService/CMakeFiles/usLogService.dir/depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/usLogService.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/compendium/LogService /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/compendium/LogService/CMakeFiles/usLogService.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : compendium/LogService/CMakeFiles/usLogService.dir/depend
 

@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c" "tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o" "gcc" "tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o.d"
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp" "tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o" "gcc" "tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/third_party/linenoise.c" "tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o" "gcc" "tools/shell/CMakeFiles/usShell.dir/__/__/third_party/linenoise.c.o.d"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development/tools/shell/Shell.cpp" "tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o" "gcc" "tools/shell/CMakeFiles/usShell.dir/Shell.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/usShellService.dir/DependInfo.cmake"
-  "/home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/framework/CMakeFiles/CppMicroServices.dir/DependInfo.cmake"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice/CMakeFiles/usShellService.dir/DependInfo.cmake"
+  "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/framework/CMakeFiles/CppMicroServices.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

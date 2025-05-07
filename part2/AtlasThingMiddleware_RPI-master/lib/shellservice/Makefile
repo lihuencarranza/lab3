@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
+CMAKE_SOURCE_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CppMicroServices-development
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib
+CMAKE_BINARY_DIR = /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/shellservice//CMakeFiles/progress.marks
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/shellservice//CMakeFiles/progress.marks
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/clean
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/preinstall
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 shellservice/CMakeFiles/usShellService.dir/rule:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/CMakeFiles/usShellService.dir/rule
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shellservice/CMakeFiles/usShellService.dir/rule
 .PHONY : shellservice/CMakeFiles/usShellService.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ usShellService: shellservice/CMakeFiles/usShellService.dir/rule
 
 # fast build rule for target.
 usShellService/fast:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/build
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/build
 .PHONY : usShellService/fast
 
 __/third_party/tinyscheme/scheme.o: __/third_party/tinyscheme/scheme.c.o
@@ -180,7 +180,7 @@ __/third_party/tinyscheme/scheme.o: __/third_party/tinyscheme/scheme.c.o
 
 # target to build an object file
 __/third_party/tinyscheme/scheme.c.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.o
 .PHONY : __/third_party/tinyscheme/scheme.c.o
 
 __/third_party/tinyscheme/scheme.i: __/third_party/tinyscheme/scheme.c.i
@@ -188,7 +188,7 @@ __/third_party/tinyscheme/scheme.i: __/third_party/tinyscheme/scheme.c.i
 
 # target to preprocess a source file
 __/third_party/tinyscheme/scheme.c.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.i
 .PHONY : __/third_party/tinyscheme/scheme.c.i
 
 __/third_party/tinyscheme/scheme.s: __/third_party/tinyscheme/scheme.c.s
@@ -196,7 +196,7 @@ __/third_party/tinyscheme/scheme.s: __/third_party/tinyscheme/scheme.c.s
 
 # target to generate assembly for a file
 __/third_party/tinyscheme/scheme.c.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/__/third_party/tinyscheme/scheme.c.s
 .PHONY : __/third_party/tinyscheme/scheme.c.s
 
 src/ShellActivator.o: src/ShellActivator.cpp.o
@@ -204,7 +204,7 @@ src/ShellActivator.o: src/ShellActivator.cpp.o
 
 # target to build an object file
 src/ShellActivator.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.o
 .PHONY : src/ShellActivator.cpp.o
 
 src/ShellActivator.i: src/ShellActivator.cpp.i
@@ -212,7 +212,7 @@ src/ShellActivator.i: src/ShellActivator.cpp.i
 
 # target to preprocess a source file
 src/ShellActivator.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.i
 .PHONY : src/ShellActivator.cpp.i
 
 src/ShellActivator.s: src/ShellActivator.cpp.s
@@ -220,7 +220,7 @@ src/ShellActivator.s: src/ShellActivator.cpp.s
 
 # target to generate assembly for a file
 src/ShellActivator.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellActivator.cpp.s
 .PHONY : src/ShellActivator.cpp.s
 
 src/ShellService.o: src/ShellService.cpp.o
@@ -228,7 +228,7 @@ src/ShellService.o: src/ShellService.cpp.o
 
 # target to build an object file
 src/ShellService.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.o
 .PHONY : src/ShellService.cpp.o
 
 src/ShellService.i: src/ShellService.cpp.i
@@ -236,7 +236,7 @@ src/ShellService.i: src/ShellService.cpp.i
 
 # target to preprocess a source file
 src/ShellService.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.i
 .PHONY : src/ShellService.cpp.i
 
 src/ShellService.s: src/ShellService.cpp.s
@@ -244,7 +244,7 @@ src/ShellService.s: src/ShellService.cpp.s
 
 # target to generate assembly for a file
 src/ShellService.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/src/ShellService.cpp.s
 .PHONY : src/ShellService.cpp.s
 
 usShellService/cppmicroservices_init.o: usShellService/cppmicroservices_init.cpp.o
@@ -252,7 +252,7 @@ usShellService/cppmicroservices_init.o: usShellService/cppmicroservices_init.cpp
 
 # target to build an object file
 usShellService/cppmicroservices_init.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.o
 .PHONY : usShellService/cppmicroservices_init.cpp.o
 
 usShellService/cppmicroservices_init.i: usShellService/cppmicroservices_init.cpp.i
@@ -260,7 +260,7 @@ usShellService/cppmicroservices_init.i: usShellService/cppmicroservices_init.cpp
 
 # target to preprocess a source file
 usShellService/cppmicroservices_init.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.i
 .PHONY : usShellService/cppmicroservices_init.cpp.i
 
 usShellService/cppmicroservices_init.s: usShellService/cppmicroservices_init.cpp.s
@@ -268,7 +268,7 @@ usShellService/cppmicroservices_init.s: usShellService/cppmicroservices_init.cpp
 
 # target to generate assembly for a file
 usShellService/cppmicroservices_init.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_init.cpp.s
 .PHONY : usShellService/cppmicroservices_init.cpp.s
 
 usShellService/cppmicroservices_resources.o: usShellService/cppmicroservices_resources.cpp.o
@@ -276,7 +276,7 @@ usShellService/cppmicroservices_resources.o: usShellService/cppmicroservices_res
 
 # target to build an object file
 usShellService/cppmicroservices_resources.cpp.o:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.o
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.o
 .PHONY : usShellService/cppmicroservices_resources.cpp.o
 
 usShellService/cppmicroservices_resources.i: usShellService/cppmicroservices_resources.cpp.i
@@ -284,7 +284,7 @@ usShellService/cppmicroservices_resources.i: usShellService/cppmicroservices_res
 
 # target to preprocess a source file
 usShellService/cppmicroservices_resources.cpp.i:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.i
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.i
 .PHONY : usShellService/cppmicroservices_resources.cpp.i
 
 usShellService/cppmicroservices_resources.s: usShellService/cppmicroservices_resources.cpp.s
@@ -292,7 +292,7 @@ usShellService/cppmicroservices_resources.s: usShellService/cppmicroservices_res
 
 # target to generate assembly for a file
 usShellService/cppmicroservices_resources.cpp.s:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.s
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(MAKE) $(MAKESILENT) -f shellservice/CMakeFiles/usShellService.dir/build.make shellservice/CMakeFiles/usShellService.dir/usShellService/cppmicroservices_resources.cpp.s
 .PHONY : usShellService/cppmicroservices_resources.cpp.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lihuen/Downloads/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/lib && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
