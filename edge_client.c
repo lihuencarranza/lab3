@@ -145,7 +145,36 @@ void *command_server_thread(void *arg) {
                     }
                 }
                 pthread_mutex_unlock(&lock);
-            } else {
+            } else if (strcmp(buffer, "HELP") == 0) {
+                snprintf(response, sizeof(response),
+                    "Available commands:\n"
+                    "READ RPi-1 Read_Humidity\n"
+                    "WRITE RPi-2 Set_LED ON\n"
+                    "WRITE RPi-2 Set_LED OFF\n"
+                    "APP HumidCheck\n"
+                    "HELP\n");
+            } else if (strcmp(buffer, "APP HumidCheck") == 0) {
+                int humidity = read_humidity();
+                if (humidity >= 0) {
+                    float voltage = humidity * 3.3 / 1023.0;
+                    char action[32];
+            
+                    if (humidity < 30) {
+                        send_led_command("ON");
+                        strcpy(action, "LED turned ON");
+                    } else {
+                        send_led_command("OFF");
+                        strcpy(action, "LED turned OFF");
+                    }
+            
+                    snprintf(response, sizeof(response),
+                        "[HumidCheck App]\nHumidity: %d (%.2f V)\nAction: %s\n",
+                        humidity, voltage, action);
+                } else {
+                    snprintf(response, sizeof(response), "Failed to run HumidCheck App (sensor error).");
+                }
+            }            
+            else {
                 snprintf(response, sizeof(response), "Unknown command.");
             }
 
