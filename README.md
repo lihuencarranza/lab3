@@ -48,12 +48,12 @@ sudo raspiconfig
 make all
 ```
 
-
 This builds:
 
 * `serviceA` -> reads humidity via SPI
 * `serviceB` -> controls LED via GPIO
 * `edge_client` -> central controller
+* `iot_ide` -> ide
 
 ## How to run it
 
@@ -69,26 +69,35 @@ Then run it:
 ./run_all.sh
 ```
 
-This will open three terminals. One for each service and another one for the edge_client.
-
+This will open three terminals. One for each service, another one for the edge_client and one for the ide.
 
 ## How It Works
 
-### Service A (Humidity Sensor Reader)
 
-- Uses SPI to communicate with MCP3008 ADC.
-- Reads from channel 0.
-- Waits for client (edge client) to connect via TCP on port 5000.
-- Sends the raw ADC humidity value to the client.
+### Service Registration
 
-### Edge Client (Decision Maker)
+- Each RPi registers its available services by connecting to the edge device on port 6000.
+- Example:
+  - Sensor registers: (RPi-1, Read_Humidity, 0, -)
+  - Actuator registers: (RPi-2, Set_LED, 1, ON/OFF)
 
-- Connects to Service A and requests humidity data.
-- Converts the ADC value to voltage.
-- If the raw value is < 30, sends "ON" to Service B via TCP on port 5001.
+### Edge Device Behavior
 
-### Service B (LED Controller)
+- Listens for service registrations on port 6000.
 
-- Listens on TCP port 5001.
-- Uses libgpiod to control GPIO pin 26.
-- When it receives "ON", turns on the LED for 2 seconds.
+- Periodically reads humidity from the sensor (port 5000).
+
+- If humidity < 30, it sends an ON command to the actuator (port 5001), else OFF.
+
+- Listens for user commands from the IDE on port 7000.
+
+### IDE (Interactive Environment)
+
+- Connects to the edge device on port 7000.
+- Sends commands like:
+
+  - READ RPi-1 Read_Humidity
+  - WRITE RPi-2 Set_LED ON
+  - WRITE RPi-2 Set_LED OFF
+
+- The edge device interprets the command and responds with the result.
