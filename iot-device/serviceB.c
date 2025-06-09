@@ -18,7 +18,7 @@
 int led_on = 0;
 struct gpiod_line *led;
 #define EDGE_IP "127.0.0.1"
-#define EDGE_PORT 6668
+#define EDGE_PORT 6000
 
 void *button_thread(void *arg) {
     struct gpiod_chip *chip = gpiod_chip_open(GPIO_CHIP);
