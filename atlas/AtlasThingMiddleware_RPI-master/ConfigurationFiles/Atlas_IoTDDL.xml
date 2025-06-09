@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Atlas_IoTDDL>
 	<Atlas_Thing>
 		<Descriptive_Metadata>
@@ -92,7 +93,7 @@
 			
 			<Services>
 			  <Service>
-				<Service_Name>getHumidity</Service_Name>
+				<Service_Name>Read_Humidity</Service_Name>
 				<Libraries>
 				  <Library>#include "mcp3008.h"</Library>
 				</Libraries>

@@ -132,15 +132,17 @@ class AtlasIDEDiscovery:
                     services={},
                     relationships=[]
                 )
-                # Add default service
+                # Add default service from IoTDDL
                 service = AtlasService(
-                    name="getHumidity",
+                    name="Read_Humidity",
                     inputs="()",
                     outputs="int",
-                    description="Reads humidity from MCP3008 channel 0"
+                    description="Reads humidity from MCP3008 channel 0",
+                    libraries=["mcp3008.h"],
+                    functionality="value = mcpRead0();"
                 )
-                self.discovered_things[thing_id].services["getHumidity"] = service
-                print(f"Added default service getHumidity for {thing_id}")
+                self.discovered_things[thing_id].services["Read_Humidity"] = service
+                print(f"Added default service Read_Humidity for {thing_id}")
 
     def _handle_identity_language(self, tweet: dict):
         """Handle identity language tweets"""
@@ -182,16 +184,81 @@ class AtlasIDEDiscovery:
                 )
                 print(f"Discovered new thing: {thing_id} ({tweet.get('Name', thing_id)}) in space {space_id}")
                 
-                # Add default service from IoTDDL
+                # Add entity and service from IoTDDL
                 if thing_id == "RaspberryHumidity":
+                    # Add the entity
+                    entity = AtlasEntity(
+                        entity_id="HumiditySensor01",
+                        entity_name="HumiditySensor",
+                        entity_type="Sensor",
+                        sensor_actuator="Sensor",
+                        description="Reads humidity from MCP3008 channel 0",
+                        services={}
+                    )
+                    self.discovered_things[thing_id].entities["HumiditySensor01"] = entity
+                    
+                    # Add the service
                     service = AtlasService(
-                        name="getHumidity",
+                        name="Read_Humidity",
                         inputs="()",
                         outputs="int",
-                        description="Reads humidity from MCP3008 channel 0"
+                        description="Reads humidity from MCP3008 channel 0",
+                        libraries=["mcp3008.h"],
+                        functionality="value = mcpRead0();"
                     )
-                    self.discovered_things[thing_id].services["getHumidity"] = service
-                    print(f"Added default service getHumidity for {thing_id}")
+                    self.discovered_things[thing_id].services["Read_Humidity"] = service
+                    entity.services["Read_Humidity"] = service
+                    print(f"Added entity HumiditySensor01 and service Read_Humidity for {thing_id}")
+                    
+                    # Send entity identity tweet
+                    entity_tweet = {
+                        "Tweet Type": "Entity Identity",
+                        "Thing ID": thing_id,
+                        "Space ID": space_id,
+                        "Entity ID": "HumiditySensor01",
+                        "Entity Name": "HumiditySensor",
+                        "Entity Type": "Sensor",
+                        "Entity SensorActuator": "Sensor",
+                        "Entity Description": "Reads humidity from MCP3008 channel 0"
+                    }
+                    
+                    # Send service tweet with complete information
+                    service_tweet = {
+                        "Tweet Type": "Service",
+                        "Thing ID": thing_id,
+                        "Space ID": space_id,
+                        "Entity ID": "HumiditySensor01",
+                        "Service Name": "Read_Humidity",
+                        "Libraries": ["#include \"mcp3008.h\""],
+                        "ADC": {
+                            "ADC_Model": "MCP3008",
+                            "ADC_Channel": "0",
+                            "ADC_ResultVar": "value"
+                        },
+                        "Service_Output": {
+                            "Output": {
+                                "Type": "int",
+                                "Name": "value"
+                            }
+                        },
+                        "Functionality": "value = mcpRead0();"
+                    }
+                    
+                    try:
+                        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+                            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                            sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+                            sock.connect((self.host, self.port))
+                            # Send entity tweet
+                            sock.sendall((json.dumps(entity_tweet) + "\n").encode('utf-8'))
+                            print(f"Sent entity identity tweet for {thing_id}")
+                            # Send service tweet
+                            sock.sendall((json.dumps(service_tweet) + "\n").encode('utf-8'))
+                            print(f"Sent service registration tweet for {thing_id}")
+                            # Wait a bit to ensure tweets are processed
+                            time.sleep(1)
+                    except Exception as e:
+                        print(f"Error sending registration tweets: {e}")
 
     def _handle_service_tweet(self, tweet: dict):
         """Handle service tweets"""
@@ -273,8 +340,24 @@ class AtlasIDEDiscovery:
                 "Tweet Type": "API Call",
                 "Thing ID": thing_id,
                 "Space ID": self.discovered_things[thing_id].space_id,
+                "Entity ID": "HumiditySensor01",
                 "Service Name": service_name,
-                "Service Inputs": inputs
+                "Service Inputs": inputs,
+                "Service Outputs": "int",
+                "Service Description": "Reads humidity from MCP3008 channel 0",
+                "Libraries": ["#include \"mcp3008.h\""],
+                "ADC": {
+                    "ADC_Model": "MCP3008",
+                    "ADC_Channel": "0",
+                    "ADC_ResultVar": "value"
+                },
+                "Service_Output": {
+                    "Output": {
+                        "Type": "int",
+                        "Name": "value"
+                    }
+                },
+                "Functionality": "value = mcpRead0();"
             }
             
             print(f"\nInvoking service {service_name} on thing {thing_id}")

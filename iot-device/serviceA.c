@@ -10,6 +10,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <json-c/json.h>
 
 #define SPI_DEVICE "/dev/spidev0.0"
 #define SPI_SPEED 1350000
@@ -37,12 +38,47 @@ int read_channel(int fd, uint8_t channel) {
 }
 
 #define EDGE_IP "127.0.0.1"
-#define EDGE_PORT 6000
+#define EDGE_PORT 6668
 
 void register_service() {
     int sock;
     struct sockaddr_in edge_addr;
-    char *message = "RPi-1,Read_Humidity,0,";
+    
+    // Create service registration tweet
+    struct json_object *tweet = json_object_new_object();
+    json_object_object_add(tweet, "Tweet Type", json_object_new_string("Service"));
+    json_object_object_add(tweet, "Thing ID", json_object_new_string("RaspberryHumidity"));
+    json_object_object_add(tweet, "Space ID", json_object_new_string("MySmartSpace"));
+    json_object_object_add(tweet, "Entity ID", json_object_new_string("HumiditySensor01"));
+    json_object_object_add(tweet, "Service Name", json_object_new_string("getHumidity"));
+    json_object_object_add(tweet, "Service Inputs", json_object_new_string("()"));
+    json_object_object_add(tweet, "Service Outputs", json_object_new_string("int"));
+    json_object_object_add(tweet, "Service Description", json_object_new_string("Reads humidity from MCP3008 channel 0"));
+    
+    // Add Libraries array
+    struct json_object *libraries = json_object_new_array();
+    json_object_array_add(libraries, json_object_new_string("#include \"mcp3008.h\""));
+    json_object_object_add(tweet, "Libraries", libraries);
+    
+    // Add ADC object
+    struct json_object *adc = json_object_new_object();
+    json_object_object_add(adc, "ADC_Model", json_object_new_string("MCP3008"));
+    json_object_object_add(adc, "ADC_Channel", json_object_new_string("0"));
+    json_object_object_add(adc, "ADC_ResultVar", json_object_new_string("value"));
+    json_object_object_add(tweet, "ADC", adc);
+    
+    // Add Service_Output object
+    struct json_object *service_output = json_object_new_object();
+    struct json_object *output = json_object_new_object();
+    json_object_object_add(output, "Type", json_object_new_string("int"));
+    json_object_object_add(output, "Name", json_object_new_string("value"));
+    json_object_object_add(service_output, "Output", output);
+    json_object_object_add(tweet, "Service_Output", service_output);
+    
+    // Add Functionality
+    json_object_object_add(tweet, "Functionality", json_object_new_string("value = mcpRead0();"));
+
+    const char *message = json_object_to_json_string(tweet);
 
     sock = socket(AF_INET, SOCK_STREAM, 0);
     edge_addr.sin_family = AF_INET;
@@ -51,14 +87,15 @@ void register_service() {
 
     if (connect(sock, (struct sockaddr *)&edge_addr, sizeof(edge_addr)) < 0) {
         perror("Error registering service to edge");
+        json_object_put(tweet);
         return;
     }
 
     send(sock, message, strlen(message), 0);
+    send(sock, "\n", 1, 0);  // Add newline as required by the middleware
     close(sock);
+    json_object_put(tweet);
 }
-
-
 
 int main() {
     int spi_fd = open(SPI_DEVICE, O_RDWR);
