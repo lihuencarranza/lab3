@@ -6,6 +6,7 @@ import threading
 import sys
 import os
 import atexit
+import struct
 
 # Check if running as root
 if os.geteuid() != 0:
@@ -46,13 +47,17 @@ except Exception as e:
 try:
     humidity_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     humidity_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    humidity_sock.bind(('', 5062))  # Bind to the same port as humidityDetector broadcasts
+    humidity_sock.bind(('', 1235))  # Bind to Atlas multicast port
     humidity_sock.settimeout(1)  # Set 1 second timeout for humidity socket
     sockets.append(humidity_sock)
 
+    # Join multicast group
+    mreq = struct.pack("4s4s", socket.inet_aton("232.1.1.1"), socket.inet_aton("0.0.0.0"))
+    humidity_sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
+
     command_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     command_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    command_sock.bind(('', 5063))  # New port for command listening
+    command_sock.bind(('', 6668))  # Keep command port as 6668 for Atlas
     sockets.append(command_sock)
 except Exception as e:
     print(f"Error configuring sockets: {e}")
@@ -67,17 +72,20 @@ def handle_humidity():
                 data, addr = humidity_sock.recvfrom(1024)
                 message = json.loads(data.decode())
                 
-                if message['type'] == 'humidity':
-                    humidity = message['value']
-                    
-                    # Turn LED on if humidity is below 30%
-                    if humidity < 30:
-                        GPIO.output(LED_PIN, GPIO.HIGH)
-                        print(f"Humidity {humidity}% is low - LED ON")
-                        time.sleep(2)  # Keep LED on for 2 seconds
-                        GPIO.output(LED_PIN, GPIO.LOW)
-                    else:
-                        print(f"Humidity {humidity}% is normal - LED OFF")
+                # Check if it's a service data tweet
+                if message.get('Tweet Type') == 'Service_Data' and message.get('Service Name') == 'Humidity_Service':
+                    humidity_data = message.get('Data', {})
+                    if humidity_data.get('type') == 'humidity':
+                        humidity = humidity_data['value']
+                        
+                        # Turn LED on if humidity is below 30%
+                        if humidity < 30:
+                            GPIO.output(LED_PIN, GPIO.HIGH)
+                            print(f"Humidity {humidity}% is low - LED ON")
+                            time.sleep(2)  # Keep LED on for 2 seconds
+                            GPIO.output(LED_PIN, GPIO.LOW)
+                        else:
+                            print(f"Humidity {humidity}% is normal - LED OFF")
             except socket.timeout:
                 # No humidity data received within timeout
                 continue
@@ -89,25 +97,28 @@ def handle_humidity():
 
 def handle_commands():
     try:
-        print("Waiting for commands on port 5063...")
+        print("Waiting for commands on port 6668...")
         while True:
             try:
                 # Receive command
                 print("Attempting to receive data...")
                 data, addr = command_sock.recvfrom(1024)
-                print(f"Received data on port 5063: {data} from {addr}")
+                print(f"Received data on port 6668: {data} from {addr}")
                 message = json.loads(data.decode())
                 print(f"Decoded message: {message}")
                 
-                if message['type'] == 'command':
-                    command = message['value']
-                    print(f"Command received: {command}")
-                    if command == 'on':
-                        GPIO.output(LED_PIN, GPIO.HIGH)
-                        print("Manual command - LED ON")
-                    elif command == 'off':
-                        GPIO.output(LED_PIN, GPIO.LOW)
-                        print("Manual command - LED OFF")
+                # Check if it's a service data tweet
+                if message.get('Tweet Type') == 'Service_Data' and message.get('Service Name') == 'LED_Control_Service':
+                    command_data = message.get('Data', {})
+                    if command_data.get('type') == 'command':
+                        command = command_data['value']
+                        print(f"Command received: {command}")
+                        if command == 'on':
+                            GPIO.output(LED_PIN, GPIO.HIGH)
+                            print("Manual command - LED ON")
+                        elif command == 'off':
+                            GPIO.output(LED_PIN, GPIO.LOW)
+                            print("Manual command - LED OFF")
             except socket.timeout:
                 print("Timeout waiting for commands...")
                 continue
@@ -120,7 +131,7 @@ def handle_commands():
 def main():
     try:
         print("Starting LED Service...")
-        print("LED control is available on port 5063")
+        print("LED control is available on port 6668")
         print("Humidity monitoring is available on port 5062 (optional)")
         
         # Start humidity handler in a separate thread
@@ -148,11 +159,20 @@ def send_command(command):
     try:
         print(f"Attempting to send command: {command}")
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        # Use exactly the same format as netcat
-        message = '{"type": "command", "value": "' + command + '"}'
-        print(f"Message to send: {message}")
-        # Send message without encoding (like netcat)
-        sock.sendto(message.encode(), ('127.0.0.1', 5063))
+        # Create message in Atlas tweet format
+        message = {
+            "Tweet Type": "Service_Data",
+            "Thing ID": "raspy-h",
+            "Space ID": "MySmartSpace",
+            "Service Name": "LED_Control_Service",
+            "Data": {
+                "type": "command",
+                "value": command
+            }
+        }
+        print(f"Message to send: {json.dumps(message)}")
+        # Send message
+        sock.sendto(json.dumps(message).encode(), ('127.0.0.1', 6668))
         time.sleep(0.1)  # Give time for message to be sent
         print("Command sent successfully")
     except Exception as e:

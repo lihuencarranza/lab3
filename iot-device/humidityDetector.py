@@ -12,7 +12,8 @@ spi.max_speed_hz = 1350000
 # Configure broadcast socket
 broadcast_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 broadcast_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-BROADCAST_PORT = 5062
+MULTICAST_IP = '232.1.1.1'  # Atlas multicast IP
+MULTICAST_PORT = 1235  # Atlas multicast port
 
 def read_humidity():
     # Read from MCP3008 channel 0
@@ -41,7 +42,7 @@ def convert_to_percentage(raw_value):
 def main():
     try:
         print("Starting humidity detector...")
-        print("Broadcasting humidity values on port", BROADCAST_PORT)
+        print(f"Broadcasting humidity values to {MULTICAST_IP}:{MULTICAST_PORT}")
         
         while True:
             # Read raw humidity value
@@ -50,18 +51,22 @@ def main():
             # Convert to percentage
             humidity_percentage = convert_to_percentage(raw_humidity)
             
-            # Create message
+            # Create message in Atlas tweet format
             message = {
-                "type": "humidity",
-                "value": humidity_percentage,
-                "raw_value": raw_humidity,
-                "timestamp": time.time()
+                "Tweet Type": "Service_Data",
+                "Thing ID": "raspy-h",
+                "Space ID": "MySmartSpace",
+                "Service Name": "Humidity_Service",
+                "Data": {
+                    "type": "humidity",
+                    "value": humidity_percentage
+                }
             }
             
             # Broadcast message
             broadcast_socket.sendto(
                 json.dumps(message).encode(),
-                ('<broadcast>', BROADCAST_PORT)
+                (MULTICAST_IP, MULTICAST_PORT)
             )
             
             print(f"Broadcast humidity: {humidity_percentage}% (Raw: {raw_humidity})")

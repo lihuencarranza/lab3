@@ -41,11 +41,11 @@
 				<Network_Passcode>MySpaceNetwork</Network_Passcode>
 				<MulticastGroup>
 					<IP>232.1.1.1</IP>
-					<Port>5062</Port>
+					<Port>1235</Port>
 				</MulticastGroup>
 				<Communication_Protocol>UDP</Communication_Protocol>
 				<Network_Configuration>
-					<Default_Port>5062</Default_Port>
+					<Default_Port>6668</Default_Port>
 					<Default_IP>0.0.0.0</Default_IP>
 					<Default_Protocol>UDP</Default_Protocol>
 				</Network_Configuration>
@@ -82,23 +82,23 @@
 			<Service>
 				<Service_Name>Humidity_Service</Service_Name>
 				<Service_Type>Sensor</Service_Type>
-				<Service_Port>5062</Service_Port>
+				<Service_Port>6668</Service_Port>
 				<Service_Protocol>UDP</Service_Protocol>
 				<Service_IP>0.0.0.0</Service_IP>
 				<Service_Configuration>
-					<Listen_Port>5062</Listen_Port>
-					<Broadcast_Port>5062</Broadcast_Port>
+					<Listen_Port>6668</Listen_Port>
+					<Broadcast_Port>6668</Broadcast_Port>
 				</Service_Configuration>
 			</Service>
 			<Service>
 				<Service_Name>LED_Control_Service</Service_Name>
 				<Service_Type>Actuator</Service_Type>
-				<Service_Port>5063</Service_Port>
+				<Service_Port>6668</Service_Port>
 				<Service_Protocol>UDP</Service_Protocol>
 				<Service_IP>0.0.0.0</Service_IP>
 				<Service_Configuration>
-					<Listen_Port>5063</Listen_Port>
-					<Command_Port>5063</Command_Port>
+					<Listen_Port>6668</Listen_Port>
+					<Command_Port>6668</Command_Port>
 				</Service_Configuration>
 			</Service>
 		</Thing_Attachment>
