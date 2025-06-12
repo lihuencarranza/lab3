@@ -3,19 +3,61 @@ import json
 import RPi.GPIO as GPIO
 import time
 import threading
+import sys
+import os
+import atexit
+
+# Verificar si se está ejecutando como root
+if os.geteuid() != 0:
+    print("Este script debe ejecutarse como root (sudo)")
+    sys.exit(1)
 
 # Configure GPIO
 LED_PIN = 26
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(LED_PIN, GPIO.OUT)
+sockets = []
+
+def cleanup():
+    print("\nLimpiando recursos...")
+    GPIO.cleanup()
+    for sock in sockets:
+        try:
+            sock.close()
+        except:
+            pass
+
+# Registrar la función de limpieza
+atexit.register(cleanup)
+
+try:
+    # Configurar GPIO
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(LED_PIN, GPIO.OUT, initial=GPIO.LOW)
+    
+    # Verificar que el pin está configurado correctamente
+    if GPIO.gpio_function(LED_PIN) != GPIO.OUT:
+        raise Exception(f"El pin {LED_PIN} no está configurado como salida")
+        
+except Exception as e:
+    print(f"Error al configurar GPIO: {e}")
+    sys.exit(1)
 
 # Configure UDP sockets
-humidity_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-humidity_sock.bind(('', 5062))  # Bind to the same port as humidityDetector broadcasts
-humidity_sock.settimeout(1)  # Set 1 second timeout for humidity socket
+try:
+    humidity_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    humidity_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    humidity_sock.bind(('', 5062))  # Bind to the same port as humidityDetector broadcasts
+    humidity_sock.settimeout(1)  # Set 1 second timeout for humidity socket
+    sockets.append(humidity_sock)
 
-command_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-command_sock.bind(('', 5063))  # New port for command listening
+    command_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    command_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    command_sock.bind(('', 5063))  # New port for command listening
+    sockets.append(command_sock)
+except Exception as e:
+    print(f"Error al configurar sockets: {e}")
+    cleanup()
+    sys.exit(1)
 
 def handle_humidity():
     try:
@@ -47,21 +89,33 @@ def handle_humidity():
 
 def handle_commands():
     try:
+        print("Esperando comandos en el puerto 5063...")
         while True:
-            # Receive command
-            data, addr = command_sock.recvfrom(1024)
-            message = json.loads(data.decode())
-            
-            if message['type'] == 'command':
-                command = message['value']
-                if command == 'on':
-                    GPIO.output(LED_PIN, GPIO.HIGH)
-                    print("Manual command - LED ON")
-                elif command == 'off':
-                    GPIO.output(LED_PIN, GPIO.LOW)
-                    print("Manual command - LED OFF")
+            try:
+                # Receive command
+                print("Intentando recibir datos...")
+                data, addr = command_sock.recvfrom(1024)
+                print(f"Recibido datos en el puerto 5063: {data} de {addr}")
+                message = json.loads(data.decode())
+                print(f"Mensaje decodificado: {message}")
+                
+                if message['type'] == 'command':
+                    command = message['value']
+                    print(f"Comando recibido: {command}")
+                    if command == 'on':
+                        GPIO.output(LED_PIN, GPIO.HIGH)
+                        print("Manual command - LED ON")
+                    elif command == 'off':
+                        GPIO.output(LED_PIN, GPIO.LOW)
+                        print("Manual command - LED OFF")
+            except socket.timeout:
+                print("Timeout esperando comandos...")
+                continue
+            except Exception as e:
+                print(f"Error procesando comando: {e}")
+                continue
     except Exception as e:
-        print(f"Error in command handler: {e}")
+        print(f"Error fatal en command handler: {e}")
 
 def main():
     try:
@@ -91,10 +145,24 @@ def main():
         command_sock.close()
 
 def send_command(command):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    message = json.dumps({"type": "command", "value": command})
-    sock.sendto(message.encode(), ('localhost', 5063))
-    sock.close()
+    try:
+        print(f"Intentando enviar comando: {command}")
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        # Usar exactamente el mismo formato que netcat
+        message = '{"type": "command", "value": "' + command + '"}'
+        print(f"Mensaje a enviar: {message}")
+        # Enviar el mensaje sin codificar (como netcat)
+        sock.sendto(message.encode(), ('127.0.0.1', 5063))
+        time.sleep(0.1)  # Dar tiempo para que el mensaje se envíe
+        print("Comando enviado exitosamente")
+    except Exception as e:
+        print(f"Error enviando comando: {e}")
+    finally:
+        try:
+            sock.close()
+        except:
+            pass
+        print("Socket cerrado")
 
 # Usage:
 # send_command("on")  # Turn LED on
