@@ -36,8 +36,8 @@
 			<Network_Manager>
 				<Module></Module>
 				<Type></Type>
-				<Network_Name>MySpaceNetwork</Network_Name>
-				<Network_Passcode>MySpaceNetwork</Network_Passcode>
+				<Network_Name>GL-SFT1200-32C-5G</Network_Name>
+				<Network_Passcode>goodlife</Network_Passcode>
 				<MulticastGroup>
 					<IP>232.1.1.1</IP>
 					<Port>1235</Port>
@@ -149,7 +149,7 @@ value = mcpRead0;
 		</Entity_1>
 		<Entity_2>
 			<Descriptive_Metadata>
-				<ID>LedController</ID>
+				<ID>LEDController</ID>
 				<Name></Name>
 				<Owner></Owner>
 				<Vendor></Vendor>
@@ -159,13 +159,13 @@ value = mcpRead0;
 			</Descriptive_Metadata>
 			<Services>
 				<Service_1>
-					<Name>LedControl</Name>
+					<Name>LEDControl</Name>
 					<AppCategory></AppCategory>
 					<Type></Type>
 					<Keywords></Keywords>
-					<Description></Description>
+					<Description>Service to turn LED on or off</Description>
 					<Contextual_Constraints>
-						<Time_Window>10seconds</Time_Window>
+						<Time_Window>1second</Time_Window>
 						<Usage_Mode></Usage_Mode>
 						<Concurrent></Concurrent>
 					</Contextual_Constraints>
@@ -179,8 +179,8 @@ value = mcpRead0;
 							<EndTime>9:30pm</EndTime>
 						</Callable>
 					</Temporal_Constraints>
-					<OutputDescription>state</OutputDescription>
-					<OutputType>void</OutputType>
+					<OutputDescription>status</OutputDescription>
+					<OutputType>int</OutputType>
 					<Service_Formula><![CDATA[
 // ~ Service body C/C++ code block ~
 // Initialize GPIO if not already initialized
@@ -199,14 +199,19 @@ if (state == 1) {
     digitalWrite(LED_PIN, LOW);
     status = 0;
 }
-
 ]]></Service_Formula>
-					<Service_NumberInputs>2</Service_NumberInputs>
-					<Service_InputTypes>int,int</Service_InputTypes>
-					<Service_InputDescriptions>"0","1"</Service_InputDescriptions>
+					<Service_NumberInputs>1</Service_NumberInputs>
+					<Service_InputTypes>int</Service_InputTypes>
+					<Service_InputDescriptions>state (1=ON, 0=OFF)</Service_InputDescriptions>
 					<Library_Number>1</Library_Number>
 					<Libraries>wiringPi.h</Libraries>
-					<ADC_Number>0</ADC_Number>
+					<GPIO>
+						<GPIO_1>
+							<Pin>17</Pin>
+							<Mode>OUTPUT</Mode>
+							<GPIO_Output>LED_PIN</GPIO_Output>
+						</GPIO_1>
+					</GPIO>
 				</Service_1>
 				<Number_Services>1</Number_Services>
 			</Services>
