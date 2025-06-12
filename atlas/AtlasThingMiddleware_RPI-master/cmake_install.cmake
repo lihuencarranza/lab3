@@ -1,4 +1,4 @@
-# Install script for directory: /home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/Main
+# Install script for directory: /home/lihuen/Documents/lab3/atlas/AtlasThingMiddleware_RPI-master/Main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lihuen/Documents/lab3/atlas/AtlasThingMiddleware_RPI-master/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

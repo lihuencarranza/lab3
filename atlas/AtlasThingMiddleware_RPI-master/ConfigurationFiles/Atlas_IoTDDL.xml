@@ -35,15 +35,20 @@
 		</Descriptive_Metadata>
 		<Administrative_Metadata>
 			<Network_Manager>
-				<Module></Module>
-				<Type></Type>
+				<Module>UDP</Module>
+				<Type>UDP</Type>
 				<Network_Name>MySpaceNetwork</Network_Name>
 				<Network_Passcode>MySpaceNetwork</Network_Passcode>
 				<MulticastGroup>
 					<IP>232.1.1.1</IP>
-					<Port>1235</Port>
+					<Port>5062</Port>
 				</MulticastGroup>
-				<Communication_Protocol></Communication_Protocol>
+				<Communication_Protocol>UDP</Communication_Protocol>
+				<Network_Configuration>
+					<Default_Port>5062</Default_Port>
+					<Default_IP>0.0.0.0</Default_IP>
+					<Default_Protocol>UDP</Default_Protocol>
+				</Network_Configuration>
 				<InterOperableCommunication>
 					<Broker>
 						<Vendor>HiveMQ</Vendor>
@@ -74,7 +79,28 @@
 			</Memory_Manager>
 		</Administrative_Metadata>
 		<Thing_Attachment>
-
+			<Service>
+				<Service_Name>Humidity_Service</Service_Name>
+				<Service_Type>Sensor</Service_Type>
+				<Service_Port>5062</Service_Port>
+				<Service_Protocol>UDP</Service_Protocol>
+				<Service_IP>0.0.0.0</Service_IP>
+				<Service_Configuration>
+					<Listen_Port>5062</Listen_Port>
+					<Broadcast_Port>5062</Broadcast_Port>
+				</Service_Configuration>
+			</Service>
+			<Service>
+				<Service_Name>LED_Control_Service</Service_Name>
+				<Service_Type>Actuator</Service_Type>
+				<Service_Port>5063</Service_Port>
+				<Service_Protocol>UDP</Service_Protocol>
+				<Service_IP>0.0.0.0</Service_IP>
+				<Service_Configuration>
+					<Listen_Port>5063</Listen_Port>
+					<Command_Port>5063</Command_Port>
+				</Service_Configuration>
+			</Service>
 		</Thing_Attachment>
 		<Structural_Metadata>
 			<Number_Hardware>0</Number_Hardware>
