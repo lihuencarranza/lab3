@@ -1,29 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Atlas_IoTDDL>
 	<Atlas_Thing>
 		<Descriptive_Metadata>
-			<Thing_ATID>raspy-h</Thing_ATID>
-			<Thing_Name>Humi</Thing_Name>
-			<Thing_Owner>Lihuen</Thing_Owner>
-			<Thing_Vendor>Raspberry Pi Foundation</Thing_Vendor>
-			<Thing_Model>Raspberry Pi 4</Thing_Model>
+			<Thing_ATID>raspberry1</Thing_ATID>
+			<Thing_Name></Thing_Name>
+			<Thing_Owner></Thing_Owner>
+			<Thing_Vendor></Thing_Vendor>
+			<Thing_Model></Thing_Model>
 			<Thing_ReleaseDate>8/2020</Thing_ReleaseDate>
-			<Thing_Type>Thing of Things</Thing_Type>
-			<Thing_OperatingSystem>Raspbian</Thing_OperatingSystem>
+			<Thing_Type></Thing_Type>
+			<Thing_OperatingSystem></Thing_OperatingSystem>
 			<Thing_ShortDescription></Thing_ShortDescription>
-			<LongDescription>Humidity sensor connected to a Raspberry Pi to monitor environmental humidity levels.</LongDescription>
+			<LongDescription></LongDescription>
 			<Thing_SSID>MySmartSpace</Thing_SSID>
 			<Space_Coordinates></Space_Coordinates>
-			<Space_Name>Living Room</Space_Name>
-			<Space_Description>A smart space in my home where environmental factors like humidity are monitored.</Space_Description>
+			<Space_Name></Space_Name>
+			<Space_Description></Space_Description>
 			<Space_Constraints>
 				<Temperature>
 					<Lower_Bound></Lower_Bound>
 					<Upper_Bound></Upper_Bound>
 				</Temperature>
 				<Humidity>
-					<Lower_Bound>10</Lower_Bound>
-					<Upper_Bound>60</Upper_Bound>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
 				</Humidity>
 				<Voltage>
 					<Lower_Bound></Lower_Bound>
@@ -35,20 +34,15 @@
 		</Descriptive_Metadata>
 		<Administrative_Metadata>
 			<Network_Manager>
-				<Module>UDP</Module>
-				<Type>UDP</Type>
-				<Network_Name>MySpaceNetwork</Network_Name>
-				<Network_Passcode>MySpaceNetwork</Network_Passcode>
+				<Module></Module>
+				<Type></Type>
+				<Network_Name>GL-SFT1200-32C-5G</Network_Name>
+				<Network_Passcode>goodlife</Network_Passcode>
 				<MulticastGroup>
 					<IP>232.1.1.1</IP>
 					<Port>1235</Port>
 				</MulticastGroup>
-				<Communication_Protocol>UDP</Communication_Protocol>
-				<Network_Configuration>
-					<Default_Port>6668</Default_Port>
-					<Default_IP>0.0.0.0</Default_IP>
-					<Default_Protocol>UDP</Default_Protocol>
-				</Network_Configuration>
+				<Communication_Protocol></Communication_Protocol>
 				<InterOperableCommunication>
 					<Broker>
 						<Vendor>HiveMQ</Vendor>
@@ -79,93 +73,99 @@
 			</Memory_Manager>
 		</Administrative_Metadata>
 		<Thing_Attachment>
-			<Service>
-				<Service_Name>Humidity_Service</Service_Name>
-				<Service_Type>Sensor</Service_Type>
-				<Service_Port>6668</Service_Port>
-				<Service_Protocol>UDP</Service_Protocol>
-				<Service_IP>0.0.0.0</Service_IP>
-				<Service_Configuration>
-					<Listen_Port>6668</Listen_Port>
-					<Broadcast_Port>6668</Broadcast_Port>
-				</Service_Configuration>
-			</Service>
-			<Service>
-				<Service_Name>LED_Control_Service</Service_Name>
-				<Service_Type>Actuator</Service_Type>
-				<Service_Port>6668</Service_Port>
-				<Service_Protocol>UDP</Service_Protocol>
-				<Service_IP>0.0.0.0</Service_IP>
-				<Service_Configuration>
-					<Listen_Port>6668</Listen_Port>
-					<Command_Port>6668</Command_Port>
-				</Service_Configuration>
-			</Service>
+
 		</Thing_Attachment>
 		<Structural_Metadata>
 			<Number_Hardware>0</Number_Hardware>
 			<Number_Software>0</Number_Software>
 			<Number_Hybrid>0</Number_Hybrid>
-			<Number_Entities>0</Number_Entities>
+			<Number_Entities>2</Number_Entities>
 		</Structural_Metadata>
-		
-		<Entities>
-		  <Entity>
-			<Entity_ID>SmartHumiditySystem</Entity_ID>
-			<Entity_Name>SmartHumiditySystem</Entity_Name>
-			<Entity_Type>Hybrid</Entity_Type>
-			<Entity_SensorActuator>SensorActuator</Entity_SensorActuator>
-			<Entity_Description>Combined humidity sensor and LED controller</Entity_Description>
-			
-			<Services>
-			  <Service>
-				<Service_Name>Read_Humidity</Service_Name>
-				<Libraries>
-				  <Library>#include "mcp3008.h"</Library>
-				</Libraries>
-				<ADC>
-				  <ADC_Model>MCP3008</ADC_Model>
-				  <ADC_Channel>0</ADC_Channel>
-				  <ADC_ResultVar>value</ADC_ResultVar>
-				</ADC>
-				<Service_Output>
-				  <Output>
-					<Type>int</Type>
-					<Name>value</Name>
-				  </Output>
-				</Service_Output>
-				<Functionality>
-				  value = mcpRead0();
-				</Functionality>
-			  </Service>
-			  <Service>
-				<Service_Name>Monitor_Humidity</Service_Name>
-				<Service_Description>Listens for humidity broadcasts and controls LED accordingly</Service_Description>
-				<Service_Input>
-				  <Input>
-					<Type>json</Type>
-					<Name>humidity_message</Name>
-					<Format>{"type": "humidity", "value": humidity_value}</Format>
-				  </Input>
-				</Service_Input>
-			  </Service>
-			  <Service>
-				<Service_Name>Manual_Control</Service_Name>
-				<Service_Description>Accepts manual commands to control LED state</Service_Description>
-				<Service_Input>
-				  <Input>
-					<Type>json</Type>
-					<Name>command_message</Name>
-					<Format>{"type": "command", "value": "on|off"}</Format>
-				  </Input>
-				</Service_Input>
-			  </Service>
-			</Services>
-		  </Entity>
-		</Entities>
-		
-		
-    
-
 	</Atlas_Thing>
+	<Atlas_Entities>
+		<Entity_1>
+			<Descriptive_Metadata>
+				<ID>HumiditySensor</ID>
+				<Name></Name>
+				<Owner></Owner>
+				<Vendor></Vendor>
+				<Category></Category>
+				<Type></Type>
+				<Description></Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Service_1>
+					<Name>HumidityDetection</Name>
+					<AppCategory></AppCategory>
+					<Type></Type>
+					<Keywords></Keywords>
+					<Description></Description>
+					<Contextual_Constraints>
+						<Time_Window>30seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription>value</OutputDescription>
+					<OutputType>int</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+// You can use the inputs you defined above by name
+// Any return values should match the specified output type
+
+value = mcpRead0;
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>1</ADC_Number>
+					<ADC>
+						<ADC_1>
+							<Type>MCP3008</Type>
+							<Channel>7</Channel>
+							<ADC_Output>mcpRead0</ADC_Output>
+						</ADC_1>
+					</ADC>
+				</Service_1>
+				<Number_Services>1</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_1>
+		<Entity_2>
+			<Descriptive_Metadata>
+				<ID></ID>
+				<Name></Name>
+				<Owner></Owner>
+				<Vendor></Vendor>
+				<Category></Category>
+				<Type></Type>
+				<Description></Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Number_Services>0</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_2>
+	</Atlas_Entities>
 </Atlas_IoTDDL>
