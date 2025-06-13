@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+        }
+        .space-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .card {
+            margin-bottom: 15px;
+        }
+        .relationship-graph {
+            min-height: 400px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Atlas Dashboard</h1>
+        
+        <!-- Space Information -->
+        <div class="space-info">
+            <h4>Space Information</h4>
+            <div id="spaceInfo">Loading...</div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="things-tab" data-bs-toggle="tab" href="#things" role="tab">Things</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="services-tab" data-bs-toggle="tab" href="#services" role="tab">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="relationships-tab" data-bs-toggle="tab" href="#relationships" role="tab">Relationships</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="apps-tab" data-bs-toggle="tab" href="#apps" role="tab">Apps</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Things Tab -->
+            <div class="tab-pane fade show active" id="things" role="tabpanel">
+                <div id="thingsList">Loading things...</div>
+            </div>
+
+            <!-- Services Tab -->
+            <div class="tab-pane fade" id="services" role="tabpanel">
+                <div id="servicesList">Loading services...</div>
+            </div>
+
+            <!-- Relationships Tab -->
+            <div class="tab-pane fade" id="relationships" role="tabpanel">
+                <div id="relationshipsList">Loading relationships...</div>
+            </div>
+
+            <!-- Apps Tab -->
+            <div class="tab-pane fade" id="apps" role="tabpanel">
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="btn btn-primary" onclick="uploadApp()">Upload App</button>
+                    <button class="btn btn-success" onclick="newApp()">New App</button>
+                </div>
+                <div id="appsList">No apps available</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fetch and display space information
+        fetch('/api/space-info')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('spaceInfo').innerHTML = `
+                    <p><strong>Hostname:</strong> ${data.hostname}</p>
+                    <p><strong>IP Address:</strong> ${data.ip_address}</p>
+                    <p><strong>Last Updated:</strong> ${data.timestamp}</p>
+                `;
+            });
+
+        // Fetch and display things
+        fetch('/api/things')
+            .then(response => response.json())
+            .then(data => {
+                const thingsHtml = data.map(thing => `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${thing.id}</h5>
+                            <p class="card-text">
+                                <strong>Name:</strong> ${thing.name || 'N/A'}<br>
+                                <strong>Type:</strong> ${thing.type || 'N/A'}<br>
+                                <strong>Description:</strong> ${thing.description || 'N/A'}
+                            </p>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('thingsList').innerHTML = thingsHtml;
+            });
+
+        // Fetch and display services
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(data => {
+                const servicesHtml = data.map(service => `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${service.name}</h5>
+                            <p class="card-text">
+                                <strong>Thing ID:</strong> ${service.thing_id}<br>
+                                <strong>Entity ID:</strong> ${service.entity_id}<br>
+                                <strong>Type:</strong> ${service.type || 'N/A'}<br>
+                                <strong>Description:</strong> ${service.description || 'N/A'}<br>
+                                <strong>Input Types:</strong> ${service.input_types.length > 0 ? service.input_types.join(', ') : 'None'}<br>
+                                <strong>Output Type:</strong> ${service.output_type || 'None'}<br>
+                                <strong>API Info:</strong> <code>${service.api_info}</code><br>
+                                <strong>Last Seen:</strong> ${service.last_seen}
+                            </p>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('servicesList').innerHTML = servicesHtml;
+            });
+
+        // Fetch and display relationships
+        fetch('/api/relationships')
+            .then(response => response.json())
+            .then(data => {
+                const relationshipsHtml = data.length > 0 
+                    ? data.map(relationship => `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Relationship</h5>
+                                <p class="card-text">
+                                    <pre>${JSON.stringify(relationship, null, 2)}</pre>
+                                </p>
+                            </div>
+                        </div>
+                    `).join('')
+                    : '<p>No relationships found</p>';
+                document.getElementById('relationshipsList').innerHTML = relationshipsHtml;
+            });
+
+        // App management functions
+        function uploadApp() {
+            // Implement app upload functionality
+            alert('App upload functionality to be implemented');
+        }
+
+        function newApp() {
+            // Implement new app creation
+            alert('New app creation functionality to be implemented');
+        }
+
+        // Refresh data every 30 seconds
+        setInterval(() => {
+            fetch('/api/space-info')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('spaceInfo').innerHTML = `
+                        <p><strong>Hostname:</strong> ${data.hostname}</p>
+                        <p><strong>IP Address:</strong> ${data.ip_address}</p>
+                        <p><strong>Last Updated:</strong> ${data.timestamp}</p>
+                    `;
+                });
+        }, 30000);
+    </script>
+</body>
+</html> 
