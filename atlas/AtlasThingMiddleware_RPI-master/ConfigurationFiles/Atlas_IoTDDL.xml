@@ -179,31 +179,33 @@ value = mcpRead0;
 							<EndTime>9:30pm</EndTime>
 						</Callable>
 					</Temporal_Constraints>
-					<OutputDescription>state</OutputDescription>
+					<OutputDescription></OutputDescription>
 					<OutputType>void</OutputType>
 					<Service_Formula><![CDATA[
 // ~ Service body C/C++ code block ~
+#include <wiringPi.h>
+
 // Initialize GPIO if not already initialized
 static int initialized = 0;
+
 if (!initialized) {
     wiringPiSetupGpio();
-    pinMode(LED_PIN, OUTPUT);
+    pinMode(26, OUTPUT);
     initialized = 1;
 }
 
 // Control LED based on input state
 if (state == 1) {
-    digitalWrite(LED_PIN, HIGH);
-    status = 1;
+    digitalWrite(26, HIGH);
 } else {
-    digitalWrite(LED_PIN, LOW);
-    status = 0;
+    digitalWrite(26, LOW);
 }
 
+return NULL;  // void return type
 ]]></Service_Formula>
-					<Service_NumberInputs>2</Service_NumberInputs>
-					<Service_InputTypes>int,int</Service_InputTypes>
-					<Service_InputDescriptions>"0","1"</Service_InputDescriptions>
+					<Service_NumberInputs>1</Service_NumberInputs>
+					<Service_InputTypes>int</Service_InputTypes>
+					<Service_InputDescriptions>state</Service_InputDescriptions>
 					<Library_Number>1</Library_Number>
 					<Libraries>wiringPi.h</Libraries>
 					<ADC_Number>0</ADC_Number>
