@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Atlas IoT DDL Monitor{% endblock %}</title>
+    <title>{% block title %}Atlas IoT DDL Monitor{% endblock %} - Atlas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
@@ -121,12 +121,12 @@
             font-size: 0.8em;
         }
 
-        #connection-status {
+        .connection-status {
             position: fixed;
             top: 10px;
             right: 10px;
             padding: 5px 10px;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 0.8em;
             z-index: 1000;
         }
@@ -139,6 +139,11 @@
         .disconnected {
             background-color: #dc3545;
             color: white;
+        }
+
+        .connecting {
+            background-color: #ffc107;
+            color: black;
         }
 
         .thing-item, .service-item, .relationship-item {
@@ -198,6 +203,8 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
+    <div id="connection-status" class="connection-status disconnected">Disconnected</div>
+    
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="/">Atlas IoT DDL Monitor</a>
@@ -236,8 +243,6 @@
         </div>
     </nav>
 
-    <div id="connection-status" class="disconnected">Disconnected</div>
-    
     <!-- Theme Switch Button -->
     <button type="button" class="theme-switch" id="themeSwitch" title="Cambiar tema" onclick="toggleTheme()" style="display: flex !important; visibility: visible !important;">
         <i class="fas fa-moon"></i>
@@ -249,47 +254,54 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Inicializar Socket.IO
+        // Socket.IO configuration
         const socket = io({
             transports: ['polling', 'websocket'],
-            upgrade: true,
-            rememberUpgrade: true,
             reconnection: true,
-            reconnectionAttempts: 5,
+            reconnectionAttempts: Infinity,
             reconnectionDelay: 1000,
             reconnectionDelayMax: 5000,
             timeout: 20000,
-            autoConnect: true,
-            path: '/socket.io',
-            forceNew: true
+            autoConnect: true
         });
 
-        // Manejar eventos de conexión
+        // Connection status handling
+        const connectionStatus = document.getElementById('connection-status');
+        
         socket.on('connect', () => {
             console.log('Connected to server');
-            const statusElement = document.getElementById('connection-status');
-            if (statusElement) {
-                statusElement.textContent = 'Connected';
-                statusElement.className = 'text-success';
-            }
+            connectionStatus.textContent = 'Connected';
+            connectionStatus.className = 'connection-status connected';
         });
 
         socket.on('disconnect', () => {
             console.log('Disconnected from server');
-            const statusElement = document.getElementById('connection-status');
-            if (statusElement) {
-                statusElement.textContent = 'Disconnected';
-                statusElement.className = 'text-danger';
-            }
+            connectionStatus.textContent = 'Disconnected';
+            connectionStatus.className = 'connection-status disconnected';
         });
 
         socket.on('connect_error', (error) => {
             console.error('Connection error:', error);
-            const statusElement = document.getElementById('connection-status');
-            if (statusElement) {
-                statusElement.textContent = 'Connection Error';
-                statusElement.className = 'text-danger';
-            }
+            connectionStatus.textContent = 'Connection Error';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        socket.on('reconnect', (attemptNumber) => {
+            console.log('Reconnected after', attemptNumber, 'attempts');
+            connectionStatus.textContent = 'Connected';
+            connectionStatus.className = 'connection-status connected';
+        });
+
+        socket.on('reconnect_error', (error) => {
+            console.error('Reconnection error:', error);
+            connectionStatus.textContent = 'Reconnection Error';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        socket.on('reconnect_failed', () => {
+            console.error('Failed to reconnect');
+            connectionStatus.textContent = 'Connection Failed';
+            connectionStatus.className = 'connection-status disconnected';
         });
 
         // Manejar actualizaciones de datos
@@ -322,18 +334,23 @@
         });
 
         // Theme switching
-        const themeSwitch = document.getElementById('themeSwitch');
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        document.body.setAttribute('data-theme', currentTheme);
-        themeSwitch.innerHTML = currentTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-
-        themeSwitch.addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.body.setAttribute('data-theme', newTheme);
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            const themeIcon = document.querySelector('.theme-switch i');
+            themeIcon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            
             localStorage.setItem('theme', newTheme);
-            themeSwitch.innerHTML = newTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        });
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const themeIcon = document.querySelector('.theme-switch i');
+        themeIcon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
     </script>
     {% block extra_js %}{% endblock %}
 </body>

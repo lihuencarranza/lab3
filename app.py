@@ -75,7 +75,7 @@ def multicast_listener():
                         "os": payload.get("OS", ""),
                         "space_id": payload.get("Space ID", "")
                     }
-                    socketio.emit('things_update', list(things.values()))
+                    socketio.emit('things_update', list(things.values()), broadcast=True)
                     logging.info(f"Emitted things_update with {len(things)} things")
                 
                 elif tweet_type == "Identity_Entity":
@@ -95,7 +95,7 @@ def multicast_listener():
                         "app_category": "N/A",
                         "keywords": "N/A"
                     }
-                    socketio.emit('services_update', list(services.values()))
+                    socketio.emit('services_update', list(services.values()), broadcast=True)
                     logging.info(f"Emitted services_update with {len(services)} services")
                 
                 elif tweet_type == "Service":
@@ -128,7 +128,7 @@ def multicast_listener():
                             "vendor": "N/A"
                         }
                     
-                    socketio.emit('services_update', list(services.values()))
+                    socketio.emit('services_update', list(services.values()), broadcast=True)
                     logging.info(f"Emitted services_update with {len(services)} services")
                 
                 elif tweet_type == "Identity_Language":
@@ -139,7 +139,7 @@ def multicast_listener():
                         "ip": payload.get("IP", ""),
                         "port": payload.get("Port", "")
                     }
-                    socketio.emit('space_update', space_info)
+                    socketio.emit('space_update', space_info, broadcast=True)
                     logging.info(f"Emitted space_update with info for {thing_id}")
                 
             except json.JSONDecodeError as e:
@@ -191,10 +191,10 @@ def handle_connect():
     logging.info(f"Client connected: {request.sid}")
     try:
         # Enviar datos actuales al cliente que se conecta
-        socketio.emit('things_update', list(things.values()))
-        socketio.emit('services_update', list(services.values()))
-        socketio.emit('relationships_update', list(relationships.values()))
-        socketio.emit('space_update', space_info)
+        socketio.emit('things_update', list(things.values()), broadcast=True)
+        socketio.emit('services_update', list(services.values()), broadcast=True)
+        socketio.emit('relationships_update', list(relationships.values()), broadcast=True)
+        socketio.emit('space_update', space_info, broadcast=True)
         logging.info("Initial data sent to new client")
     except Exception as e:
         logging.error(f"Error sending initial data: {e}")

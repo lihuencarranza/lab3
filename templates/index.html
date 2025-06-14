@@ -1,66 +1,82 @@
 {% extends "base.html" %}
 
-{% block title %}Atlas Dashboard{% endblock %}
+{% block title %}Atlas Manager{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
-    <h1 class="mb-4">Atlas Dashboard</h1>
-    
-    <!-- Space Information -->
-    <div class="card mb-4">
-        <div class="card-header">
-            <h4 class="mb-0">Space Information</h4>
-        </div>
-        <div class="card-body">
-            <div id="spaceInfo">Loading...</div>
-        </div>
-    </div>
-
-    <!-- Things Section -->
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Things</h4>
-            <a href="/things" class="btn btn-sm btn-outline-primary">View All</a>
-        </div>
-        <div class="card-body">
-            <div id="thingsList">Loading things...</div>
-        </div>
-    </div>
-
-    <!-- Services Section -->
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Services</h4>
-            <a href="/services" class="btn btn-sm btn-outline-primary">View All</a>
-        </div>
-        <div class="card-body">
-            <div id="servicesList">Loading services...</div>
-        </div>
-    </div>
-
-    <!-- Relationships Section -->
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Relationships</h4>
-            <a href="/relationships" class="btn btn-sm btn-outline-primary">View All</a>
-        </div>
-        <div class="card-body">
-            <div id="relationshipsList">Loading relationships...</div>
-        </div>
-    </div>
-
-    <!-- Apps Section -->
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Apps</h4>
-            <div>
-                <button class="btn btn-sm btn-primary me-2" onclick="uploadApp()">Upload App</button>
-                <button class="btn btn-sm btn-success me-2" onclick="newApp()">New App</button>
-                <a href="/apps" class="btn btn-sm btn-outline-primary">View All</a>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <h1 class="display-4 mb-4">Welcome to Atlas Manager</h1>
+                    <p class="lead">IoT Device Management Platform based on DDL (Device Description Language)</p>
+                </div>
             </div>
-        </div>
-        <div class="card-body">
-            <div id="appsList">No apps available</div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4 class="mb-0">What is Atlas Manager?</h4>
+                </div>
+                <div class="card-body">
+                    <p>Atlas Manager is a platform that enables real-time monitoring and management of IoT devices. It uses DDL to describe and understand the capabilities of connected devices.</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4 class="mb-0">Available Sections</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-microchip"></i> Things</h5>
+                                    <p class="card-text">View all IoT devices connected to the network. Here you can see detailed information about each device, including its model, manufacturer, and status.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-cogs"></i> Services</h5>
+                                    <p class="card-text">Explore the services available on each device. This section shows the capabilities and functionalities that each device can offer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-project-diagram"></i> Relationships</h5>
+                                    <p class="card-text">Discover how devices and services relate to each other. This section shows the connections and dependencies between different system components.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-th-large"></i> Apps</h5>
+                                    <p class="card-text">Manage available applications for interacting with devices. Here you can view, create, and modify applications that use device services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4 class="mb-0">Getting Started</h4>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li class="mb-2">Explore the <strong>Things</strong> section to view connected devices.</li>
+                        <li class="mb-2">Check <strong>Services</strong> to understand what each device can do.</li>
+                        <li class="mb-2">Consult <strong>Relationships</strong> to see how devices connect.</li>
+                        <li class="mb-2">Visit <strong>Apps</strong> to interact with devices.</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -70,139 +86,252 @@
 <script>
     // Function to update things list
     function updateThingsList(things) {
-        console.log('Updating things list:', things);
+        console.log('Updating things list with:', things);
         const thingsList = document.getElementById('thingsList');
+        if (!thingsList) {
+            console.error('Things list element not found');
+            return;
+        }
+        
+        thingsList.innerHTML = '';
         if (!things || things.length === 0) {
             thingsList.innerHTML = '<p>No things discovered yet.</p>';
             return;
         }
 
-        thingsList.innerHTML = things.map(thing => `
-            <div class="card mb-3">
+        things.forEach(thing => {
+            const thingElement = document.createElement('div');
+            thingElement.className = 'card mb-3';
+            thingElement.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">${thing.name || thing.id}</h5>
+                    <h5 class="card-title">${thing.name || 'Unnamed Thing'}</h5>
                     <p class="card-text">
                         <strong>ID:</strong> ${thing.id}<br>
-                        <strong>Type:</strong> ${thing.type || 'N/A'}<br>
+                        <strong>Model:</strong> ${thing.model || 'N/A'}<br>
+                        <strong>Vendor:</strong> ${thing.vendor || 'N/A'}<br>
+                        <strong>Owner:</strong> ${thing.owner || 'N/A'}<br>
                         <strong>Description:</strong> ${thing.description || 'N/A'}<br>
-                        <strong>Last Seen:</strong> ${thing.last_seen || 'N/A'}
+                        <strong>OS:</strong> ${thing.os || 'N/A'}<br>
+                        <strong>Space ID:</strong> ${thing.space_id || 'N/A'}
                     </p>
                 </div>
-            </div>
-        `).join('');
+            `;
+            thingsList.appendChild(thingElement);
+        });
     }
 
     // Function to update services list
     function updateServicesList(services) {
-        console.log('Updating services list:', services);
+        console.log('Updating services list with:', services);
         const servicesList = document.getElementById('servicesList');
+        if (!servicesList) {
+            console.error('Services list element not found');
+            return;
+        }
+        
+        servicesList.innerHTML = '';
         if (!services || services.length === 0) {
             servicesList.innerHTML = '<p>No services discovered yet.</p>';
             return;
         }
 
-        servicesList.innerHTML = services.map(service => `
-            <div class="card mb-3">
+        services.forEach(service => {
+            const serviceElement = document.createElement('div');
+            serviceElement.className = 'card mb-3';
+            serviceElement.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">${service.name || service.id}</h5>
+                    <h5 class="card-title">${service.name || service.id || 'Unnamed Service'}</h5>
                     <p class="card-text">
                         <strong>ID:</strong> ${service.id}<br>
-                        <strong>Thing ID:</strong> ${service.thing_id || 'N/A'}<br>
+                        <strong>API:</strong> ${service.api || 'N/A'}<br>
                         <strong>Type:</strong> ${service.type || 'N/A'}<br>
+                        <strong>App Category:</strong> ${service.app_category || 'N/A'}<br>
                         <strong>Description:</strong> ${service.description || 'N/A'}<br>
-                        <strong>Last Seen:</strong> ${service.last_seen || 'N/A'}
+                        <strong>Keywords:</strong> ${service.keywords || 'N/A'}<br>
+                        <strong>Thing ID:</strong> ${service.thing_id || 'N/A'}<br>
+                        <strong>Space ID:</strong> ${service.space_id || 'N/A'}
                     </p>
                 </div>
-            </div>
-        `).join('');
+            `;
+            servicesList.appendChild(serviceElement);
+        });
     }
 
     // Function to update relationships list
     function updateRelationshipsList(relationships) {
-        console.log('Updating relationships list:', relationships);
+        console.log('Updating relationships list with:', relationships);
         const relationshipsList = document.getElementById('relationshipsList');
+        if (!relationshipsList) {
+            console.error('Relationships list element not found');
+            return;
+        }
+        
+        relationshipsList.innerHTML = '';
         if (!relationships || relationships.length === 0) {
             relationshipsList.innerHTML = '<p>No relationships discovered yet.</p>';
             return;
         }
 
-        relationshipsList.innerHTML = relationships.map(relationship => `
-            <div class="card mb-3">
+        relationships.forEach(relationship => {
+            const relationshipElement = document.createElement('div');
+            relationshipElement.className = 'card mb-3';
+            relationshipElement.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">Relationship: ${relationship.id}</h5>
+                    <h5 class="card-title">Relationship: ${relationship.id || 'Unnamed Relationship'}</h5>
                     <p class="card-text">
                         <strong>Source Service:</strong> ${relationship.source_service || 'N/A'}<br>
                         <strong>Target Service:</strong> ${relationship.target_service || 'N/A'}<br>
                         <strong>Type:</strong> ${relationship.type || 'N/A'}<br>
-                        <strong>Last Seen:</strong> ${relationship.last_seen || 'N/A'}
+                        <strong>Description:</strong> ${relationship.description || 'N/A'}
                     </p>
                 </div>
-            </div>
-        `).join('');
+            `;
+            relationshipsList.appendChild(relationshipElement);
+        });
     }
 
     // Function to update space info
     function updateSpaceInfo(space) {
-        console.log('Updating space info:', space);
+        console.log('Updating space info with:', space);
         const spaceInfo = document.getElementById('spaceInfo');
+        if (!spaceInfo) {
+            console.error('Space info element not found');
+            return;
+        }
+        
+        spaceInfo.innerHTML = '';
         if (!space || Object.keys(space).length === 0) {
             spaceInfo.innerHTML = '<p>No space information available.</p>';
             return;
         }
 
-        spaceInfo.innerHTML = `
-            <div class="card">
+        Object.entries(space).forEach(([thingId, info]) => {
+            const spaceElement = document.createElement('div');
+            spaceElement.className = 'card mb-3';
+            spaceElement.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">Space Information</h5>
+                    <h5 class="card-title">Space Info for Thing: ${thingId}</h5>
                     <p class="card-text">
-                        <strong>ID:</strong> ${space.id || 'N/A'}<br>
-                        <strong>Name:</strong> ${space.name || 'N/A'}<br>
-                        <strong>Description:</strong> ${space.description || 'N/A'}<br>
-                        <strong>Last Updated:</strong> ${space.last_updated || 'N/A'}
+                        <strong>Network Name:</strong> ${info.network_name || 'N/A'}<br>
+                        <strong>Communication Language:</strong> ${info.communication_language || 'N/A'}<br>
+                        <strong>IP:</strong> ${info.ip || 'N/A'}<br>
+                        <strong>Port:</strong> ${info.port || 'N/A'}
                     </p>
                 </div>
-            </div>
-        `;
+            `;
+            spaceInfo.appendChild(spaceElement);
+        });
     }
 
-    // Handle updates from Socket.IO
-    function handleUpdate(data) {
-        console.log('Handling update:', data);
-        if (data.things) updateThingsList(data.things);
-        if (data.services) updateServicesList(data.services);
-        if (data.relationships) updateRelationshipsList(data.relationships);
-    }
+    // Socket.IO configuration
+    const socket = io({
+        transports: ['websocket', 'polling'],
+        reconnection: true,
+        reconnectionAttempts: 5,
+        reconnectionDelay: 1000,
+        timeout: 20000
+    });
 
-    // Initialize Socket.IO connection
+    // Socket.IO event handlers
+    socket.on('connect', () => {
+        console.log('Connected to server');
+        document.getElementById('connection-status').textContent = 'Connected';
+        document.getElementById('connection-status').className = 'connected';
+    });
+
+    socket.on('disconnect', () => {
+        console.log('Disconnected from server');
+        document.getElementById('connection-status').textContent = 'Disconnected';
+        document.getElementById('connection-status').className = 'disconnected';
+    });
+
+    socket.on('connect_error', (error) => {
+        console.error('Connection error:', error);
+        document.getElementById('connection-status').textContent = 'Connection Error';
+        document.getElementById('connection-status').className = 'disconnected';
+    });
+
+    socket.on('reconnect', (attemptNumber) => {
+        console.log('Reconnected after', attemptNumber, 'attempts');
+        document.getElementById('connection-status').textContent = 'Connected';
+        document.getElementById('connection-status').className = 'connected';
+    });
+
+    socket.on('reconnect_error', (error) => {
+        console.error('Reconnection error:', error);
+        document.getElementById('connection-status').textContent = 'Reconnection Error';
+        document.getElementById('connection-status').className = 'disconnected';
+    });
+
+    socket.on('reconnect_failed', () => {
+        console.error('Failed to reconnect');
+        document.getElementById('connection-status').textContent = 'Connection Failed';
+        document.getElementById('connection-status').className = 'disconnected';
+    });
+
+    socket.on('things_update', function(data) {
+        console.log('Received things update:', data);
+        if (Array.isArray(data)) {
+            updateThingsList(data);
+        }
+    });
+
+    socket.on('services_update', function(data) {
+        console.log('Received services update:', data);
+        if (Array.isArray(data)) {
+            updateServicesList(data);
+        }
+    });
+
+    socket.on('relationships_update', function(data) {
+        console.log('Received relationships update:', data);
+        if (Array.isArray(data)) {
+            updateRelationshipsList(data);
+        }
+    });
+
+    socket.on('space_update', function(data) {
+        console.log('Received space update:', data);
+        if (typeof data === 'object') {
+            updateSpaceInfo(data);
+        }
+    });
+
+    // Initial data load
     document.addEventListener('DOMContentLoaded', function() {
-        console.log('Initializing Socket.IO connection');
+        console.log('Loading initial data...');
         
-        // Initial data load
-        fetch('/api/space')
-            .then(response => response.json())
-            .then(data => updateSpaceInfo(data))
-            .catch(error => console.error('Error loading space info:', error));
-
         fetch('/api/things')
             .then(response => response.json())
-            .then(data => updateThingsList(data))
+            .then(data => {
+                console.log('Initial things data:', data);
+                updateThingsList(data);
+            })
             .catch(error => console.error('Error loading things:', error));
 
         fetch('/api/services')
             .then(response => response.json())
-            .then(data => updateServicesList(data))
+            .then(data => {
+                console.log('Initial services data:', data);
+                updateServicesList(data);
+            })
             .catch(error => console.error('Error loading services:', error));
 
         fetch('/api/relationships')
             .then(response => response.json())
-            .then(data => updateRelationshipsList(data))
+            .then(data => {
+                console.log('Initial relationships data:', data);
+                updateRelationshipsList(data);
+            })
             .catch(error => console.error('Error loading relationships:', error));
 
-        // Listen for Socket.IO events
-        socket.on('update', function(data) {
-            console.log('Received update event:', data);
-            handleUpdate(data);
-        });
+        fetch('/api/space')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Initial space data:', data);
+                updateSpaceInfo(data);
+            })
+            .catch(error => console.error('Error loading space info:', error));
     });
 
     // App management functions
