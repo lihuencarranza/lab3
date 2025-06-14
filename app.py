@@ -39,6 +39,7 @@ things = {}
 services = {}
 relationships = {}
 space_info = {}
+apps = {}
 
 # Configuración de multicast
 MULTICAST_GROUP = '232.1.1.1'
@@ -184,6 +185,30 @@ def get_relationships():
 @app.route('/api/space')
 def get_space():
     return jsonify(space_info)
+
+@app.route('/api/apps')
+def get_apps():
+    return jsonify(list(apps.values()))
+
+@app.route('/api/apps', methods=['POST'])
+def save_app():
+    app_data = request.json
+    app_id = app_data.get('name')  # Using name as ID for simplicity
+    apps[app_id] = app_data
+    return jsonify({"status": "success", "message": "App saved successfully"})
+
+@app.route('/api/apps/<app_id>', methods=['GET'])
+def get_app(app_id):
+    if app_id in apps:
+        return jsonify(apps[app_id])
+    return jsonify({"error": "App not found"}), 404
+
+@app.route('/api/apps/<app_id>', methods=['DELETE'])
+def delete_app(app_id):
+    if app_id in apps:
+        del apps[app_id]
+        return jsonify({"status": "success", "message": "App deleted successfully"})
+    return jsonify({"error": "App not found"}), 404
 
 # Eventos de Socket.IO
 @socketio.on('connect')

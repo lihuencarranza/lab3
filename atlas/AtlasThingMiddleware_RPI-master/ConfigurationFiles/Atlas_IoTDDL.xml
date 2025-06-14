@@ -2,7 +2,7 @@
 	<Atlas_Thing>
 		<Descriptive_Metadata>
 			<Thing_ATID>raspberry1</Thing_ATID>
-			<Thing_Name></Thing_Name>
+			<Thing_Name>RaspberryPi</Thing_Name>
 			<Thing_Owner></Thing_Owner>
 			<Thing_Vendor></Thing_Vendor>
 			<Thing_Model></Thing_Model>
@@ -86,7 +86,7 @@
 		<Entity_1>
 			<Descriptive_Metadata>
 				<ID>HumiditySensor</ID>
-				<Name></Name>
+				<Name>HumiditySensor</Name>
 				<Owner></Owner>
 				<Vendor></Vendor>
 				<Category></Category>
@@ -150,7 +150,7 @@ value = mcpRead0;
 		<Entity_2>
 			<Descriptive_Metadata>
 				<ID>LedController</ID>
-				<Name></Name>
+				<Name>LedController</Name>
 				<Owner></Owner>
 				<Vendor></Vendor>
 				<Category></Category>

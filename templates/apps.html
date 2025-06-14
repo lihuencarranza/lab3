@@ -1,87 +1,364 @@
 {% extends "base.html" %}
 
-{% block title %}Apps - Atlas IoT DDL Monitor{% endblock %}
+{% block title %}Apps{% endblock %}
 
 {% block content %}
 <div class="row">
-    <div class="col-12">
+    <div class="col-md-12 mb-4">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Available Apps</h5>
-                <div class="input-group" style="width: 300px;">
-                    <input type="text" class="form-control" id="searchApps" placeholder="Search apps...">
-                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
-                        <i class="fas fa-times"></i>
+                <h5 class="mb-0">IoT Applications</h5>
+                <div>
+                    <button class="btn btn-primary me-2" onclick="startNewApp()">
+                        <i class="fas fa-plus"></i> New App
+                    </button>
+                    <button class="btn btn-secondary" onclick="uploadApp()">
+                        <i class="fas fa-upload"></i> Upload App
                     </button>
                 </div>
             </div>
             <div class="card-body">
-                <div class="row" id="apps-list">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Dashboard</h5>
-                                <p class="card-text">View real-time updates and statistics about your IoT devices and services.</p>
-                                <a href="/" class="btn btn-primary">Open Dashboard</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Things Explorer</h5>
-                                <p class="card-text">Browse and search through all discovered things and their entities.</p>
-                                <a href="/things" class="btn btn-primary">Open Things</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Services Explorer</h5>
-                                <p class="card-text">Explore all available services and their capabilities.</p>
-                                <a href="/services" class="btn btn-primary">Open Services</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Relationships Explorer</h5>
-                                <p class="card-text">View and manage relationships between services.</p>
-                                <a href="/relationships" class="btn btn-primary">Open Relationships</a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="appsList" class="row">
+                    <!-- Apps will be listed here -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- App Editor Modal -->
+<div class="modal fade" id="appEditorModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">App Editor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">App Name</label>
+                        <input type="text" class="form-control" id="appName">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Available Services</h6>
+                            </div>
+                            <div class="card-body">
+                                <div id="availableServices" class="list-group">
+                                    <!-- Services will be listed here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">App Flow</h6>
+                            </div>
+                            <div class="card-body">
+                                <div id="appFlow" class="app-flow">
+                                    <!-- App flow will be built here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="clearEditor()">Clear</button>
+                <button type="button" class="btn btn-primary" onclick="saveApp()">Save App</button>
+                <button type="button" class="btn btn-success" onclick="finalizeApp()">Finalize</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- File Upload Input (Hidden) -->
+<input type="file" id="fileUpload" accept=".iot" style="display: none;">
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .app-flow {
+        min-height: 300px;
+        border: 2px dashed var(--border-color);
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: var(--bg-card);
+    }
+
+    .service-item {
+        cursor: move;
+        margin-bottom: 0.5rem;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .service-item:hover {
+        background-color: var(--bg-darker);
+    }
+
+    .service-item.selected {
+        background-color: var(--accent-primary);
+        color: white;
+    }
+
+    .flow-item {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        color: var(--text-primary);
+    }
+
+    .flow-item::after {
+        content: "↓";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--text-secondary);
+    }
+
+    .flow-item:last-child::after {
+        display: none;
+    }
+
+    .modal-content {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    .modal-header {
+        border-bottom-color: var(--border-color);
+    }
+
+    .modal-footer {
+        border-top-color: var(--border-color);
+    }
+
+    .list-group-item {
+        background-color: var(--bg-card);
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .list-group-item:hover {
+        background-color: var(--bg-darker);
+    }
+</style>
 {% endblock %}
 
 {% block extra_js %}
 <script>
-    // Search functionality
-    document.getElementById('searchApps').addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        const appCards = document.querySelectorAll('#apps-list .card');
-        
-        appCards.forEach(card => {
-            const title = card.querySelector('.card-title').textContent.toLowerCase();
-            const description = card.querySelector('.card-text').textContent.toLowerCase();
-            const shouldShow = title.includes(searchTerm) || description.includes(searchTerm);
-            
-            card.closest('.col-md-4').style.display = shouldShow ? 'block' : 'none';
-        });
+    let currentApp = {
+        name: '',
+        services: [],
+        type: 'sequential' // Default type
+    };
+
+    let availableServices = [];
+    let appEditorModal;
+
+    // Initialize when document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        appEditorModal = new bootstrap.Modal(document.getElementById('appEditorModal'));
+        loadServices();
     });
 
-    document.getElementById('clearSearch').addEventListener('click', function() {
-        document.getElementById('searchApps').value = '';
-        const appCards = document.querySelectorAll('#apps-list .card');
-        appCards.forEach(card => {
-            card.closest('.col-md-4').style.display = 'block';
+    function loadServices() {
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(services => {
+                availableServices = services;
+                updateServicesList();
+            })
+            .catch(error => {
+                console.error('Error loading services:', error);
+            });
+    }
+
+    function updateServicesList() {
+        const container = document.getElementById('availableServices');
+        container.innerHTML = '';
+        
+        availableServices.forEach(service => {
+            const div = document.createElement('div');
+            div.className = 'list-group-item service-item';
+            div.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>${service.name || 'Unnamed Service'}</strong>
+                        <br>
+                        <small>${service.type || 'Unknown Type'}</small>
+                        ${service.description ? `<br><small class="text-muted">${service.description}</small>` : ''}
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addServiceToFlow('${service.id}')">
+                        Add
+                    </button>
+                </div>
+            `;
+            container.appendChild(div);
         });
+    }
+
+    function startNewApp() {
+        currentApp = {
+            name: '',
+            services: [],
+            type: 'sequential'
+        };
+        document.getElementById('appName').value = '';
+        document.getElementById('appFlow').innerHTML = '';
+        appEditorModal.show();
+    }
+
+    function uploadApp() {
+        document.getElementById('fileUpload').click();
+    }
+
+    document.getElementById('fileUpload').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    currentApp = JSON.parse(e.target.result);
+                    document.getElementById('appName').value = currentApp.name;
+                    updateAppFlow();
+                    appEditorModal.show();
+                } catch (error) {
+                    alert('Error loading app file');
+                }
+            };
+            reader.readAsText(file);
+        }
     });
+
+    function addServiceToFlow(serviceId) {
+        const service = availableServices.find(s => s.id === serviceId);
+        if (service) {
+            currentApp.services.push(service);
+            updateAppFlow();
+        }
+    }
+
+    function updateAppFlow() {
+        const container = document.getElementById('appFlow');
+        container.innerHTML = '';
+        
+        currentApp.services.forEach(service => {
+            const div = document.createElement('div');
+            div.className = 'flow-item';
+            div.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>${service.name || 'Unnamed Service'}</strong>
+                        <br>
+                        <small>${service.type || 'Unknown Type'}</small>
+                        ${service.description ? `<br><small class="text-muted">${service.description}</small>` : ''}
+                    </div>
+                    <button class="btn btn-sm btn-danger" onclick="removeServiceFromFlow('${service.id}')">
+                        Remove
+                    </button>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function removeServiceFromFlow(serviceId) {
+        currentApp.services = currentApp.services.filter(s => s.id !== serviceId);
+        updateAppFlow();
+    }
+
+    function clearEditor() {
+        if (confirm('Are you sure you want to clear the editor?')) {
+            currentApp.services = [];
+            updateAppFlow();
+        }
+    }
+
+    function saveApp() {
+        const appName = document.getElementById('appName').value;
+        if (!appName) {
+            alert('Please enter an app name');
+            return;
+        }
+
+        currentApp.name = appName;
+        const blob = new Blob([JSON.stringify(currentApp, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${appName}.iot`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function finalizeApp() {
+        const appName = document.getElementById('appName').value;
+        if (!appName) {
+            alert('Please enter an app name');
+            return;
+        }
+
+        if (currentApp.services.length === 0) {
+            alert('Please add at least one service to the app');
+            return;
+        }
+
+        currentApp.name = appName;
+        // Here you would typically send the app to the server
+        // For now, we'll just add it to the local list
+        addAppToList(currentApp);
+        appEditorModal.hide();
+    }
+
+    function addAppToList(app) {
+        const container = document.getElementById('appsList');
+        const div = document.createElement('div');
+        div.className = 'col-md-4 mb-3';
+        div.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${app.name}</h5>
+                    <p class="card-text">
+                        <small>Services: ${app.services.length}</small>
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-secondary" onclick="downloadApp('${app.name}')">
+                            Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    function editApp(appName) {
+        // In a real implementation, you would load the app from the server
+        // For now, we'll just show the editor with the current app
+        appEditorModal.show();
+    }
+
+    function downloadApp(appName) {
+        // In a real implementation, you would get the app from the server
+        // For now, we'll just use the current app
+        saveApp();
+    }
 </script>
 {% endblock %} 
