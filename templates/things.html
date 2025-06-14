@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Things - Atlas IoT DDL Monitor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Discovered Things</h5>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" id="searchThings" placeholder="Search things...">
+                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="things-list">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Function to update things list
+    function updateThingsList(things) {
+        const thingsList = document.getElementById('things-list');
+        if (!thingsList) return;
+        
+        thingsList.innerHTML = '';
+        things.forEach(thing => {
+            const thingElement = document.createElement('div');
+            thingElement.className = 'card mb-3';
+            thingElement.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${thing.name || 'Unnamed Thing'}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: ${thing.id}</h6>
+                    <p class="card-text">
+                        <strong>Model:</strong> ${thing.model || 'N/A'}<br>
+                        <strong>Vendor:</strong> ${thing.vendor || 'N/A'}<br>
+                        <strong>Owner:</strong> ${thing.owner || 'N/A'}<br>
+                        <strong>Description:</strong> ${thing.description || 'N/A'}<br>
+                        <strong>OS:</strong> ${thing.os || 'N/A'}<br>
+                        <strong>Space ID:</strong> ${thing.space_id || 'N/A'}
+                    </p>
+                </div>
+            `;
+            thingsList.appendChild(thingElement);
+        });
+    }
+
+    // Handle updates from Socket.IO
+    function handleUpdate(data) {
+        if (data.things) updateThingsList(data.things);
+    }
+
+    // Search functionality
+    document.getElementById('searchThings').addEventListener('input', function(e) {
+        fetch('/api/things')
+            .then(response => response.json())
+            .then(data => updateThingsList(data))
+            .catch(error => console.error('Error searching things:', error));
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('searchThings').value = '';
+        fetch('/api/things')
+            .then(response => response.json())
+            .then(data => updateThingsList(data))
+            .catch(error => console.error('Error clearing search:', error));
+    });
+
+    // Initial data load
+    fetch('/api/things')
+        .then(response => response.json())
+        .then(data => updateThingsList(data))
+        .catch(error => console.error('Error loading things:', error));
+</script>
+{% endblock %} 

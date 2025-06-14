@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Services - Atlas IoT DDL Monitor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Discovered Services</h5>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" id="searchServices" placeholder="Search services...">
+                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="services-list">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Function to update services list
+    function updateServicesList(services) {
+        const servicesList = document.getElementById('services-list');
+        if (!servicesList) return;
+        
+        servicesList.innerHTML = '';
+        services.forEach(service => {
+            const serviceElement = document.createElement('div');
+            serviceElement.className = 'card mb-3';
+            serviceElement.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${service.name || 'Unnamed Service'}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: ${service.id}</h6>
+                    <p class="card-text">
+                        <strong>API:</strong> ${service.api || 'N/A'}<br>
+                        <strong>Type:</strong> ${service.type || 'N/A'}<br>
+                        <strong>App Category:</strong> ${service.app_category || 'N/A'}<br>
+                        <strong>Description:</strong> ${service.description || 'N/A'}<br>
+                        <strong>Keywords:</strong> ${service.keywords || 'N/A'}<br>
+                        <strong>Thing ID:</strong> ${service.thing_id || 'N/A'}<br>
+                        <strong>Entity ID:</strong> ${service.entity_id || 'N/A'}<br>
+                        <strong>Space ID:</strong> ${service.space_id || 'N/A'}
+                    </p>
+                </div>
+            `;
+            servicesList.appendChild(serviceElement);
+        });
+    }
+
+    // Handle updates from Socket.IO
+    function handleUpdate(data) {
+        if (data.services) updateServicesList(data.services);
+    }
+
+    // Search functionality
+    document.getElementById('searchServices').addEventListener('input', function(e) {
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(data => updateServicesList(data))
+            .catch(error => console.error('Error searching services:', error));
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('searchServices').value = '';
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(data => updateServicesList(data))
+            .catch(error => console.error('Error clearing search:', error));
+    });
+
+    // Initial data load
+    fetch('/api/services')
+        .then(response => response.json())
+        .then(data => updateServicesList(data))
+        .catch(error => console.error('Error loading services:', error));
+</script>
+{% endblock %} 

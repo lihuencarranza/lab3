@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Apps - Atlas IoT DDL Monitor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Available Apps</h5>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" id="searchApps" placeholder="Search apps...">
+                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row" id="apps-list">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Dashboard</h5>
+                                <p class="card-text">View real-time updates and statistics about your IoT devices and services.</p>
+                                <a href="/" class="btn btn-primary">Open Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Things Explorer</h5>
+                                <p class="card-text">Browse and search through all discovered things and their entities.</p>
+                                <a href="/things" class="btn btn-primary">Open Things</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Services Explorer</h5>
+                                <p class="card-text">Explore all available services and their capabilities.</p>
+                                <a href="/services" class="btn btn-primary">Open Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Relationships Explorer</h5>
+                                <p class="card-text">View and manage relationships between services.</p>
+                                <a href="/relationships" class="btn btn-primary">Open Relationships</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Search functionality
+    document.getElementById('searchApps').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const appCards = document.querySelectorAll('#apps-list .card');
+        
+        appCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const description = card.querySelector('.card-text').textContent.toLowerCase();
+            const shouldShow = title.includes(searchTerm) || description.includes(searchTerm);
+            
+            card.closest('.col-md-4').style.display = shouldShow ? 'block' : 'none';
+        });
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('searchApps').value = '';
+        const appCards = document.querySelectorAll('#apps-list .card');
+        appCards.forEach(card => {
+            card.closest('.col-md-4').style.display = 'block';
+        });
+    });
+</script>
+{% endblock %} 

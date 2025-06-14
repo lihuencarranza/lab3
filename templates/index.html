@@ -1,185 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .tab-content {
-            padding: 20px;
-            border: 1px solid #dee2e6;
-            border-top: none;
-            border-radius: 0 0 4px 4px;
-        }
-        .space-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        .card {
-            margin-bottom: 15px;
-        }
-        .relationship-graph {
-            min-height: 400px;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container mt-4">
-        <h1 class="mb-4">Atlas Dashboard</h1>
-        
-        <!-- Space Information -->
-        <div class="space-info">
-            <h4>Space Information</h4>
-            <div id="spaceInfo">Loading...</div>
+{% extends "base.html" %}
+
+{% block title %}Atlas Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Atlas Dashboard</h1>
+    
+    <!-- Space Information -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4 class="mb-0">Space Information</h4>
         </div>
-
-        <!-- Tabs -->
-        <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="things-tab" data-bs-toggle="tab" href="#things" role="tab">Things</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="services-tab" data-bs-toggle="tab" href="#services" role="tab">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="relationships-tab" data-bs-toggle="tab" href="#relationships" role="tab">Relationships</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="apps-tab" data-bs-toggle="tab" href="#apps" role="tab">Apps</a>
-            </li>
-        </ul>
-
-        <!-- Tab Content -->
-        <div class="tab-content">
-            <!-- Things Tab -->
-            <div class="tab-pane fade show active" id="things" role="tabpanel">
-                <div id="thingsList">Loading things...</div>
-            </div>
-
-            <!-- Services Tab -->
-            <div class="tab-pane fade" id="services" role="tabpanel">
-                <div id="servicesList">Loading services...</div>
-            </div>
-
-            <!-- Relationships Tab -->
-            <div class="tab-pane fade" id="relationships" role="tabpanel">
-                <div id="relationshipsList">Loading relationships...</div>
-            </div>
-
-            <!-- Apps Tab -->
-            <div class="tab-pane fade" id="apps" role="tabpanel">
-                <div class="d-flex justify-content-between mb-3">
-                    <button class="btn btn-primary" onclick="uploadApp()">Upload App</button>
-                    <button class="btn btn-success" onclick="newApp()">New App</button>
-                </div>
-                <div id="appsList">No apps available</div>
-            </div>
+        <div class="card-body">
+            <div id="spaceInfo">Loading...</div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Fetch and display space information
-        fetch('/api/space-info')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('spaceInfo').innerHTML = `
-                    <p><strong>Hostname:</strong> ${data.hostname}</p>
-                    <p><strong>IP Address:</strong> ${data.ip_address}</p>
-                    <p><strong>Last Updated:</strong> ${data.timestamp}</p>
-                `;
-            });
+    <!-- Things Section -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Things</h4>
+            <a href="/things" class="btn btn-sm btn-outline-primary">View All</a>
+        </div>
+        <div class="card-body">
+            <div id="thingsList">Loading things...</div>
+        </div>
+    </div>
 
-        // Fetch and display things
+    <!-- Services Section -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Services</h4>
+            <a href="/services" class="btn btn-sm btn-outline-primary">View All</a>
+        </div>
+        <div class="card-body">
+            <div id="servicesList">Loading services...</div>
+        </div>
+    </div>
+
+    <!-- Relationships Section -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Relationships</h4>
+            <a href="/relationships" class="btn btn-sm btn-outline-primary">View All</a>
+        </div>
+        <div class="card-body">
+            <div id="relationshipsList">Loading relationships...</div>
+        </div>
+    </div>
+
+    <!-- Apps Section -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Apps</h4>
+            <div>
+                <button class="btn btn-sm btn-primary me-2" onclick="uploadApp()">Upload App</button>
+                <button class="btn btn-sm btn-success me-2" onclick="newApp()">New App</button>
+                <a href="/apps" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div id="appsList">No apps available</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Function to update things list
+    function updateThingsList(things) {
+        console.log('Updating things list:', things);
+        const thingsList = document.getElementById('thingsList');
+        if (!things || things.length === 0) {
+            thingsList.innerHTML = '<p>No things discovered yet.</p>';
+            return;
+        }
+
+        thingsList.innerHTML = things.map(thing => `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">${thing.name || thing.id}</h5>
+                    <p class="card-text">
+                        <strong>ID:</strong> ${thing.id}<br>
+                        <strong>Type:</strong> ${thing.type || 'N/A'}<br>
+                        <strong>Description:</strong> ${thing.description || 'N/A'}<br>
+                        <strong>Last Seen:</strong> ${thing.last_seen || 'N/A'}
+                    </p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Function to update services list
+    function updateServicesList(services) {
+        console.log('Updating services list:', services);
+        const servicesList = document.getElementById('servicesList');
+        if (!services || services.length === 0) {
+            servicesList.innerHTML = '<p>No services discovered yet.</p>';
+            return;
+        }
+
+        servicesList.innerHTML = services.map(service => `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">${service.name || service.id}</h5>
+                    <p class="card-text">
+                        <strong>ID:</strong> ${service.id}<br>
+                        <strong>Thing ID:</strong> ${service.thing_id || 'N/A'}<br>
+                        <strong>Type:</strong> ${service.type || 'N/A'}<br>
+                        <strong>Description:</strong> ${service.description || 'N/A'}<br>
+                        <strong>Last Seen:</strong> ${service.last_seen || 'N/A'}
+                    </p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Function to update relationships list
+    function updateRelationshipsList(relationships) {
+        console.log('Updating relationships list:', relationships);
+        const relationshipsList = document.getElementById('relationshipsList');
+        if (!relationships || relationships.length === 0) {
+            relationshipsList.innerHTML = '<p>No relationships discovered yet.</p>';
+            return;
+        }
+
+        relationshipsList.innerHTML = relationships.map(relationship => `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Relationship: ${relationship.id}</h5>
+                    <p class="card-text">
+                        <strong>Source Service:</strong> ${relationship.source_service || 'N/A'}<br>
+                        <strong>Target Service:</strong> ${relationship.target_service || 'N/A'}<br>
+                        <strong>Type:</strong> ${relationship.type || 'N/A'}<br>
+                        <strong>Last Seen:</strong> ${relationship.last_seen || 'N/A'}
+                    </p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Function to update space info
+    function updateSpaceInfo(space) {
+        console.log('Updating space info:', space);
+        const spaceInfo = document.getElementById('spaceInfo');
+        if (!space || Object.keys(space).length === 0) {
+            spaceInfo.innerHTML = '<p>No space information available.</p>';
+            return;
+        }
+
+        spaceInfo.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Space Information</h5>
+                    <p class="card-text">
+                        <strong>ID:</strong> ${space.id || 'N/A'}<br>
+                        <strong>Name:</strong> ${space.name || 'N/A'}<br>
+                        <strong>Description:</strong> ${space.description || 'N/A'}<br>
+                        <strong>Last Updated:</strong> ${space.last_updated || 'N/A'}
+                    </p>
+                </div>
+            </div>
+        `;
+    }
+
+    // Handle updates from Socket.IO
+    function handleUpdate(data) {
+        console.log('Handling update:', data);
+        if (data.things) updateThingsList(data.things);
+        if (data.services) updateServicesList(data.services);
+        if (data.relationships) updateRelationshipsList(data.relationships);
+    }
+
+    // Initialize Socket.IO connection
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Initializing Socket.IO connection');
+        
+        // Initial data load
+        fetch('/api/space')
+            .then(response => response.json())
+            .then(data => updateSpaceInfo(data))
+            .catch(error => console.error('Error loading space info:', error));
+
         fetch('/api/things')
             .then(response => response.json())
-            .then(data => {
-                const thingsHtml = data.map(thing => `
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${thing.id}</h5>
-                            <p class="card-text">
-                                <strong>Name:</strong> ${thing.name || 'N/A'}<br>
-                                <strong>Type:</strong> ${thing.type || 'N/A'}<br>
-                                <strong>Description:</strong> ${thing.description || 'N/A'}
-                            </p>
-                        </div>
-                    </div>
-                `).join('');
-                document.getElementById('thingsList').innerHTML = thingsHtml;
-            });
+            .then(data => updateThingsList(data))
+            .catch(error => console.error('Error loading things:', error));
 
-        // Fetch and display services
         fetch('/api/services')
             .then(response => response.json())
-            .then(data => {
-                const servicesHtml = data.map(service => `
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${service.name}</h5>
-                            <p class="card-text">
-                                <strong>Thing ID:</strong> ${service.thing_id}<br>
-                                <strong>Entity ID:</strong> ${service.entity_id}<br>
-                                <strong>Type:</strong> ${service.type || 'N/A'}<br>
-                                <strong>Description:</strong> ${service.description || 'N/A'}<br>
-                                <strong>Input Types:</strong> ${service.input_types.length > 0 ? service.input_types.join(', ') : 'None'}<br>
-                                <strong>Output Type:</strong> ${service.output_type || 'None'}<br>
-                                <strong>API Info:</strong> <code>${service.api_info}</code><br>
-                                <strong>Last Seen:</strong> ${service.last_seen}
-                            </p>
-                        </div>
-                    </div>
-                `).join('');
-                document.getElementById('servicesList').innerHTML = servicesHtml;
-            });
+            .then(data => updateServicesList(data))
+            .catch(error => console.error('Error loading services:', error));
 
-        // Fetch and display relationships
         fetch('/api/relationships')
             .then(response => response.json())
-            .then(data => {
-                const relationshipsHtml = data.length > 0 
-                    ? data.map(relationship => `
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Relationship</h5>
-                                <p class="card-text">
-                                    <pre>${JSON.stringify(relationship, null, 2)}</pre>
-                                </p>
-                            </div>
-                        </div>
-                    `).join('')
-                    : '<p>No relationships found</p>';
-                document.getElementById('relationshipsList').innerHTML = relationshipsHtml;
-            });
+            .then(data => updateRelationshipsList(data))
+            .catch(error => console.error('Error loading relationships:', error));
 
-        // App management functions
-        function uploadApp() {
-            // Implement app upload functionality
-            alert('App upload functionality to be implemented');
-        }
+        // Listen for Socket.IO events
+        socket.on('update', function(data) {
+            console.log('Received update event:', data);
+            handleUpdate(data);
+        });
+    });
 
-        function newApp() {
-            // Implement new app creation
-            alert('New app creation functionality to be implemented');
-        }
+    // App management functions
+    function uploadApp() {
+        alert('App upload functionality to be implemented');
+    }
 
-        // Refresh data every 30 seconds
-        setInterval(() => {
-            fetch('/api/space-info')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('spaceInfo').innerHTML = `
-                        <p><strong>Hostname:</strong> ${data.hostname}</p>
-                        <p><strong>IP Address:</strong> ${data.ip_address}</p>
-                        <p><strong>Last Updated:</strong> ${data.timestamp}</p>
-                    `;
-                });
-        }, 30000);
-    </script>
-</body>
-</html> 
+    function newApp() {
+        alert('New app creation functionality to be implemented');
+    }
+</script>
+{% endblock %} 
