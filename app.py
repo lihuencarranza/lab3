@@ -101,10 +101,13 @@ def on_mqtt_message(client, userdata, msg):
         payload = json.loads(msg.payload.decode())
         logger.info(f"Message payload: {payload}")
         
+        # Process things first
         if msg.topic == "/Atlas/Multicast/Tweet_ThingIdentity":
             handle_thing_identity(payload)
         elif msg.topic == "/Atlas/Multicast/Tweet_EntityIdentity":
             handle_entity_identity(payload)
+            
+        # Then process services
         elif msg.topic == "/Atlas/Multicast/API":
             handle_api_message(payload)
         elif msg.topic == "/Atlas/Unicast/Interaction":
