@@ -81,6 +81,7 @@ def multicast_listener():
                 elif tweet_type == "Identity_Entity":
                     entity_id = payload.get("ID", "")
                     thing_id = payload.get("Thing ID", "")
+                    # Store entity information with entity_id as key
                     services[entity_id] = {
                         "id": entity_id,
                         "name": payload.get("Name", ""),
@@ -89,7 +90,10 @@ def multicast_listener():
                         "vendor": payload.get("Vendor", ""),
                         "description": payload.get("Description", ""),
                         "thing_id": thing_id,
-                        "space_id": payload.get("Space ID", "")
+                        "space_id": payload.get("Space ID", ""),
+                        "api": "N/A",
+                        "app_category": "N/A",
+                        "keywords": "N/A"
                     }
                     socketio.emit('services_update', list(services.values()))
                     logging.info(f"Emitted services_update with {len(services)} services")
@@ -98,18 +102,32 @@ def multicast_listener():
                     service_name = payload.get("Name", "")
                     thing_id = payload.get("Thing ID", "")
                     entity_id = payload.get("Entity ID", "")
-                    services[service_name] = {
-                        "id": service_name,
-                        "name": service_name,
-                        "api": payload.get("API", ""),
-                        "type": payload.get("Type", ""),
-                        "app_category": payload.get("AppCategory", ""),
-                        "description": payload.get("Description", ""),
-                        "keywords": payload.get("Keywords", ""),
-                        "thing_id": thing_id,
-                        "entity_id": entity_id,
-                        "space_id": payload.get("Space ID", "")
-                    }
+                    
+                    # If we already have an entity with this ID, update its service information
+                    if entity_id in services:
+                        services[entity_id].update({
+                            "api": payload.get("API", ""),
+                            "type": payload.get("Type", ""),
+                            "app_category": payload.get("AppCategory", ""),
+                            "description": payload.get("Description", "") or services[entity_id].get("description", "N/A"),
+                            "keywords": payload.get("Keywords", "")
+                        })
+                    else:
+                        # If no entity exists, create a new service entry
+                        services[entity_id] = {
+                            "id": entity_id,
+                            "name": service_name,
+                            "api": payload.get("API", ""),
+                            "type": payload.get("Type", ""),
+                            "app_category": payload.get("AppCategory", ""),
+                            "description": payload.get("Description", ""),
+                            "keywords": payload.get("Keywords", ""),
+                            "thing_id": thing_id,
+                            "space_id": payload.get("Space ID", ""),
+                            "owner": "N/A",
+                            "vendor": "N/A"
+                        }
+                    
                     socketio.emit('services_update', list(services.values()))
                     logging.info(f"Emitted services_update with {len(services)} services")
                 
