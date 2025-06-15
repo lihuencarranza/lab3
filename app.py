@@ -99,30 +99,35 @@ class AppStatus:
         self.stop_event.clear()
         self.logs = []
         self.thread = threading.Thread(target=self.run_app)
+        self.thread.daemon = True
         self.thread.start()
 
     def stop(self):
         self.status = "stopped"
-        if self.thread:
+        if self.thread and self.thread.is_alive():
             self.stop_event.set()
-            self.thread.join()
             self.thread = None
 
     def complete(self):
-        self.status = "completed"
-        if self.thread:
-            self.thread.join()
+        with app.app_context():
+            self.status = "completed"
             self.thread = None
+            # Emitir el estado actualizado
+            socketio.emit('app_status_update', {
+                'app_name': self.app_name,
+                'status': self.status
+            })
 
     def add_log(self, message):
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_entry = f"[{timestamp}] {message}"
-        self.logs.append(log_entry)
-        # Emitir el log a través de Socket.IO
-        socketio.emit('app_log', {
-            'app_name': self.app_name,
-            'log': log_entry
-        })
+        with app.app_context():
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            log_entry = f"[{timestamp}] {message}"
+            self.logs.append(log_entry)
+            # Emitir el log a través de Socket.IO
+            socketio.emit('app_log', {
+                'app_name': self.app_name,
+                'log': log_entry
+            })
 
     def run_app(self):
         try:
@@ -134,7 +139,9 @@ class AppStatus:
                 if self.stop_event.is_set():
                     break
                 
-                service_name = service.get('name', service.get('id', 'Unknown'))
+                # Extraer el nombre del servicio del campo api
+                api = service.get('api', '')
+                service_name = api.split(':')[0] if api else service.get('name', 'Unknown')
                 
                 # Crear tweet para el servicio
                 service_tweet = {
@@ -142,7 +149,7 @@ class AppStatus:
                     "Thing ID": "raspberry1",
                     "Space ID": "MySmartSpace",
                     "Service Name": service_name,
-                    "Service Inputs": "(1)"  # Valor por defecto como en el ejemplo que funciona
+                    "Service Inputs": "(1)"
                 }
                 
                 # Enviar tweet a Atlas
@@ -163,12 +170,14 @@ class AppStatus:
                 self.add_log(f"Service {service_name} completed")
             
             if not self.stop_event.is_set():
-                self.complete()
                 self.add_log("App execution completed successfully")
+                self.complete()
             
         except Exception as e:
             self.add_log(f"Error during app execution: {str(e)}")
-            self.status = "error"
+            with app.app_context():
+                self.status = "error"
+                self.complete()
 
 def multicast_listener():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
