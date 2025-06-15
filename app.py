@@ -6,6 +6,9 @@ import socket
 import struct
 import logging
 from datetime import datetime
+import os
+import time
+import socketio
 
 # Configurar logging
 logging.basicConfig(
@@ -34,16 +37,140 @@ socketio = SocketIO(app,
     transports=['polling', 'websocket']
 )
 
+# Configuración del directorio de trabajo de Atlas
+ATLAS_WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'atlas_apps')
+if not os.path.exists(ATLAS_WORKING_DIR):
+    os.makedirs(ATLAS_WORKING_DIR)
+
 # Estado de la aplicación
 things = {}
 services = {}
 relationships = {}
 space_info = {}
 apps = {}
+running_apps = {}  # Diccionario para mantener el estado de las apps en ejecución
 
 # Configuración de multicast
 MULTICAST_GROUP = '232.1.1.1'
 MULTICAST_PORT = 1235
+
+# Configuración de Atlas
+ATLAS_SERVER_IP = "192.168.8.195"  # IP de tu Raspberry Pi
+ATLAS_SERVER_PORT = 6668
+
+# Estructura para almacenar logs de apps
+app_logs = {}
+
+def send_tweet_to_atlas(tweet_data):
+    """Envía un tweet a Atlas usando TCP socket."""
+    try:
+        # Crear socket TCP
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket.settimeout(5)  # 5 segundos de timeout
+        
+        # Conectar al servidor Atlas
+        client_socket.connect((ATLAS_SERVER_IP, ATLAS_SERVER_PORT))
+        
+        # Enviar el tweet
+        tweet_json = json.dumps(tweet_data)
+        client_socket.send(tweet_json.encode())
+        
+        # Esperar respuesta
+        response = client_socket.recv(1024).decode()
+        
+        # Cerrar conexión
+        client_socket.close()
+        
+        return True, response
+    except Exception as e:
+        return False, str(e)
+
+class AppStatus:
+    def __init__(self):
+        self.status = "stopped"
+        self.start_time = None
+        self.thread = None
+        self.stop_event = threading.Event()
+        self.logs = []
+        self.app_name = None
+        self.app = None
+
+    def start(self):
+        self.status = "active"
+        self.start_time = datetime.now()
+        self.stop_event.clear()
+        self.logs = []
+        self.thread = threading.Thread(target=self.run_app)
+        self.thread.start()
+
+    def stop(self):
+        self.status = "stopped"
+        if self.thread:
+            self.stop_event.set()
+            self.thread.join()
+            self.thread = None
+
+    def complete(self):
+        self.status = "completed"
+        if self.thread:
+            self.thread.join()
+            self.thread = None
+
+    def add_log(self, message):
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] {message}"
+        self.logs.append(log_entry)
+        # Emitir el log a través de Socket.IO
+        socketio.emit('app_log', {
+            'app_name': self.app_name,
+            'log': log_entry
+        })
+
+    def run_app(self):
+        try:
+            # Enviar tweet de activación a Atlas
+            self.add_log("Sending activation tweet to Atlas...")
+            
+            # Crear y enviar el tweet de activación para cada servicio
+            for service in self.app.get('services', []):
+                if self.stop_event.is_set():
+                    break
+                
+                service_name = service.get('name', service.get('id', 'Unknown'))
+                
+                # Crear tweet para el servicio
+                service_tweet = {
+                    "Tweet Type": "API Call",
+                    "Thing ID": "raspberry1",
+                    "Space ID": "MySmartSpace",
+                    "Service Name": service.get('name', service_name),
+                    "Service Inputs": "(5)"  # Valor por defecto, podría ser configurable
+                }
+                
+                # Enviar tweet a Atlas
+                success, response = send_tweet_to_atlas(service_tweet)
+                
+                if success:
+                    self.add_log(f"Service tweet sent successfully: {service_name}")
+                    self.add_log(f"Atlas response: {response}")
+                else:
+                    self.add_log(f"Error sending service tweet: {response}")
+                
+                # Simular tiempo de ejecución
+                time.sleep(2)
+                
+                if self.stop_event.is_set():
+                    break
+                
+                self.add_log(f"Service {service_name} completed")
+            
+            if not self.stop_event.is_set():
+                self.complete()
+                self.add_log("App execution completed successfully")
+            
+        except Exception as e:
+            self.add_log(f"Error during app execution: {str(e)}")
+            self.status = "error"
 
 def multicast_listener():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -188,27 +315,67 @@ def get_space():
 
 @app.route('/api/apps')
 def get_apps():
-    return jsonify(list(apps.values()))
+    return jsonify({
+        'apps': list(apps.values()),
+        'running_apps': {
+            name: {
+                'status': status.status,
+                'start_time': status.start_time.isoformat() if status.start_time else None,
+                'logs': status.logs
+            } for name, status in running_apps.items()
+        }
+    })
 
 @app.route('/api/apps', methods=['POST'])
 def save_app():
+    """Guarda una nueva app o actualiza una existente."""
     app_data = request.json
-    app_id = app_data.get('name')  # Using name as ID for simplicity
-    apps[app_id] = app_data
-    return jsonify({"status": "success", "message": "App saved successfully"})
+    success, message = save_app_to_file(app_data)
+    return jsonify({"success": success, "message": message})
 
-@app.route('/api/apps/<app_id>', methods=['GET'])
-def get_app(app_id):
-    if app_id in apps:
-        return jsonify(apps[app_id])
-    return jsonify({"error": "App not found"}), 404
+@app.route('/api/apps/<app_name>', methods=['DELETE'])
+def delete_app(app_name):
+    """Elimina una app."""
+    success, message = delete_app_file(app_name)
+    return jsonify({"success": success, "message": message})
 
-@app.route('/api/apps/<app_id>', methods=['DELETE'])
-def delete_app(app_id):
-    if app_id in apps:
-        del apps[app_id]
-        return jsonify({"status": "success", "message": "App deleted successfully"})
-    return jsonify({"error": "App not found"}), 404
+@app.route('/api/apps/<app_name>/activate', methods=['POST'])
+def activate_app(app_name):
+    if app_name not in apps:
+        return jsonify({'success': False, 'message': 'App not found'}), 404
+    
+    if app_name in running_apps:
+        return jsonify({'success': False, 'message': 'App is already running'}), 400
+    
+    try:
+        app_status = AppStatus()
+        app_status.app_name = app_name
+        app_status.app = apps[app_name]
+        running_apps[app_name] = app_status
+        app_status.start()
+        return jsonify({'success': True, 'message': 'App activated successfully'})
+    except Exception as e:
+        if app_name in running_apps:
+            del running_apps[app_name]
+        return jsonify({'success': False, 'message': str(e)}), 500
+
+@app.route('/api/apps/<app_name>/stop', methods=['POST'])
+def stop_app_endpoint(app_name):
+    """Detiene una app."""
+    success, message = stop_app(app_name)
+    return jsonify({"success": success, "message": message})
+
+@app.route('/api/apps/<app_name>/logs')
+def get_app_logs(app_name):
+    if app_name in running_apps:
+        return jsonify({
+            'success': True,
+            'logs': running_apps[app_name].logs
+        })
+    return jsonify({
+        'success': False,
+        'message': 'App not found or not running'
+    })
 
 # Eventos de Socket.IO
 @socketio.on('connect')
@@ -232,6 +399,64 @@ def handle_disconnect():
 multicast_thread = threading.Thread(target=multicast_listener, daemon=True)
 multicast_thread.start()
 logging.info("Multicast listener started")
+
+def load_apps_from_directory():
+    """Carga todas las apps desde el directorio de trabajo."""
+    for filename in os.listdir(ATLAS_WORKING_DIR):
+        if filename.endswith('.iot'):
+            try:
+                with open(os.path.join(ATLAS_WORKING_DIR, filename), 'r') as f:
+                    app_data = json.load(f)
+                    app_name = os.path.splitext(filename)[0]
+                    apps[app_name] = app_data
+            except Exception as e:
+                logging.error(f"Error loading app {filename}: {e}")
+
+def save_app_to_file(app_data):
+    """Guarda una app en el directorio de trabajo."""
+    app_name = app_data.get('name', '').strip()
+    if not app_name:
+        return False, "App name is required"
+    
+    # Validar nombre de app
+    if not app_name.isalnum():
+        return False, "App name must contain only letters and numbers"
+    
+    filename = f"{app_name}.iot"
+    filepath = os.path.join(ATLAS_WORKING_DIR, filename)
+    
+    try:
+        with open(filepath, 'w') as f:
+            json.dump(app_data, f, indent=2)
+        apps[app_name] = app_data
+        return True, "App saved successfully"
+    except Exception as e:
+        return False, f"Error saving app: {str(e)}"
+
+def delete_app_file(app_name):
+    """Elimina una app del directorio de trabajo."""
+    filename = f"{app_name}.iot"
+    filepath = os.path.join(ATLAS_WORKING_DIR, filename)
+    
+    try:
+        if os.path.exists(filepath):
+            os.remove(filepath)
+        if app_name in apps:
+            del apps[app_name]
+        if app_name in running_apps:
+            stop_app(app_name)
+        return True, "App deleted successfully"
+    except Exception as e:
+        return False, f"Error deleting app: {str(e)}"
+
+def stop_app(app_name):
+    if app_name in running_apps:
+        running_apps[app_name].stop()
+        return True
+    return False
+
+# Cargar apps al iniciar
+load_apps_from_directory()
 
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000, debug=True, use_reloader=False) 

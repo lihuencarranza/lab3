@@ -26,6 +26,39 @@
     </div>
 </div>
 
+<!-- Status Panel -->
+<div class="status-panel">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Running Apps</h6>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleLogsPanel()">
+                <i class="fas fa-terminal"></i> Toggle Logs
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="runningAppsList" class="list-group">
+                        <!-- Running apps will be listed here -->
+                    </div>
+                </div>
+                <div class="col-md-6" id="logsPanel" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="mb-0">App Logs</h6>
+                        </div>
+                            <div class="card-body">
+                            <div id="appLogs" class="logs-container">
+                                <!-- Logs will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            </div>
+                        </div>
+
 <!-- App Editor Modal -->
 <div class="modal fade" id="appEditorModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
@@ -38,7 +71,8 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">App Name</label>
-                        <input type="text" class="form-control" id="appName">
+                        <input type="text" class="form-control" id="appName" pattern="[a-zA-Z0-9]+" title="Only letters and numbers allowed">
+                        <small class="text-muted">App name must contain only letters and numbers</small>
                     </div>
                 </div>
                 <div class="row">
@@ -79,6 +113,25 @@
 
 <!-- File Upload Input (Hidden) -->
 <input type="file" id="fileUpload" accept=".iot" style="display: none;">
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this app? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_css %}
@@ -153,6 +206,89 @@
     .list-group-item:hover {
         background-color: var(--bg-darker);
     }
+
+    .status-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-card);
+        border-top: 1px solid var(--border-color);
+        padding: 1rem;
+        z-index: 1000;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .status-panel .card {
+        margin-bottom: 0;
+    }
+
+    .app-status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+        cursor: pointer;
+    }
+
+    .app-status:hover {
+        background-color: var(--bg-darker);
+    }
+
+    .app-status.selected {
+        background-color: var(--accent-primary);
+        color: white;
+    }
+
+    .app-status.selected .status-badge {
+        background-color: white;
+        color: var(--accent-primary);
+    }
+
+    .status-badge {
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8em;
+    }
+
+    .status-active {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .status-stopped {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .status-completed {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+    .logs-container {
+        height: 200px;
+        overflow-y: auto;
+        background-color: var(--bg-darker);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 0.9em;
+        color: var(--text-primary);
+    }
+
+    .log-entry {
+        margin-bottom: 5px;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .log-entry:hover {
+        background-color: var(--bg-card);
+    }
 </style>
 {% endblock %}
 
@@ -161,16 +297,32 @@
     let currentApp = {
         name: '',
         services: [],
-        type: 'sequential' // Default type
+        type: 'sequential'
     };
 
     let availableServices = [];
     let appEditorModal;
+    let deleteConfirmModal;
+    let appToDelete = null;
+    let appsList = [];
+    let runningApps = {};
+    let selectedApp = null;
 
     // Initialize when document is ready
     document.addEventListener('DOMContentLoaded', function() {
         appEditorModal = new bootstrap.Modal(document.getElementById('appEditorModal'));
+        deleteConfirmModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
         loadServices();
+        loadApps();
+        // Actualizar el estado de las apps cada 5 segundos
+        setInterval(updateRunningApps, 5000);
+        
+        // Socket.IO event handlers
+        socket.on('app_log', function(data) {
+            if (data.app_name === selectedApp) {
+                addLogEntry(data.log);
+            }
+        });
     });
 
     function loadServices() {
@@ -185,6 +337,20 @@
             });
     }
 
+    function loadApps() {
+        fetch('/api/apps')
+            .then(response => response.json())
+            .then(data => {
+                appsList = data.apps;
+                runningApps = data.running_apps;
+                updateAppsList();
+                updateRunningAppsList();
+            })
+            .catch(error => {
+                console.error('Error loading apps:', error);
+            });
+    }
+
     function updateServicesList() {
         const container = document.getElementById('availableServices');
         container.innerHTML = '';
@@ -195,10 +361,10 @@
             div.innerHTML = `
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <strong>${service.name || 'Unnamed Service'}</strong>
+                        <strong>${service.name || service.id}</strong>
                         <br>
                         <small>${service.type || 'Unknown Type'}</small>
-                        ${service.description ? `<br><small class="text-muted">${service.description}</small>` : ''}
+                        ${service.api ? `<br><small class="text-muted">${service.api}</small>` : ''}
                     </div>
                     <button class="btn btn-sm btn-primary" onclick="addServiceToFlow('${service.id}')">
                         Add
@@ -207,6 +373,87 @@
             `;
             container.appendChild(div);
         });
+    }
+
+    function updateAppsList() {
+        const container = document.getElementById('appsList');
+        container.innerHTML = '';
+        
+        appsList.forEach(app => {
+            const div = document.createElement('div');
+            div.className = 'col-md-4 mb-3';
+            div.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${app.name}</h5>
+                        <p class="card-text">
+                            <small>Services: ${app.services.length}</small>
+                        </p>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
+                                Edit
+                            </button>
+                            <button class="btn btn-sm btn-secondary" onclick="downloadApp('${app.name}')">
+                                Download
+                            </button>
+                            ${runningApps[app.name] ? 
+                                `<button class="btn btn-sm btn-danger" onclick="stopApp('${app.name}')">
+                                    Stop
+                                </button>` :
+                                `<button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
+                                    Activate
+                                </button>`
+                            }
+                            <button class="btn btn-sm btn-danger" onclick="confirmDeleteApp('${app.name}')">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function updateRunningAppsList() {
+        const container = document.getElementById('runningAppsList');
+        container.innerHTML = '';
+        
+        Object.entries(runningApps).forEach(([appName, status]) => {
+            const div = document.createElement('div');
+            div.className = `app-status ${appName === selectedApp ? 'selected' : ''}`;
+            div.setAttribute('data-app-name', appName);
+            div.onclick = () => selectApp(appName);
+            div.innerHTML = `
+                <div>
+                    <strong>${appName}</strong>
+                    <br>
+                    <small>Started: ${new Date(status.start_time).toLocaleTimeString()}</small>
+                </div>
+                <div>
+                    <span class="status-badge status-${status.status.toLowerCase()}">${status.status}</span>
+                    ${status.status === 'active' ? 
+                        `<button class="btn btn-sm btn-danger ms-2" onclick="stopApp('${appName}')">
+                            Stop
+                        </button>` : ''
+                    }
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function updateRunningApps() {
+        fetch('/api/apps')
+            .then(response => response.json())
+            .then(data => {
+                runningApps = data.running_apps;
+                updateRunningAppsList();
+                updateAppsList();
+            })
+            .catch(error => {
+                console.error('Error updating running apps:', error);
+            });
     }
 
     function startNewApp() {
@@ -260,10 +507,10 @@
             div.innerHTML = `
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <strong>${service.name || 'Unnamed Service'}</strong>
+                        <strong>${service.name || service.id}</strong>
                         <br>
                         <small>${service.type || 'Unknown Type'}</small>
-                        ${service.description ? `<br><small class="text-muted">${service.description}</small>` : ''}
+                        ${service.api ? `<br><small class="text-muted">${service.api}</small>` : ''}
                     </div>
                     <button class="btn btn-sm btn-danger" onclick="removeServiceFromFlow('${service.id}')">
                         Remove
@@ -293,72 +540,163 @@
             return;
         }
 
+        if (!/^[a-zA-Z0-9]+$/.test(appName)) {
+            alert('App name must contain only letters and numbers');
+            return;
+        }
+
         currentApp.name = appName;
-        const blob = new Blob([JSON.stringify(currentApp, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `${appName}.iot`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
+        fetch('/api/apps', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(currentApp)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('App saved successfully');
+                loadApps();
+            } else {
+                alert('Error saving app: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error saving app:', error);
+            alert('Error saving app');
+        });
     }
 
     function finalizeApp() {
-        const appName = document.getElementById('appName').value;
-        if (!appName) {
-            alert('Please enter an app name');
-            return;
-        }
-
-        if (currentApp.services.length === 0) {
-            alert('Please add at least one service to the app');
-            return;
-        }
-
-        currentApp.name = appName;
-        // Here you would typically send the app to the server
-        // For now, we'll just add it to the local list
-        addAppToList(currentApp);
+        saveApp();
         appEditorModal.hide();
     }
 
-    function addAppToList(app) {
-        const container = document.getElementById('appsList');
-        const div = document.createElement('div');
-        div.className = 'col-md-4 mb-3';
-        div.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${app.name}</h5>
-                    <p class="card-text">
-                        <small>Services: ${app.services.length}</small>
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
-                            Edit
-                        </button>
-                        <button class="btn btn-sm btn-secondary" onclick="downloadApp('${app.name}')">
-                            Download
-                        </button>
-                    </div>
-                </div>
-            </div>
-        `;
-        container.appendChild(div);
-    }
-
     function editApp(appName) {
-        // In a real implementation, you would load the app from the server
-        // For now, we'll just show the editor with the current app
-        appEditorModal.show();
+        const app = appsList.find(a => a.name === appName);
+        if (app) {
+            currentApp = app;
+            document.getElementById('appName').value = app.name;
+            updateAppFlow();
+            appEditorModal.show();
+        }
     }
 
     function downloadApp(appName) {
-        // In a real implementation, you would get the app from the server
-        // For now, we'll just use the current app
-        saveApp();
+        const app = appsList.find(a => a.name === appName);
+        if (app) {
+            const blob = new Blob([JSON.stringify(app, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${appName}.iot`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    }
+
+    function activateApp(appName) {
+        fetch(`/api/apps/${appName}/activate`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadApps();
+                selectApp(appName);
+            } else {
+                alert('Error activating app: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error activating app:', error);
+            alert('Error activating app');
+        });
+    }
+
+    function stopApp(appName) {
+        fetch(`/api/apps/${appName}/stop`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadApps();
+            } else {
+                alert('Error stopping app: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error stopping app:', error);
+            alert('Error stopping app');
+        });
+    }
+
+    function confirmDeleteApp(appName) {
+        appToDelete = appName;
+        deleteConfirmModal.show();
+    }
+
+    function confirmDelete() {
+        if (appToDelete) {
+            fetch(`/api/apps/${appToDelete}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    loadApps();
+                    deleteConfirmModal.hide();
+                } else {
+                    alert('Error deleting app: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting app:', error);
+                alert('Error deleting app');
+            });
+        }
+    }
+
+    function toggleLogsPanel() {
+        const logsPanel = document.getElementById('logsPanel');
+        logsPanel.style.display = logsPanel.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function selectApp(appName) {
+        selectedApp = appName;
+        document.querySelectorAll('.app-status').forEach(el => {
+            el.classList.remove('selected');
+        });
+        document.querySelector(`[data-app-name="${appName}"]`).classList.add('selected');
+        loadAppLogs(appName);
+    }
+
+    function loadAppLogs(appName) {
+        fetch(`/api/apps/${appName}/logs`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const logsContainer = document.getElementById('appLogs');
+                    logsContainer.innerHTML = '';
+                    data.logs.forEach(log => addLogEntry(log));
+                }
+            })
+            .catch(error => {
+                console.error('Error loading app logs:', error);
+            });
+    }
+
+    function addLogEntry(log) {
+        const logsContainer = document.getElementById('appLogs');
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        logEntry.textContent = log;
+        logsContainer.appendChild(logEntry);
+        logsContainer.scrollTop = logsContainer.scrollHeight;
     }
 </script>
 {% endblock %} 
