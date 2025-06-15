@@ -159,7 +159,7 @@ value = mcpRead0;
 			</Descriptive_Metadata>
 			<Services>
 				<Service_1>
-					<Name>LedControl</Name>
+					<Name>LedOn</Name>
 					<AppCategory></AppCategory>
 					<Type></Type>
 					<Keywords></Keywords>
@@ -194,23 +194,67 @@ if (!initialized) {
     initialized = 1;
 }
 
-// Control LED based on input state
-if (state == 1) {
-    digitalWrite(26, HIGH);
-} else {
-    digitalWrite(26, LOW);
-}
+// Turn LED on
+digitalWrite(26, HIGH);
 
 return NULL;  // void return type
 ]]></Service_Formula>
-					<Service_NumberInputs>1</Service_NumberInputs>
-					<Service_InputTypes>int</Service_InputTypes>
-					<Service_InputDescriptions>state</Service_InputDescriptions>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
 					<Library_Number>1</Library_Number>
 					<Libraries>wiringPi.h</Libraries>
 					<ADC_Number>0</ADC_Number>
 				</Service_1>
-				<Number_Services>1</Number_Services>
+				<Service_2>
+					<Name>LedOff</Name>
+					<AppCategory></AppCategory>
+					<Type></Type>
+					<Keywords></Keywords>
+					<Description></Description>
+					<Contextual_Constraints>
+						<Time_Window>10seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription></OutputDescription>
+					<OutputType>void</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+#include <wiringPi.h>
+
+// Initialize GPIO if not already initialized
+static int initialized = 0;
+
+if (!initialized) {
+    wiringPiSetupGpio();
+    pinMode(26, OUTPUT);
+    initialized = 1;
+}
+
+// Turn LED off
+digitalWrite(26, LOW);
+
+return NULL;  // void return type
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>0</ADC_Number>
+				</Service_2>
+				<Number_Services>2</Number_Services>
 			</Services>
 			<UnboundedService>
 				<Number_UnboundedServices>0</Number_UnboundedServices>
