@@ -10,21 +10,21 @@ import os
 import time
 import socketio
 
-# Configurar logging
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-# Inicializar Flask y Socket.IO
+# Initialize Flask and Socket.IO
 app = Flask(__name__, 
     static_folder='templates',
     static_url_path='',
     template_folder='templates'
 )
 
-# Configuración de Socket.IO
+# Socket.IO Configuration
 socketio = SocketIO(app, 
     cors_allowed_origins="*",
     async_mode='threading',
@@ -37,44 +37,44 @@ socketio = SocketIO(app,
     transports=['polling', 'websocket']
 )
 
-# Configuración del directorio de trabajo de Atlas
+# Atlas working directory configuration
 ATLAS_WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'atlas_apps')
 if not os.path.exists(ATLAS_WORKING_DIR):
     os.makedirs(ATLAS_WORKING_DIR)
 
-# Estado de la aplicación
+# Application state
 things = {}
-entities = {}  # Nuevo diccionario para entidades
+entities = {}  # Dictionary for entities
 services = {}
 relationships = {}
 space_info = {}
 apps = {}
-runtime_apps = {}  # Diccionario para mantener el estado de las apps en ejecución
-completed_apps = {}  # Diccionario para mantener el historial de apps completadas
+runtime_apps = {}  # Dictionary to maintain state of running apps
+completed_apps = {}  # Dictionary to maintain history of completed apps
 
-# Configuración de multicast
+# Multicast configuration
 MULTICAST_GROUP = '232.1.1.1'
 MULTICAST_PORT = 1235
 
-# Configuración de Atlas
-ATLAS_SERVER_IP = "192.168.8.195"  # IP de tu Raspberry Pi
+# Atlas configuration
+ATLAS_SERVER_IP = "192.168.8.195"  # Raspberry Pi IP
 ATLAS_SERVER_PORT = 6668
 
-# Estructura para almacenar logs de apps
+# Structure to store app logs
 app_logs = {}
 
 def send_tweet_to_atlas(tweet_data):
-    """Envía un tweet a Atlas usando TCP socket."""
+    """Sends a tweet to Atlas using TCP socket."""
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
-            # Conectar al servidor Atlas
+            # Connect to Atlas server
             client_socket.connect((ATLAS_SERVER_IP, ATLAS_SERVER_PORT))
             
-            # Enviar el tweet
+            # Send tweet
             tweet_json = json.dumps(tweet_data)
             client_socket.sendall(tweet_json.encode('utf-8'))
             
-            # Esperar respuesta
+            # Wait for response
             response = client_socket.recv(1024).decode('utf-8')
             
             current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -95,6 +95,7 @@ class AppStatus:
         self.app_name = None
         self.app = None
         self.completion_time = None
+        self.auto_complete = False  # Indicates if app should auto-complete
 
     def start(self):
         self.status = "active"
@@ -106,27 +107,38 @@ class AppStatus:
         self.thread.start()
 
     def stop(self):
+        if self.auto_complete:
+            self.add_log("Cannot stop app: Auto-completing app")
+            return False
+        
         self.status = "stopped"
         if self.thread and self.thread.is_alive():
             self.stop_event.set()
             self.thread = None
-        with app.app_context():
-            socketio.emit('app_status_update', {
-                'app_name': self.app_name,
-                'status': self.status,
-                'action': 'stopped'
-            })
+            self.add_log("App stopped by user")
+            # Move app from runtime to completed
+            if self.app_name in runtime_apps:
+                completed_apps[self.app_name] = self
+                runtime_apps.pop(self.app_name)
+            with app.app_context():
+                socketio.emit('app_status_update', {
+                    'app_name': self.app_name,
+                    'status': self.status,
+                    'action': 'stopped'
+                })
+            return True
+        return False
 
     def complete(self):
         with app.app_context():
             self.status = "completed"
             self.thread = None
             self.completion_time = datetime.now()
-            # Mover la app de runtime a completed
+            # Move app from runtime to completed
             if self.app_name in runtime_apps:
                 completed_apps[self.app_name] = self
                 runtime_apps.pop(self.app_name)
-            # Emitir el estado actualizado
+            # Emit updated status
             socketio.emit('app_status_update', {
                 'app_name': self.app_name,
                 'status': self.status,
@@ -140,7 +152,7 @@ class AppStatus:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             log_entry = f"[{timestamp}] {message}"
             self.logs.append(log_entry)
-            # Emitir el log a través de Socket.IO
+            # Emit log through Socket.IO
             socketio.emit('app_log', {
                 'app_name': self.app_name,
                 'log': log_entry,
@@ -149,22 +161,33 @@ class AppStatus:
 
     def run_app(self):
         try:
-            # Enviar tweet de activación a Atlas
+            # Wait 5 seconds before starting execution
+            self.add_log("Getting ready to run...")
+            for i in range(5, 0, -1):
+                if self.stop_event.is_set():
+                    self.add_log("App execution cancelled by user")
+                    return
+                time.sleep(1)
+            
+            self.add_log("Ready for running")
+            
+            # Send activation tweet to Atlas
             self.add_log("Sending activation tweet to Atlas...")
             
-            # Crear y enviar el tweet de activación para cada servicio
+            # Create and send activation tweet for each service
             for service in self.app.get('services', []):
                 if self.stop_event.is_set():
+                    self.add_log("App execution stopped by user")
                     break
                 
-                # Obtener la información del servicio desde el diccionario de servicios
+                # Get service info from services dictionary
                 service_id = service.get('id')
                 if service_id in services:
                     service_info = services[service_id]
                     api = service_info.get('api', '')
                     service_name = api.split(':')[0] if api else service_info.get('name', 'Unknown')
                     
-                    # Crear tweet para el servicio
+                    # Create tweet for service
                     service_tweet = {
                         "Tweet Type": "Service call",
                         "Thing ID": service_info.get('thing_id', 'raspberry1'),
@@ -173,7 +196,7 @@ class AppStatus:
                         "Service Inputs": "()"
                     }
                     
-                    # Enviar tweet a Atlas
+                    # Send tweet to Atlas
                     success, response = send_tweet_to_atlas(service_tweet)
                     
                     if success:
@@ -182,7 +205,7 @@ class AppStatus:
                     else:
                         self.add_log(f"Error sending service tweet: {response}")
                     
-                    # Simular tiempo de ejecución
+                    # Simulate execution time
                     time.sleep(2)
                     
                     if self.stop_event.is_set():
@@ -200,7 +223,7 @@ class AppStatus:
             self.add_log(f"Error during app execution: {str(e)}")
             with app.app_context():
                 self.status = "error"
-                # Mover la app de runtime a completed con estado de error
+                # Move app from runtime to completed with error status
                 if self.app_name in runtime_apps:
                     completed_apps[self.app_name] = runtime_apps.pop(self.app_name)
                 socketio.emit('app_status_update', {
@@ -310,7 +333,7 @@ def multicast_listener():
         except Exception as e:
             logging.error(f"Error in multicast listener: {e}")
 
-# Rutas de la aplicación
+# Application routes
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -385,14 +408,14 @@ def get_apps():
 
 @app.route('/api/apps', methods=['POST'])
 def save_app():
-    """Guarda una nueva app o actualiza una existente."""
+    """Saves a new app or updates an existing one."""
     app_data = request.json
     success, message = save_app_to_file(app_data)
     return jsonify({"success": success, "message": message})
 
 @app.route('/api/apps/<app_name>', methods=['DELETE'])
 def delete_app(app_name):
-    """Elimina una app."""
+    """Deletes an app."""
     success, message = delete_app_file(app_name)
     return jsonify({"success": success, "message": message})
 
@@ -401,13 +424,20 @@ def activate_app(app_name):
     if app_name not in apps:
         return jsonify({'success': False, 'message': 'App not found'}), 404
     
+    # Check if app is in runtime_apps and not active
     if app_name in runtime_apps:
-        return jsonify({'success': False, 'message': 'App is already running'}), 400
+        app_status = runtime_apps[app_name]
+        if app_status.status == 'active':
+            return jsonify({'success': False, 'message': 'App is already running'}), 400
+        # If app is in runtime_apps but not active, remove it
+        runtime_apps.pop(app_name)
     
     try:
         app_status = AppStatus()
         app_status.app_name = app_name
         app_status.app = apps[app_name]
+        # Determine if app should auto-complete based on its configuration
+        app_status.auto_complete = apps[app_name].get('auto_complete', False)
         runtime_apps[app_name] = app_status
         app_status.start()
         return jsonify({'success': True, 'message': 'App activated successfully'})
@@ -418,9 +448,17 @@ def activate_app(app_name):
 
 @app.route('/api/apps/<app_name>/stop', methods=['POST'])
 def stop_app_endpoint(app_name):
-    """Detiene una app."""
-    success, message = stop_app(app_name)
-    return jsonify({"success": success, "message": message})
+    """Stops an app."""
+    if app_name not in runtime_apps:
+        return jsonify({"success": False, "message": "App is not running"}), 400
+    
+    app_status = runtime_apps[app_name]
+    if app_status.auto_complete:
+        return jsonify({"success": False, "message": "Cannot stop auto-completing app"}), 400
+    
+    if app_status.stop():
+        return jsonify({"success": True, "message": "App stopped successfully"})
+    return jsonify({"success": False, "message": "Failed to stop app"}), 500
 
 @app.route('/api/apps/<app_name>/logs')
 def get_app_logs(app_name):
@@ -439,12 +477,12 @@ def get_app_logs(app_name):
         'message': 'App not found'
     })
 
-# Eventos de Socket.IO
+# Socket.IO Events
 @socketio.on('connect')
 def handle_connect():
     logging.info(f"Client connected: {request.sid}")
     try:
-        # Enviar datos actuales al cliente que se conecta
+        # Send current data to connecting client
         socketio.emit('things_update', list(things.values()), broadcast=True)
         socketio.emit('entities_update', list(entities.values()), broadcast=True)
         socketio.emit('services_update', list(services.values()), broadcast=True)
@@ -458,13 +496,13 @@ def handle_connect():
 def handle_disconnect():
     logging.info(f"Client disconnected: {request.sid}")
 
-# Iniciar el listener de multicast en un hilo separado
+# Start multicast listener in separate thread
 multicast_thread = threading.Thread(target=multicast_listener, daemon=True)
 multicast_thread.start()
 logging.info("Multicast listener started")
 
 def load_apps_from_directory():
-    """Carga todas las apps desde el directorio de trabajo."""
+    """Loads all apps from working directory."""
     for filename in os.listdir(ATLAS_WORKING_DIR):
         if filename.endswith('.iot'):
             try:
@@ -476,12 +514,12 @@ def load_apps_from_directory():
                 logging.error(f"Error loading app {filename}: {e}")
 
 def save_app_to_file(app_data):
-    """Guarda una app en el directorio de trabajo."""
+    """Saves an app to working directory."""
     app_name = app_data.get('name', '').strip()
     if not app_name:
         return False, "App name is required"
     
-    # Validar nombre de app
+    # Validate app name
     if not app_name.isalnum():
         return False, "App name must contain only letters and numbers"
     
@@ -497,7 +535,7 @@ def save_app_to_file(app_data):
         return False, f"Error saving app: {str(e)}"
 
 def delete_app_file(app_name):
-    """Elimina una app del directorio de trabajo."""
+    """Deletes an app from working directory."""
     filename = f"{app_name}.iot"
     filepath = os.path.join(ATLAS_WORKING_DIR, filename)
     
@@ -518,16 +556,16 @@ def stop_app(app_name):
         return True
     return False
 
-# Cargar apps al iniciar
+# Load apps on startup
 load_apps_from_directory()
 
 def scan_apps_directory():
-    """Escanea el directorio de atlas_apps para detectar nuevas apps y apps eliminadas."""
+    """Scans atlas_apps directory for new and deleted apps."""
     try:
         current_apps = set(apps.keys())
         existing_apps = set()
         
-        # Escanear el directorio
+        # Scan directory
         for filename in os.listdir(ATLAS_WORKING_DIR):
             if filename.endswith('.iot'):
                 app_name = os.path.splitext(filename)[0]
@@ -538,7 +576,7 @@ def scan_apps_directory():
                             app_data = json.load(f)
                             apps[app_name] = app_data
                             logging.info(f"New app detected: {app_name}")
-                            # Notificar a los clientes sobre la nueva app
+                            # Notify clients about new app
                             with app.app_context():
                                 socketio.emit('new_app_detected', {
                                     'app_name': app_name,
@@ -547,13 +585,13 @@ def scan_apps_directory():
                     except Exception as e:
                         logging.error(f"Error loading new app {filename}: {e}")
         
-        # Detectar apps eliminadas
+        # Detect deleted apps
         deleted_apps = current_apps - existing_apps
         for app_name in deleted_apps:
             if app_name in apps:
                 del apps[app_name]
                 logging.info(f"App deleted: {app_name}")
-                # Notificar a los clientes sobre la app eliminada
+                # Notify clients about deleted app
                 with app.app_context():
                     socketio.emit('app_deleted', {
                         'app_name': app_name
@@ -561,14 +599,14 @@ def scan_apps_directory():
     except Exception as e:
         logging.error(f"Error scanning apps directory: {e}")
 
-# Iniciar el escaneo periódico del directorio de apps
+# Start periodic apps directory scanning
 def start_apps_scanner():
-    """Inicia el escaneo periódico del directorio de apps."""
+    """Starts periodic scanning of apps directory."""
     while True:
         scan_apps_directory()
-        time.sleep(5)  # Escanear cada 5 segundos
+        time.sleep(5)  # Scan every 5 seconds
 
-# Iniciar el escáner de apps en un hilo separado
+# Start apps scanner in separate thread
 apps_scanner_thread = threading.Thread(target=start_apps_scanner, daemon=True)
 apps_scanner_thread.start()
 logging.info("Apps directory scanner started")

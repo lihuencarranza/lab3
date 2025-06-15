@@ -365,6 +365,11 @@
                 .sort((a, b) => b[1].startTime - a[1].startTime)[0];
             
             if (execution) {
+                // Si el log indica que la cuenta regresiva ha terminado
+                if (data.log.includes("Sending activation tweet to Atlas")) {
+                    execution[1].countdown = false;
+                    updateExecutionsList();
+                }
                 addLogToExecution(execution[0], data.log);
             }
         });
@@ -502,11 +507,19 @@
             if (runningApps[app.name]) {
                 const status = runningApps[app.name].status;
                 if (status === 'active') {
-                    buttonHtml = `
-                        <button class="btn btn-sm btn-warning" disabled>
-                            <i class="fas fa-spinner fa-spin"></i> In Progress
-                        </button>
-                    `;
+                    if (runningApps[app.name].auto_complete) {
+                        buttonHtml = `
+                            <button class="btn btn-sm btn-warning" disabled>
+                                <i class="fas fa-spinner fa-spin"></i> Auto-completing
+                            </button>
+                        `;
+                    } else {
+                        buttonHtml = `
+                            <button class="btn btn-sm btn-warning" onclick="stopApp('${app.name}')">
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                        `;
+                    }
                 } else {
                     buttonHtml = `
                         <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
@@ -514,12 +527,6 @@
                         </button>
                     `;
                 }
-            } else if (completedApps[app.name]) {
-                buttonHtml = `
-                    <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
-                        Activate
-                    </button>
-                `;
             } else {
                 buttonHtml = `
                     <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
@@ -534,6 +541,7 @@
                         <h5 class="card-title">${app.name}</h5>
                         <p class="card-text">
                             <small>Services: ${app.services ? app.services.length : 0}</small>
+                            ${app.auto_complete ? '<br><small class="text-info">Auto-completing app</small>' : ''}
                         </p>
                         <div class="btn-group">
                             <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
@@ -787,7 +795,7 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                showNotification('App activated successfully', 'success');
+                showNotification('App activated - Getting ready to run', 'info');
                 addExecution(appName);
                 updateAppsList();
             } else {
@@ -810,12 +818,15 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                updateAppStatus(appName, 'stopped', 'stopped');
-                updateAppButtons(appName);
+                showNotification('App stopped successfully', 'success');
+                updateAppsList();
+            } else {
+                showNotification('Error stopping app: ' + data.message, 'error');
             }
         })
         .catch(error => {
             console.error('Error stopping app:', error);
+            showNotification('Error stopping app', 'error');
         });
     }
 
@@ -980,7 +991,9 @@
             appName: appName,
             startTime: now,
             status: 'in-progress',
-            logs: []
+            logs: [],
+            auto_complete: runningApps[appName]?.auto_complete || false,
+            countdown: true // Indica que está en el período de espera
         });
 
         updateExecutionsList();
@@ -1018,10 +1031,17 @@
             div.className = `execution-item ${execution.status} ${executionId === selectedExecution ? 'active' : ''}`;
             div.onclick = () => selectExecution(executionId);
             
+            let statusText = execution.status.charAt(0).toUpperCase() + execution.status.slice(1);
+            if (execution.countdown) {
+                statusText = 'Starting...';
+            } else if (execution.auto_complete && execution.status === 'in-progress') {
+                statusText = 'Auto-completing';
+            }
+            
             div.innerHTML = `
                 <div class="app-name">${execution.appName}</div>
                 <div class="execution-time">${execution.startTime.toLocaleTimeString()}</div>
-                <div class="status">${execution.status.charAt(0).toUpperCase() + execution.status.slice(1)}</div>
+                <div class="status">${statusText}</div>
             `;
             
             container.appendChild(div);
