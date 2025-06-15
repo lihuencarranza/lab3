@@ -30,34 +30,25 @@
 <div class="status-panel">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h6 class="mb-0">Running Apps</h6>
-            <button class="btn btn-sm btn-outline-secondary" onclick="toggleLogsPanel()">
-                <i class="fas fa-terminal"></i> Toggle Logs
-            </button>
+            <h6 class="mb-0">App Logs</h6>
+            <div>
+                <select id="appSelector" class="form-select form-select-sm" style="width: auto; display: inline-block;">
+                    <option value="">Select an app to view logs</option>
+                </select>
+                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="toggleLogsPanel()">
+                    <i class="fas fa-terminal"></i> Toggle Logs
+                </button>
+            </div>
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="runningAppsList" class="list-group">
-                        <!-- Running apps will be listed here -->
-                    </div>
-                </div>
-                <div class="col-md-6" id="logsPanel" style="display: none;">
-                    <div class="card">
-                        <div class="card-header">
-                            <h6 class="mb-0">App Logs</h6>
-                        </div>
-                            <div class="card-body">
-                            <div id="appLogs" class="logs-container">
-                                <!-- Logs will be displayed here -->
-                            </div>
-                        </div>
-                    </div>
+            <div id="logsPanel">
+                <div id="appLogs" class="logs-container">
+                    <!-- Logs will be displayed here -->
                 </div>
             </div>
         </div>
-                            </div>
-                        </div>
+    </div>
+</div>
 
 <!-- App Editor Modal -->
 <div class="modal fade" id="appEditorModal" tabindex="-1">
@@ -224,50 +215,6 @@
         margin-bottom: 0;
     }
 
-    .app-status {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem;
-        border-bottom: 1px solid var(--border-color);
-        cursor: pointer;
-    }
-
-    .app-status:hover {
-        background-color: var(--bg-darker);
-    }
-
-    .app-status.selected {
-        background-color: var(--accent-primary);
-        color: white;
-    }
-
-    .app-status.selected .status-badge {
-        background-color: white;
-        color: var(--accent-primary);
-    }
-
-    .status-badge {
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-        font-size: 0.8em;
-    }
-
-    .status-active {
-        background-color: #28a745;
-        color: white;
-    }
-
-    .status-stopped {
-        background-color: #dc3545;
-        color: white;
-    }
-
-    .status-completed {
-        background-color: #17a2b8;
-        color: white;
-    }
-
     .logs-container {
         height: 200px;
         overflow-y: auto;
@@ -288,6 +235,17 @@
 
     .log-entry:hover {
         background-color: var(--bg-card);
+    }
+
+    #appSelector {
+        background-color: var(--bg-darker);
+        color: var(--text-primary);
+        border-color: var(--border-color);
+    }
+
+    #appSelector option {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
     }
 
     /* Estilos para las notificaciones toast en tema oscuro */
@@ -352,6 +310,7 @@
             appsList.push(data.app_data);
             // Actualizar la UI
             updateAppsList();
+            updateAppSelector();
             // Mostrar notificación
             showNotification(`New app detected: ${data.app_name}`);
         });
@@ -361,6 +320,7 @@
             appsList = appsList.filter(app => app.name !== data.app_name);
             // Actualizar la UI
             updateAppsList();
+            updateAppSelector();
             // Mostrar notificación
             showNotification(`App deleted: ${data.app_name}`);
             
@@ -368,6 +328,7 @@
             if (selectedApp === data.app_name) {
                 selectedApp = null;
                 document.getElementById('appLogs').innerHTML = '';
+                document.getElementById('appSelector').value = '';
             }
         });
 
@@ -376,12 +337,22 @@
             const status = data.status;
             const action = data.action;
             
-            // Actualizar el estado de la app en la UI
-            updateAppStatus(appName, status, action);
+            // Actualizar el selector de apps
+            updateAppSelector();
             
-            // Si la app se completó o se detuvo, actualizar los botones
-            if (action === 'completed' || action === 'stopped' || action === 'error') {
-                updateAppButtons(appName);
+            // Si la app seleccionada cambió de estado, actualizar los logs
+            if (appName === selectedApp) {
+                loadAppLogs(appName);
+            }
+        });
+
+        // Agregar event listener para el selector de apps
+        document.getElementById('appSelector').addEventListener('change', function(e) {
+            selectedApp = e.target.value;
+            if (selectedApp) {
+                loadAppLogs(selectedApp);
+            } else {
+                document.getElementById('appLogs').innerHTML = '';
             }
         });
     });
@@ -826,6 +797,30 @@
         container.className = 'toast-container position-fixed top-0 end-0 p-3';
         document.body.appendChild(container);
         return container;
+    }
+
+    function updateAppSelector() {
+        const selector = document.getElementById('appSelector');
+        const currentValue = selector.value;
+        
+        // Limpiar el selector
+        selector.innerHTML = '<option value="">Select an app to view logs</option>';
+        
+        // Agregar todas las apps (tanto en ejecución como completadas)
+        const allApps = new Set([
+            ...Object.keys(runningApps),
+            ...Object.keys(completedApps)
+        ]);
+        
+        allApps.forEach(appName => {
+            const option = document.createElement('option');
+            option.value = appName;
+            option.textContent = appName;
+            if (appName === currentValue) {
+                option.selected = true;
+            }
+            selector.appendChild(option);
+        });
     }
 </script>
 {% endblock %} 
