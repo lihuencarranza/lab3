@@ -324,6 +324,19 @@
                 addLogEntry(data.log);
             }
         });
+        socket.on('app_status_update', function(data) {
+            const appName = data.app_name;
+            const status = data.status;
+            const action = data.action;
+            
+            // Actualizar el estado de la app en la UI
+            updateAppStatus(appName, status, action);
+            
+            // Si la app se completó o se detuvo, actualizar los botones
+            if (action === 'completed' || action === 'stopped' || action === 'error') {
+                updateAppButtons(appName);
+            }
+        });
     });
 
     function loadServices() {
@@ -605,38 +618,39 @@
 
     function activateApp(appName) {
         fetch(`/api/apps/${appName}/activate`, {
-            method: 'POST'
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                loadApps();
-                selectApp(appName);
-            } else {
-                alert('Error activating app: ' + data.message);
+                updateAppStatus(appName, 'active', 'started');
+                updateAppButtons(appName);
             }
         })
         .catch(error => {
             console.error('Error activating app:', error);
-            alert('Error activating app');
         });
     }
 
     function stopApp(appName) {
         fetch(`/api/apps/${appName}/stop`, {
-            method: 'POST'
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                loadApps();
-            } else {
-                alert('Error stopping app: ' + data.message);
+                updateAppStatus(appName, 'stopped', 'stopped');
+                updateAppButtons(appName);
             }
         })
         .catch(error => {
             console.error('Error stopping app:', error);
-            alert('Error stopping app');
         });
     }
 

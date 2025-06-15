@@ -202,9 +202,7 @@ class AppStatus:
                 socketio.emit('app_status_update', {
                     'app_name': self.app_name,
                     'status': self.status,
-                    'action': 'error',
-                    'success': False,
-                    'error_message': str(e)
+                    'action': 'error'
                 })
 
 def multicast_listener():
@@ -450,7 +448,6 @@ def handle_connect():
         logging.info("Initial data sent to new client")
     except Exception as e:
         logging.error(f"Error sending initial data: {e}")
-        socketio.emit('error', {'message': 'Error sending initial data'}, broadcast=True)
 
 @socketio.on('disconnect')
 def handle_disconnect():
