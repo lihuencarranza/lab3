@@ -64,25 +64,23 @@ app_logs = {}
 def send_tweet_to_atlas(tweet_data):
     """Envía un tweet a Atlas usando TCP socket."""
     try:
-        # Crear socket TCP
-        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket.settimeout(5)  # 5 segundos de timeout
-        
-        # Conectar al servidor Atlas
-        client_socket.connect((ATLAS_SERVER_IP, ATLAS_SERVER_PORT))
-        
-        # Enviar el tweet
-        tweet_json = json.dumps(tweet_data)
-        client_socket.send(tweet_json.encode())
-        
-        # Esperar respuesta
-        response = client_socket.recv(1024).decode()
-        
-        # Cerrar conexión
-        client_socket.close()
-        
-        return True, response
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
+            # Conectar al servidor Atlas
+            client_socket.connect((ATLAS_SERVER_IP, ATLAS_SERVER_PORT))
+            
+            # Enviar el tweet
+            tweet_json = json.dumps(tweet_data)
+            client_socket.sendall(tweet_json.encode('utf-8'))
+            
+            # Esperar respuesta
+            response = client_socket.recv(1024).decode('utf-8')
+            
+            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            logging.info(f"[{current_time}] Server Response: {response}")
+            
+            return True, response
     except Exception as e:
+        logging.error(f"Failed to connect to the server: {e}")
         return False, str(e)
 
 class AppStatus:
@@ -140,11 +138,11 @@ class AppStatus:
                 
                 # Crear tweet para el servicio
                 service_tweet = {
-                    "Tweet Type": "API Call",
+                    "Tweet Type": "Service call",
                     "Thing ID": "raspberry1",
                     "Space ID": "MySmartSpace",
-                    "Service Name": service.get('name', service_name),
-                    "Service Inputs": "(5)"  # Valor por defecto, podría ser configurable
+                    "Service Name": service_name,
+                    "Service Inputs": "(1)"  # Valor por defecto como en el ejemplo que funciona
                 }
                 
                 # Enviar tweet a Atlas
