@@ -638,6 +638,30 @@
         appEditorModal.show();
     }
 
+    function editApp(appName) {
+        const app = appsList.find(a => a.name === appName);
+        if (app) {
+            // Cargar los datos de la app en el editor
+            currentApp = {
+                name: app.name,
+                services: app.services.map(service => ({
+                    ...service,
+                    instanceId: `${service.id}_${Date.now()}`
+                })),
+                type: app.type || 'sequential'
+            };
+            
+            document.getElementById('appName').value = app.name;
+            updateFlowDisplay();
+            
+            // Mostrar el editor
+            appEditorModal.show();
+            
+            // Cambiar el texto del botón de guardar
+            document.getElementById('saveAppBtn').textContent = 'Update App';
+        }
+    }
+
     function uploadApp() {
         document.getElementById('fileUpload').click();
     }
@@ -745,6 +769,15 @@
                 appEditorModal.hide();
                 loadApps();
                 showNotification('App saved successfully', 'success');
+                // Resetear el editor
+                currentApp = {
+                    name: '',
+                    services: [],
+                    type: 'sequential'
+                };
+                document.getElementById('appName').value = '';
+                document.getElementById('appFlow').innerHTML = '';
+                document.getElementById('saveAppBtn').textContent = 'Save App';
             } else {
                 showNotification('Error saving app: ' + data.message, 'error');
             }
@@ -758,16 +791,6 @@
     function finalizeApp() {
         saveApp();
         appEditorModal.hide();
-    }
-
-    function editApp(appName) {
-        const app = appsList.find(a => a.name === appName);
-        if (app) {
-            currentApp = app;
-            document.getElementById('appName').value = app.name;
-            updateAppFlow();
-            appEditorModal.show();
-        }
     }
 
     function downloadApp(appName) {
