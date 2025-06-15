@@ -551,16 +551,22 @@
     function addServiceToFlow(serviceId) {
         const service = availableServices.find(s => s.id === serviceId);
         if (service) {
-            currentApp.services.push(service);
-            updateAppFlow();
+            // Generar un ID único para esta instancia del servicio
+            const instanceId = `${serviceId}_${Date.now()}`;
+            const serviceInstance = {
+                ...service,
+                instanceId: instanceId
+            };
+            currentApp.services.push(serviceInstance);
+            updateFlowDisplay();
         }
     }
 
-    function updateAppFlow() {
+    function updateFlowDisplay() {
         const container = document.getElementById('appFlow');
         container.innerHTML = '';
         
-        currentApp.services.forEach(service => {
+        currentApp.services.forEach((service, index) => {
             const div = document.createElement('div');
             div.className = 'flow-item';
             div.innerHTML = `
@@ -571,7 +577,7 @@
                         <small>${service.type || 'Unknown Type'}</small>
                         ${service.api ? `<br><small class="text-muted">${service.api}</small>` : ''}
                     </div>
-                    <button class="btn btn-sm btn-danger" onclick="removeServiceFromFlow('${service.id}')">
+                    <button class="btn btn-sm btn-danger" onclick="removeServiceFromFlow('${service.instanceId}')">
                         Remove
                     </button>
                 </div>
@@ -580,9 +586,9 @@
         });
     }
 
-    function removeServiceFromFlow(serviceId) {
-        currentApp.services = currentApp.services.filter(s => s.id !== serviceId);
-        updateAppFlow();
+    function removeServiceFromFlow(instanceId) {
+        currentApp.services = currentApp.services.filter(s => s.instanceId !== instanceId);
+        updateFlowDisplay();
     }
 
     function clearEditor() {
@@ -593,29 +599,32 @@
     }
 
     function saveApp() {
-        const appName = document.getElementById('appName').value;
+        const appName = document.getElementById('appName').value.trim();
         if (!appName) {
             alert('Please enter an app name');
             return;
         }
 
-        if (!/^[a-zA-Z0-9]+$/.test(appName)) {
-            alert('App name must contain only letters and numbers');
-            return;
-        }
+        // Crear una copia de los servicios sin los IDs de instancia
+        const servicesToSave = currentApp.services.map(({ instanceId, ...service }) => service);
 
-        currentApp.name = appName;
+        const appData = {
+            name: appName,
+            services: servicesToSave,
+            type: currentApp.type
+        };
+
         fetch('/api/apps', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(currentApp)
+            body: JSON.stringify(appData)
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('App saved successfully');
+                appEditorModal.hide();
                 loadApps();
             } else {
                 alert('Error saving app: ' + data.message);
