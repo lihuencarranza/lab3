@@ -94,6 +94,7 @@ class AppStatus:
         self.logs = []
         self.app_name = None
         self.app = None
+        self.completion_time = None
 
     def start(self):
         self.status = "active"
@@ -120,15 +121,18 @@ class AppStatus:
         with app.app_context():
             self.status = "completed"
             self.thread = None
+            self.completion_time = datetime.now()
             # Mover la app de runtime a completed
             if self.app_name in runtime_apps:
-                completed_apps[self.app_name] = runtime_apps.pop(self.app_name)
+                completed_apps[self.app_name] = self
+                runtime_apps.pop(self.app_name)
             # Emitir el estado actualizado
             socketio.emit('app_status_update', {
                 'app_name': self.app_name,
                 'status': self.status,
                 'action': 'completed',
-                'success': True
+                'success': True,
+                'completion_time': self.completion_time.isoformat()
             })
 
     def add_log(self, message):
@@ -370,6 +374,7 @@ def get_apps():
             name: {
                 'status': status.status,
                 'start_time': status.start_time.isoformat() if status.start_time else None,
+                'completion_time': status.completion_time.isoformat() if status.completion_time else None,
                 'logs': status.logs,
                 'can_activate': True,
                 'can_stop': False,
@@ -515,6 +520,58 @@ def stop_app(app_name):
 
 # Cargar apps al iniciar
 load_apps_from_directory()
+
+def scan_apps_directory():
+    """Escanea el directorio de atlas_apps para detectar nuevas apps y apps eliminadas."""
+    try:
+        current_apps = set(apps.keys())
+        existing_apps = set()
+        
+        # Escanear el directorio
+        for filename in os.listdir(ATLAS_WORKING_DIR):
+            if filename.endswith('.iot'):
+                app_name = os.path.splitext(filename)[0]
+                existing_apps.add(app_name)
+                if app_name not in current_apps:
+                    try:
+                        with open(os.path.join(ATLAS_WORKING_DIR, filename), 'r') as f:
+                            app_data = json.load(f)
+                            apps[app_name] = app_data
+                            logging.info(f"New app detected: {app_name}")
+                            # Notificar a los clientes sobre la nueva app
+                            with app.app_context():
+                                socketio.emit('new_app_detected', {
+                                    'app_name': app_name,
+                                    'app_data': app_data
+                                })
+                    except Exception as e:
+                        logging.error(f"Error loading new app {filename}: {e}")
+        
+        # Detectar apps eliminadas
+        deleted_apps = current_apps - existing_apps
+        for app_name in deleted_apps:
+            if app_name in apps:
+                del apps[app_name]
+                logging.info(f"App deleted: {app_name}")
+                # Notificar a los clientes sobre la app eliminada
+                with app.app_context():
+                    socketio.emit('app_deleted', {
+                        'app_name': app_name
+                    })
+    except Exception as e:
+        logging.error(f"Error scanning apps directory: {e}")
+
+# Iniciar el escaneo periódico del directorio de apps
+def start_apps_scanner():
+    """Inicia el escaneo periódico del directorio de apps."""
+    while True:
+        scan_apps_directory()
+        time.sleep(5)  # Escanear cada 5 segundos
+
+# Iniciar el escáner de apps en un hilo separado
+apps_scanner_thread = threading.Thread(target=start_apps_scanner, daemon=True)
+apps_scanner_thread.start()
+logging.info("Apps directory scanner started")
 
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000, debug=True, use_reloader=False) 

@@ -289,6 +289,28 @@
     .log-entry:hover {
         background-color: var(--bg-card);
     }
+
+    /* Estilos para las notificaciones toast en tema oscuro */
+    .toast {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+    }
+
+    .toast-header {
+        background-color: var(--bg-darker);
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .toast-body {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
 </style>
 {% endblock %}
 
@@ -324,6 +346,31 @@
                 addLogEntry(data.log);
             }
         });
+
+        socket.on('new_app_detected', function(data) {
+            // Agregar la nueva app a la lista
+            appsList.push(data.app_data);
+            // Actualizar la UI
+            updateAppsList();
+            // Mostrar notificación
+            showNotification(`New app detected: ${data.app_name}`);
+        });
+
+        socket.on('app_deleted', function(data) {
+            // Remover la app de la lista
+            appsList = appsList.filter(app => app.name !== data.app_name);
+            // Actualizar la UI
+            updateAppsList();
+            // Mostrar notificación
+            showNotification(`App deleted: ${data.app_name}`);
+            
+            // Si la app eliminada estaba seleccionada, limpiar la selección
+            if (selectedApp === data.app_name) {
+                selectedApp = null;
+                document.getElementById('appLogs').innerHTML = '';
+            }
+        });
+
         socket.on('app_status_update', function(data) {
             const appName = data.app_name;
             const status = data.status;
@@ -437,6 +484,7 @@
         const container = document.getElementById('runningAppsList');
         container.innerHTML = '';
         
+        // Mostrar apps en ejecución
         Object.entries(runningApps).forEach(([appName, status]) => {
             const div = document.createElement('div');
             div.className = `app-status ${appName === selectedApp ? 'selected' : ''}`;
@@ -455,6 +503,28 @@
                             Stop
                         </button>` : ''
                     }
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        // Mostrar apps completadas
+        Object.entries(completedApps).forEach(([appName, status]) => {
+            const div = document.createElement('div');
+            div.className = `app-status ${appName === selectedApp ? 'selected' : ''}`;
+            div.setAttribute('data-app-name', appName);
+            div.onclick = () => selectApp(appName);
+            div.innerHTML = `
+                <div>
+                    <strong>${appName}</strong>
+                    <br>
+                    <small>Completed: ${new Date(status.completion_time).toLocaleTimeString()}</small>
+                </div>
+                <div>
+                    <span class="status-badge status-${status.status.toLowerCase()}">${status.status}</span>
+                    <button class="btn btn-sm btn-success ms-2" onclick="activateApp('${appName}')">
+                        Run Again
+                    </button>
                 </div>
             `;
             container.appendChild(div);
@@ -716,6 +786,46 @@
         logEntry.textContent = log;
         logsContainer.appendChild(logEntry);
         logsContainer.scrollTop = logsContainer.scrollHeight;
+    }
+
+    function showNotification(message) {
+        // Crear elemento de notificación
+        const notification = document.createElement('div');
+        notification.className = 'toast';
+        notification.setAttribute('role', 'alert');
+        notification.setAttribute('aria-live', 'assertive');
+        notification.setAttribute('aria-atomic', 'true');
+        
+        notification.innerHTML = `
+            <div class="toast-header">
+                <strong class="me-auto">Notification</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ${message}
+            </div>
+        `;
+        
+        // Agregar al contenedor de notificaciones
+        const container = document.getElementById('toastContainer') || createToastContainer();
+        container.appendChild(notification);
+        
+        // Inicializar y mostrar la notificación
+        const toast = new bootstrap.Toast(notification);
+        toast.show();
+        
+        // Remover después de que se oculte
+        notification.addEventListener('hidden.bs.toast', function () {
+            notification.remove();
+        });
+    }
+
+    function createToastContainer() {
+        const container = document.createElement('div');
+        container.id = 'toastContainer';
+        container.className = 'toast-container position-fixed top-0 end-0 p-3';
+        document.body.appendChild(container);
+        return container;
     }
 </script>
 {% endblock %} 
