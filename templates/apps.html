@@ -560,8 +560,8 @@
                     <div>
                         <strong>${service.name || service.id}</strong>
                         <br>
-                        <small>${service.type || 'Unknown Type'}</small>
-                        ${service.api ? `<br><small class="text-muted">${service.api}</small>` : ''}
+                        <small>${service.description || 'No description available'}</small>
+                        ${service.type ? `<br><small class="text-muted">${service.type}</small>` : ''}
                     </div>
                     <button class="btn btn-sm btn-primary" onclick="addServiceToFlow('${service.id}')">
                         Add
