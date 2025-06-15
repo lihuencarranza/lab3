@@ -47,7 +47,7 @@
                         <div class="card-header">
                             <h6 class="mb-0">App Logs</h6>
                         </div>
-                            <div class="card-body">
+                        <div class="card-body">
                             <div id="appLogs" class="logs-container">
                                 <!-- Logs will be displayed here -->
                             </div>
@@ -56,8 +56,8 @@
                 </div>
             </div>
         </div>
-                            </div>
-                        </div>
+    </div>
+</div>
 
 <!-- App Editor Modal -->
 <div class="modal fade" id="appEditorModal" tabindex="-1">
@@ -306,6 +306,7 @@
     let appToDelete = null;
     let appsList = [];
     let runningApps = {};
+    let completedApps = {};
     let selectedApp = null;
 
     // Initialize when document is ready
@@ -341,8 +342,9 @@
         fetch('/api/apps')
             .then(response => response.json())
             .then(data => {
-                appsList = data.apps;
-                runningApps = data.running_apps;
+                appsList = data.apps || [];
+                runningApps = data.runtime_apps || {};
+                completedApps = data.completed_apps || {};
                 updateAppsList();
                 updateRunningAppsList();
             })
@@ -379,7 +381,10 @@
         const container = document.getElementById('appsList');
         container.innerHTML = '';
         
-        appsList.forEach(app => {
+        // Combinar apps normales y completadas
+        const allApps = [...appsList];
+        
+        allApps.forEach(app => {
             const div = document.createElement('div');
             div.className = 'col-md-4 mb-3';
             div.innerHTML = `
@@ -387,7 +392,7 @@
                     <div class="card-body">
                         <h5 class="card-title">${app.name}</h5>
                         <p class="card-text">
-                            <small>Services: ${app.services.length}</small>
+                            <small>Services: ${app.services ? app.services.length : 0}</small>
                         </p>
                         <div class="btn-group">
                             <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
@@ -447,7 +452,7 @@
         fetch('/api/apps')
             .then(response => response.json())
             .then(data => {
-                runningApps = data.running_apps;
+                runningApps = data.runtime_apps || {};
                 updateRunningAppsList();
                 updateAppsList();
             })
@@ -699,4 +704,4 @@
         logsContainer.scrollTop = logsContainer.scrollHeight;
     }
 </script>
-{% endblock %} 
+{% endblock %}

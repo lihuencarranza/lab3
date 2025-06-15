@@ -48,7 +48,8 @@ services = {}
 relationships = {}
 space_info = {}
 apps = {}
-running_apps = {}  # Diccionario para mantener el estado de las apps en ejecución
+runtime_apps = {}  # Diccionario para mantener el estado de las apps en ejecución
+completed_apps = {}  # Diccionario para mantener el historial de apps completadas
 
 # Configuración de multicast
 MULTICAST_GROUP = '232.1.1.1'
@@ -107,15 +108,26 @@ class AppStatus:
         if self.thread and self.thread.is_alive():
             self.stop_event.set()
             self.thread = None
+        with app.app_context():
+            socketio.emit('app_status_update', {
+                'app_name': self.app_name,
+                'status': self.status,
+                'action': 'stopped'
+            })
 
     def complete(self):
         with app.app_context():
             self.status = "completed"
             self.thread = None
+            # Mover la app de runtime a completed
+            if self.app_name in runtime_apps:
+                completed_apps[self.app_name] = runtime_apps.pop(self.app_name)
             # Emitir el estado actualizado
             socketio.emit('app_status_update', {
                 'app_name': self.app_name,
-                'status': self.status
+                'status': self.status,
+                'action': 'completed',
+                'success': True
             })
 
     def add_log(self, message):
@@ -126,7 +138,8 @@ class AppStatus:
             # Emitir el log a través de Socket.IO
             socketio.emit('app_log', {
                 'app_name': self.app_name,
-                'log': log_entry
+                'log': log_entry,
+                'success': True
             })
 
     def run_app(self):
@@ -139,35 +152,40 @@ class AppStatus:
                 if self.stop_event.is_set():
                     break
                 
-                # Extraer el nombre del servicio del campo api
-                api = service.get('api', '')
-                service_name = api.split(':')[0] if api else service.get('name', 'Unknown')
-                
-                # Crear tweet para el servicio
-                service_tweet = {
-                    "Tweet Type": "Service call",
-                    "Thing ID": "raspberry1",
-                    "Space ID": "MySmartSpace",
-                    "Service Name": service_name,
-                    "Service Inputs": "(1)"
-                }
-                
-                # Enviar tweet a Atlas
-                success, response = send_tweet_to_atlas(service_tweet)
-                
-                if success:
-                    self.add_log(f"Service tweet sent successfully: {service_name}")
-                    self.add_log(f"Atlas response: {response}")
+                # Obtener la información del servicio desde el diccionario de servicios
+                entity_id = service.get('id')
+                if entity_id in services:
+                    service_info = services[entity_id]
+                    api = service_info.get('api', '')
+                    service_name = api.split(':')[0] if api else service_info.get('name', 'Unknown')
+                    
+                    # Crear tweet para el servicio
+                    service_tweet = {
+                        "Tweet Type": "Service call",
+                        "Thing ID": service_info.get('thing_id', 'raspberry1'),
+                        "Space ID": service_info.get('space_id', 'MySmartSpace'),
+                        "Service Name": service_name,
+                        "Service Inputs": "()"
+                    }
+                    
+                    # Enviar tweet a Atlas
+                    success, response = send_tweet_to_atlas(service_tweet)
+                    
+                    if success:
+                        self.add_log(f"Service tweet sent successfully: {service_name}")
+                        self.add_log(f"Atlas response: {response}")
+                    else:
+                        self.add_log(f"Error sending service tweet: {response}")
+                    
+                    # Simular tiempo de ejecución
+                    time.sleep(2)
+                    
+                    if self.stop_event.is_set():
+                        break
+                    
+                    self.add_log(f"Service {service_name} completed")
                 else:
-                    self.add_log(f"Error sending service tweet: {response}")
-                
-                # Simular tiempo de ejecución
-                time.sleep(2)
-                
-                if self.stop_event.is_set():
-                    break
-                
-                self.add_log(f"Service {service_name} completed")
+                    self.add_log(f"Service {entity_id} not found in available services")
             
             if not self.stop_event.is_set():
                 self.add_log("App execution completed successfully")
@@ -177,7 +195,16 @@ class AppStatus:
             self.add_log(f"Error during app execution: {str(e)}")
             with app.app_context():
                 self.status = "error"
-                self.complete()
+                # Mover la app de runtime a completed con estado de error
+                if self.app_name in runtime_apps:
+                    completed_apps[self.app_name] = runtime_apps.pop(self.app_name)
+                socketio.emit('app_status_update', {
+                    'app_name': self.app_name,
+                    'status': self.status,
+                    'action': 'error',
+                    'success': False,
+                    'error_message': str(e)
+                })
 
 def multicast_listener():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -237,32 +264,23 @@ def multicast_listener():
                     service_name = payload.get("Name", "")
                     thing_id = payload.get("Thing ID", "")
                     entity_id = payload.get("Entity ID", "")
+                    space_id = payload.get("Space ID", "")
+                    api = payload.get("API", "")
                     
-                    # If we already have an entity with this ID, update its service information
-                    if entity_id in services:
-                        services[entity_id].update({
-                            "api": payload.get("API", ""),
-                            "type": payload.get("Type", ""),
-                            "app_category": payload.get("AppCategory", ""),
-                            "description": payload.get("Description", "") or services[entity_id].get("description", "N/A"),
-                            "keywords": payload.get("Keywords", "")
-                        })
-                    else:
-                        # If no entity exists, create a new service entry
-                        services[entity_id] = {
-                            "id": entity_id,
-                            "name": service_name,
-                            "api": payload.get("API", ""),
-                            "type": payload.get("Type", ""),
-                            "app_category": payload.get("AppCategory", ""),
-                            "description": payload.get("Description", ""),
-                            "keywords": payload.get("Keywords", ""),
-                            "thing_id": thing_id,
-                            "space_id": payload.get("Space ID", ""),
-                            "owner": "N/A",
-                            "vendor": "N/A"
-                        }
-                    
+                    # Store service information with entity_id as key
+                    services[entity_id] = {
+                        "id": entity_id,
+                        "name": service_name,
+                        "api": api,
+                        "type": payload.get("Type", ""),
+                        "app_category": payload.get("AppCategory", ""),
+                        "description": payload.get("Description", ""),
+                        "keywords": payload.get("Keywords", ""),
+                        "thing_id": thing_id,
+                        "space_id": space_id,
+                        "owner": "N/A",
+                        "vendor": "N/A"
+                    }
                     socketio.emit('services_update', list(services.values()), broadcast=True)
                     logging.info(f"Emitted services_update with {len(services)} services")
                 
@@ -324,12 +342,25 @@ def get_space():
 def get_apps():
     return jsonify({
         'apps': list(apps.values()),
-        'running_apps': {
+        'runtime_apps': {
             name: {
                 'status': status.status,
                 'start_time': status.start_time.isoformat() if status.start_time else None,
-                'logs': status.logs
-            } for name, status in running_apps.items()
+                'logs': status.logs,
+                'can_activate': status.status in ['stopped', 'completed', 'error'],
+                'can_stop': status.status == 'active',
+                'success': status.status != 'error'
+            } for name, status in runtime_apps.items()
+        },
+        'completed_apps': {
+            name: {
+                'status': status.status,
+                'start_time': status.start_time.isoformat() if status.start_time else None,
+                'logs': status.logs,
+                'can_activate': True,
+                'can_stop': False,
+                'success': status.status != 'error'
+            } for name, status in completed_apps.items()
         }
     })
 
@@ -351,19 +382,19 @@ def activate_app(app_name):
     if app_name not in apps:
         return jsonify({'success': False, 'message': 'App not found'}), 404
     
-    if app_name in running_apps:
+    if app_name in runtime_apps:
         return jsonify({'success': False, 'message': 'App is already running'}), 400
     
     try:
         app_status = AppStatus()
         app_status.app_name = app_name
         app_status.app = apps[app_name]
-        running_apps[app_name] = app_status
+        runtime_apps[app_name] = app_status
         app_status.start()
         return jsonify({'success': True, 'message': 'App activated successfully'})
     except Exception as e:
-        if app_name in running_apps:
-            del running_apps[app_name]
+        if app_name in runtime_apps:
+            del runtime_apps[app_name]
         return jsonify({'success': False, 'message': str(e)}), 500
 
 @app.route('/api/apps/<app_name>/stop', methods=['POST'])
@@ -374,14 +405,19 @@ def stop_app_endpoint(app_name):
 
 @app.route('/api/apps/<app_name>/logs')
 def get_app_logs(app_name):
-    if app_name in running_apps:
+    if app_name in runtime_apps:
         return jsonify({
             'success': True,
-            'logs': running_apps[app_name].logs
+            'logs': runtime_apps[app_name].logs
+        })
+    elif app_name in completed_apps:
+        return jsonify({
+            'success': True,
+            'logs': completed_apps[app_name].logs
         })
     return jsonify({
         'success': False,
-        'message': 'App not found or not running'
+        'message': 'App not found'
     })
 
 # Eventos de Socket.IO
@@ -397,6 +433,7 @@ def handle_connect():
         logging.info("Initial data sent to new client")
     except Exception as e:
         logging.error(f"Error sending initial data: {e}")
+        socketio.emit('error', {'message': 'Error sending initial data'}, broadcast=True)
 
 @socketio.on('disconnect')
 def handle_disconnect():
@@ -450,15 +487,15 @@ def delete_app_file(app_name):
             os.remove(filepath)
         if app_name in apps:
             del apps[app_name]
-        if app_name in running_apps:
+        if app_name in runtime_apps:
             stop_app(app_name)
         return True, "App deleted successfully"
     except Exception as e:
         return False, f"Error deleting app: {str(e)}"
 
 def stop_app(app_name):
-    if app_name in running_apps:
-        running_apps[app_name].stop()
+    if app_name in runtime_apps:
+        runtime_apps[app_name].stop()
         return True
     return False
 
