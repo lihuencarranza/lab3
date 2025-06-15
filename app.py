@@ -44,6 +44,7 @@ if not os.path.exists(ATLAS_WORKING_DIR):
 
 # Estado de la aplicación
 things = {}
+entities = {}  # Nuevo diccionario para entidades
 services = {}
 relationships = {}
 space_info = {}
@@ -153,9 +154,9 @@ class AppStatus:
                     break
                 
                 # Obtener la información del servicio desde el diccionario de servicios
-                entity_id = service.get('id')
-                if entity_id in services:
-                    service_info = services[entity_id]
+                service_id = service.get('id')
+                if service_id in services:
+                    service_info = services[service_id]
                     api = service_info.get('api', '')
                     service_name = api.split(':')[0] if api else service_info.get('name', 'Unknown')
                     
@@ -185,7 +186,7 @@ class AppStatus:
                     
                     self.add_log(f"Service {service_name} completed")
                 else:
-                    self.add_log(f"Service {entity_id} not found in available services")
+                    self.add_log(f"Service {service_id} not found in available services")
             
             if not self.stop_event.is_set():
                 self.add_log("App execution completed successfully")
@@ -243,8 +244,10 @@ def multicast_listener():
                 elif tweet_type == "Identity_Entity":
                     entity_id = payload.get("ID", "")
                     thing_id = payload.get("Thing ID", "")
+                    logging.info(f"Processing Identity_Entity tweet for entity {entity_id} from thing {thing_id}")
+                    
                     # Store entity information with entity_id as key
-                    services[entity_id] = {
+                    entities[entity_id] = {
                         "id": entity_id,
                         "name": payload.get("Name", ""),
                         "type": payload.get("Type", ""),
@@ -252,13 +255,11 @@ def multicast_listener():
                         "vendor": payload.get("Vendor", ""),
                         "description": payload.get("Description", ""),
                         "thing_id": thing_id,
-                        "space_id": payload.get("Space ID", ""),
-                        "api": "N/A",
-                        "app_category": "N/A",
-                        "keywords": "N/A"
+                        "space_id": payload.get("Space ID", "")
                     }
-                    socketio.emit('services_update', list(services.values()), broadcast=True)
-                    logging.info(f"Emitted services_update with {len(services)} services")
+                    logging.info(f"Stored entity {entity_id} in entities dictionary. Current entities: {list(entities.keys())}")
+                    socketio.emit('entities_update', list(entities.values()), broadcast=True)
+                    logging.info(f"Emitted entities_update with {len(entities)} entities")
                 
                 elif tweet_type == "Service":
                     service_name = payload.get("Name", "")
@@ -267,9 +268,14 @@ def multicast_listener():
                     space_id = payload.get("Space ID", "")
                     api = payload.get("API", "")
                     
-                    # Store service information with entity_id as key
-                    services[entity_id] = {
-                        "id": entity_id,
+                    logging.info(f"Processing Service tweet for service {service_name} from entity {entity_id}")
+                    
+                    # Create a unique service ID combining entity_id and service_name
+                    service_id = f"{entity_id}_{service_name}"
+                    
+                    # Store service information
+                    services[service_id] = {
+                        "id": service_id,
                         "name": service_name,
                         "api": api,
                         "type": payload.get("Type", ""),
@@ -277,10 +283,12 @@ def multicast_listener():
                         "description": payload.get("Description", ""),
                         "keywords": payload.get("Keywords", ""),
                         "thing_id": thing_id,
+                        "entity_id": entity_id,
                         "space_id": space_id,
                         "owner": "N/A",
                         "vendor": "N/A"
                     }
+                    logging.info(f"Stored service {service_id} in services dictionary. Current services: {list(services.keys())}")
                     socketio.emit('services_update', list(services.values()), broadcast=True)
                     logging.info(f"Emitted services_update with {len(services)} services")
                 
@@ -309,6 +317,10 @@ def index():
 def things_page():
     return render_template('things.html')
 
+@app.route('/entities')
+def entities_page():
+    return render_template('entities.html')
+
 @app.route('/services')
 def services_page():
     return render_template('services.html')
@@ -325,6 +337,10 @@ def apps_page():
 @app.route('/api/things')
 def get_things():
     return jsonify(list(things.values()))
+
+@app.route('/api/entities')
+def get_entities():
+    return jsonify(list(entities.values()))
 
 @app.route('/api/services')
 def get_services():
@@ -427,6 +443,7 @@ def handle_connect():
     try:
         # Enviar datos actuales al cliente que se conecta
         socketio.emit('things_update', list(things.values()), broadcast=True)
+        socketio.emit('entities_update', list(entities.values()), broadcast=True)
         socketio.emit('services_update', list(services.values()), broadcast=True)
         socketio.emit('relationships_update', list(relationships.values()), broadcast=True)
         socketio.emit('space_update', space_info, broadcast=True)
