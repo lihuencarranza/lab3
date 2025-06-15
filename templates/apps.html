@@ -650,7 +650,7 @@
                                 Download
                             </button>
                             ${buttonHtml}
-                            <button class="btn btn-sm btn-danger" onclick="confirmDeleteApp('${app.name}')">
+                            <button class="btn btn-sm btn-danger" onclick="deleteApp('${app.name}')">
                                 Delete
                             </button>
                         </div>
@@ -916,11 +916,27 @@
         }
     }
 
+    function generateAppName() {
+        // Obtener el número más alto de las apps existentes
+        const appNumbers = appsList
+            .map(app => {
+                const match = app.name.match(/^app(\d+)$/);
+                return match ? parseInt(match[1]) : 0;
+            })
+            .filter(num => !isNaN(num));
+        
+        const maxNumber = Math.max(0, ...appNumbers);
+        return `app${maxNumber + 1}`;
+    }
+
     function saveApp() {
-        const appName = document.getElementById('appName').value.trim();
+        let appName = document.getElementById('appName').value.trim();
+        
+        // Si no hay nombre, generar uno automáticamente
         if (!appName) {
-            showNotification('Please enter an app name', 'warning');
-            return;
+            appName = generateAppName();
+            document.getElementById('appName').value = appName;
+            showNotification(`Generated app name: ${appName}`, 'info');
         }
 
         // Validar según el tipo de app
@@ -1046,36 +1062,23 @@
         });
     }
 
-    function confirmDeleteApp(appName) {
-        appToDelete = appName;
-        showNotification(`Are you sure you want to delete "${appName}"? Click here to confirm.`, 'warning');
-        // Agregar un event listener al toast para manejar la confirmación
-        const toast = document.querySelector('.toast');
-        toast.addEventListener('click', function() {
-            confirmDelete();
-            toast.remove();
+    function deleteApp(appName) {
+        fetch(`/api/apps/${appName}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadApps();
+                showNotification('App deleted successfully', 'success');
+            } else {
+                showNotification('Error deleting app: ' + data.message, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting app:', error);
+            showNotification('Error deleting app', 'error');
         });
-    }
-
-    function confirmDelete() {
-        if (appToDelete) {
-            fetch(`/api/apps/${appToDelete}`, {
-                method: 'DELETE'
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    loadApps();
-                    showNotification('App deleted successfully', 'success');
-                } else {
-                    showNotification('Error deleting app: ' + data.message, 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error deleting app:', error);
-                showNotification('Error deleting app', 'error');
-            });
-        }
     }
 
     function toggleLogsPanel() {
