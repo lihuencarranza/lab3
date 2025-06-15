@@ -357,6 +357,12 @@
         setInterval(updateRunningApps, 5000);
         
         // Socket.IO event handlers
+        socket.on('services_update', function(services) {
+            availableServices = services;
+            updateServicesList();
+            updateAppsList(); // Actualizar las tarjetas de apps cuando cambien los servicios
+        });
+
         socket.on('app_log', function(data) {
             const appName = data.app_name;
             // Encontrar la ejecución más reciente de esta app
@@ -446,11 +452,37 @@
             .then(services => {
                 availableServices = services;
                 updateServicesList();
+                updateAppsList(); // Actualizar las tarjetas cuando se carguen los servicios
             })
             .catch(error => {
                 console.error('Error loading services:', error);
             });
     }
+
+    // Actualizar servicios periódicamente
+    function updateServices() {
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(services => {
+                const previousServices = availableServices;
+                availableServices = services;
+                
+                // Verificar si hubo cambios en los servicios
+                const hasChanges = JSON.stringify(previousServices) !== JSON.stringify(services);
+                
+                if (hasChanges) {
+                    updateServicesList();
+                    updateAppsList(); // Actualizar las tarjetas solo si hubo cambios
+                    console.log('Services updated, refreshing apps list');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating services:', error);
+            });
+    }
+
+    // Iniciar actualización periódica de servicios
+    setInterval(updateServices, 5000); // Actualizar cada 5 segundos
 
     function loadApps() {
         fetch('/api/apps')
@@ -499,6 +531,12 @@
         const allApps = [...appsList];
         
         allApps.forEach(app => {
+            // Verificar disponibilidad de servicios
+            const unavailableServices = app.services.filter(service => 
+                !availableServices.some(availService => availService.id === service.id)
+            );
+            const hasUnavailableServices = unavailableServices.length > 0;
+            
             const div = document.createElement('div');
             div.className = 'col-md-4 mb-3';
             
@@ -522,14 +560,14 @@
                     }
                 } else {
                     buttonHtml = `
-                        <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
+                        <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')" ${hasUnavailableServices ? 'disabled' : ''}>
                             Activate
                         </button>
                     `;
                 }
             } else {
                 buttonHtml = `
-                    <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')">
+                    <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')" ${hasUnavailableServices ? 'disabled' : ''}>
                         Activate
                     </button>
                 `;
@@ -538,10 +576,21 @@
             div.innerHTML = `
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">${app.name}</h5>
+                        <h5 class="card-title">
+                            ${app.name}
+                            ${hasUnavailableServices ? 
+                                '<i class="fas fa-exclamation-triangle text-warning ms-2" title="Some services are not available"></i>' : 
+                                ''}
+                        </h5>
                         <p class="card-text">
                             <small>Services: ${app.services ? app.services.length : 0}</small>
                             ${app.auto_complete ? '<br><small class="text-info">Auto-completing app</small>' : ''}
+                            ${hasUnavailableServices ? 
+                                `<br><small class="text-warning">
+                                    <i class="fas fa-exclamation-circle"></i> 
+                                    ${unavailableServices.length} service${unavailableServices.length > 1 ? 's' : ''} not available
+                                </small>` : 
+                                ''}
                         </p>
                         <div class="btn-group">
                             <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
