@@ -3,14 +3,14 @@
 		<Descriptive_Metadata>
 			<Thing_ATID>raspberry1</Thing_ATID>
 			<Thing_Name>RaspberryPi</Thing_Name>
-			<Thing_Owner></Thing_Owner>
-			<Thing_Vendor></Thing_Vendor>
-			<Thing_Model></Thing_Model>
+			<Thing_Owner>RaspberryPi 4B</Thing_Owner>
+			<Thing_Vendor>RaspberryPi Ltd</Thing_Vendor>
+			<Thing_Model>RaspberryPi 4B</Thing_Model>
 			<Thing_ReleaseDate>8/2020</Thing_ReleaseDate>
-			<Thing_Type></Thing_Type>
-			<Thing_OperatingSystem></Thing_OperatingSystem>
-			<Thing_ShortDescription></Thing_ShortDescription>
-			<LongDescription></LongDescription>
+			<Thing_Type>IoT Device</Thing_Type>
+			<Thing_OperatingSystem>Raspbian</Thing_OperatingSystem>
+			<Thing_ShortDescription>RaspberryPi 4B IoT Device</Thing_ShortDescription>
+			<LongDescription>RaspberryPi 4B IoT Device</LongDescription>
 			<Thing_SSID>MySmartSpace</Thing_SSID>
 			<Space_Coordinates></Space_Coordinates>
 			<Space_Name></Space_Name>
@@ -87,19 +87,19 @@
 			<Descriptive_Metadata>
 				<ID>HumiditySensor</ID>
 				<Name>HumiditySensor</Name>
-				<Owner></Owner>
-				<Vendor></Vendor>
-				<Category></Category>
-				<Type></Type>
-				<Description></Description>
+				<Owner>RaspberryPi 4B</Owner>
+				<Vendor>RaspberryPi Ltd</Vendor>
+				<Category>Sensor</Category>
+				<Type>Humidity</Type>
+				<Description>Humidity Sensor</Description>
 			</Descriptive_Metadata>
 			<Services>
 				<Service_1>
 					<Name>HumidityDetection</Name>
-					<AppCategory></AppCategory>
-					<Type></Type>
-					<Keywords></Keywords>
-					<Description></Description>
+					<AppCategory>Sensor</AppCategory>
+					<Type>Humidity</Type>
+					<Keywords>Humidity, Sensor, RaspberryPi</Keywords>
+					<Description>Detects humidity levels in the environment</Description>
 					<Contextual_Constraints>
 						<Time_Window>30seconds</Time_Window>
 						<Usage_Mode></Usage_Mode>
@@ -151,19 +151,19 @@ value = mcpRead0;
 			<Descriptive_Metadata>
 				<ID>LedController</ID>
 				<Name>LedController</Name>
-				<Owner></Owner>
-				<Vendor></Vendor>
-				<Category></Category>
-				<Type></Type>
-				<Description></Description>
+				<Owner>RaspberryPi 4B</Owner>
+				<Vendor>RaspberryPi Ltd</Vendor>
+				<Category>Actuator</Category>
+				<Type>LED</Type>
+				<Description>LED Controller</Description>
 			</Descriptive_Metadata>
 			<Services>
 				<Service_1>
 					<Name>LedOn</Name>
-					<AppCategory></AppCategory>
-					<Type></Type>
-					<Keywords></Keywords>
-					<Description></Description>
+					<AppCategory>Actuator</AppCategory>
+					<Type>LED</Type>
+					<Keywords>LED, RaspberryPi</Keywords>
+					<Description>Turns on the LED</Description>
 					<Contextual_Constraints>
 						<Time_Window>10seconds</Time_Window>
 						<Usage_Mode></Usage_Mode>
@@ -208,10 +208,10 @@ return NULL;  // void return type
 				</Service_1>
 				<Service_2>
 					<Name>LedOff</Name>
-					<AppCategory></AppCategory>
-					<Type></Type>
-					<Keywords></Keywords>
-					<Description></Description>
+					<AppCategory>Actuator</AppCategory>
+					<Type>LED</Type>
+					<Keywords>LED, RaspberryPi</Keywords>
+					<Description>Turns off the LED</Description>
 					<Contextual_Constraints>
 						<Time_Window>10seconds</Time_Window>
 						<Usage_Mode></Usage_Mode>
