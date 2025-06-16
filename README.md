@@ -1,11 +1,11 @@
 # Atlas Manager
 
-Atlas Manager is an IoT Device Management Platform based on DDL (Device Description Language). It provides a comprehensive interface for managing IoT devices, services, and applications.
+Atlas Manager is an IoT Device Management Platform based on DDL (Device Description Language). It provides a comprehensive interface for managing IoT devices, entities, services, and applications.
 
 ## Features
 
 - Real-time monitoring of IoT devices
-- Service management and discovery
+- Service and entities management and discovery
 - Application creation and execution
 - Device relationship management
 - WebSocket-based real-time updates
@@ -74,6 +74,66 @@ python app.py
 
 For the application to work properly, you must have the Atlas server running on port 6668. The Atlas Manager communicates with the Atlas server to execute applications and manage IoT devices. If the Atlas server is not running or is running on a different port, application execution will fail.
 
+## Project Description
+
+Atlas Manager is an IoT Application IDE designed to help developers create and manage Atlas IoT Applications. It provides a comprehensive environment for discovering, managing, and utilizing IoT devices and their services within a Virtual Smart Space (VSS).
+
+### Core Functionalities
+
+#### 1. IoT Device Discovery
+- Real-time monitoring of the VSS smart space
+- Automatic scanning of connected IoT things
+- Processing of various tweet types:
+  - Thing identity
+  - Service information
+  - Thing language
+  - Relationships
+  - Entity identity
+- Continuous background updates of device information
+
+#### 2. Space Information Display
+- Network address information
+- Organized tabs for different components:
+  - **Things**: Detailed information about each connected device
+  - **Services**: Filterable list of available services
+    - Filtering by thing ID, service name, or keywords
+    - Alphabetical organization by thing
+  - **Relationships**: Visual representation of service connections
+    - Support for order-based relationships
+    - Support for condition-based relationships
+    - Ability to bind unbound relationships
+  - **Apps**: Application management interface
+
+#### 3. IoT Application Editor
+Supports three types of application structures:
+1. **Sequential Services**: Ordered execution of services {S1, S2, S3, ...}
+2. **Order-based Relationships**: Service B runs after Service A completes
+3. **Condition-based Relationships**: Service B runs based on Service A's return value
+
+Features:
+- Interactive GUI-based editor
+- Drag-and-drop service arrangement
+- Clear and finalize operations
+- Real-time validation
+- Automatic relationship guidance
+
+#### 4. Application Management
+- **Save**: Local storage of applications in .iot format
+- **Upload**: Import existing applications for modification
+- **Activate**: Start application execution
+- **Stop**: End execution and clean up resources
+- **Delete**: Remove applications from the system
+- Status tracking for running applications
+
+### Key Features
+- Real-time updates via WebSocket
+- Automatic service discovery
+- Relationship visualization
+- Application lifecycle management
+- Status monitoring
+- Error handling and recovery
+- Clean and intuitive interface
+
 ## Project Structure
 
 ```
@@ -97,10 +157,64 @@ For the application to work properly, you must have the Atlas server running on 
 1. Ensure Atlas server is running on port 6668
 2. Access the web interface at `http://localhost:5000`
 3. Navigate through different sections:
-   - Things: View and manage connected IoT devices
-   - Services: Explore available device services
-   - Relationships: Manage device and service connections
-   - Apps: Create and manage IoT applications
+
+### Things Page
+- Displays a comprehensive list of all connected IoT devices
+- Each device entry shows:
+  - Device ID and name
+  - Available services
+  - Current status
+  - Connection details
+- Real-time updates when devices connect/disconnect
+- Search and filter capabilities
+- Detailed view for each device with service information
+
+### Services Page
+- Lists all available services across all devices
+- Features:
+  - Filtering by device ID
+  - Search by service name
+  - Service type categorization
+  - Input/output parameter details
+  - Service status indicators
+- Interactive service testing interface
+- Service documentation and usage examples
+
+### Relationships Page
+- Visual representation of device and service connections
+- Shows:
+  - Order-based relationships (sequential execution)
+  - Condition-based relationships (conditional execution)
+  - Unbound relationships (available connections)
+- Interactive relationship management:
+  - Create new relationships
+  - Modify existing connections
+  - Delete relationships
+  - Validate relationship configurations
+- Real-time relationship status updates
+
+### Apps Page
+- Application management interface with features:
+  - Create new applications
+  - Upload existing applications
+  - Edit application configurations
+  - Monitor running applications
+  - View application logs
+- Application editor capabilities:
+  - Visual relationship mapping
+  - Real-time validation
+  - Save and export functionality
+- Application execution controls:
+  - Start/Stop applications
+  - View execution status
+  - Monitor resource usage
+  - Error handling and recovery
+
+### Dark Mode Interface
+- Consistent dark theme across all pages
+- High contrast for better readability
+- Reduced eye strain for extended use
+- Automatic theme persistence
 
 ## Development
 
