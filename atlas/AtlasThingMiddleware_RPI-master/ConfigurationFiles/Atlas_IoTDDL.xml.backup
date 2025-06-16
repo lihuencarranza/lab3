@@ -1,0 +1,226 @@
+<Atlas_IoTDDL>
+	<Atlas_Thing>
+		<Descriptive_Metadata>
+			<Thing_ATID>raspberry1</Thing_ATID>
+			<Thing_Name></Thing_Name>
+			<Thing_Owner></Thing_Owner>
+			<Thing_Vendor></Thing_Vendor>
+			<Thing_Model></Thing_Model>
+			<Thing_ReleaseDate>8/2020</Thing_ReleaseDate>
+			<Thing_Type></Thing_Type>
+			<Thing_OperatingSystem></Thing_OperatingSystem>
+			<Thing_ShortDescription></Thing_ShortDescription>
+			<LongDescription></LongDescription>
+			<Thing_SSID>MySmartSpace</Thing_SSID>
+			<Space_Coordinates></Space_Coordinates>
+			<Space_Name></Space_Name>
+			<Space_Description></Space_Description>
+			<Space_Constraints>
+				<Temperature>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Temperature>
+				<Humidity>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Humidity>
+				<Voltage>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Voltage>
+				<Radio_Interference_Radius></Radio_Interference_Radius>
+				<Safe_Temperature_Radius></Safe_Temperature_Radius>
+			</Space_Constraints>
+		</Descriptive_Metadata>
+		<Administrative_Metadata>
+			<Network_Manager>
+				<Module></Module>
+				<Type></Type>
+				<Network_Name>GL-SFT1200-32C-5G</Network_Name>
+				<Network_Passcode>goodlife</Network_Passcode>
+				<MulticastGroup>
+					<IP>232.1.1.1</IP>
+					<Port>1235</Port>
+				</MulticastGroup>
+				<Communication_Protocol></Communication_Protocol>
+				<InterOperableCommunication>
+					<Broker>
+						<Vendor>HiveMQ</Vendor>
+						<Dashboard>http://www.mqtt-dashboard.com/</Dashboard>
+						<IP>broker.hivemq.com</IP>
+						<Port>1883</Port>
+					</Broker>
+					<Topic>
+						<Root>/Atlas</Root>
+						<Network_MQTTClient>/Network/MQTT_Client</Network_MQTTClient>
+						<Network_PrivateBroker>/Network/Private_Broker</Network_PrivateBroker>
+						<Multicast_ThingIdentity>/Multicast/Tweet_ThingIdentity</Multicast_ThingIdentity>
+						<Multicast_EntityIdentity>/Multicast/Tweet_EntityIdentity</Multicast_EntityIdentity>
+						<Multicast_API>/Multicast/API</Multicast_API>
+						<Unicast>/Unicast/Interaction</Unicast>
+					</Topic>
+				</InterOperableCommunication>
+				<OMA_DM>
+					<AccessName>Eclipse Leshan</AccessName>
+					<IP>coap://leshan.eclipseprojects.io</IP>
+					<Port>5683</Port>
+				</OMA_DM>
+			</Network_Manager>
+			<Memory_Manager>
+				<Store_Format></Store_Format>
+				<MemoryUnit_Application></MemoryUnit_Application>
+				<MemoryUnit_Knowledge></MemoryUnit_Knowledge>
+			</Memory_Manager>
+		</Administrative_Metadata>
+		<Thing_Attachment>
+
+		</Thing_Attachment>
+		<Structural_Metadata>
+			<Number_Hardware>0</Number_Hardware>
+			<Number_Software>0</Number_Software>
+			<Number_Hybrid>0</Number_Hybrid>
+			<Number_Entities>2</Number_Entities>
+		</Structural_Metadata>
+	</Atlas_Thing>
+	<Atlas_Entities>
+		<Entity_1>
+			<Descriptive_Metadata>
+				<ID>HumiditySensor</ID>
+				<Name></Name>
+				<Owner></Owner>
+				<Vendor></Vendor>
+				<Category></Category>
+				<Type></Type>
+				<Description></Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Service_1>
+					<Name>HumidityDetection</Name>
+					<AppCategory></AppCategory>
+					<Type></Type>
+					<Keywords></Keywords>
+					<Description></Description>
+					<Contextual_Constraints>
+						<Time_Window>30seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription>value</OutputDescription>
+					<OutputType>int</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+// You can use the inputs you defined above by name
+// Any return values should match the specified output type
+
+value = mcpRead0;
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>1</ADC_Number>
+					<ADC>
+						<ADC_1>
+							<Type>MCP3008</Type>
+							<Channel>7</Channel>
+							<ADC_Output>mcpRead0</ADC_Output>
+						</ADC_1>
+					</ADC>
+				</Service_1>
+				<Number_Services>1</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_1>
+		<Entity_2>
+			<Descriptive_Metadata>
+				<ID>LEDController</ID>
+				<Name></Name>
+				<Owner></Owner>
+				<Vendor></Vendor>
+				<Category></Category>
+				<Type></Type>
+				<Description></Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Service_1>
+					<Name>LEDControl</Name>
+					<AppCategory></AppCategory>
+					<Type></Type>
+					<Keywords></Keywords>
+					<Description>Service to turn LED on or off</Description>
+					<Contextual_Constraints>
+						<Time_Window>1second</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription>status</OutputDescription>
+					<OutputType>int</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+// Initialize GPIO if not already initialized
+static int initialized = 0;
+if (!initialized) {
+    wiringPiSetupGpio();
+    pinMode(LED_PIN, OUTPUT);
+    initialized = 1;
+}
+
+// Control LED based on input state
+if (state == 1) {
+    digitalWrite(LED_PIN, HIGH);
+    status = 1;
+} else {
+    digitalWrite(LED_PIN, LOW);
+    status = 0;
+}
+]]></Service_Formula>
+					<Service_NumberInputs>1</Service_NumberInputs>
+					<Service_InputTypes>int</Service_InputTypes>
+					<Service_InputDescriptions>state (1=ON, 0=OFF)</Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<GPIO>
+						<GPIO_1>
+							<Pin>17</Pin>
+							<Mode>OUTPUT</Mode>
+							<GPIO_Output>LED_PIN</GPIO_Output>
+						</GPIO_1>
+					</GPIO>
+				</Service_1>
+				<Number_Services>1</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_2>
+	</Atlas_Entities>
+</Atlas_IoTDDL>

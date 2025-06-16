@@ -1,3 +1,0 @@
-/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/CMakeFiles/Atlas.dir
-/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/CMakeFiles/edit_cache.dir
-/home/lihuen/Documents/lab3/part2/AtlasThingMiddleware_RPI-master/CMakeFiles/rebuild_cache.dir

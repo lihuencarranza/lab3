@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Atlas IoT DDL Monitor{% endblock %} - Atlas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        :root[data-theme="light"] {
+            --bg-dark: #f8f9fa;
+            --bg-darker: #e9ecef;
+            --bg-card: #ffffff;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --accent-primary: #0d6efd;
+            --accent-secondary: #6c757d;
+            --border-color: #dee2e6;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-dark: #1a1a1a;
+            --bg-darker: #141414;
+            --bg-card: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-primary: #0d6efd;
+            --accent-secondary: #6c757d;
+            --border-color: #404040;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar {
+            background-color: var(--bg-darker) !important;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            color: var(--text-primary) !important;
+        }
+
+        .nav-link {
+            color: var(--text-secondary) !important;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary) !important;
+        }
+
+        .nav-link.active {
+            color: var(--accent-primary) !important;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-header {
+            background-color: var(--bg-darker);
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .card-body {
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .card-title {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .btn-outline-secondary {
+            color: var(--text-secondary);
+            border-color: var(--border-color);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--bg-darker);
+            color: var(--text-primary);
+        }
+
+        .form-control {
+            background-color: var(--bg-darker);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .form-control:focus {
+            background-color: var(--bg-darker);
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        .badge {
+            background-color: var(--accent-primary);
+        }
+
+        .last-seen {
+            color: var(--text-secondary);
+            font-size: 0.8em;
+        }
+
+        .connection-status {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            z-index: 1000;
+        }
+
+        .connected {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .disconnected {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .connecting {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .thing-item, .service-item, .relationship-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .thing-item:last-child, .service-item:last-child, .relationship-item:last-child {
+            border-bottom: none;
+        }
+
+        .entity-item {
+            background-color: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .theme-switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: var(--accent-primary);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .theme-switch:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .theme-switch i {
+            font-size: 24px;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-switch:hover i {
+            transform: rotate(180deg);
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div id="connection-status" class="connection-status disconnected">Disconnected</div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Atlas IoT DDL Monitor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/things' %}active{% endif %}" href="/things">
+                            <i class="fas fa-microchip"></i> Things
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/entities' %}active{% endif %}" href="/entities">
+                            <i class="fas fa-th-large"></i> Entities
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="/services">
+                            <i class="fas fa-cogs"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/relationships' %}active{% endif %}" href="/relationships">
+                            <i class="fas fa-project-diagram"></i> Relationships
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/apps' %}active{% endif %}" href="/apps">
+                            <i class="fas fa-th-large"></i> Apps
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Theme Switch Button -->
+    <button type="button" class="theme-switch" id="themeSwitch" title="Cambiar tema" onclick="toggleTheme()" style="display: flex !important; visibility: visible !important;">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Socket.IO configuration
+        const socket = io({
+            transports: ['polling', 'websocket'],
+            reconnection: true,
+            reconnectionAttempts: Infinity,
+            reconnectionDelay: 1000,
+            reconnectionDelayMax: 5000,
+            timeout: 20000,
+            autoConnect: true
+        });
+
+        // Connection status handling
+        const connectionStatus = document.getElementById('connection-status');
+        
+        socket.on('connect', () => {
+            console.log('Connected to server');
+            connectionStatus.textContent = 'Connected';
+            connectionStatus.className = 'connection-status connected';
+        });
+
+        socket.on('disconnect', () => {
+            console.log('Disconnected from server');
+            connectionStatus.textContent = 'Disconnected';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        socket.on('connect_error', (error) => {
+            console.error('Connection error:', error);
+            connectionStatus.textContent = 'Connection Error';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        socket.on('reconnect', (attemptNumber) => {
+            console.log('Reconnected after', attemptNumber, 'attempts');
+            connectionStatus.textContent = 'Connected';
+            connectionStatus.className = 'connection-status connected';
+        });
+
+        socket.on('reconnect_error', (error) => {
+            console.error('Reconnection error:', error);
+            connectionStatus.textContent = 'Reconnection Error';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        socket.on('reconnect_failed', () => {
+            console.error('Failed to reconnect');
+            connectionStatus.textContent = 'Connection Failed';
+            connectionStatus.className = 'connection-status disconnected';
+        });
+
+        // Manejar actualizaciones de datos
+        socket.on('things_update', (data) => {
+            console.log('Received things update:', data);
+            if (typeof updateThingsList === 'function') {
+                updateThingsList(data);
+            }
+        });
+
+        socket.on('services_update', (data) => {
+            console.log('Received services update:', data);
+            if (typeof updateServicesList === 'function') {
+                updateServicesList(data);
+            }
+        });
+
+        socket.on('relationships_update', (data) => {
+            console.log('Received relationships update:', data);
+            if (typeof updateRelationshipsList === 'function') {
+                updateRelationshipsList(data);
+            }
+        });
+
+        socket.on('space_update', (data) => {
+            console.log('Received space update:', data);
+            if (typeof updateSpaceInfo === 'function') {
+                updateSpaceInfo(data);
+            }
+        });
+
+        // Theme switching
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            const themeIcon = document.querySelector('.theme-switch i');
+            themeIcon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const themeIcon = document.querySelector('.theme-switch i');
+        themeIcon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 

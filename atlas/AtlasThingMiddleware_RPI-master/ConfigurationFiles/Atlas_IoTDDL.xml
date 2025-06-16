@@ -1,0 +1,267 @@
+<Atlas_IoTDDL>
+	<Atlas_Thing>
+		<Descriptive_Metadata>
+			<Thing_ATID>raspberry1</Thing_ATID>
+			<Thing_Name>RaspberryPi</Thing_Name>
+			<Thing_Owner>RaspberryPi 4B</Thing_Owner>
+			<Thing_Vendor>RaspberryPi Ltd</Thing_Vendor>
+			<Thing_Model>RaspberryPi 4B</Thing_Model>
+			<Thing_ReleaseDate>8/2020</Thing_ReleaseDate>
+			<Thing_Type>IoT Device</Thing_Type>
+			<Thing_OperatingSystem>Raspbian</Thing_OperatingSystem>
+			<Thing_ShortDescription>RaspberryPi 4B IoT Device</Thing_ShortDescription>
+			<LongDescription>RaspberryPi 4B IoT Device</LongDescription>
+			<Thing_SSID>MySmartSpace</Thing_SSID>
+			<Space_Coordinates></Space_Coordinates>
+			<Space_Name></Space_Name>
+			<Space_Description></Space_Description>
+			<Space_Constraints>
+				<Temperature>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Temperature>
+				<Humidity>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Humidity>
+				<Voltage>
+					<Lower_Bound></Lower_Bound>
+					<Upper_Bound></Upper_Bound>
+				</Voltage>
+				<Radio_Interference_Radius></Radio_Interference_Radius>
+				<Safe_Temperature_Radius></Safe_Temperature_Radius>
+			</Space_Constraints>
+		</Descriptive_Metadata>
+		<Administrative_Metadata>
+			<Network_Manager>
+				<Module></Module>
+				<Type></Type>
+				<Network_Name>MySpaceNetwork</Network_Name>
+				<Network_Passcode>MySpaceNetwork</Network_Passcode>
+				<MulticastGroup>
+					<IP>232.1.1.1</IP>
+					<Port>1235</Port>
+				</MulticastGroup>
+				<Communication_Protocol></Communication_Protocol>
+				<InterOperableCommunication>
+					<Broker>
+						<Vendor>HiveMQ</Vendor>
+						<Dashboard>http://www.mqtt-dashboard.com/</Dashboard>
+						<IP>broker.hivemq.com</IP>
+						<Port>1883</Port>
+					</Broker>
+					<Topic>
+						<Root>/Atlas</Root>
+						<Network_MQTTClient>/Network/MQTT_Client</Network_MQTTClient>
+						<Network_PrivateBroker>/Network/Private_Broker</Network_PrivateBroker>
+						<Multicast_ThingIdentity>/Multicast/Tweet_ThingIdentity</Multicast_ThingIdentity>
+						<Multicast_EntityIdentity>/Multicast/Tweet_EntityIdentity</Multicast_EntityIdentity>
+						<Multicast_API>/Multicast/API</Multicast_API>
+						<Unicast>/Unicast/Interaction</Unicast>
+					</Topic>
+				</InterOperableCommunication>
+				<OMA_DM>
+					<AccessName>Eclipse Leshan</AccessName>
+					<IP>coap://leshan.eclipseprojects.io</IP>
+					<Port>5683</Port>
+				</OMA_DM>
+			</Network_Manager>
+			<Memory_Manager>
+				<Store_Format></Store_Format>
+				<MemoryUnit_Application></MemoryUnit_Application>
+				<MemoryUnit_Knowledge></MemoryUnit_Knowledge>
+			</Memory_Manager>
+		</Administrative_Metadata>
+		<Thing_Attachment>
+
+		</Thing_Attachment>
+		<Structural_Metadata>
+			<Number_Hardware>0</Number_Hardware>
+			<Number_Software>0</Number_Software>
+			<Number_Hybrid>0</Number_Hybrid>
+			<Number_Entities>2</Number_Entities>
+		</Structural_Metadata>
+	</Atlas_Thing>
+	<Atlas_Entities>
+		<Entity_1>
+			<Descriptive_Metadata>
+				<ID>HumiditySensor</ID>
+				<Name>HumiditySensor</Name>
+				<Owner>RaspberryPi 4B</Owner>
+				<Vendor>RaspberryPi Ltd</Vendor>
+				<Category>Sensor</Category>
+				<Type>Humidity</Type>
+				<Description>Humidity Sensor</Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Service_1>
+					<Name>HumidityDetection</Name>
+					<AppCategory>Sensor</AppCategory>
+					<Type>Humidity</Type>
+					<Keywords>Humidity, Sensor, RaspberryPi</Keywords>
+					<Description>Detects humidity levels in the environment</Description>
+					<Contextual_Constraints>
+						<Time_Window>30seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription>value</OutputDescription>
+					<OutputType>int</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+// You can use the inputs you defined above by name
+// Any return values should match the specified output type
+
+value = mcpRead0;
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>1</ADC_Number>
+					<ADC>
+						<ADC_1>
+							<Type>MCP3008</Type>
+							<Channel>7</Channel>
+							<ADC_Output>mcpRead0</ADC_Output>
+						</ADC_1>
+					</ADC>
+				</Service_1>
+				<Number_Services>1</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_1>
+		<Entity_2>
+			<Descriptive_Metadata>
+				<ID>LedController</ID>
+				<Name>LedController</Name>
+				<Owner>RaspberryPi 4B</Owner>
+				<Vendor>RaspberryPi Ltd</Vendor>
+				<Category>Actuator</Category>
+				<Type>LED</Type>
+				<Description>LED Controller</Description>
+			</Descriptive_Metadata>
+			<Services>
+				<Service_1>
+					<Name>LedOn</Name>
+					<AppCategory>Actuator</AppCategory>
+					<Type>LED</Type>
+					<Keywords>LED, RaspberryPi</Keywords>
+					<Description>Turns on the LED</Description>
+					<Contextual_Constraints>
+						<Time_Window>10seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription></OutputDescription>
+					<OutputType>void</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+#include <wiringPi.h>
+
+// Initialize GPIO if not already initialized
+static int initialized = 0;
+
+if (!initialized) {
+    wiringPiSetupGpio();
+    pinMode(26, OUTPUT);
+    initialized = 1;
+}
+
+// Turn LED on
+digitalWrite(26, HIGH);
+
+return NULL;  // void return type
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>0</ADC_Number>
+				</Service_1>
+				<Service_2>
+					<Name>LedOff</Name>
+					<AppCategory>Actuator</AppCategory>
+					<Type>LED</Type>
+					<Keywords>LED, RaspberryPi</Keywords>
+					<Description>Turns off the LED</Description>
+					<Contextual_Constraints>
+						<Time_Window>10seconds</Time_Window>
+						<Usage_Mode></Usage_Mode>
+						<Concurrent></Concurrent>
+					</Contextual_Constraints>
+					<Temporal_Constraints>
+						<Working>
+							<StartTime>6am</StartTime>
+							<EndTime>10pm</EndTime>
+						</Working>
+						<Callable>
+							<StartTime>6:30am</StartTime>
+							<EndTime>9:30pm</EndTime>
+						</Callable>
+					</Temporal_Constraints>
+					<OutputDescription></OutputDescription>
+					<OutputType>void</OutputType>
+					<Service_Formula><![CDATA[
+// ~ Service body C/C++ code block ~
+#include <wiringPi.h>
+
+// Initialize GPIO if not already initialized
+static int initialized = 0;
+
+if (!initialized) {
+    wiringPiSetupGpio();
+    pinMode(26, OUTPUT);
+    initialized = 1;
+}
+
+// Turn LED off
+digitalWrite(26, LOW);
+
+return NULL;  // void return type
+]]></Service_Formula>
+					<Service_NumberInputs>0</Service_NumberInputs>
+					<Service_InputTypes></Service_InputTypes>
+					<Service_InputDescriptions></Service_InputDescriptions>
+					<Library_Number>1</Library_Number>
+					<Libraries>wiringPi.h</Libraries>
+					<ADC_Number>0</ADC_Number>
+				</Service_2>
+				<Number_Services>2</Number_Services>
+			</Services>
+			<UnboundedService>
+				<Number_UnboundedServices>0</Number_UnboundedServices>
+			</UnboundedService>
+			<Relationships>
+				<Number_Relationships>0</Number_Relationships>
+			</Relationships>
+		</Entity_2>
+	</Atlas_Entities>
+</Atlas_IoTDDL>

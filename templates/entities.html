@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Entities - Atlas IoT DDL Monitor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Discovered Entities</h5>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" id="searchEntities" placeholder="Search entities...">
+                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="entities-list">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Function to update entities list
+    function updateEntitiesList(entities) {
+        const entitiesList = document.getElementById('entities-list');
+        if (!entitiesList) return;
+        
+        entitiesList.innerHTML = '';
+        entities.forEach(entity => {
+            const entityElement = document.createElement('div');
+            entityElement.className = 'card mb-3';
+            entityElement.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${entity.name || 'Unnamed Entity'}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: ${entity.id}</h6>
+                    <p class="card-text">
+                        <strong>Type:</strong> ${entity.type || 'N/A'}<br>
+                        <strong>Owner:</strong> ${entity.owner || 'N/A'}<br>
+                        <strong>Vendor:</strong> ${entity.vendor || 'N/A'}<br>
+                        <strong>Description:</strong> ${entity.description || 'N/A'}<br>
+                        <strong>Thing ID:</strong> ${entity.thing_id || 'N/A'}<br>
+                        <strong>Space ID:</strong> ${entity.space_id || 'N/A'}
+                    </p>
+                </div>
+            `;
+            entitiesList.appendChild(entityElement);
+        });
+    }
+
+    // Handle updates from Socket.IO
+    function handleUpdate(data) {
+        if (data.entities) updateEntitiesList(data.entities);
+    }
+
+    // Search functionality
+    document.getElementById('searchEntities').addEventListener('input', function(e) {
+        fetch('/api/entities')
+            .then(response => response.json())
+            .then(data => updateEntitiesList(data))
+            .catch(error => console.error('Error searching entities:', error));
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('searchEntities').value = '';
+        fetch('/api/entities')
+            .then(response => response.json())
+            .then(data => updateEntitiesList(data))
+            .catch(error => console.error('Error clearing search:', error));
+    });
+
+    // Initial data load
+    fetch('/api/entities')
+        .then(response => response.json())
+        .then(data => updateEntitiesList(data))
+        .catch(error => console.error('Error loading entities:', error));
+</script>
+{% endblock %} 

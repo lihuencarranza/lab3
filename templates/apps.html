@@ -1,0 +1,1282 @@
+{% extends "base.html" %}
+
+{% block title %}Apps{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">IoT Applications</h5>
+                <div>
+                    <button class="btn btn-primary me-2" onclick="startNewApp()">
+                        <i class="fas fa-plus"></i> New App
+                    </button>
+                    <button class="btn btn-secondary" onclick="uploadApp()">
+                        <i class="fas fa-upload"></i> Upload App
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="appsList" class="row">
+                    <!-- Apps will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Status Panel -->
+<div class="status-panel">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">App Logs</h6>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleLogsPanel()">
+                <i class="fas fa-terminal"></i> Toggle Logs
+            </button>
+        </div>
+        <div class="card-body">
+            <div id="logsPanel">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="executionsList" class="executions-list">
+                            <!-- Lista de ejecuciones -->
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div id="appLogs" class="logs-container">
+                            <!-- Logs de la ejecución seleccionada -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- App Editor Modal -->
+<div class="modal fade" id="appEditorModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">App Editor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">App Name</label>
+                        <input type="text" class="form-control" id="appName" pattern="[a-zA-Z0-9]+" title="Only letters and numbers allowed">
+                        <small class="text-muted">App name must contain only letters and numbers</small>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">App Type</label>
+                        <select class="form-select" id="appType" onchange="handleAppTypeChange()">
+                            <option value="sequential">Type 1: Sequential Services</option>
+                            <option value="order">Type 2: Order-based Relationship</option>
+                            <option value="condition">Type 3: Condition-based Relationship</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Available Services</h6>
+                            </div>
+                            <div class="card-body">
+                                <div id="availableServices" class="list-group">
+                                    <!-- Services will be listed here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">App Flow</h6>
+                            </div>
+                            <div class="card-body">
+                                <div id="appFlow" class="app-flow">
+                                    <!-- App flow will be built here -->
+                                </div>
+                                <!-- Condition Editor (hidden by default) -->
+                                <div id="conditionEditor" class="mt-3" style="display: none;">
+                                    <h6>Condition Settings</h6>
+                                    <div class="mb-3">
+                                        <label class="form-label">Comparison Operator</label>
+                                        <select class="form-select" id="comparisonOperator">
+                                            <option value="equals">Equals (=)</option>
+                                            <option value="notEquals">Not Equals (!=)</option>
+                                            <option value="greaterThan">Greater Than (>)</option>
+                                            <option value="lessThan">Less Than (<)</option>
+                                            <option value="greaterThanOrEqual">Greater Than or Equal (>=)</option>
+                                            <option value="lessThanOrEqual">Less Than or Equal (<=)</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Comparison Value</label>
+                                        <input type="text" class="form-control" id="comparisonValue" placeholder="Enter value to compare">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="clearEditor()">Clear</button>
+                <button type="button" class="btn btn-primary" id="saveAppBtn" onclick="saveApp()">Save App</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- File Upload Input (Hidden) -->
+<input type="file" id="fileUpload" accept=".iot" style="display: none;">
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this app? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .app-flow {
+        min-height: 300px;
+        border: 2px dashed var(--border-color);
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: var(--bg-card);
+    }
+
+    .service-item {
+        margin-bottom: 0.5rem;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .service-item:hover {
+        background-color: var(--bg-darker);
+    }
+
+    .service-item.selected {
+        background-color: var(--accent-primary);
+        color: white;
+    }
+
+    .flow-item {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        color: var(--text-primary);
+    }
+
+    .flow-item::after {
+        content: "↓";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--text-secondary);
+    }
+
+    .flow-item:last-child::after {
+        display: none;
+    }
+
+    .flow-item.condition {
+        border-left: 4px solid var(--accent-primary);
+    }
+
+    .flow-item.order {
+        border-left: 4px solid var(--success);
+    }
+
+    .flow-item .relationship-info {
+        font-size: 0.8em;
+        color: var(--text-secondary);
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed var(--border-color);
+    }
+
+    .flow-item .condition-settings {
+        background-color: var(--bg-darker);
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .modal-content {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    .modal-header {
+        border-bottom-color: var(--border-color);
+    }
+
+    .modal-footer {
+        border-top-color: var(--border-color);
+    }
+
+    .list-group-item {
+        background-color: var(--bg-card);
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .list-group-item:hover {
+        background-color: var(--bg-darker);
+    }
+
+    .status-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-card);
+        border-top: 1px solid var(--border-color);
+        padding: 1rem;
+        z-index: 1000;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .status-panel .card {
+        margin-bottom: 0;
+    }
+
+    .logs-container {
+        height: 200px;
+        overflow-y: auto;
+        background-color: var(--bg-darker);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 0.9em;
+        color: var(--text-primary);
+    }
+
+    .log-entry {
+        margin-bottom: 5px;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .log-entry:hover {
+        background-color: var(--bg-card);
+    }
+
+    #appSelector {
+        background-color: var(--bg-darker);
+        color: var(--text-primary);
+        border-color: var(--border-color);
+    }
+
+    #appSelector option {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    /* Estilos para las notificaciones toast en tema oscuro */
+    .toast {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+    }
+
+    .toast-header {
+        background-color: var(--bg-darker);
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .toast-body {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+
+    .executions-list {
+        height: 200px;
+        overflow-y: auto;
+        background-color: var(--bg-darker);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    .execution-item {
+        padding: 8px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .execution-item:hover {
+        background-color: var(--bg-card);
+    }
+
+    .execution-item.active {
+        background-color: var(--accent-primary);
+        color: white;
+    }
+
+    .execution-item.completed {
+        border-left: 3px solid #28a745;
+    }
+
+    .execution-item.error {
+        border-left: 3px solid #dc3545;
+    }
+
+    .execution-item.in-progress {
+        border-left: 3px solid #ffc107;
+    }
+
+    .execution-item .app-name {
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .execution-item .execution-time {
+        font-size: 0.8em;
+        opacity: 0.8;
+    }
+
+    .execution-item .status {
+        font-size: 0.8em;
+        margin-top: 2px;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let currentApp = {
+        name: '',
+        services: [],
+        type: 'sequential',
+        relationships: []
+    };
+
+    let availableServices = [];
+    let appEditorModal;
+    let deleteConfirmModal;
+    let appToDelete = null;
+    let appsList = [];
+    let runningApps = {};
+    let completedApps = {};
+    let selectedApp = null;
+    let executions = new Map(); // Almacena las ejecuciones con sus logs
+
+    // Initialize when document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        appEditorModal = new bootstrap.Modal(document.getElementById('appEditorModal'));
+        deleteConfirmModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
+        loadServices();
+        loadApps();
+        // Actualizar el estado de las apps cada 5 segundos
+        setInterval(updateRunningApps, 5000);
+        
+        // Socket.IO event handlers
+        socket.on('services_update', function(services) {
+            availableServices = services;
+            updateServicesList();
+            updateAppsList(); // Actualizar las tarjetas de apps cuando cambien los servicios
+        });
+
+        socket.on('app_log', function(data) {
+            const appName = data.app_name;
+            // Encontrar la ejecución más reciente de esta app
+            const execution = Array.from(executions.entries())
+                .filter(([_, exec]) => exec.appName === appName)
+                .sort((a, b) => b[1].startTime - a[1].startTime)[0];
+            
+            if (execution) {
+                // Si el log indica que la cuenta regresiva ha terminado
+                if (data.log.includes("Sending activation tweet to Atlas")) {
+                    execution[1].countdown = false;
+                    updateExecutionsList();
+                }
+                addLogToExecution(execution[0], data.log);
+            }
+        });
+
+        socket.on('new_app_detected', function(data) {
+            // Agregar la nueva app a la lista
+            appsList.push(data.app_data);
+            // Actualizar la UI
+            updateAppsList();
+            updateAppSelector();
+            // Mostrar notificación
+            showNotification(`New app detected: ${data.app_name}`);
+        });
+
+        socket.on('app_deleted', function(data) {
+            // Remover la app de la lista
+            appsList = appsList.filter(app => app.name !== data.app_name);
+            // Actualizar la UI
+            updateAppsList();
+            updateAppSelector();
+            // Mostrar notificación
+            showNotification(`App deleted: ${data.app_name}`);
+            
+            // Si la app eliminada estaba seleccionada, limpiar la selección
+            if (selectedApp === data.app_name) {
+                selectedApp = null;
+                document.getElementById('appLogs').innerHTML = '';
+                document.getElementById('appSelector').value = '';
+            }
+        });
+
+        socket.on('app_status_update', function(data) {
+            const appName = data.app_name;
+            const status = data.status;
+            const action = data.action;
+            
+            // Encontrar la ejecución más reciente de esta app
+            const execution = Array.from(executions.entries())
+                .filter(([_, exec]) => exec.appName === appName)
+                .sort((a, b) => b[1].startTime - a[1].startTime)[0];
+            
+            if (execution) {
+                let newStatus = 'in-progress';
+                if (action === 'completed') {
+                    newStatus = 'completed';
+                    showNotification(`App "${appName}" completed successfully`, 'success');
+                } else if (action === 'error') {
+                    newStatus = 'error';
+                    showNotification(`App "${appName}" failed to execute`, 'error');
+                } else if (action === 'stopped') {
+                    newStatus = 'stopped';
+                    showNotification(`App "${appName}" stopped`, 'info');
+                }
+                updateExecutionStatus(execution[0], newStatus);
+            }
+            
+            updateAppsList();
+        });
+
+        // Agregar event listener para el selector de apps
+        document.getElementById('appSelector').addEventListener('change', function(e) {
+            selectedApp = e.target.value;
+            if (selectedApp) {
+                loadAppLogs(selectedApp);
+            } else {
+                document.getElementById('appLogs').innerHTML = '';
+            }
+        });
+    });
+
+    function loadServices() {
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(services => {
+                availableServices = services;
+                updateServicesList();
+                updateAppsList(); // Actualizar las tarjetas cuando se carguen los servicios
+            })
+            .catch(error => {
+                console.error('Error loading services:', error);
+            });
+    }
+
+    // Actualizar servicios periódicamente
+    function updateServices() {
+        fetch('/api/services')
+            .then(response => response.json())
+            .then(services => {
+                const previousServices = availableServices;
+                availableServices = services;
+                
+                // Verificar si hubo cambios en los servicios
+                const hasChanges = JSON.stringify(previousServices) !== JSON.stringify(services);
+                
+                if (hasChanges) {
+                    updateServicesList();
+                    updateAppsList(); // Actualizar las tarjetas solo si hubo cambios
+                    console.log('Services updated, refreshing apps list');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating services:', error);
+            });
+    }
+
+    // Iniciar actualización periódica de servicios
+    setInterval(updateServices, 5000); // Actualizar cada 5 segundos
+
+    function loadApps() {
+        fetch('/api/apps')
+            .then(response => response.json())
+            .then(data => {
+                appsList = data.apps || [];
+                runningApps = data.runtime_apps || {};
+                completedApps = data.completed_apps || {};
+                updateAppsList();
+                updateRunningAppsList();
+            })
+            .catch(error => {
+                console.error('Error loading apps:', error);
+            });
+    }
+
+    function updateServicesList() {
+        const container = document.getElementById('availableServices');
+        container.innerHTML = '';
+        
+        availableServices.forEach(service => {
+            const div = document.createElement('div');
+            div.className = 'list-group-item service-item';
+            div.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>${service.name || service.id}</strong>
+                        <br>
+                        <small>${service.description || 'No description available'}</small>
+                        ${service.type ? `<br><small class="text-muted">${service.type}</small>` : ''}
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addServiceToFlow('${service.id}')">
+                        Add
+                    </button>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function updateAppsList() {
+        const container = document.getElementById('appsList');
+        container.innerHTML = '';
+        
+        // Combinar apps normales y completadas
+        const allApps = [...appsList];
+        
+        allApps.forEach(app => {
+            // Verificar disponibilidad de servicios
+            const unavailableServices = app.services.filter(service => 
+                !availableServices.some(availService => availService.id === service.id)
+            );
+            const hasUnavailableServices = unavailableServices.length > 0;
+            
+            const div = document.createElement('div');
+            div.className = 'col-md-4 mb-3';
+            
+            // Determinar el estado del botón
+            let buttonHtml = '';
+            if (runningApps[app.name]) {
+                const status = runningApps[app.name].status;
+                if (status === 'active') {
+                    if (runningApps[app.name].auto_complete) {
+                        buttonHtml = `
+                            <button class="btn btn-sm btn-warning" disabled>
+                                <i class="fas fa-spinner fa-spin"></i> Auto-completing
+                            </button>
+                        `;
+                    } else {
+                        buttonHtml = `
+                            <button class="btn btn-sm btn-warning" onclick="stopApp('${app.name}')">
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                        `;
+                    }
+                } else {
+                    buttonHtml = `
+                        <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')" ${hasUnavailableServices ? 'disabled' : ''}>
+                            Activate
+                        </button>
+                    `;
+                }
+            } else {
+                buttonHtml = `
+                    <button class="btn btn-sm btn-success" onclick="activateApp('${app.name}')" ${hasUnavailableServices ? 'disabled' : ''}>
+                        Activate
+                    </button>
+                `;
+            }
+            
+            div.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            ${app.name}
+                            ${hasUnavailableServices ? 
+                                '<i class="fas fa-exclamation-triangle text-warning ms-2" title="Some services are not available"></i>' : 
+                                ''}
+                        </h5>
+                        <p class="card-text">
+                            <small>Services: ${app.services ? app.services.length : 0}</small>
+                            ${app.auto_complete ? '<br><small class="text-info">Auto-completing app</small>' : ''}
+                            ${hasUnavailableServices ? 
+                                `<br><small class="text-warning">
+                                    <i class="fas fa-exclamation-circle"></i> 
+                                    ${unavailableServices.length} service${unavailableServices.length > 1 ? 's' : ''} not available
+                                </small>` : 
+                                ''}
+                        </p>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-primary" onclick="editApp('${app.name}')">
+                                Edit
+                            </button>
+                            <button class="btn btn-sm btn-secondary" onclick="downloadApp('${app.name}')">
+                                Download
+                            </button>
+                            ${buttonHtml}
+                            <button class="btn btn-sm btn-danger" onclick="deleteApp('${app.name}')">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function updateRunningAppsList() {
+        const container = document.getElementById('runningAppsList');
+        container.innerHTML = '';
+        
+        // Mostrar apps en ejecución
+        Object.entries(runningApps).forEach(([appName, status]) => {
+            const div = document.createElement('div');
+            div.className = `app-status ${appName === selectedApp ? 'selected' : ''}`;
+            div.setAttribute('data-app-name', appName);
+            div.onclick = () => selectApp(appName);
+            div.innerHTML = `
+                <div>
+                    <strong>${appName}</strong>
+                    <br>
+                    <small>Started: ${new Date(status.start_time).toLocaleTimeString()}</small>
+                </div>
+                <div>
+                    <span class="status-badge status-${status.status.toLowerCase()}">${status.status}</span>
+                    ${status.status === 'active' ? 
+                        `<button class="btn btn-sm btn-danger ms-2" onclick="stopApp('${appName}')">
+                            Stop
+                        </button>` : ''
+                    }
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        // Mostrar apps completadas
+        Object.entries(completedApps).forEach(([appName, status]) => {
+            const div = document.createElement('div');
+            div.className = `app-status ${appName === selectedApp ? 'selected' : ''}`;
+            div.setAttribute('data-app-name', appName);
+            div.onclick = () => selectApp(appName);
+            div.innerHTML = `
+                <div>
+                    <strong>${appName}</strong>
+                    <br>
+                    <small>Completed: ${new Date(status.completion_time).toLocaleTimeString()}</small>
+                </div>
+                <div>
+                    <span class="status-badge status-${status.status.toLowerCase()}">${status.status}</span>
+                    <button class="btn btn-sm btn-success ms-2" onclick="activateApp('${appName}')">
+                        Run Again
+                    </button>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function updateRunningApps() {
+        fetch('/api/apps')
+            .then(response => response.json())
+            .then(data => {
+                runningApps = data.runtime_apps || {};
+                completedApps = data.completed_apps || {};
+                updateAppsList();
+                updateAppSelector();
+            })
+            .catch(error => {
+                console.error('Error updating running apps:', error);
+            });
+    }
+
+    function startNewApp() {
+        currentApp = {
+            name: '',
+            services: [],
+            type: 'sequential',
+            relationships: []
+        };
+        document.getElementById('appName').value = '';
+        document.getElementById('appFlow').innerHTML = '';
+        appEditorModal.show();
+    }
+
+    function editApp(appName) {
+        const app = appsList.find(a => a.name === appName);
+        if (app) {
+            // Cargar los datos de la app en el editor
+            currentApp = {
+                name: app.name,
+                services: app.services.map(service => ({
+                    ...service,
+                    instanceId: `${service.id}_${Date.now()}`
+                })),
+                type: app.type || 'sequential',
+                relationships: app.relationships || []
+            };
+            
+            document.getElementById('appName').value = app.name;
+            updateFlowDisplay();
+            
+            // Mostrar el editor
+            appEditorModal.show();
+            
+            // Cambiar el texto del botón de guardar
+            document.getElementById('saveAppBtn').textContent = 'Update App';
+        }
+    }
+
+    function uploadApp() {
+        document.getElementById('fileUpload').click();
+    }
+
+    function handleFileUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const appData = JSON.parse(e.target.result);
+                    if (appData.name && appData.services) {
+                        currentApp = appData;
+                        document.getElementById('appName').value = appData.name;
+                        updateFlowDisplay();
+                        appEditorModal.show();
+                        showNotification('App loaded successfully', 'success');
+                    } else {
+                        showNotification('Invalid app file format', 'error');
+                    }
+                } catch (error) {
+                    showNotification('Error reading app file', 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+    }
+
+    function handleAppTypeChange() {
+        const appType = document.getElementById('appType').value;
+        currentApp.type = appType;
+        
+        // Mostrar/ocultar el editor de condiciones según el tipo
+        const conditionEditor = document.getElementById('conditionEditor');
+        conditionEditor.style.display = appType === 'condition' ? 'block' : 'none';
+        
+        // Actualizar la visualización del flujo
+        updateFlowDisplay();
+    }
+
+    function addServiceToFlow(serviceId) {
+        const service = availableServices.find(s => s.id === serviceId);
+        if (service) {
+            const instanceId = `${serviceId}_${Date.now()}`;
+            const serviceInstance = {
+                ...service,
+                instanceId: instanceId
+            };
+
+            if (currentApp.type === 'sequential') {
+                currentApp.services.push(serviceInstance);
+            } else if (currentApp.type === 'order' || currentApp.type === 'condition') {
+                if (currentApp.services.length < 2) {
+                    currentApp.services.push(serviceInstance);
+                    if (currentApp.services.length === 2) {
+                        // Agregar la relación
+                        const relationship = {
+                            type: currentApp.type,
+                            source: currentApp.services[0].instanceId,
+                            target: currentApp.services[1].instanceId
+                        };
+                        
+                        if (currentApp.type === 'condition') {
+                            relationship.operator = document.getElementById('comparisonOperator').value;
+                            relationship.value = document.getElementById('comparisonValue').value;
+                        }
+                        
+                        currentApp.relationships.push(relationship);
+                    }
+                }
+            }
+            
+            updateFlowDisplay();
+        }
+    }
+
+    function updateFlowDisplay() {
+        const container = document.getElementById('appFlow');
+        container.innerHTML = '';
+        
+        if (currentApp.type === 'sequential') {
+            currentApp.services.forEach((service, index) => {
+                addServiceToFlowDisplay(service, index);
+            });
+        } else if (currentApp.type === 'order' || currentApp.type === 'condition') {
+            if (currentApp.services.length > 0) {
+                addServiceToFlowDisplay(currentApp.services[0], 0);
+                
+                if (currentApp.services.length > 1) {
+                    const relationship = currentApp.relationships[0];
+                    addRelationshipDisplay(relationship);
+                    addServiceToFlowDisplay(currentApp.services[1], 1);
+                }
+            }
+        }
+    }
+
+    function addServiceToFlowDisplay(service, index) {
+        const div = document.createElement('div');
+        div.className = 'flow-item';
+        div.innerHTML = `
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>${service.name || service.id}</strong>
+                    <br>
+                    <small>${service.type || 'Unknown Type'}</small>
+                    ${service.api ? `<br><small class="text-muted">${service.api}</small>` : ''}
+                </div>
+                <button class="btn btn-sm btn-danger" onclick="removeServiceFromFlow('${service.instanceId}')">
+                    Remove
+                </button>
+            </div>
+        `;
+        document.getElementById('appFlow').appendChild(div);
+    }
+
+    function addRelationshipDisplay(relationship) {
+        const div = document.createElement('div');
+        div.className = 'flow-item relationship-info';
+        
+        let relationshipText = '';
+        if (relationship.type === 'order') {
+            relationshipText = 'If Service A completes successfully, then run Service B';
+        } else if (relationship.type === 'condition') {
+            relationshipText = `If Service A's result ${relationship.operator} ${relationship.value}, then run Service B`;
+        }
+        
+        div.innerHTML = `
+            <div class="text-center">
+                <i class="fas fa-arrow-down"></i>
+                <br>
+                <small>${relationshipText}</small>
+            </div>
+        `;
+        document.getElementById('appFlow').appendChild(div);
+    }
+
+    function removeServiceFromFlow(instanceId) {
+        currentApp.services = currentApp.services.filter(s => s.instanceId !== instanceId);
+        currentApp.relationships = currentApp.relationships.filter(r => 
+            r.source !== instanceId && r.target !== instanceId
+        );
+        updateFlowDisplay();
+    }
+
+    function clearEditor() {
+        if (confirm('Are you sure you want to clear the editor?')) {
+            currentApp.services = [];
+            currentApp.relationships = [];
+            updateAppFlow();
+        }
+    }
+
+    function generateAppName() {
+        // Obtener el número más alto de las apps existentes
+        const appNumbers = appsList
+            .map(app => {
+                const match = app.name.match(/^app(\d+)$/);
+                return match ? parseInt(match[1]) : 0;
+            })
+            .filter(num => !isNaN(num));
+        
+        const maxNumber = Math.max(0, ...appNumbers);
+        return `app${maxNumber + 1}`;
+    }
+
+    function saveApp() {
+        let appName = document.getElementById('appName').value.trim();
+        
+        // Si no hay nombre, generar uno automáticamente
+        if (!appName) {
+            appName = generateAppName();
+            document.getElementById('appName').value = appName;
+            showNotification(`Generated app name: ${appName}`, 'info');
+        }
+
+        // Validar según el tipo de app
+        if (currentApp.type === 'order' || currentApp.type === 'condition') {
+            if (currentApp.services.length !== 2) {
+                showNotification('This app type requires exactly 2 services', 'warning');
+                return;
+            }
+            if (currentApp.type === 'condition' && !document.getElementById('comparisonValue').value) {
+                showNotification('Please enter a comparison value', 'warning');
+                return;
+            }
+        }
+
+        // Crear una copia de los servicios sin los IDs de instancia
+        const servicesToSave = currentApp.services.map(({ instanceId, ...service }) => service);
+
+        const appData = {
+            name: appName,
+            services: servicesToSave,
+            type: currentApp.type,
+            relationships: currentApp.relationships.map(r => ({
+                type: r.type,
+                source: servicesToSave[0].id,
+                target: servicesToSave[1].id,
+                operator: r.operator,
+                value: r.value
+            }))
+        };
+
+        fetch('/api/apps', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(appData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                appEditorModal.hide();
+                loadApps();
+                showNotification('App saved successfully', 'success');
+                // Resetear el editor
+                currentApp = {
+                    name: '',
+                    services: [],
+                    type: 'sequential',
+                    relationships: []
+                };
+                document.getElementById('appName').value = '';
+                document.getElementById('appFlow').innerHTML = '';
+                document.getElementById('saveAppBtn').textContent = 'Save App';
+                document.getElementById('appType').value = 'sequential';
+                document.getElementById('conditionEditor').style.display = 'none';
+            } else {
+                showNotification('Error saving app: ' + data.message, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error saving app:', error);
+            showNotification('Error saving app', 'error');
+        });
+    }
+
+    function downloadApp(appName) {
+        const app = appsList.find(a => a.name === appName);
+        if (app) {
+            const blob = new Blob([JSON.stringify(app, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${appName}.iot`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    }
+
+    function activateApp(appName) {
+        fetch(`/api/apps/${appName}/activate`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showNotification('App activated - Getting ready to run', 'info');
+                addExecution(appName);
+                updateAppsList();
+            } else {
+                showNotification('Error activating app: ' + data.message, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error activating app:', error);
+            showNotification('Error activating app', 'error');
+        });
+    }
+
+    function stopApp(appName) {
+        fetch(`/api/apps/${appName}/stop`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showNotification('App stopped successfully', 'success');
+                updateAppsList();
+            } else {
+                showNotification('Error stopping app: ' + data.message, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error stopping app:', error);
+            showNotification('Error stopping app', 'error');
+        });
+    }
+
+    function deleteApp(appName) {
+        fetch(`/api/apps/${appName}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadApps();
+                showNotification('App deleted successfully', 'success');
+            } else {
+                showNotification('Error deleting app: ' + data.message, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting app:', error);
+            showNotification('Error deleting app', 'error');
+        });
+    }
+
+    function toggleLogsPanel() {
+        const logsPanel = document.getElementById('logsPanel');
+        logsPanel.style.display = logsPanel.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function selectApp(appName) {
+        selectedApp = appName;
+        document.querySelectorAll('.app-status').forEach(el => {
+            el.classList.remove('selected');
+        });
+        document.querySelector(`[data-app-name="${appName}"]`).classList.add('selected');
+        loadAppLogs(appName);
+    }
+
+    function loadAppLogs(appName) {
+        fetch(`/api/apps/${appName}/logs`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const logsContainer = document.getElementById('appLogs');
+                    logsContainer.innerHTML = '';
+                    data.logs.forEach(log => addLogEntry(log));
+                }
+            })
+            .catch(error => {
+                console.error('Error loading app logs:', error);
+            });
+    }
+
+    function addLogEntry(log) {
+        const logsContainer = document.getElementById('appLogs');
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        logEntry.textContent = log;
+        logsContainer.appendChild(logEntry);
+        logsContainer.scrollTop = logsContainer.scrollHeight;
+    }
+
+    function showNotification(message, type = 'info') {
+        // Crear elemento de notificación
+        const notification = document.createElement('div');
+        notification.className = 'toast';
+        notification.setAttribute('role', 'alert');
+        notification.setAttribute('aria-live', 'assertive');
+        notification.setAttribute('aria-atomic', 'true');
+        
+        // Determinar el color del header según el tipo
+        let headerClass = '';
+        switch(type) {
+            case 'success':
+                headerClass = 'bg-success text-white';
+                break;
+            case 'error':
+                headerClass = 'bg-danger text-white';
+                break;
+            case 'warning':
+                headerClass = 'bg-warning text-dark';
+                break;
+            default:
+                headerClass = 'bg-info text-white';
+        }
+        
+        notification.innerHTML = `
+            <div class="toast-header ${headerClass}">
+                <strong class="me-auto">${type.charAt(0).toUpperCase() + type.slice(1)}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ${message}
+            </div>
+        `;
+        
+        // Agregar al contenedor de notificaciones
+        const container = document.getElementById('toastContainer') || createToastContainer();
+        container.appendChild(notification);
+        
+        // Inicializar y mostrar la notificación
+        const toast = new bootstrap.Toast(notification, {
+            autohide: true,
+            delay: 3000
+        });
+        toast.show();
+        
+        // Remover después de que se oculte
+        notification.addEventListener('hidden.bs.toast', function () {
+            notification.remove();
+        });
+    }
+
+    function createToastContainer() {
+        const container = document.createElement('div');
+        container.id = 'toastContainer';
+        container.className = 'toast-container position-fixed top-0 end-0 p-3';
+        document.body.appendChild(container);
+        return container;
+    }
+
+    function updateAppSelector() {
+        const selector = document.getElementById('appSelector');
+        const currentValue = selector.value;
+        
+        // Limpiar el selector
+        selector.innerHTML = '<option value="">Select an app to view logs</option>';
+        
+        // Agregar todas las apps (tanto en ejecución como completadas)
+        const allApps = new Set([
+            ...Object.keys(runningApps),
+            ...Object.keys(completedApps)
+        ]);
+        
+        allApps.forEach(appName => {
+            const option = document.createElement('option');
+            option.value = appName;
+            option.textContent = appName;
+            if (appName === currentValue) {
+                option.selected = true;
+            }
+            selector.appendChild(option);
+        });
+    }
+
+    function addExecution(appName) {
+        const now = new Date();
+        const executionId = `${appName}_${now.getTime()}`;
+        
+        executions.set(executionId, {
+            appName: appName,
+            startTime: now,
+            status: 'in-progress',
+            logs: [],
+            auto_complete: runningApps[appName]?.auto_complete || false,
+            countdown: true // Indica que está en el período de espera
+        });
+
+        updateExecutionsList();
+        selectExecution(executionId);
+    }
+
+    function updateExecutionStatus(executionId, status) {
+        const execution = executions.get(executionId);
+        if (execution) {
+            execution.status = status;
+            updateExecutionsList();
+        }
+    }
+
+    function addLogToExecution(executionId, log) {
+        const execution = executions.get(executionId);
+        if (execution) {
+            execution.logs.push(log);
+            if (executionId === selectedExecution) {
+                addLogEntry(log);
+            }
+        }
+    }
+
+    function updateExecutionsList() {
+        const container = document.getElementById('executionsList');
+        container.innerHTML = '';
+
+        // Ordenar ejecuciones por fecha (más recientes primero)
+        const sortedExecutions = Array.from(executions.entries())
+            .sort((a, b) => b[1].startTime - a[1].startTime);
+
+        sortedExecutions.forEach(([executionId, execution]) => {
+            const div = document.createElement('div');
+            div.className = `execution-item ${execution.status} ${executionId === selectedExecution ? 'active' : ''}`;
+            div.onclick = () => selectExecution(executionId);
+            
+            let statusText = execution.status.charAt(0).toUpperCase() + execution.status.slice(1);
+            if (execution.countdown) {
+                statusText = 'Starting...';
+            } else if (execution.auto_complete && execution.status === 'in-progress') {
+                statusText = 'Auto-completing';
+            }
+            
+            div.innerHTML = `
+                <div class="app-name">${execution.appName}</div>
+                <div class="execution-time">${execution.startTime.toLocaleTimeString()}</div>
+                <div class="status">${statusText}</div>
+            `;
+            
+            container.appendChild(div);
+        });
+    }
+
+    let selectedExecution = null;
+
+    function selectExecution(executionId) {
+        selectedExecution = executionId;
+        const execution = executions.get(executionId);
+        if (execution) {
+            const logsContainer = document.getElementById('appLogs');
+            logsContainer.innerHTML = '';
+            execution.logs.forEach(log => addLogEntry(log));
+            updateExecutionsList();
+        }
+    }
+</script>
+{% endblock %} 

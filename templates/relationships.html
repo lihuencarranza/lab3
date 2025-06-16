@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Relationships - Atlas IoT DDL Monitor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Discovered Relationships</h5>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" id="searchRelationships" placeholder="Search relationships...">
+                    <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="relationships-list">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Function to update relationships list
+    function updateRelationshipsList(relationships) {
+        console.log('Updating relationships list:', relationships);
+        const relationshipsList = document.getElementById('relationships-list');
+        const searchTerm = document.getElementById('searchRelationships').value.toLowerCase();
+        
+        if (relationships.length === 0) {
+            relationshipsList.innerHTML = '<p>No relationships discovered yet.</p>';
+            return;
+        }
+
+        // Filter relationships based on search term
+        const filteredRelationships = relationships.filter(relationship => 
+            relationship.id.toLowerCase().includes(searchTerm) ||
+            relationship.source_service?.toLowerCase().includes(searchTerm) ||
+            relationship.target_service?.toLowerCase().includes(searchTerm) ||
+            relationship.type?.toLowerCase().includes(searchTerm)
+        );
+
+        relationshipsList.innerHTML = filteredRelationships.map(relationship => `
+            <div class="relationship-item mb-4">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h5>Relationship: ${relationship.id}</h5>
+                        <p><strong>Source Service:</strong> ${relationship.source_service}</p>
+                        <p><strong>Target Service:</strong> ${relationship.target_service}</p>
+                        <p><strong>Type:</strong> ${relationship.type || 'N/A'}</p>
+                        <p><strong>Condition:</strong> ${relationship.condition || 'N/A'}</p>
+                        <p class="last-seen">Last seen: ${relationship.last_seen}</p>
+                    </div>
+                    <div class="badge bg-primary">${relationship.type || 'Unknown'}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Handle updates from Socket.IO
+    function handleUpdate(data) {
+        if (data.relationships) updateRelationshipsList(data.relationships);
+    }
+
+    // Search functionality
+    document.getElementById('searchRelationships').addEventListener('input', function(e) {
+        fetch('/api/relationships')
+            .then(response => response.json())
+            .then(data => updateRelationshipsList(data))
+            .catch(error => console.error('Error searching relationships:', error));
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('searchRelationships').value = '';
+        fetch('/api/relationships')
+            .then(response => response.json())
+            .then(data => updateRelationshipsList(data))
+            .catch(error => console.error('Error clearing search:', error));
+    });
+
+    // Initial data load
+    fetch('/api/relationships')
+        .then(response => response.json())
+        .then(data => updateRelationshipsList(data))
+        .catch(error => console.error('Error loading relationships:', error));
+</script>
+{% endblock %} 
